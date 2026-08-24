@@ -1,0 +1,38 @@
+[
+  {
+    "platform": "hackerone",
+    "ok": true,
+    "count": 448,
+    "via": "arkadiyt"
+  },
+  {
+    "platform": "bugcrowd",
+    "ok": true,
+    "count": 260,
+    "via": "arkadiyt"
+  },
+  {
+    "platform": "intigriti",
+    "ok": true,
+    "count": 136,
+    "via": "arkadiyt"
+  },
+  {
+    "platform": "yeswehack",
+    "ok": true,
+    "count": 63,
+    "via": "arkadiyt"
+  },
+  {
+    "platform": "federacy",
+    "ok": true,
+    "count": 35,
+    "via": "arkadiyt"
+  },
+  {
+    "platform": "hackenproof",
+    "ok": true,
+    "count": 65,
+    "via": "mcp"
+  }
+]

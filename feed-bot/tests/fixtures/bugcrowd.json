@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Tiny Startup BB",
+    "url": "https://bugcrowd.com/engagements/tiny-startup-bb",
+    "max_payout": 1500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://app.tiny.test/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://status.tiny.test/"
+        }
+      ]
+    }
+  }
+]

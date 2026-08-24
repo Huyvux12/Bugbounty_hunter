@@ -1,0 +1,53 @@
+[
+  {
+    "handle": "starbucks_japan",
+    "name": "Starbucks Japan",
+    "offers_bounties": true,
+    "submission_state": "open",
+    "url": "https://hackerone.com/starbucks_japan",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "www.starbucks.co.jp",
+          "asset_type": "URL",
+          "eligible_for_submission": true,
+          "eligible_for_bounty": true
+        },
+        {
+          "asset_identifier": "https://login.starbucks.co.jp",
+          "asset_type": "URL",
+          "eligible_for_submission": true,
+          "eligible_for_bounty": true
+        },
+        {
+          "asset_identifier": "Starbucks Japan iOS",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "eligible_for_submission": true,
+          "eligible_for_bounty": true
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.example-cdn.com",
+          "asset_type": "WILDCARD"
+        }
+      ]
+    }
+  },
+  {
+    "handle": "google",
+    "name": "Google",
+    "offers_bounties": true,
+    "submission_state": "open",
+    "url": "https://hackerone.com/google",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.google.com",
+          "asset_type": "WILDCARD"
+        }
+      ],
+      "out_of_scope": []
+    }
+  }
+]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bug bounty feed</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Bug bounty feed</h1>
+    <p class="banner">Snapshot công khai. Không thay policy live. Không phải giấy phép scan.</p>
+    <p id="meta" class="meta"></p>
+  </header>
+  <nav class="tabs" role="tablist">
+    <button data-tab="recommended" class="active">Đề xuất</button>
+    <button data-tab="easy">Dễ ăn</button>
+    <button data-tab="new">Mới</button>
+    <button data-tab="all">Tất cả</button>
+  </nav>
+  <form class="filters">
+    <input id="q" type="search" placeholder="Tìm tên, handle, domain" />
+  </form>
+  <nav id="platforms" class="chips" aria-label="Lọc nền tảng"></nav>
+  <main id="list"></main>
+  <dialog id="detail">
+    <article>
+      <header>
+        <h2 id="d-title"></h2>
+        <button id="close" type="button">Đóng</button>
+      </header>
+      <p id="d-meta"></p>
+      <p id="d-reasons"></p>
+      <h3>In scope</h3>
+      <ul id="d-in"></ul>
+      <h3>Out of scope</h3>
+      <ul id="d-out"></ul>
+    </article>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>

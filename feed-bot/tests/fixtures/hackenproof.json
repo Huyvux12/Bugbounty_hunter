@@ -1,0 +1,36 @@
+[
+  {
+    "program": "hackenproof",
+    "title": "HackenProof",
+    "state": "published",
+    "status": {"name": "Active"},
+    "url": "https://hackenproof.com/programs/hackenproof",
+    "rewards": {
+      "critical_max": 1500,
+      "critical_min": 1200,
+      "low_min": 50
+    },
+    "scopes": [
+      {
+        "criticality": "Critical",
+        "out_of_scope": false,
+        "target": "Main website",
+        "target_description": "https://hackenproof.com",
+        "title": "Web"
+      },
+      {
+        "criticality": "None",
+        "out_of_scope": true,
+        "target": "blog.hackenproof.com",
+        "target_description": "* Our Blog",
+        "title": "Web"
+      }
+    ]
+  },
+  {
+    "slug": "old-chain",
+    "title": "Old Chain",
+    "state": "archived",
+    "scopes": []
+  }
+]

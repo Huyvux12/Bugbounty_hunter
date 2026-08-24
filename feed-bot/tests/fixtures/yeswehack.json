@@ -1,0 +1,18 @@
+[
+  {
+    "id": "outscale",
+    "name": "3DS OUTSCALE",
+    "public": true,
+    "disabled": false,
+    "min_bounty": 50,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {"target": "https://cockpit.outscale.test/", "type": "web-application"}
+      ],
+      "out_of_scope": [
+        {"target": "Denial of service attacks", "type": "other"}
+      ]
+    }
+  }
+]

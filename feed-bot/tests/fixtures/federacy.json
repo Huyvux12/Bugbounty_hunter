@@ -1,0 +1,12 @@
+[
+  {
+    "id": "abc",
+    "name": "AngelList VDP",
+    "offers_awards": false,
+    "url": "https://www.federacy.com/angellist-vdp",
+    "targets": {
+      "in_scope": [{"type": "website", "target": "*.angellist.com"}],
+      "out_of_scope": []
+    }
+  }
+]
