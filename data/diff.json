@@ -5,9 +5,340 @@
       "name": "Challenge 0826",
       "platform": "intigriti",
       "url": "https://www.intigriti.com/programs/intigriti/challenge0826/detail"
+    },
+    {
+      "id": "intigriti:pdqcomprivate",
+      "name": "PDQ bug bounty program",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail"
     }
   ],
   "removed": [
+    {
+      "id": "hackenproof:1inch-smart-contract",
+      "name": "1inch Smart Contract",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:alfred-telegram-trading-bot",
+      "name": "Alfred Telegram Trading Bot",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:allbridge",
+      "name": "Allbridge",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:alphax-exchange",
+      "name": "AlphaX Exchange",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:assetmantle",
+      "name": "AssetMantle",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:backpack-web-and-api",
+      "name": "Backpack Web & API",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:bigone-global-exchange",
+      "name": "BigONE Global Exchange",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:bingx-exchange",
+      "name": "BingX Exchange",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:bitcastle-web",
+      "name": "bitcastle Web",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:bitforex",
+      "name": "BitForex",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:bitkub",
+      "name": "Bitkub",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:bitmart-exchange",
+      "name": "BitMart Exchange",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:bitrue",
+      "name": "Bitrue",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:bitstorage-web-and-api",
+      "name": " BitStorage Web & API",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:blofin-web-and-mobile",
+      "name": "BloFin Web & Mobile",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:btse-bug-bounty-program",
+      "name": "BTSE Bug Bounty Program",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:chainstack",
+      "name": "Chainstack",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:citex-web-and-api",
+      "name": "CITEX Web & API",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:civic-smart-contracts",
+      "name": "Civic Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:coin98",
+      "name": "Coin98",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:coingecko",
+      "name": "CoinGecko",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:coinmetro-exchange",
+      "name": "CoinMetro Exchange",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:coinsbit",
+      "name": "Coinsbit",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:coinstore",
+      "name": "Coinstore",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:coinw-web-and-mobile",
+      "name": "CoinW Web & Mobile",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:cryptology",
+      "name": "Cryptology",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:deepcoin-web-and-mobile",
+      "name": "Deepcoin Web & Mobile",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:deltaprime-smart-contracts",
+      "name": "DeltaPrime Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:dex-trade",
+      "name": "Dex-Trade",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:dexe-protocol-smart-contracts",
+      "name": "DeXe Protocol Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:envelop-smart-contracts",
+      "name": "ENVELOP Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:exmo",
+      "name": "EXMO",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:fastex-web",
+      "name": "Fastex Web",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:hackenproof",
+      "name": "HackenProof",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:horizon-protocol-smart-contracts",
+      "name": "Horizon Protocol Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:impermax-finance-smart-contracts",
+      "name": "Impermax Finance Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:jojo-web",
+      "name": "JOJO Web",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:kinza-smart-contracts",
+      "name": "KINZA Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:kucoin",
+      "name": "KuCoin",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:kuna-crypto-exchange",
+      "name": "Kuna Crypto Exchange",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:latoken-exchange",
+      "name": "Latoken Exchange",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:lcx",
+      "name": "LCX",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:metamask-validator-staking-smart-contracts",
+      "name": "MetaMask Validator Staking Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:myetherwallet",
+      "name": "MyEtherWallet",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:okx",
+      "name": "OKX",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:oort-protocol",
+      "name": "OORT Protocol",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:p2b-exchange",
+      "name": "P2B Exchange",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:pionex-app-and-api",
+      "name": "Pionex App & API",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:pointpay-web-and-mobile",
+      "name": "PointPay Web & Mobile",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:poloniex-web-and-api",
+      "name": "Poloniex Web & API",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:router-web",
+      "name": "Router Web",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:shido-network-protocol",
+      "name": "Shido Network - Protocol ",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:smardex-smart-contracts",
+      "name": "SmarDex Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:smilee-smart-contracts",
+      "name": "Smilee Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:sui-protocol",
+      "name": "Sui Protocol",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:tetu-smart-contracts",
+      "name": "TETU Smart Contracts",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:tickets-travel-network-slash-updated-ui",
+      "name": "Tickets Travel Network / Updated UI",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:tokenize-xchange-web-and-mobile",
+      "name": "Tokenize Xchange Web & Mobile",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:ton-diamonds-web",
+      "name": "TON Diamonds Web",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:toobit-web-and-mobile",
+      "name": "Toobit Web & Mobile",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:trustee-plus-mobile",
+      "name": "Trustee Plus Mobile",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:u2staking-web",
+      "name": "U2Staking Web",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:whitebit",
+      "name": "WhiteBIT",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:whitemarket-web",
+      "name": "WhiteMarket Web",
+      "platform": "hackenproof"
+    },
+    {
+      "id": "hackenproof:xt",
+      "name": "XT",
+      "platform": "hackenproof"
+    },
     {
       "id": "yeswehack:alasco-gmbh-bug-bounty-program",
       "name": "Alasco GmbH - Bug Bounty Program",
@@ -324,5 +655,18 @@
       "platform": "yeswehack"
     }
   ],
-  "scope_changes": []
+  "scope_changes": [
+    {
+      "id": "hackerone:aws_vdp",
+      "name": "AWS VDP",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/aws_vdp",
+      "added": [
+        "Amazon VPC"
+      ],
+      "removed": [
+        "Amazon VPC Lattice"
+      ]
+    }
+  ]
 }

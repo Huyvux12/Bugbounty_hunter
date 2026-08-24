@@ -16,7 +16,50 @@
     "min_bounty": 0.0,
     "max_bounty": 0.0,
     "currency": "EUR",
-    "first_seen": "2026-08-24T11:05:30Z",
+    "first_seen": "2026-08-24T12:37:22Z",
     "added_assets": []
+  },
+  {
+    "id": "intigriti:pdqcomprivate",
+    "platform": "intigriti",
+    "handle": "pdqcomprivate",
+    "name": "PDQ bug bounty program",
+    "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "5 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 5,
+    "min_bounty": 50.0,
+    "max_bounty": 3500.0,
+    "currency": "EUR",
+    "first_seen": "2026-08-24T12:37:22Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:aws_vdp",
+    "platform": "hackerone",
+    "handle": "aws_vdp",
+    "name": "AWS VDP",
+    "url": "https://hackerone.com/aws_vdp",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 50,
+    "reasons": [
+      "13 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 13,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "Amazon VPC"
+    ]
   }
 ]
