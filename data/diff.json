@@ -1,396 +1,328 @@
 {
   "added": [
     {
-      "id": "hackenproof:hackenproof",
-      "name": "HackenProof",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/hackenproof"
-    },
-    {
-      "id": "hackenproof:backpack-web-and-api",
-      "name": "Backpack Web & API",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/backpack-web-and-api"
-    },
-    {
-      "id": "hackenproof:1inch-smart-contract",
-      "name": "1inch Smart Contract",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/1inch-smart-contract"
-    },
-    {
-      "id": "hackenproof:allbridge",
-      "name": "Allbridge",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/allbridge"
-    },
-    {
-      "id": "hackenproof:alphax-exchange",
-      "name": "AlphaX Exchange",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/alphax-exchange"
-    },
-    {
-      "id": "hackenproof:assetmantle",
-      "name": "AssetMantle",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/assetmantle"
-    },
-    {
-      "id": "hackenproof:bigone-global-exchange",
-      "name": "BigONE Global Exchange",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/bigone-global-exchange"
-    },
-    {
-      "id": "hackenproof:bingx-exchange",
-      "name": "BingX Exchange",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/bingx-exchange"
-    },
-    {
-      "id": "hackenproof:bitcastle-web",
-      "name": "bitcastle Web",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/bitcastle-web"
-    },
-    {
-      "id": "hackenproof:bitforex",
-      "name": "BitForex",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/bitforex"
-    },
-    {
-      "id": "hackenproof:bitkub",
-      "name": "Bitkub",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/bitkub"
-    },
-    {
-      "id": "hackenproof:bitmart-exchange",
-      "name": "BitMart Exchange",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/bitmart-exchange"
-    },
-    {
-      "id": "hackenproof:bitrue",
-      "name": "Bitrue",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/bitrue"
-    },
-    {
-      "id": "hackenproof:bitstorage-web-and-api",
-      "name": " BitStorage Web & API",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/bitstorage-web-and-api"
-    },
-    {
-      "id": "hackenproof:blofin-web-and-mobile",
-      "name": "BloFin Web & Mobile",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/blofin-web-and-mobile"
-    },
-    {
-      "id": "hackenproof:btse-bug-bounty-program",
-      "name": "BTSE Bug Bounty Program",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/btse-bug-bounty-program"
-    },
-    {
-      "id": "hackenproof:chainstack",
-      "name": "Chainstack",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/chainstack"
-    },
-    {
-      "id": "hackenproof:citex-web-and-api",
-      "name": "CITEX Web & API",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/citex-web-and-api"
-    },
-    {
-      "id": "hackenproof:civic-smart-contracts",
-      "name": "Civic Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/civic-smart-contracts"
-    },
-    {
-      "id": "hackenproof:coin98",
-      "name": "Coin98",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/coin98"
-    },
-    {
-      "id": "hackenproof:coingecko",
-      "name": "CoinGecko",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/coingecko"
-    },
-    {
-      "id": "hackenproof:coinmetro-exchange",
-      "name": "CoinMetro Exchange",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/coinmetro-exchange"
-    },
-    {
-      "id": "hackenproof:coinsbit",
-      "name": "Coinsbit",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/coinsbit"
-    },
-    {
-      "id": "hackenproof:coinstore",
-      "name": "Coinstore",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/coinstore"
-    },
-    {
-      "id": "hackenproof:coinw-web-and-mobile",
-      "name": "CoinW Web & Mobile",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/coinw-web-and-mobile"
-    },
-    {
-      "id": "hackenproof:cryptology",
-      "name": "Cryptology",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/cryptology"
-    },
-    {
-      "id": "hackenproof:deepcoin-web-and-mobile",
-      "name": "Deepcoin Web & Mobile",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/deepcoin-web-and-mobile"
-    },
-    {
-      "id": "hackenproof:deltaprime-smart-contracts",
-      "name": "DeltaPrime Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/deltaprime-smart-contracts"
-    },
-    {
-      "id": "hackenproof:dex-trade",
-      "name": "Dex-Trade",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/dex-trade"
-    },
-    {
-      "id": "hackenproof:dexe-protocol-smart-contracts",
-      "name": "DeXe Protocol Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/dexe-protocol-smart-contracts"
-    },
-    {
-      "id": "hackenproof:envelop-smart-contracts",
-      "name": "ENVELOP Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/envelop-smart-contracts"
-    },
-    {
-      "id": "hackenproof:exmo",
-      "name": "EXMO",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/exmo"
-    },
-    {
-      "id": "hackenproof:fastex-web",
-      "name": "Fastex Web",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/fastex-web"
-    },
-    {
-      "id": "hackenproof:horizon-protocol-smart-contracts",
-      "name": "Horizon Protocol Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/horizon-protocol-smart-contracts"
-    },
-    {
-      "id": "hackenproof:impermax-finance-smart-contracts",
-      "name": "Impermax Finance Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/impermax-finance-smart-contracts"
-    },
-    {
-      "id": "hackenproof:jojo-web",
-      "name": "JOJO Web",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/jojo-web"
-    },
-    {
-      "id": "hackenproof:kinza-smart-contracts",
-      "name": "KINZA Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/kinza-smart-contracts"
-    },
-    {
-      "id": "hackenproof:alfred-telegram-trading-bot",
-      "name": "Alfred Telegram Trading Bot",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/alfred-telegram-trading-bot"
-    },
-    {
-      "id": "hackenproof:kucoin",
-      "name": "KuCoin",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/kucoin"
-    },
-    {
-      "id": "hackenproof:kuna-crypto-exchange",
-      "name": "Kuna Crypto Exchange",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/kuna-crypto-exchange"
-    },
-    {
-      "id": "hackenproof:latoken-exchange",
-      "name": "Latoken Exchange",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/latoken-exchange"
-    },
-    {
-      "id": "hackenproof:lcx",
-      "name": "LCX",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/lcx"
-    },
-    {
-      "id": "hackenproof:metamask-validator-staking-smart-contracts",
-      "name": "MetaMask Validator Staking Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/metamask-validator-staking-smart-contracts"
-    },
-    {
-      "id": "hackenproof:myetherwallet",
-      "name": "MyEtherWallet",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/myetherwallet"
-    },
-    {
-      "id": "hackenproof:okx",
-      "name": "OKX",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/okx"
-    },
-    {
-      "id": "hackenproof:oort-protocol",
-      "name": "OORT Protocol",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/oort-protocol"
-    },
-    {
-      "id": "hackenproof:p2b-exchange",
-      "name": "P2B Exchange",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/p2b-exchange"
-    },
-    {
-      "id": "hackenproof:pionex-app-and-api",
-      "name": "Pionex App & API",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/pionex-app-and-api"
-    },
-    {
-      "id": "hackenproof:pointpay-web-and-mobile",
-      "name": "PointPay Web & Mobile",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/pointpay-web-and-mobile"
-    },
-    {
-      "id": "hackenproof:poloniex-web-and-api",
-      "name": "Poloniex Web & API",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/poloniex-web-and-api"
-    },
-    {
-      "id": "hackenproof:router-web",
-      "name": "Router Web",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/router-web"
-    },
-    {
-      "id": "hackenproof:shido-network-protocol",
-      "name": "Shido Network - Protocol ",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/shido-network-protocol"
-    },
-    {
-      "id": "hackenproof:smardex-smart-contracts",
-      "name": "SmarDex Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/smardex-smart-contracts"
-    },
-    {
-      "id": "hackenproof:smilee-smart-contracts",
-      "name": "Smilee Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/smilee-smart-contracts"
-    },
-    {
-      "id": "hackenproof:sui-protocol",
-      "name": "Sui Protocol",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/sui-protocol"
-    },
-    {
-      "id": "hackenproof:tetu-smart-contracts",
-      "name": "TETU Smart Contracts",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/tetu-smart-contracts"
-    },
-    {
-      "id": "hackenproof:tickets-travel-network-slash-updated-ui",
-      "name": "Tickets Travel Network / Updated UI",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/tickets-travel-network-slash-updated-ui"
-    },
-    {
-      "id": "hackenproof:tokenize-xchange-web-and-mobile",
-      "name": "Tokenize Xchange Web & Mobile",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/tokenize-xchange-web-and-mobile"
-    },
-    {
-      "id": "hackenproof:ton-diamonds-web",
-      "name": "TON Diamonds Web",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/ton-diamonds-web"
-    },
-    {
-      "id": "hackenproof:toobit-web-and-mobile",
-      "name": "Toobit Web & Mobile",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/toobit-web-and-mobile"
-    },
-    {
-      "id": "hackenproof:trustee-plus-mobile",
-      "name": "Trustee Plus Mobile",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/trustee-plus-mobile"
-    },
-    {
-      "id": "hackenproof:u2staking-web",
-      "name": "U2Staking Web",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/u2staking-web"
-    },
-    {
-      "id": "hackenproof:whitebit",
-      "name": "WhiteBIT",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/whitebit"
-    },
-    {
-      "id": "hackenproof:whitemarket-web",
-      "name": "WhiteMarket Web",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/whitemarket-web"
-    },
-    {
-      "id": "hackenproof:xt",
-      "name": "XT",
-      "platform": "hackenproof",
-      "url": "https://hackenproof.com/programs/xt"
+      "id": "intigriti:challenge0826",
+      "name": "Challenge 0826",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/intigriti/challenge0826/detail"
     }
   ],
-  "removed": [],
+  "removed": [
+    {
+      "id": "yeswehack:alasco-gmbh-bug-bounty-program",
+      "name": "Alasco GmbH - Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:ant-group-security-response-center-bug-bounty-program",
+      "name": "Ant Group Security Response Center - Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:atg-public-bug-bounty-program",
+      "name": "ATG Public Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:bind-bug-bounty-program",
+      "name": "BIND 9 Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:bitoasis-bug-bounty-program",
+      "name": "BitOasis - Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:bookbeat",
+      "name": "BookBeat",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:bug-bounty-program-blablacar",
+      "name": "Bug Bounty Program - BlaBlaCar",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:coindcx-bug-bounty-program",
+      "name": "Coindcx - Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:cryptobox-bug-bounty",
+      "name": "Cryptobox",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:cyberghost-bug-bounty-program",
+      "name": "CyberGhost - Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:cybermalveillance-gouv-fr-sensibilization-prevention-and-support-in-terms-of-cybersecurity",
+      "name": "Cybermalveillance.gouv.fr  - sensibilization, prevention and support in terms of cybersecurity",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:dana-bug-bounty-program",
+      "name": "DANA Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:datadome-bot-bounty",
+      "name": "DataDome Bot Bounty",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:datadome-bug-bounty",
+      "name": "DataDome Bug Bounty",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:decathlon",
+      "name": "DECATHLON",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:deezer-bug-bounty-program-2019",
+      "name": "Deezer Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:digital-flanders-vulnerability-disclosure-program",
+      "name": "Digital Flanders Vulnerability Disclosure Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:doctolib-public-bug-bounty-program",
+      "name": "Doctolib",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:dojo",
+      "name": "YesWeHack Dojo",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:dossier-medical-partage-program",
+      "name": "Dossier Medical Partagé Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:expressvpn-bug-bounty-program",
+      "name": "ExpressVPN - Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:ezviz-bug-bounty-program",
+      "name": "Ezviz - Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:fdj-united-online-betting-gaming-bug-bounty-program",
+      "name": "FDJ United (Online Betting and Gaming) - Bug Bounty program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:gojek-bug-bounty-program",
+      "name": "GOJEK - Public Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:goto-financial-public-bounty-program",
+      "name": "GoTo Financial - Public Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:grw-trading-fze-bug-bounty-program",
+      "name": "GRW Trading FZE - Open Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:harman-international-public-bug-bounty",
+      "name": "Harman International Lifestyle Products & Services",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:harman-international-web-applications",
+      "name": "HARMAN International - Web Applications",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:imou-public-bug-bounty-program",
+      "name": "IMOU Public Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:infomaniak-bug-bounty-program",
+      "name": "Infomaniak Bug Bounty program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:komoju-public-bug-bounty-program",
+      "name": "KOMOJU - Public Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:louis-vuitton-malletier-public-bug-bounty-program",
+      "name": "Louis Vuitton Malletier - Public Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:maya-public-bug-bounty-program",
+      "name": "Maya - Public Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:mediamarktsaturn-bug-bounty-program",
+      "name": "MediaMarktSaturn Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:mon-espace-sante-mes",
+      "name": "Mon Espace Santé (MES)",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:moneybox-bug-bounty",
+      "name": "Moneybox Bug Bounty",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:okto-bug-bounty-program",
+      "name": "Okto - Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:ooredoo-qpsc-bug-bounty-program",
+      "name": "Ooredoo QPSC - Customer Portal Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:otto-de-bug-bounty",
+      "name": "OTTO.DE Bug Bounty",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:outscale",
+      "name": "3DS OUTSCALE",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:ovh",
+      "name": "OVHcloud",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:paddle-com-public-bug-bounty-program",
+      "name": "Paddle.com Public Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:pine-labs-bug-bounty-program",
+      "name": "Pine Labs Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:private-internet-access-bug-bounty-program",
+      "name": "Private Internet Access - Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:programmes-de-primes-aux-bogues-du-gouvernement-du-quebec-cgcd",
+      "name": "Programme de prime aux bogues du Gouvernement du Québec",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:qwant",
+      "name": "Qwant",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:sante-publique-france-bugbounty-public-program",
+      "name": "Santé Publique France Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:sogexia",
+      "name": "Sogexia",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:superbank-public-bug-bounty-program",
+      "name": "Superbank - Public Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:swapcard",
+      "name": "Swapcard",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:swiss-post",
+      "name": "Swiss Post",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:swiss-post-evoting",
+      "name": "Swiss Post - E-Voting",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:teamviewer-bounty-program",
+      "name": "TeamViewer - Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:telenor-sweden-public-bug-bounty-program",
+      "name": "Telenor Sweden Public Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:tencent-bug-bounty-program",
+      "name": "Tencent Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:thuringer-aufbaubank-bug-bounty-program",
+      "name": "Thüringer Aufbaubank Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:toom-baumarkt-gmbh-bug-bounty-program",
+      "name": "toom Baumarkt GmbH - Webshop",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:vfs-global-bug-bounty-program",
+      "name": "VFS Global Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:vidaxl-services-open-bug-bounty-program",
+      "name": "vidaXL Services - Open Bug Bounty Program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:vincisa-public-program",
+      "name": "VINCI SA - Public program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:xelians-blackbox-program",
+      "name": "Xelians - Blackbox program",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:yes-we-hack",
+      "name": "YesWeHack",
+      "platform": "yeswehack"
+    },
+    {
+      "id": "yeswehack:zecible-public-bug-bounty-program",
+      "name": "ZECIBLE PUBLIC BUG BOUNTY PROGRAM",
+      "platform": "yeswehack"
+    }
+  ],
   "scope_changes": []
 }
