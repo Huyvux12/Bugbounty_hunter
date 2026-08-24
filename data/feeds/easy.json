@@ -17,7 +17,73 @@
     "min_bounty": 50.0,
     "max_bounty": 3500.0,
     "currency": "EUR",
-    "first_seen": "2026-08-24T12:37:22Z",
+    "first_seen": "2026-08-24T18:31:40Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:wickr",
+    "platform": "hackerone",
+    "handle": "wickr",
+    "name": "Wickr",
+    "url": "https://hackerone.com/wickr",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 80,
+    "reasons": [
+      "có bounty",
+      "2 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 2,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T18:31:40Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:moonpay",
+    "platform": "hackerone",
+    "handle": "moonpay",
+    "name": "MoonPay ",
+    "url": "https://hackerone.com/moonpay",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "13 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 13,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "*.iron.xyz"
+    ]
+  },
+  {
+    "id": "intigriti:truelayer",
+    "platform": "intigriti",
+    "handle": "truelayer",
+    "name": "TrueLayer",
+    "url": "https://www.intigriti.com/programs/truelayer/truelayer/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 70,
+    "reasons": [
+      "có bounty",
+      "21 host/repo cụ thể",
+      "program mới",
+      "scope rộng"
+    ],
+    "concrete_count": 21,
+    "min_bounty": 75.0,
+    "max_bounty": 6000.0,
+    "currency": "EUR",
+    "first_seen": "2026-08-24T18:31:40Z",
     "added_assets": []
   },
   {
@@ -441,6 +507,37 @@
     "added_assets": []
   },
   {
+    "id": "hackerone:visa",
+    "platform": "hackerone",
+    "handle": "visa",
+    "name": "Visa",
+    "url": "https://hackerone.com/visa",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "196 host/repo cụ thể",
+      "+48 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 196,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "africa.visa.com",
+      "by.visa.com",
+      "cis.visa.com",
+      "https://usa.visa.com/gateway/api",
+      "kino.visa.pl",
+      "myanmar.visa.com",
+      "rs.visa.com",
+      "sr.visa.com"
+    ]
+  },
+  {
     "id": "hackerone:toolsforhumanity",
     "platform": "hackerone",
     "handle": "toolsforhumanity",
@@ -801,26 +898,6 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:moonpay",
-    "platform": "hackerone",
-    "handle": "moonpay",
-    "name": "MoonPay ",
-    "url": "https://hackerone.com/moonpay",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "13 host/repo cụ thể"
-    ],
-    "concrete_count": 13,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
     "id": "hackerone:koho",
     "platform": "hackerone",
     "handle": "koho",
@@ -934,66 +1011,6 @@
       "13 host/repo cụ thể"
     ],
     "concrete_count": 13,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:whatnot",
-    "platform": "hackerone",
-    "handle": "whatnot",
-    "name": "Whatnot",
-    "url": "https://hackerone.com/whatnot",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:smtp2go",
-    "platform": "hackerone",
-    "handle": "smtp2go",
-    "name": "SMTP2GO BBP",
-    "url": "https://hackerone.com/smtp2go",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:playtika",
-    "platform": "hackerone",
-    "handle": "playtika",
-    "name": "Playtika",
-    "url": "https://hackerone.com/playtika",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể"
-    ],
-    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

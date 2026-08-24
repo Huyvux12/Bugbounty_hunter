@@ -18,7 +18,29 @@
       "min_bounty": 50.0,
       "max_bounty": 3500.0,
       "currency": "EUR",
-      "first_seen": "2026-08-24T12:37:22Z",
+      "first_seen": "2026-08-24T18:31:40Z",
+      "added_assets": []
+    },
+    {
+      "id": "intigriti:truelayer",
+      "platform": "intigriti",
+      "handle": "truelayer",
+      "name": "TrueLayer",
+      "url": "https://www.intigriti.com/programs/truelayer/truelayer/detail",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 70,
+      "reasons": [
+        "có bounty",
+        "21 host/repo cụ thể",
+        "program mới",
+        "scope rộng"
+      ],
+      "concrete_count": 21,
+      "min_bounty": 75.0,
+      "max_bounty": 6000.0,
+      "currency": "EUR",
+      "first_seen": "2026-08-24T18:31:40Z",
       "added_assets": []
     },
     {
@@ -220,29 +242,53 @@
       "currency": "EUR",
       "first_seen": "2026-08-24T09:20:54Z",
       "added_assets": []
-    },
-    {
-      "id": "intigriti:digitalocean",
-      "platform": "intigriti",
-      "handle": "digitalocean",
-      "name": "DigitalOcean",
-      "url": "https://www.intigriti.com/programs/digitalocean/digitalocean/detail",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "17 host/repo cụ thể"
-      ],
-      "concrete_count": 17,
-      "min_bounty": 50.0,
-      "max_bounty": 10000.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
     }
   ],
   "hackerone": [
+    {
+      "id": "hackerone:wickr",
+      "platform": "hackerone",
+      "handle": "wickr",
+      "name": "Wickr",
+      "url": "https://hackerone.com/wickr",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 80,
+      "reasons": [
+        "có bounty",
+        "2 host/repo cụ thể",
+        "program mới"
+      ],
+      "concrete_count": 2,
+      "min_bounty": null,
+      "max_bounty": null,
+      "currency": null,
+      "first_seen": "2026-08-24T18:31:40Z",
+      "added_assets": []
+    },
+    {
+      "id": "hackerone:moonpay",
+      "platform": "hackerone",
+      "handle": "moonpay",
+      "name": "MoonPay ",
+      "url": "https://hackerone.com/moonpay",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 75,
+      "reasons": [
+        "có bounty",
+        "13 host/repo cụ thể",
+        "+1 asset"
+      ],
+      "concrete_count": 13,
+      "min_bounty": null,
+      "max_bounty": null,
+      "currency": null,
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [
+        "*.iron.xyz"
+      ]
+    },
     {
       "id": "hackerone:wolt",
       "platform": "hackerone",
@@ -437,46 +483,6 @@
         "7 host/repo cụ thể"
       ],
       "concrete_count": 7,
-      "min_bounty": null,
-      "max_bounty": null,
-      "currency": null,
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
-    },
-    {
-      "id": "hackerone:circle-bbp",
-      "platform": "hackerone",
-      "handle": "circle-bbp",
-      "name": "Circle BBP",
-      "url": "https://hackerone.com/circle-bbp",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "17 host/repo cụ thể"
-      ],
-      "concrete_count": 17,
-      "min_bounty": null,
-      "max_bounty": null,
-      "currency": null,
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
-    },
-    {
-      "id": "hackerone:varonis",
-      "platform": "hackerone",
-      "handle": "varonis",
-      "name": "Varonis",
-      "url": "https://hackerone.com/varonis",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "4 host/repo cụ thể"
-      ],
-      "concrete_count": 4,
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
