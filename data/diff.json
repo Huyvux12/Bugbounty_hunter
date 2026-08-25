@@ -1,39 +1,38 @@
 {
-  "added": [],
-  "removed": [
+  "added": [
     {
       "id": "intigriti:pdqcomprivate",
       "name": "PDQ bug bounty program",
-      "platform": "intigriti"
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail"
     }
   ],
+  "removed": [],
   "scope_changes": [
     {
-      "id": "hackerone:visa",
-      "name": "Visa",
+      "id": "hackerone:8x8-bounty",
+      "name": "8x8",
       "platform": "hackerone",
-      "url": "https://hackerone.com/visa",
+      "url": "https://hackerone.com/8x8-bounty",
       "added": [
-        "https://www.visa.com.ua/"
+        "map.8x8.com"
       ],
-      "removed": [
-        "cybersourcebouncebacks.visa.com",
-        "kino.visa.pl",
-        "merchantsignageap.visa.com",
-        "merchantsignagejp.visa.com",
-        "www.fraedom.com",
-        "www.mz.visa.com",
-        "www.visa.co.ao",
-        "www.visa.com.cn"
-      ]
+      "removed": []
     },
     {
-      "id": "bugcrowd:aiven-mbb-og",
-      "name": "Aiven Managed Bug Bounty",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
+      "id": "intigriti:europeanspaceagencyvdp",
+      "name": "European Space Agency (ESA) VDP",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/europeanspaceagency/europeanspaceagencyvdp/detail",
       "added": [
-        "Third-party dependency versions"
+        "activities.esa.int",
+        "bluedocs.esa.int",
+        "doing-business.sso.esa.int",
+        "dst.esa.int",
+        "eris.esa.int",
+        "esa-p.sso.esa.int",
+        "esastar-ecm.sso.esa.int",
+        "esastar-emr.sso.esa.int"
       ],
       "removed": []
     }
