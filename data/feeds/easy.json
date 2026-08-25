@@ -1,49 +1,5 @@
 [
   {
-    "id": "hackerone:wickr",
-    "platform": "hackerone",
-    "handle": "wickr",
-    "name": "Wickr",
-    "url": "https://hackerone.com/wickr",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "2 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 2,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-25T00:56:20Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:moonpay",
-    "platform": "hackerone",
-    "handle": "moonpay",
-    "name": "MoonPay ",
-    "url": "https://hackerone.com/moonpay",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "13 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 13,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "*.iron.xyz"
-    ]
-  },
-  {
     "id": "bugcrowd:aiven-mbb-og",
     "platform": "bugcrowd",
     "handle": "aiven-mbb-og",
@@ -65,28 +21,6 @@
     "added_assets": [
       "Third-party dependency versions"
     ]
-  },
-  {
-    "id": "intigriti:truelayer",
-    "platform": "intigriti",
-    "handle": "truelayer",
-    "name": "TrueLayer",
-    "url": "https://www.intigriti.com/programs/truelayer/truelayer/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 70,
-    "reasons": [
-      "có bounty",
-      "21 host/repo cụ thể",
-      "program mới",
-      "scope rộng"
-    ],
-    "concrete_count": 21,
-    "min_bounty": 75.0,
-    "max_bounty": 6000.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-25T00:56:20Z",
-    "added_assets": []
   },
   {
     "id": "hackerone:wolt",
@@ -520,7 +454,7 @@
     "reasons": [
       "có bounty",
       "182 host/repo cụ thể",
-      "+46 asset",
+      "+1 asset",
       "scope rộng"
     ],
     "concrete_count": 182,
@@ -529,14 +463,7 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "africa.visa.com",
-      "by.visa.com",
-      "cis.visa.com",
-      "https://usa.visa.com/gateway/api",
-      "https://www.visa.com.ua/",
-      "myanmar.visa.com",
-      "rs.visa.com",
-      "sr.visa.com"
+      "https://www.visa.com.ua/"
     ]
   },
   {
@@ -900,6 +827,26 @@
     "added_assets": []
   },
   {
+    "id": "hackerone:moonpay",
+    "platform": "hackerone",
+    "handle": "moonpay",
+    "name": "MoonPay ",
+    "url": "https://hackerone.com/moonpay",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "13 host/repo cụ thể"
+    ],
+    "concrete_count": 13,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
     "id": "hackerone:koho",
     "platform": "hackerone",
     "handle": "koho",
@@ -1013,6 +960,46 @@
       "13 host/repo cụ thể"
     ],
     "concrete_count": 13,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:whatnot",
+    "platform": "hackerone",
+    "handle": "whatnot",
+    "name": "Whatnot",
+    "url": "https://hackerone.com/whatnot",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:smtp2go",
+    "platform": "hackerone",
+    "handle": "smtp2go",
+    "name": "SMTP2GO BBP",
+    "url": "https://hackerone.com/smtp2go",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể"
+    ],
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

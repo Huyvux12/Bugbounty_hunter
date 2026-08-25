@@ -1,30 +1,6 @@
 {
-  "added": [
-    {
-      "id": "hackerone:wickr",
-      "name": "Wickr",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/wickr"
-    },
-    {
-      "id": "hackerone:brave",
-      "name": "Brave Software",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/brave"
-    },
-    {
-      "id": "intigriti:truelayer",
-      "name": "TrueLayer",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/truelayer/truelayer/detail"
-    }
-  ],
+  "added": [],
   "removed": [
-    {
-      "id": "hackerone:homebargains",
-      "name": "Home Bargains",
-      "platform": "hackerone"
-    },
     {
       "id": "intigriti:pdqcomprivate",
       "name": "PDQ bug bounty program",
@@ -38,35 +14,18 @@
       "platform": "hackerone",
       "url": "https://hackerone.com/visa",
       "added": [
-        "africa.visa.com",
-        "by.visa.com",
-        "cis.visa.com",
-        "https://usa.visa.com/gateway/api",
-        "https://www.visa.com.ua/",
-        "myanmar.visa.com",
-        "rs.visa.com",
-        "sr.visa.com"
+        "https://www.visa.com.ua/"
       ],
       "removed": [
         "cybersourcebouncebacks.visa.com",
+        "kino.visa.pl",
         "merchantsignageap.visa.com",
         "merchantsignagejp.visa.com",
         "www.fraedom.com",
+        "www.mz.visa.com",
         "www.visa.co.ao",
-        "www.visa.com.cn",
-        "www.visa.com.lc",
-        "www.visa.com.ms"
+        "www.visa.com.cn"
       ]
-    },
-    {
-      "id": "hackerone:moonpay",
-      "name": "MoonPay ",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/moonpay",
-      "added": [
-        "*.iron.xyz"
-      ],
-      "removed": []
     },
     {
       "id": "bugcrowd:aiven-mbb-og",
