@@ -17,7 +17,7 @@
     "min_bounty": 50.0,
     "max_bounty": 3500.0,
     "currency": "EUR",
-    "first_seen": "2026-08-25T12:36:36Z",
+    "first_seen": "2026-08-25T18:31:44Z",
     "added_assets": []
   },
   {
@@ -439,6 +439,30 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
+  },
+  {
+    "id": "hackerone:visa",
+    "platform": "hackerone",
+    "handle": "visa",
+    "name": "Visa",
+    "url": "https://hackerone.com/visa",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "183 host/repo cụ thể",
+      "+1 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 183,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://ebctest.cybersource.com/underwriting"
+    ]
   },
   {
     "id": "hackerone:toolsforhumanity",
@@ -974,26 +998,6 @@
       "3 host/repo cụ thể"
     ],
     "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:playtika",
-    "platform": "hackerone",
-    "handle": "playtika",
-    "name": "Playtika",
-    "url": "https://hackerone.com/playtika",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể"
-    ],
-    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

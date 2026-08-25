@@ -1,6 +1,12 @@
 {
   "added": [
     {
+      "id": "hackerone:vanguard",
+      "name": "Vanguard",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/vanguard"
+    },
+    {
       "id": "intigriti:pdqcomprivate",
       "name": "PDQ bug bounty program",
       "platform": "intigriti",
@@ -9,6 +15,26 @@
   ],
   "removed": [],
   "scope_changes": [
+    {
+      "id": "hackerone:tbs-sct",
+      "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/tbs-sct",
+      "added": [
+        "auth.cdssandbox.xyz"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:visa",
+      "name": "Visa",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/visa",
+      "added": [
+        "https://ebctest.cybersource.com/underwriting"
+      ],
+      "removed": []
+    },
     {
       "id": "hackerone:8x8-bounty",
       "name": "8x8",

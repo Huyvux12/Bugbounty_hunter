@@ -1,5 +1,25 @@
 [
   {
+    "id": "hackerone:vanguard",
+    "platform": "hackerone",
+    "handle": "vanguard",
+    "name": "Vanguard",
+    "url": "https://hackerone.com/vanguard",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 5,
+    "reasons": [
+      "program mới",
+      "không có web/API cụ thể"
+    ],
+    "concrete_count": 0,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-25T18:31:44Z",
+    "added_assets": []
+  },
+  {
     "id": "intigriti:pdqcomprivate",
     "platform": "intigriti",
     "handle": "pdqcomprivate",
@@ -17,7 +37,7 @@
     "min_bounty": 50.0,
     "max_bounty": 3500.0,
     "currency": "EUR",
-    "first_seen": "2026-08-25T12:36:36Z",
+    "first_seen": "2026-08-25T18:31:44Z",
     "added_assets": []
   },
   {
@@ -48,6 +68,52 @@
       "esa-p.sso.esa.int",
       "esastar-ecm.sso.esa.int",
       "esastar-emr.sso.esa.int"
+    ]
+  },
+  {
+    "id": "hackerone:tbs-sct",
+    "platform": "hackerone",
+    "handle": "tbs-sct",
+    "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
+    "url": "https://hackerone.com/tbs-sct",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 50,
+    "reasons": [
+      "12 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 12,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "auth.cdssandbox.xyz"
+    ]
+  },
+  {
+    "id": "hackerone:visa",
+    "platform": "hackerone",
+    "handle": "visa",
+    "name": "Visa",
+    "url": "https://hackerone.com/visa",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "183 host/repo cụ thể",
+      "+1 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 183,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://ebctest.cybersource.com/underwriting"
     ]
   },
   {
