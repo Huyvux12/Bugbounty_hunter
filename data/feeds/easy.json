@@ -1,26 +1,5 @@
 [
   {
-    "id": "intigriti:pdqcomprivate",
-    "platform": "intigriti",
-    "handle": "pdqcomprivate",
-    "name": "PDQ bug bounty program",
-    "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 5,
-    "min_bounty": 50.0,
-    "max_bounty": 3500.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-24T18:31:40Z",
-    "added_assets": []
-  },
-  {
     "id": "hackerone:wickr",
     "platform": "hackerone",
     "handle": "wickr",
@@ -38,7 +17,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-08-24T18:31:40Z",
+    "first_seen": "2026-08-25T00:56:20Z",
     "added_assets": []
   },
   {
@@ -65,6 +44,29 @@
     ]
   },
   {
+    "id": "bugcrowd:aiven-mbb-og",
+    "platform": "bugcrowd",
+    "handle": "aiven-mbb-og",
+    "name": "Aiven Managed Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "9 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 9,
+    "min_bounty": null,
+    "max_bounty": 25000.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "Third-party dependency versions"
+    ]
+  },
+  {
     "id": "intigriti:truelayer",
     "platform": "intigriti",
     "handle": "truelayer",
@@ -83,7 +85,7 @@
     "min_bounty": 75.0,
     "max_bounty": 6000.0,
     "currency": "EUR",
-    "first_seen": "2026-08-24T18:31:40Z",
+    "first_seen": "2026-08-25T00:56:20Z",
     "added_assets": []
   },
   {
@@ -517,11 +519,11 @@
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "196 host/repo cụ thể",
-      "+48 asset",
+      "182 host/repo cụ thể",
+      "+46 asset",
       "scope rộng"
     ],
-    "concrete_count": 196,
+    "concrete_count": 182,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -531,7 +533,7 @@
       "by.visa.com",
       "cis.visa.com",
       "https://usa.visa.com/gateway/api",
-      "kino.visa.pl",
+      "https://www.visa.com.ua/",
       "myanmar.visa.com",
       "rs.visa.com",
       "sr.visa.com"

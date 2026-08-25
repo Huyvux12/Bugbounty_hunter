@@ -13,12 +13,6 @@
       "url": "https://hackerone.com/brave"
     },
     {
-      "id": "intigriti:pdqcomprivate",
-      "name": "PDQ bug bounty program",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail"
-    },
-    {
       "id": "intigriti:truelayer",
       "name": "TrueLayer",
       "platform": "intigriti",
@@ -30,21 +24,14 @@
       "id": "hackerone:homebargains",
       "name": "Home Bargains",
       "platform": "hackerone"
+    },
+    {
+      "id": "intigriti:pdqcomprivate",
+      "name": "PDQ bug bounty program",
+      "platform": "intigriti"
     }
   ],
   "scope_changes": [
-    {
-      "id": "hackerone:aws_vdp",
-      "name": "AWS VDP",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/aws_vdp",
-      "added": [
-        "Amazon VPC"
-      ],
-      "removed": [
-        "Amazon VPC Lattice"
-      ]
-    },
     {
       "id": "hackerone:visa",
       "name": "Visa",
@@ -55,12 +42,21 @@
         "by.visa.com",
         "cis.visa.com",
         "https://usa.visa.com/gateway/api",
-        "kino.visa.pl",
+        "https://www.visa.com.ua/",
         "myanmar.visa.com",
         "rs.visa.com",
         "sr.visa.com"
       ],
-      "removed": []
+      "removed": [
+        "cybersourcebouncebacks.visa.com",
+        "merchantsignageap.visa.com",
+        "merchantsignagejp.visa.com",
+        "www.fraedom.com",
+        "www.visa.co.ao",
+        "www.visa.com.cn",
+        "www.visa.com.lc",
+        "www.visa.com.ms"
+      ]
     },
     {
       "id": "hackerone:moonpay",
@@ -69,6 +65,16 @@
       "url": "https://hackerone.com/moonpay",
       "added": [
         "*.iron.xyz"
+      ],
+      "removed": []
+    },
+    {
+      "id": "bugcrowd:aiven-mbb-og",
+      "name": "Aiven Managed Bug Bounty",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
+      "added": [
+        "Third-party dependency versions"
       ],
       "removed": []
     }
