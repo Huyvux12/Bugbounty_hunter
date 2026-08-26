@@ -1,47 +1,5 @@
 [
   {
-    "id": "hackerone:vanguard",
-    "platform": "hackerone",
-    "handle": "vanguard",
-    "name": "Vanguard",
-    "url": "https://hackerone.com/vanguard",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 5,
-    "reasons": [
-      "program mới",
-      "không có web/API cụ thể"
-    ],
-    "concrete_count": 0,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-26T00:57:22Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:tbs-sct",
-    "platform": "hackerone",
-    "handle": "tbs-sct",
-    "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
-    "url": "https://hackerone.com/tbs-sct",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 50,
-    "reasons": [
-      "12 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 12,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "auth.cdssandbox.xyz"
-    ]
-  },
-  {
     "id": "hackerone:visa",
     "platform": "hackerone",
     "handle": "visa",
@@ -53,7 +11,7 @@
     "reasons": [
       "có bounty",
       "171 host/repo cụ thể",
-      "+2 asset",
+      "+1 asset",
       "scope rộng"
     ],
     "concrete_count": 171,
@@ -62,8 +20,7 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "https://ebctest.cybersource.com/bos",
-      "https://ebctest.cybersource.com/underwriting"
+      "https://ebctest.cybersource.com/bos"
     ]
   },
   {

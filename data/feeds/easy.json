@@ -454,7 +454,7 @@
     "reasons": [
       "có bounty",
       "171 host/repo cụ thể",
-      "+2 asset",
+      "+1 asset",
       "scope rộng"
     ],
     "concrete_count": 171,
@@ -463,8 +463,7 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "https://ebctest.cybersource.com/bos",
-      "https://ebctest.cybersource.com/underwriting"
+      "https://ebctest.cybersource.com/bos"
     ]
   },
   {

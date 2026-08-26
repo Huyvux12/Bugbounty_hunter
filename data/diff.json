@@ -1,12 +1,5 @@
 {
-  "added": [
-    {
-      "id": "hackerone:vanguard",
-      "name": "Vanguard",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/vanguard"
-    }
-  ],
+  "added": [],
   "removed": [
     {
       "id": "intigriti:pdqcomprivate",
@@ -16,23 +9,12 @@
   ],
   "scope_changes": [
     {
-      "id": "hackerone:tbs-sct",
-      "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/tbs-sct",
-      "added": [
-        "auth.cdssandbox.xyz"
-      ],
-      "removed": []
-    },
-    {
       "id": "hackerone:visa",
       "name": "Visa",
       "platform": "hackerone",
       "url": "https://hackerone.com/visa",
       "added": [
-        "https://ebctest.cybersource.com/bos",
-        "https://ebctest.cybersource.com/underwriting"
+        "https://ebctest.cybersource.com/bos"
       ],
       "removed": [
         "aw.visa.com",
