@@ -5,15 +5,15 @@
       "name": "Vanguard",
       "platform": "hackerone",
       "url": "https://hackerone.com/vanguard"
-    },
+    }
+  ],
+  "removed": [
     {
       "id": "intigriti:pdqcomprivate",
       "name": "PDQ bug bounty program",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail"
+      "platform": "intigriti"
     }
   ],
-  "removed": [],
   "scope_changes": [
     {
       "id": "hackerone:tbs-sct",
@@ -31,36 +31,31 @@
       "platform": "hackerone",
       "url": "https://hackerone.com/visa",
       "added": [
+        "https://ebctest.cybersource.com/bos",
         "https://ebctest.cybersource.com/underwriting"
       ],
-      "removed": []
+      "removed": [
+        "aw.visa.com",
+        "bb.visa.com",
+        "bm.visa.com",
+        "bq.visa.com",
+        "cw.visa.com",
+        "garp.visa.com",
+        "ht.visa.com",
+        "infinite.visa.fr"
+      ]
     },
     {
-      "id": "hackerone:8x8-bounty",
-      "name": "8x8",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/8x8-bounty",
+      "id": "bugcrowd:chime",
+      "name": "Chime Managed Bug Bounty Engagement",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/chime",
       "added": [
-        "map.8x8.com"
+        "https://app-qa.chime.com/login"
       ],
-      "removed": []
-    },
-    {
-      "id": "intigriti:europeanspaceagencyvdp",
-      "name": "European Space Agency (ESA) VDP",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/europeanspaceagency/europeanspaceagencyvdp/detail",
-      "added": [
-        "activities.esa.int",
-        "bluedocs.esa.int",
-        "doing-business.sso.esa.int",
-        "dst.esa.int",
-        "eris.esa.int",
-        "esa-p.sso.esa.int",
-        "esastar-ecm.sso.esa.int",
-        "esastar-emr.sso.esa.int"
-      ],
-      "removed": []
+      "removed": [
+        "http://app-qa.chime.com/users/sign_in"
+      ]
     }
   ]
 }

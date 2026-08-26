@@ -1,24 +1,26 @@
 [
   {
-    "id": "intigriti:pdqcomprivate",
-    "platform": "intigriti",
-    "handle": "pdqcomprivate",
-    "name": "PDQ bug bounty program",
-    "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail",
+    "id": "bugcrowd:chime",
+    "platform": "bugcrowd",
+    "handle": "chime",
+    "name": "Chime Managed Bug Bounty Engagement",
+    "url": "https://bugcrowd.com/engagements/chime",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 75,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể",
-      "program mới"
+      "7 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 5,
-    "min_bounty": 50.0,
-    "max_bounty": 3500.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-25T18:31:44Z",
-    "added_assets": []
+    "concrete_count": 7,
+    "min_bounty": null,
+    "max_bounty": 20000.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://app-qa.chime.com/login"
+    ]
   },
   {
     "id": "hackerone:wolt",
@@ -451,16 +453,17 @@
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "183 host/repo cụ thể",
-      "+1 asset",
+      "171 host/repo cụ thể",
+      "+2 asset",
       "scope rộng"
     ],
-    "concrete_count": 183,
+    "concrete_count": 171,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
+      "https://ebctest.cybersource.com/bos",
       "https://ebctest.cybersource.com/underwriting"
     ]
   },

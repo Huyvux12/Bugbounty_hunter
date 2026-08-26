@@ -16,59 +16,8 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-08-25T18:31:44Z",
+    "first_seen": "2026-08-26T00:57:22Z",
     "added_assets": []
-  },
-  {
-    "id": "intigriti:pdqcomprivate",
-    "platform": "intigriti",
-    "handle": "pdqcomprivate",
-    "name": "PDQ bug bounty program",
-    "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 5,
-    "min_bounty": 50.0,
-    "max_bounty": 3500.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-25T18:31:44Z",
-    "added_assets": []
-  },
-  {
-    "id": "intigriti:europeanspaceagencyvdp",
-    "platform": "intigriti",
-    "handle": "europeanspaceagencyvdp",
-    "name": "European Space Agency (ESA) VDP",
-    "url": "https://www.intigriti.com/programs/europeanspaceagency/europeanspaceagencyvdp/detail",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 35,
-    "reasons": [
-      "53 host/repo cụ thể",
-      "+17 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 53,
-    "min_bounty": 0.0,
-    "max_bounty": 0.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "activities.esa.int",
-      "bluedocs.esa.int",
-      "doing-business.sso.esa.int",
-      "dst.esa.int",
-      "eris.esa.int",
-      "esa-p.sso.esa.int",
-      "esastar-ecm.sso.esa.int",
-      "esastar-emr.sso.esa.int"
-    ]
   },
   {
     "id": "hackerone:tbs-sct",
@@ -103,41 +52,41 @@
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "183 host/repo cụ thể",
-      "+1 asset",
+      "171 host/repo cụ thể",
+      "+2 asset",
       "scope rộng"
     ],
-    "concrete_count": 183,
+    "concrete_count": 171,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
+      "https://ebctest.cybersource.com/bos",
       "https://ebctest.cybersource.com/underwriting"
     ]
   },
   {
-    "id": "hackerone:8x8-bounty",
-    "platform": "hackerone",
-    "handle": "8x8-bounty",
-    "name": "8x8",
-    "url": "https://hackerone.com/8x8-bounty",
+    "id": "bugcrowd:chime",
+    "platform": "bugcrowd",
+    "handle": "chime",
+    "name": "Chime Managed Bug Bounty Engagement",
+    "url": "https://bugcrowd.com/engagements/chime",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 75,
     "reasons": [
       "có bounty",
-      "44 host/repo cụ thể",
-      "+1 asset",
-      "scope rộng"
+      "7 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 44,
+    "concrete_count": 7,
     "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
+    "max_bounty": 20000.0,
+    "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "map.8x8.com"
+      "https://app-qa.chime.com/login"
     ]
   }
 ]
