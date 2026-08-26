@@ -1,12 +1,19 @@
 {
-  "added": [
-    {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
-    }
-  ],
+  "added": [],
   "removed": [],
-  "scope_changes": []
+  "scope_changes": [
+    {
+      "id": "bugcrowd:aurory-mbb-og2",
+      "name": "Aurory Managed Bug Bounty Engagement (Public)",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/aurory-mbb-og2",
+      "added": [
+        "https://store.epicgames.com/p/amiko-arena-a5986d",
+        "https://store.steampowered.com/app/4245930/Amiko_Legends/"
+      ],
+      "removed": [
+        "https://store.epicgames.com/en-US/p/amiko-legends-a5986d"
+      ]
+    }
+  ]
 }

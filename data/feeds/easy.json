@@ -1,24 +1,27 @@
 [
   {
-    "id": "intigriti:datacamp",
-    "platform": "intigriti",
-    "handle": "datacamp",
-    "name": "DataCamp",
-    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "id": "bugcrowd:aurory-mbb-og2",
+    "platform": "bugcrowd",
+    "handle": "aurory-mbb-og2",
+    "name": "Aurory Managed Bug Bounty Engagement (Public)",
+    "url": "https://bugcrowd.com/engagements/aurory-mbb-og2",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 75,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể",
-      "program mới"
+      "3 host/repo cụ thể",
+      "+2 asset"
     ],
-    "concrete_count": 12,
-    "min_bounty": 25.0,
-    "max_bounty": 1500.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-26T12:39:43Z",
-    "added_assets": []
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": 4500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://store.epicgames.com/p/amiko-arena-a5986d",
+      "https://store.steampowered.com/app/4245930/Amiko_Legends/"
+    ]
   },
   {
     "id": "hackerone:wolt",
