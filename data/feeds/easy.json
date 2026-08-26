@@ -1,26 +1,24 @@
 [
   {
-    "id": "bugcrowd:chime",
-    "platform": "bugcrowd",
-    "handle": "chime",
-    "name": "Chime Managed Bug Bounty Engagement",
-    "url": "https://bugcrowd.com/engagements/chime",
+    "id": "intigriti:datacamp",
+    "platform": "intigriti",
+    "handle": "datacamp",
+    "name": "DataCamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 75,
+    "easy_score": 85,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể",
-      "+1 asset"
+      "12 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 7,
-    "min_bounty": null,
-    "max_bounty": 20000.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "https://app-qa.chime.com/login"
-    ]
+    "concrete_count": 12,
+    "min_bounty": 25.0,
+    "max_bounty": 1500.0,
+    "currency": "EUR",
+    "first_seen": "2026-08-26T12:39:43Z",
+    "added_assets": []
   },
   {
     "id": "hackerone:wolt",
@@ -441,30 +439,6 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
-  },
-  {
-    "id": "hackerone:visa",
-    "platform": "hackerone",
-    "handle": "visa",
-    "name": "Visa",
-    "url": "https://hackerone.com/visa",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "171 host/repo cụ thể",
-      "+1 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 171,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "https://ebctest.cybersource.com/bos"
-    ]
   },
   {
     "id": "hackerone:toolsforhumanity",
@@ -1000,6 +974,26 @@
       "3 host/repo cụ thể"
     ],
     "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:playtika",
+    "platform": "hackerone",
+    "handle": "playtika",
+    "name": "Playtika",
+    "url": "https://hackerone.com/playtika",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "5 host/repo cụ thể"
+    ],
+    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

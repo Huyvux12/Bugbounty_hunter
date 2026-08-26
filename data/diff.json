@@ -1,43 +1,12 @@
 {
-  "added": [],
-  "removed": [
+  "added": [
     {
-      "id": "intigriti:pdqcomprivate",
-      "name": "PDQ bug bounty program",
-      "platform": "intigriti"
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
     }
   ],
-  "scope_changes": [
-    {
-      "id": "hackerone:visa",
-      "name": "Visa",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/visa",
-      "added": [
-        "https://ebctest.cybersource.com/bos"
-      ],
-      "removed": [
-        "aw.visa.com",
-        "bb.visa.com",
-        "bm.visa.com",
-        "bq.visa.com",
-        "cw.visa.com",
-        "garp.visa.com",
-        "ht.visa.com",
-        "infinite.visa.fr"
-      ]
-    },
-    {
-      "id": "bugcrowd:chime",
-      "name": "Chime Managed Bug Bounty Engagement",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/chime",
-      "added": [
-        "https://app-qa.chime.com/login"
-      ],
-      "removed": [
-        "http://app-qa.chime.com/users/sign_in"
-      ]
-    }
-  ]
+  "removed": [],
+  "scope_changes": []
 }
