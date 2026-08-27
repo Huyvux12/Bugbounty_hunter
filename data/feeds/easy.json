@@ -1,5 +1,110 @@
 [
   {
+    "id": "bugcrowd:brizoit",
+    "platform": "bugcrowd",
+    "handle": "brizoit",
+    "name": "BrizoIT",
+    "url": "https://bugcrowd.com/engagements/brizoit",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "6 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 6,
+    "min_bounty": null,
+    "max_bounty": 1500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-27T06:43:18Z",
+    "added_assets": []
+  },
+  {
+    "id": "bugcrowd:caelor-group-market",
+    "platform": "bugcrowd",
+    "handle": "caelor-group-market",
+    "name": "Caelor Group",
+    "url": "https://bugcrowd.com/engagements/caelor-group-market",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "13 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 13,
+    "min_bounty": null,
+    "max_bounty": 1500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-27T06:43:18Z",
+    "added_assets": []
+  },
+  {
+    "id": "bugcrowd:metainfkft",
+    "platform": "bugcrowd",
+    "handle": "metainfkft",
+    "name": "META-INF",
+    "url": "https://bugcrowd.com/engagements/metainfkft",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "7 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 7,
+    "min_bounty": null,
+    "max_bounty": 1500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-27T06:43:18Z",
+    "added_assets": []
+  },
+  {
+    "id": "bugcrowd:findout-infovis",
+    "platform": "bugcrowd",
+    "handle": "findout-infovis",
+    "name": "FindOut InfoVis AB - Marketplace Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/FindOut-infovis",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 80,
+    "reasons": [
+      "có bounty",
+      "1 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 1,
+    "min_bounty": null,
+    "max_bounty": 1500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-27T06:43:18Z",
+    "added_assets": []
+  },
+  {
+    "id": "bugcrowd:navarambh",
+    "platform": "bugcrowd",
+    "handle": "navarambh",
+    "name": "Navarambh",
+    "url": "https://bugcrowd.com/engagements/navarambh",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 80,
+    "reasons": [
+      "có bounty",
+      "1 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 1,
+    "min_bounty": null,
+    "max_bounty": 1500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-27T06:43:18Z",
+    "added_assets": []
+  },
+  {
     "id": "bugcrowd:aurory-mbb-og2",
     "platform": "bugcrowd",
     "handle": "aurory-mbb-og2",
@@ -444,6 +549,30 @@
     "added_assets": []
   },
   {
+    "id": "hackerone:visa",
+    "platform": "hackerone",
+    "handle": "visa",
+    "name": "Visa",
+    "url": "https://hackerone.com/visa",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "170 host/repo cụ thể",
+      "+1 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 170,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://ebctest.cybersource.com/vroom"
+    ]
+  },
+  {
     "id": "hackerone:toolsforhumanity",
     "platform": "hackerone",
     "handle": "toolsforhumanity",
@@ -877,126 +1006,6 @@
       "6 host/repo cụ thể"
     ],
     "concrete_count": 6,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:zooplus",
-    "platform": "hackerone",
-    "handle": "zooplus",
-    "name": "Zooplus",
-    "url": "https://hackerone.com/zooplus",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:newegg",
-    "platform": "hackerone",
-    "handle": "newegg",
-    "name": "Newegg",
-    "url": "https://hackerone.com/newegg",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:krisp",
-    "platform": "hackerone",
-    "handle": "krisp",
-    "name": "Krisp",
-    "url": "https://hackerone.com/krisp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "13 host/repo cụ thể"
-    ],
-    "concrete_count": 13,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:whatnot",
-    "platform": "hackerone",
-    "handle": "whatnot",
-    "name": "Whatnot",
-    "url": "https://hackerone.com/whatnot",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:smtp2go",
-    "platform": "hackerone",
-    "handle": "smtp2go",
-    "name": "SMTP2GO BBP",
-    "url": "https://hackerone.com/smtp2go",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:playtika",
-    "platform": "hackerone",
-    "handle": "playtika",
-    "name": "Playtika",
-    "url": "https://hackerone.com/playtika",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể"
-    ],
-    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

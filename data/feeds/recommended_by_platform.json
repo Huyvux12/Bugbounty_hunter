@@ -1,6 +1,111 @@
 {
   "bugcrowd": [
     {
+      "id": "bugcrowd:brizoit",
+      "platform": "bugcrowd",
+      "handle": "brizoit",
+      "name": "BrizoIT",
+      "url": "https://bugcrowd.com/engagements/brizoit",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 85,
+      "reasons": [
+        "có bounty",
+        "6 host/repo cụ thể",
+        "program mới"
+      ],
+      "concrete_count": 6,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-27T06:43:18Z",
+      "added_assets": []
+    },
+    {
+      "id": "bugcrowd:caelor-group-market",
+      "platform": "bugcrowd",
+      "handle": "caelor-group-market",
+      "name": "Caelor Group",
+      "url": "https://bugcrowd.com/engagements/caelor-group-market",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 85,
+      "reasons": [
+        "có bounty",
+        "13 host/repo cụ thể",
+        "program mới"
+      ],
+      "concrete_count": 13,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-27T06:43:18Z",
+      "added_assets": []
+    },
+    {
+      "id": "bugcrowd:metainfkft",
+      "platform": "bugcrowd",
+      "handle": "metainfkft",
+      "name": "META-INF",
+      "url": "https://bugcrowd.com/engagements/metainfkft",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 85,
+      "reasons": [
+        "có bounty",
+        "7 host/repo cụ thể",
+        "program mới"
+      ],
+      "concrete_count": 7,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-27T06:43:18Z",
+      "added_assets": []
+    },
+    {
+      "id": "bugcrowd:findout-infovis",
+      "platform": "bugcrowd",
+      "handle": "findout-infovis",
+      "name": "FindOut InfoVis AB - Marketplace Bug Bounty Program",
+      "url": "https://bugcrowd.com/engagements/FindOut-infovis",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 80,
+      "reasons": [
+        "có bounty",
+        "1 host/repo cụ thể",
+        "program mới"
+      ],
+      "concrete_count": 1,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-27T06:43:18Z",
+      "added_assets": []
+    },
+    {
+      "id": "bugcrowd:navarambh",
+      "platform": "bugcrowd",
+      "handle": "navarambh",
+      "name": "Navarambh",
+      "url": "https://bugcrowd.com/engagements/navarambh",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 80,
+      "reasons": [
+        "có bounty",
+        "1 host/repo cụ thể",
+        "program mới"
+      ],
+      "concrete_count": 1,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-27T06:43:18Z",
+      "added_assets": []
+    },
+    {
       "id": "bugcrowd:aurory-mbb-og2",
       "platform": "bugcrowd",
       "handle": "aurory-mbb-og2",
@@ -140,106 +245,6 @@
       "concrete_count": 9,
       "min_bounty": null,
       "max_bounty": 25000.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
-    },
-    {
-      "id": "bugcrowd:appliger",
-      "platform": "bugcrowd",
-      "handle": "appliger",
-      "name": "AppLiger",
-      "url": "https://bugcrowd.com/engagements/appliger",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "4 host/repo cụ thể"
-      ],
-      "concrete_count": 4,
-      "min_bounty": null,
-      "max_bounty": 1500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
-    },
-    {
-      "id": "bugcrowd:appsvio",
-      "platform": "bugcrowd",
-      "handle": "appsvio",
-      "name": "Appsvio Marketplace Bug Bounty",
-      "url": "https://bugcrowd.com/engagements/appsvio",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "4 host/repo cụ thể"
-      ],
-      "concrete_count": 4,
-      "min_bounty": null,
-      "max_bounty": 1500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
-    },
-    {
-      "id": "bugcrowd:arlo",
-      "platform": "bugcrowd",
-      "handle": "arlo",
-      "name": "Arlo Cash Rewards",
-      "url": "https://bugcrowd.com/engagements/arlo",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "7 host/repo cụ thể"
-      ],
-      "concrete_count": 7,
-      "min_bounty": null,
-      "max_bounty": 4500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
-    },
-    {
-      "id": "bugcrowd:asana",
-      "platform": "bugcrowd",
-      "handle": "asana",
-      "name": "Asana",
-      "url": "https://bugcrowd.com/engagements/asana",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "5 host/repo cụ thể"
-      ],
-      "concrete_count": 5,
-      "min_bounty": null,
-      "max_bounty": 6500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
-    },
-    {
-      "id": "bugcrowd:automationconsultants",
-      "platform": "bugcrowd",
-      "handle": "automationconsultants",
-      "name": "AppFox",
-      "url": "https://bugcrowd.com/engagements/automationconsultants",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "5 host/repo cụ thể"
-      ],
-      "concrete_count": 5,
-      "min_bounty": null,
-      "max_bounty": 1500.0,
       "currency": "USD",
       "first_seen": "2026-08-24T09:20:54Z",
       "added_assets": []

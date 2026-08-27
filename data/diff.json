@@ -1,7 +1,62 @@
 {
-  "added": [],
-  "removed": [],
+  "added": [
+    {
+      "id": "bugcrowd:findout-infovis",
+      "name": "FindOut InfoVis AB - Marketplace Bug Bounty Program",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/FindOut-infovis"
+    },
+    {
+      "id": "bugcrowd:brizoit",
+      "name": "BrizoIT",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/brizoit"
+    },
+    {
+      "id": "bugcrowd:caelor-group-market",
+      "name": "Caelor Group",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/caelor-group-market"
+    },
+    {
+      "id": "bugcrowd:metainfkft",
+      "name": "META-INF",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/metainfkft"
+    },
+    {
+      "id": "bugcrowd:navarambh",
+      "name": "Navarambh",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/navarambh"
+    }
+  ],
+  "removed": [
+    {
+      "id": "hackerone:adobe",
+      "name": "Adobe",
+      "platform": "hackerone"
+    },
+    {
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti"
+    }
+  ],
   "scope_changes": [
+    {
+      "id": "hackerone:visa",
+      "name": "Visa",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/visa",
+      "added": [
+        "https://ebctest.cybersource.com/vroom"
+      ],
+      "removed": [
+        "api.prod.innovexperiments.com",
+        "experience.prod.innovexperiments.com"
+      ]
+    },
     {
       "id": "bugcrowd:aurory-mbb-og2",
       "name": "Aurory Managed Bug Bounty Engagement (Public)",
