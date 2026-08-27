@@ -17,7 +17,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T06:43:18Z",
+    "first_seen": "2026-08-27T21:36:07Z",
     "added_assets": []
   },
   {
@@ -38,7 +38,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T06:43:18Z",
+    "first_seen": "2026-08-27T21:36:07Z",
     "added_assets": []
   },
   {
@@ -59,7 +59,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T06:43:18Z",
+    "first_seen": "2026-08-27T21:36:07Z",
     "added_assets": []
   },
   {
@@ -80,7 +80,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T06:43:18Z",
+    "first_seen": "2026-08-27T21:36:07Z",
     "added_assets": []
   },
   {
@@ -101,31 +101,31 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T06:43:18Z",
+    "first_seen": "2026-08-27T21:36:07Z",
     "added_assets": []
   },
   {
-    "id": "bugcrowd:aurory-mbb-og2",
-    "platform": "bugcrowd",
-    "handle": "aurory-mbb-og2",
-    "name": "Aurory Managed Bug Bounty Engagement (Public)",
-    "url": "https://bugcrowd.com/engagements/aurory-mbb-og2",
+    "id": "hackerone:matomo",
+    "platform": "hackerone",
+    "handle": "matomo",
+    "name": "Matomo",
+    "url": "https://hackerone.com/matomo",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 75,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể",
+      "9 host/repo cụ thể",
       "+2 asset"
     ],
-    "concrete_count": 3,
+    "concrete_count": 9,
     "min_bounty": null,
-    "max_bounty": 4500.0,
-    "currency": "USD",
+    "max_bounty": null,
+    "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "https://store.epicgames.com/p/amiko-arena-a5986d",
-      "https://store.steampowered.com/app/4245930/Amiko_Legends/"
+      "https://github.com/matomo-org/developer-documentation",
+      "https://github.com/matomo-org/tracker-proxy"
     ]
   },
   {

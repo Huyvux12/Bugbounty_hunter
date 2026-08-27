@@ -36,14 +36,26 @@
       "id": "hackerone:adobe",
       "name": "Adobe",
       "platform": "hackerone"
-    },
-    {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
-      "platform": "intigriti"
     }
   ],
   "scope_changes": [
+    {
+      "id": "hackerone:tbs-sct",
+      "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/tbs-sct",
+      "added": [
+        "api.login-connexion.canada.ca",
+        "api.migration.login-connexion.canada.ca",
+        "app.login-connexion.canada.ca",
+        "app.migration.login-connexion.canada.ca"
+      ],
+      "removed": [
+        "api.signin-connexion.canada.ca",
+        "app.signin-connexion.canada.ca",
+        "auth.signin-connexion.canada.ca"
+      ]
+    },
     {
       "id": "hackerone:visa",
       "name": "Visa",
@@ -52,23 +64,28 @@
       "added": [
         "https://ebctest.cybersource.com/vroom"
       ],
-      "removed": [
-        "api.prod.innovexperiments.com",
-        "experience.prod.innovexperiments.com"
-      ]
+      "removed": []
     },
     {
-      "id": "bugcrowd:aurory-mbb-og2",
-      "name": "Aurory Managed Bug Bounty Engagement (Public)",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/aurory-mbb-og2",
+      "id": "hackerone:john-deere",
+      "name": "John Deere",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/john-deere",
       "added": [
-        "https://store.epicgames.com/p/amiko-arena-a5986d",
-        "https://store.steampowered.com/app/4245930/Amiko_Legends/"
+        "ewmprioritypointexp.ghns-web-platform-prod-standalone4.us.e00.c01.johndeerecloud.com"
       ],
-      "removed": [
-        "https://store.epicgames.com/en-US/p/amiko-legends-a5986d"
-      ]
+      "removed": []
+    },
+    {
+      "id": "hackerone:matomo",
+      "name": "Matomo",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/matomo",
+      "added": [
+        "https://github.com/matomo-org/developer-documentation",
+        "https://github.com/matomo-org/tracker-proxy"
+      ],
+      "removed": []
     }
   ]
 }
