@@ -1,27 +1,23 @@
 [
   {
-    "id": "hackerone:matomo",
+    "id": "hackerone:wolt",
     "platform": "hackerone",
-    "handle": "matomo",
-    "name": "Matomo",
-    "url": "https://hackerone.com/matomo",
+    "handle": "wolt",
+    "name": "Wolt",
+    "url": "https://hackerone.com/wolt",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 75,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "9 host/repo cụ thể",
-      "+2 asset"
+      "7 host/repo cụ thể"
     ],
-    "concrete_count": 9,
+    "concrete_count": 7,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "https://github.com/matomo-org/developer-documentation",
-      "https://github.com/matomo-org/tracker-proxy"
-    ]
+    "added_assets": []
   },
   {
     "id": "bugcrowd:jaangainc-mbb-market",
@@ -84,19 +80,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:wolt",
+    "id": "hackerone:1win_com",
     "platform": "hackerone",
-    "handle": "wolt",
-    "name": "Wolt",
-    "url": "https://hackerone.com/wolt",
+    "handle": "1win_com",
+    "name": "1win",
+    "url": "https://hackerone.com/1win_com",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể"
+      "5 host/repo cụ thể"
     ],
-    "concrete_count": 7,
+    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -164,19 +160,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:1win_com",
+    "id": "hackerone:meesho_bbp",
     "platform": "hackerone",
-    "handle": "1win_com",
-    "name": "1win",
-    "url": "https://hackerone.com/1win_com",
+    "handle": "meesho_bbp",
+    "name": "Meesho",
+    "url": "https://hackerone.com/meesho_bbp",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể"
+      "9 host/repo cụ thể"
     ],
-    "concrete_count": 5,
+    "concrete_count": 9,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -244,19 +240,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:meesho_bbp",
+    "id": "hackerone:braze_inc",
     "platform": "hackerone",
-    "handle": "meesho_bbp",
-    "name": "Meesho",
-    "url": "https://hackerone.com/meesho_bbp",
+    "handle": "braze_inc",
+    "name": "Braze, Inc.",
+    "url": "https://hackerone.com/braze_inc",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "9 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 9,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -324,19 +320,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:braze_inc",
+    "id": "hackerone:kong",
     "platform": "hackerone",
-    "handle": "braze_inc",
-    "name": "Braze, Inc.",
-    "url": "https://hackerone.com/braze_inc",
+    "handle": "kong",
+    "name": "Kong",
+    "url": "https://hackerone.com/kong",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 3,
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -404,11 +400,11 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:kong",
+    "id": "hackerone:whoop_bug_bounty",
     "platform": "hackerone",
-    "handle": "kong",
-    "name": "Kong",
-    "url": "https://hackerone.com/kong",
+    "handle": "whoop_bug_bounty",
+    "name": "Whoop Bug Bounty",
+    "url": "https://hackerone.com/whoop_bug_bounty",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,

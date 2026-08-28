@@ -1,29 +1,5 @@
 [
   {
-    "id": "hackerone:matomo",
-    "platform": "hackerone",
-    "handle": "matomo",
-    "name": "Matomo",
-    "url": "https://hackerone.com/matomo",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "9 host/repo cụ thể",
-      "+2 asset"
-    ],
-    "concrete_count": 9,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "https://github.com/matomo-org/developer-documentation",
-      "https://github.com/matomo-org/tracker-proxy"
-    ]
-  },
-  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -997,6 +973,26 @@
       "5 host/repo cụ thể"
     ],
     "concrete_count": 5,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:trendyol",
+    "platform": "hackerone",
+    "handle": "trendyol",
+    "name": "Trendyol",
+    "url": "https://hackerone.com/trendyol",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

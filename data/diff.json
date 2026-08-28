@@ -2,6 +2,11 @@
   "added": [],
   "removed": [
     {
+      "id": "intigriti:truelayer",
+      "name": "TrueLayer",
+      "platform": "intigriti"
+    },
+    {
       "id": "intigriti:wpenginebugbounty",
       "name": "WP Engine Bug Bounty",
       "platform": "intigriti"
@@ -9,40 +14,22 @@
   ],
   "scope_changes": [
     {
-      "id": "hackerone:tbs-sct",
-      "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/tbs-sct",
-      "added": [
-        "api.login-connexion.canada.ca",
-        "api.migration.login-connexion.canada.ca",
-        "app.login-connexion.canada.ca",
-        "app.migration.login-connexion.canada.ca"
-      ],
-      "removed": [
-        "api.signin-connexion.canada.ca",
-        "app.signin-connexion.canada.ca",
-        "auth.signin-connexion.canada.ca"
-      ]
-    },
-    {
       "id": "hackerone:john-deere",
       "name": "John Deere",
       "platform": "hackerone",
       "url": "https://hackerone.com/john-deere",
       "added": [
-        "ewmprioritypointexp.ghns-web-platform-prod-standalone4.us.e00.c01.johndeerecloud.com"
+        "opsinsight.deere.com"
       ],
       "removed": []
     },
     {
-      "id": "hackerone:matomo",
-      "name": "Matomo",
+      "id": "hackerone:security",
+      "name": "HackerOne",
       "platform": "hackerone",
-      "url": "https://hackerone.com/matomo",
+      "url": "https://hackerone.com/security",
       "added": [
-        "https://github.com/matomo-org/developer-documentation",
-        "https://github.com/matomo-org/tracker-proxy"
+        "https://hackerone.com/mcp"
       ],
       "removed": []
     }

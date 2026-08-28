@@ -9,66 +9,41 @@
     "status": "open",
     "easy_score": 35,
     "reasons": [
-      "1990 host/repo cụ thể",
+      "1991 host/repo cụ thể",
       "+1 asset",
       "scope rộng"
     ],
-    "concrete_count": 1990,
+    "concrete_count": 1991,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "ewmprioritypointexp.ghns-web-platform-prod-standalone4.us.e00.c01.johndeerecloud.com"
+      "opsinsight.deere.com"
     ]
   },
   {
-    "id": "hackerone:tbs-sct",
+    "id": "hackerone:security",
     "platform": "hackerone",
-    "handle": "tbs-sct",
-    "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
-    "url": "https://hackerone.com/tbs-sct",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 50,
-    "reasons": [
-      "13 host/repo cụ thể",
-      "+4 asset"
-    ],
-    "concrete_count": 13,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "api.login-connexion.canada.ca",
-      "api.migration.login-connexion.canada.ca",
-      "app.login-connexion.canada.ca",
-      "app.migration.login-connexion.canada.ca"
-    ]
-  },
-  {
-    "id": "hackerone:matomo",
-    "platform": "hackerone",
-    "handle": "matomo",
-    "name": "Matomo",
-    "url": "https://hackerone.com/matomo",
+    "handle": "security",
+    "name": "HackerOne",
+    "url": "https://hackerone.com/security",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 75,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "9 host/repo cụ thể",
-      "+2 asset"
+      "23 host/repo cụ thể",
+      "+1 asset",
+      "scope rộng"
     ],
-    "concrete_count": 9,
+    "concrete_count": 23,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "https://github.com/matomo-org/developer-documentation",
-      "https://github.com/matomo-org/tracker-proxy"
+      "https://hackerone.com/mcp"
     ]
   }
 ]
