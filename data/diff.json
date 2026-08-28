@@ -1,41 +1,10 @@
 {
-  "added": [
-    {
-      "id": "bugcrowd:findout-infovis",
-      "name": "FindOut InfoVis AB - Marketplace Bug Bounty Program",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/FindOut-infovis"
-    },
-    {
-      "id": "bugcrowd:brizoit",
-      "name": "BrizoIT",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/brizoit"
-    },
-    {
-      "id": "bugcrowd:caelor-group-market",
-      "name": "Caelor Group",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/caelor-group-market"
-    },
-    {
-      "id": "bugcrowd:metainfkft",
-      "name": "META-INF",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/metainfkft"
-    },
-    {
-      "id": "bugcrowd:navarambh",
-      "name": "Navarambh",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/navarambh"
-    }
-  ],
+  "added": [],
   "removed": [
     {
-      "id": "hackerone:adobe",
-      "name": "Adobe",
-      "platform": "hackerone"
+      "id": "intigriti:wpenginebugbounty",
+      "name": "WP Engine Bug Bounty",
+      "platform": "intigriti"
     }
   ],
   "scope_changes": [
@@ -55,16 +24,6 @@
         "app.signin-connexion.canada.ca",
         "auth.signin-connexion.canada.ca"
       ]
-    },
-    {
-      "id": "hackerone:visa",
-      "name": "Visa",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/visa",
-      "added": [
-        "https://ebctest.cybersource.com/vroom"
-      ],
-      "removed": []
     },
     {
       "id": "hackerone:john-deere",

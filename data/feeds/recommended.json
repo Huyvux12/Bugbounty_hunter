@@ -24,24 +24,23 @@
     ]
   },
   {
-    "id": "bugcrowd:brizoit",
+    "id": "bugcrowd:jaangainc-mbb-market",
     "platform": "bugcrowd",
-    "handle": "brizoit",
-    "name": "BrizoIT",
-    "url": "https://bugcrowd.com/engagements/brizoit",
+    "handle": "jaangainc-mbb-market",
+    "name": "Jaanga Marketplace Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể",
-      "program mới"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 6,
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T21:36:07Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
   {
@@ -105,24 +104,23 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:caelor-group-market",
+    "id": "bugcrowd:acorns",
     "platform": "bugcrowd",
-    "handle": "caelor-group-market",
-    "name": "Caelor Group",
-    "url": "https://bugcrowd.com/engagements/caelor-group-market",
+    "handle": "acorns",
+    "name": "Acorns Grow, Inc.",
+    "url": "https://bugcrowd.com/engagements/acorns",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "13 host/repo cụ thể",
-      "program mới"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 13,
+    "concrete_count": 4,
     "min_bounty": null,
-    "max_bounty": 1500.0,
+    "max_bounty": 4000.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T21:36:07Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
   {
@@ -186,24 +184,23 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:metainfkft",
+    "id": "bugcrowd:afterpay",
     "platform": "bugcrowd",
-    "handle": "metainfkft",
-    "name": "META-INF",
-    "url": "https://bugcrowd.com/engagements/metainfkft",
+    "handle": "afterpay",
+    "name": "Afterpay Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/afterpay",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể",
-      "program mới"
+      "12 host/repo cụ thể"
     ],
-    "concrete_count": 7,
+    "concrete_count": 12,
     "min_bounty": null,
-    "max_bounty": 1500.0,
+    "max_bounty": 5000.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T21:36:07Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
   {
@@ -267,24 +264,23 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:findout-infovis",
+    "id": "bugcrowd:agile-pulse",
     "platform": "bugcrowd",
-    "handle": "findout-infovis",
-    "name": "FindOut InfoVis AB - Marketplace Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/FindOut-infovis",
+    "handle": "agile-pulse",
+    "name": "AgilePulse Marketplace Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/agile-pulse",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 80,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
+      "8 host/repo cụ thể"
     ],
-    "concrete_count": 1,
+    "concrete_count": 8,
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T21:36:07Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
   {
@@ -348,24 +344,23 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:navarambh",
+    "id": "bugcrowd:agilislt",
     "platform": "bugcrowd",
-    "handle": "navarambh",
-    "name": "Navarambh",
-    "url": "https://bugcrowd.com/engagements/navarambh",
+    "handle": "agilislt",
+    "name": "Agilis LT Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/agilislt",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 80,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
+      "9 host/repo cụ thể"
     ],
-    "concrete_count": 1,
+    "concrete_count": 9,
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-27T21:36:07Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
   {
@@ -429,21 +424,21 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:jaangainc-mbb-market",
+    "id": "bugcrowd:aiven-mbb-og",
     "platform": "bugcrowd",
-    "handle": "jaangainc-mbb-market",
-    "name": "Jaanga Marketplace Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
+    "handle": "aiven-mbb-og",
+    "name": "Aiven Managed Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "9 host/repo cụ thể"
     ],
-    "concrete_count": 4,
+    "concrete_count": 9,
     "min_bounty": null,
-    "max_bounty": 1500.0,
+    "max_bounty": 25000.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
