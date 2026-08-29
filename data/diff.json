@@ -1,16 +1,5 @@
 {
   "added": [],
-  "removed": [
-    {
-      "id": "hackerone:brave",
-      "name": "Brave Software",
-      "platform": "hackerone"
-    },
-    {
-      "id": "intigriti:yahoobugbounty",
-      "name": "Yahoo Bug Bounty",
-      "platform": "intigriti"
-    }
-  ],
+  "removed": [],
   "scope_changes": []
 }
