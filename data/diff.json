@@ -2,13 +2,18 @@
   "added": [],
   "removed": [
     {
+      "id": "hackerone:brave",
+      "name": "Brave Software",
+      "platform": "hackerone"
+    },
+    {
       "id": "intigriti:truelayer",
       "name": "TrueLayer",
       "platform": "intigriti"
     },
     {
-      "id": "intigriti:wpenginebugbounty",
-      "name": "WP Engine Bug Bounty",
+      "id": "intigriti:yahoobugbounty",
+      "name": "Yahoo Bug Bounty",
       "platform": "intigriti"
     }
   ],
