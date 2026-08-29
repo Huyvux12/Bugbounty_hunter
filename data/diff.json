@@ -7,36 +7,10 @@
       "platform": "hackerone"
     },
     {
-      "id": "intigriti:truelayer",
-      "name": "TrueLayer",
-      "platform": "intigriti"
-    },
-    {
       "id": "intigriti:yahoobugbounty",
       "name": "Yahoo Bug Bounty",
       "platform": "intigriti"
     }
   ],
-  "scope_changes": [
-    {
-      "id": "hackerone:john-deere",
-      "name": "John Deere",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/john-deere",
-      "added": [
-        "opsinsight.deere.com"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:security",
-      "name": "HackerOne",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/security",
-      "added": [
-        "https://hackerone.com/mcp"
-      ],
-      "removed": []
-    }
-  ]
+  "scope_changes": []
 }
