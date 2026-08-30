@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "id": "bugcrowd:canva",
+    "platform": "bugcrowd",
+    "handle": "canva",
+    "name": "Canva",
+    "url": "https://bugcrowd.com/engagements/canva",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "5 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 5,
+    "min_bounty": null,
+    "max_bounty": 15000.0,
+    "currency": "USD",
+    "first_seen": "2026-08-30T15:53:09Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:8x8-bounty",
+    "platform": "hackerone",
+    "handle": "8x8-bounty",
+    "name": "8x8",
+    "url": "https://hackerone.com/8x8-bounty",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "43 host/repo cụ thể",
+      "+5 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 43,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "*.8x8.cloud",
+      "*.8x8.engineering",
+      "*.mavenlab.com",
+      "*.moobicast.com",
+      "*.moobidesk.com"
+    ]
+  }
+]

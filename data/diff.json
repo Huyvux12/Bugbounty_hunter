@@ -1,21 +1,35 @@
 {
-  "added": [],
-  "removed": [
+  "added": [
     {
-      "id": "bugcrowd:sky-plc-mbb-og",
-      "name": "Sky UK/ROI Vulnerability Disclosure Program",
-      "platform": "bugcrowd"
-    },
+      "id": "bugcrowd:canva",
+      "name": "Canva",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/canva"
+    }
+  ],
+  "removed": [
     {
       "id": "intigriti:ninjakiwigames",
       "name": "Ninja Kiwi Games Bug Bounty program",
       "platform": "intigriti"
-    },
-    {
-      "id": "intigriti:privatebankdelen",
-      "name": "Delen Private Bank",
-      "platform": "intigriti"
     }
   ],
-  "scope_changes": []
+  "scope_changes": [
+    {
+      "id": "hackerone:8x8-bounty",
+      "name": "8x8",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/8x8-bounty",
+      "added": [
+        "*.8x8.cloud",
+        "*.8x8.engineering",
+        "*.mavenlab.com",
+        "*.moobicast.com",
+        "*.moobidesk.com"
+      ],
+      "removed": [
+        "8x8.cloud"
+      ]
+    }
+  ]
 }
