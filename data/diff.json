@@ -2,9 +2,14 @@
   "added": [],
   "removed": [
     {
-      "id": "bugcrowd:canva",
-      "name": "Canva",
+      "id": "bugcrowd:sky-plc-mbb-og",
+      "name": "Sky UK/ROI Vulnerability Disclosure Program",
       "platform": "bugcrowd"
+    },
+    {
+      "id": "intigriti:ninjakiwigames",
+      "name": "Ninja Kiwi Games Bug Bounty program",
+      "platform": "intigriti"
     },
     {
       "id": "intigriti:privatebankdelen",
