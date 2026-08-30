@@ -20,24 +20,24 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:canva",
+    "id": "bugcrowd:sky-plc-mbb-og",
     "platform": "bugcrowd",
-    "handle": "canva",
-    "name": "Canva",
-    "url": "https://bugcrowd.com/engagements/canva",
+    "handle": "sky-plc-mbb-og",
+    "name": "Sky UK/ROI Vulnerability Disclosure Program",
+    "url": "https://bugcrowd.com/engagements/sky-plc-mbb-og",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 80,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể",
+      "1 host/repo cụ thể",
       "program mới"
     ],
-    "concrete_count": 5,
+    "concrete_count": 1,
     "min_bounty": null,
-    "max_bounty": 15000.0,
+    "max_bounty": 1000.0,
     "currency": "USD",
-    "first_seen": "2026-08-30T15:53:09Z",
+    "first_seen": "2026-08-30T20:24:08Z",
     "added_assets": []
   },
   {

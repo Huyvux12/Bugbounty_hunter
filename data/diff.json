@@ -1,17 +1,17 @@
 {
   "added": [
     {
-      "id": "bugcrowd:canva",
-      "name": "Canva",
+      "id": "bugcrowd:sky-plc-mbb-og",
+      "name": "Sky UK/ROI Vulnerability Disclosure Program",
       "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/canva"
+      "url": "https://bugcrowd.com/engagements/sky-plc-mbb-og"
     }
   ],
   "removed": [
     {
-      "id": "intigriti:ninjakiwigames",
-      "name": "Ninja Kiwi Games Bug Bounty program",
-      "platform": "intigriti"
+      "id": "bugcrowd:requirement-yogi",
+      "name": "Requirement Yogi (Bug bounty)",
+      "platform": "bugcrowd"
     }
   ],
   "scope_changes": [
@@ -25,7 +25,8 @@
         "*.8x8.engineering",
         "*.mavenlab.com",
         "*.moobicast.com",
-        "*.moobidesk.com"
+        "*.moobidesk.com",
+        "bridge.8x8.com"
       ],
       "removed": [
         "8x8.cloud"
