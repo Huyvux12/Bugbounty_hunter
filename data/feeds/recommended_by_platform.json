@@ -665,26 +665,6 @@
       "added_assets": []
     },
     {
-      "id": "intigriti:privatebankdelen",
-      "platform": "intigriti",
-      "handle": "privatebankdelen",
-      "name": "Delen Private Bank",
-      "url": "https://www.intigriti.com/programs/delenprivatebank/privatebankdelen/detail",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "17 host/repo cụ thể"
-      ],
-      "concrete_count": 17,
-      "min_bounty": 100.0,
-      "max_bounty": 15000.0,
-      "currency": "EUR",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
-    },
-    {
       "id": "intigriti:digitalocean",
       "platform": "intigriti",
       "handle": "digitalocean",
@@ -721,6 +701,26 @@
       "min_bounty": 100.0,
       "max_bounty": 15000.0,
       "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": []
+    },
+    {
+      "id": "intigriti:dstnybugbounty",
+      "platform": "intigriti",
+      "handle": "dstnybugbounty",
+      "name": "Dstny",
+      "url": "https://www.intigriti.com/programs/dstny/dstnybugbounty/detail",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "4 host/repo cụ thể"
+      ],
+      "concrete_count": 4,
+      "min_bounty": 0.0,
+      "max_bounty": 1697.0,
+      "currency": "EUR",
       "first_seen": "2026-08-24T09:20:54Z",
       "added_assets": []
     }

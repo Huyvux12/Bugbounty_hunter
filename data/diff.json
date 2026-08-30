@@ -1,5 +1,16 @@
 {
   "added": [],
-  "removed": [],
+  "removed": [
+    {
+      "id": "bugcrowd:canva",
+      "name": "Canva",
+      "platform": "bugcrowd"
+    },
+    {
+      "id": "intigriti:privatebankdelen",
+      "name": "Delen Private Bank",
+      "platform": "intigriti"
+    }
+  ],
   "scope_changes": []
 }
