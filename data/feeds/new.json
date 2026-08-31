@@ -1,26 +1,5 @@
 [
   {
-    "id": "bugcrowd:sky-plc-mbb-og",
-    "platform": "bugcrowd",
-    "handle": "sky-plc-mbb-og",
-    "name": "Sky UK/ROI Vulnerability Disclosure Program",
-    "url": "https://bugcrowd.com/engagements/sky-plc-mbb-og",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 1000.0,
-    "currency": "USD",
-    "first_seen": "2026-08-30T20:24:08Z",
-    "added_assets": []
-  },
-  {
     "id": "hackerone:8x8-bounty",
     "platform": "hackerone",
     "handle": "8x8-bounty",
@@ -32,7 +11,7 @@
     "reasons": [
       "có bounty",
       "44 host/repo cụ thể",
-      "+6 asset",
+      "+1 asset",
       "scope rộng"
     ],
     "concrete_count": 44,
@@ -41,11 +20,6 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "*.8x8.cloud",
-      "*.8x8.engineering",
-      "*.mavenlab.com",
-      "*.moobicast.com",
-      "*.moobidesk.com",
       "bridge.8x8.com"
     ]
   }

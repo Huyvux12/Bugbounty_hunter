@@ -1,17 +1,10 @@
 {
-  "added": [
-    {
-      "id": "bugcrowd:sky-plc-mbb-og",
-      "name": "Sky UK/ROI Vulnerability Disclosure Program",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/sky-plc-mbb-og"
-    }
-  ],
+  "added": [],
   "removed": [
     {
-      "id": "bugcrowd:requirement-yogi",
-      "name": "Requirement Yogi (Bug bounty)",
-      "platform": "bugcrowd"
+      "id": "intigriti:skodaautoprivatebugbountyprogram",
+      "name": "Skoda Auto Bug Bounty Program",
+      "platform": "intigriti"
     }
   ],
   "scope_changes": [
@@ -21,16 +14,9 @@
       "platform": "hackerone",
       "url": "https://hackerone.com/8x8-bounty",
       "added": [
-        "*.8x8.cloud",
-        "*.8x8.engineering",
-        "*.mavenlab.com",
-        "*.moobicast.com",
-        "*.moobidesk.com",
         "bridge.8x8.com"
       ],
-      "removed": [
-        "8x8.cloud"
-      ]
+      "removed": []
     }
   ]
 }

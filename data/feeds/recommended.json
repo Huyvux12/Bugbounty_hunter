@@ -20,24 +20,23 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:sky-plc-mbb-og",
+    "id": "bugcrowd:jaangainc-mbb-market",
     "platform": "bugcrowd",
-    "handle": "sky-plc-mbb-og",
-    "name": "Sky UK/ROI Vulnerability Disclosure Program",
-    "url": "https://bugcrowd.com/engagements/sky-plc-mbb-og",
+    "handle": "jaangainc-mbb-market",
+    "name": "Jaanga Marketplace Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 80,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 1,
+    "concrete_count": 4,
     "min_bounty": null,
-    "max_bounty": 1000.0,
+    "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-30T20:24:08Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
   {
@@ -101,11 +100,11 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:jaangainc-mbb-market",
+    "id": "bugcrowd:acorns",
     "platform": "bugcrowd",
-    "handle": "jaangainc-mbb-market",
-    "name": "Jaanga Marketplace Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
+    "handle": "acorns",
+    "name": "Acorns Grow, Inc.",
+    "url": "https://bugcrowd.com/engagements/acorns",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
@@ -115,7 +114,7 @@
     ],
     "concrete_count": 4,
     "min_bounty": null,
-    "max_bounty": 1500.0,
+    "max_bounty": 4000.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -181,21 +180,21 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:acorns",
+    "id": "bugcrowd:afterpay",
     "platform": "bugcrowd",
-    "handle": "acorns",
-    "name": "Acorns Grow, Inc.",
-    "url": "https://bugcrowd.com/engagements/acorns",
+    "handle": "afterpay",
+    "name": "Afterpay Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/afterpay",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "12 host/repo cụ thể"
     ],
-    "concrete_count": 4,
+    "concrete_count": 12,
     "min_bounty": null,
-    "max_bounty": 4000.0,
+    "max_bounty": 5000.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -261,21 +260,21 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:afterpay",
+    "id": "bugcrowd:agile-pulse",
     "platform": "bugcrowd",
-    "handle": "afterpay",
-    "name": "Afterpay Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/afterpay",
+    "handle": "agile-pulse",
+    "name": "AgilePulse Marketplace Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/agile-pulse",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể"
+      "8 host/repo cụ thể"
     ],
-    "concrete_count": 12,
+    "concrete_count": 8,
     "min_bounty": null,
-    "max_bounty": 5000.0,
+    "max_bounty": 1500.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -341,19 +340,19 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:agile-pulse",
+    "id": "bugcrowd:agilislt",
     "platform": "bugcrowd",
-    "handle": "agile-pulse",
-    "name": "AgilePulse Marketplace Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/agile-pulse",
+    "handle": "agilislt",
+    "name": "Agilis LT Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/agilislt",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "8 host/repo cụ thể"
+      "9 host/repo cụ thể"
     ],
-    "concrete_count": 8,
+    "concrete_count": 9,
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
@@ -421,11 +420,11 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:agilislt",
+    "id": "bugcrowd:aiven-mbb-og",
     "platform": "bugcrowd",
-    "handle": "agilislt",
-    "name": "Agilis LT Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/agilislt",
+    "handle": "aiven-mbb-og",
+    "name": "Aiven Managed Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
@@ -435,7 +434,7 @@
     ],
     "concrete_count": 9,
     "min_bounty": null,
-    "max_bounty": 1500.0,
+    "max_bounty": 25000.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []

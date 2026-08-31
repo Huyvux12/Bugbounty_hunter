@@ -1,26 +1,5 @@
 [
   {
-    "id": "bugcrowd:sky-plc-mbb-og",
-    "platform": "bugcrowd",
-    "handle": "sky-plc-mbb-og",
-    "name": "Sky UK/ROI Vulnerability Disclosure Program",
-    "url": "https://bugcrowd.com/engagements/sky-plc-mbb-og",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 1000.0,
-    "currency": "USD",
-    "first_seen": "2026-08-30T20:24:08Z",
-    "added_assets": []
-  },
-  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -994,6 +973,26 @@
       "5 host/repo cụ thể"
     ],
     "concrete_count": 5,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:trendyol",
+    "platform": "hackerone",
+    "handle": "trendyol",
+    "name": "Trendyol",
+    "url": "https://hackerone.com/trendyol",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
