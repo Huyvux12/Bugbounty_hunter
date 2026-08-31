@@ -1,5 +1,133 @@
 [
   {
+    "id": "bugcrowd:requirement-yogi",
+    "platform": "bugcrowd",
+    "handle": "requirement-yogi",
+    "name": "Requirement Yogi (Bug bounty)",
+    "url": "https://bugcrowd.com/engagements/requirement-yogi",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "9 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 9,
+    "min_bounty": null,
+    "max_bounty": 1500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-31T12:26:19Z",
+    "added_assets": []
+  },
+  {
+    "id": "intigriti:privatebankdelen",
+    "platform": "intigriti",
+    "handle": "privatebankdelen",
+    "name": "Delen Private Bank",
+    "url": "https://www.intigriti.com/programs/delenprivatebank/privatebankdelen/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "17 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 17,
+    "min_bounty": 100.0,
+    "max_bounty": 15000.0,
+    "currency": "EUR",
+    "first_seen": "2026-08-31T12:26:19Z",
+    "added_assets": []
+  },
+  {
+    "id": "intigriti:wpenginebugbounty",
+    "platform": "intigriti",
+    "handle": "wpenginebugbounty",
+    "name": "WP Engine Bug Bounty",
+    "url": "https://www.intigriti.com/programs/wpengine/wpenginebugbounty/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "9 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 9,
+    "min_bounty": 0.0,
+    "max_bounty": 2500.0,
+    "currency": "EUR",
+    "first_seen": "2026-08-31T12:26:19Z",
+    "added_assets": []
+  },
+  {
+    "id": "intigriti:yahoobugbounty",
+    "platform": "intigriti",
+    "handle": "yahoobugbounty",
+    "name": "Yahoo Bug Bounty",
+    "url": "https://www.intigriti.com/programs/yahoo/yahoobugbounty/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "5 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 5,
+    "min_bounty": 100.0,
+    "max_bounty": 15000.0,
+    "currency": "USD",
+    "first_seen": "2026-08-31T12:26:19Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:zabbix",
+    "platform": "hackerone",
+    "handle": "zabbix",
+    "name": "Zabbix",
+    "url": "https://hackerone.com/zabbix",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 80,
+    "reasons": [
+      "có bounty",
+      "1 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 1,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-31T12:26:19Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:okg",
+    "platform": "hackerone",
+    "handle": "okg",
+    "name": "OKG",
+    "url": "https://hackerone.com/okg",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 70,
+    "reasons": [
+      "có bounty",
+      "1 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 1,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://github.com/okx/go-wallet-sdk"
+    ]
+  },
+  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -418,6 +546,31 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
+  },
+  {
+    "id": "hackerone:visa",
+    "platform": "hackerone",
+    "handle": "visa",
+    "name": "Visa",
+    "url": "https://hackerone.com/visa",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "172 host/repo cụ thể",
+      "+2 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 172,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "developer.plus.authorize.net",
+      "sandbox.developer.plus.authorize.net"
+    ]
   },
   {
     "id": "hackerone:toolsforhumanity",
@@ -853,146 +1006,6 @@
       "6 host/repo cụ thể"
     ],
     "concrete_count": 6,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:zooplus",
-    "platform": "hackerone",
-    "handle": "zooplus",
-    "name": "Zooplus",
-    "url": "https://hackerone.com/zooplus",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:newegg",
-    "platform": "hackerone",
-    "handle": "newegg",
-    "name": "Newegg",
-    "url": "https://hackerone.com/newegg",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:krisp",
-    "platform": "hackerone",
-    "handle": "krisp",
-    "name": "Krisp",
-    "url": "https://hackerone.com/krisp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "13 host/repo cụ thể"
-    ],
-    "concrete_count": 13,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:whatnot",
-    "platform": "hackerone",
-    "handle": "whatnot",
-    "name": "Whatnot",
-    "url": "https://hackerone.com/whatnot",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:smtp2go",
-    "platform": "hackerone",
-    "handle": "smtp2go",
-    "name": "SMTP2GO BBP",
-    "url": "https://hackerone.com/smtp2go",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:playtika",
-    "platform": "hackerone",
-    "handle": "playtika",
-    "name": "Playtika",
-    "url": "https://hackerone.com/playtika",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể"
-    ],
-    "concrete_count": 5,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:trendyol",
-    "platform": "hackerone",
-    "handle": "trendyol",
-    "name": "Trendyol",
-    "url": "https://hackerone.com/trendyol",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

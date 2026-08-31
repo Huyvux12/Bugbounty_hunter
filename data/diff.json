@@ -1,20 +1,84 @@
 {
-  "added": [],
+  "added": [
+    {
+      "id": "hackerone:zabbix",
+      "name": "Zabbix",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/zabbix"
+    },
+    {
+      "id": "bugcrowd:requirement-yogi",
+      "name": "Requirement Yogi (Bug bounty)",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/requirement-yogi"
+    },
+    {
+      "id": "intigriti:privatebankdelen",
+      "name": "Delen Private Bank",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/delenprivatebank/privatebankdelen/detail"
+    },
+    {
+      "id": "intigriti:wpenginebugbounty",
+      "name": "WP Engine Bug Bounty",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/wpengine/wpenginebugbounty/detail"
+    },
+    {
+      "id": "intigriti:yahoobugbounty",
+      "name": "Yahoo Bug Bounty",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/yahoo/yahoobugbounty/detail"
+    }
+  ],
   "removed": [
     {
-      "id": "intigriti:skodaautoprivatebugbountyprogram",
-      "name": "Skoda Auto Bug Bounty Program",
+      "id": "hackerone:stellar",
+      "name": "Stellar.org",
+      "platform": "hackerone"
+    },
+    {
+      "id": "intigriti:monzopublicbugbountyprogram",
+      "name": "Monzo Public Bug Bounty Program",
       "platform": "intigriti"
     }
   ],
   "scope_changes": [
     {
-      "id": "hackerone:8x8-bounty",
-      "name": "8x8",
+      "id": "hackerone:visa",
+      "name": "Visa",
       "platform": "hackerone",
-      "url": "https://hackerone.com/8x8-bounty",
+      "url": "https://hackerone.com/visa",
       "added": [
-        "bridge.8x8.com"
+        "developer.plus.authorize.net",
+        "sandbox.developer.plus.authorize.net"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:okg",
+      "name": "OKG",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/okg",
+      "added": [
+        "https://github.com/okx/go-wallet-sdk"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:kkr_vdp",
+      "name": "KKR-VDP",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/kkr_vdp",
+      "added": [
+        "*.gafg.com",
+        "*.globalatlantic.com",
+        "acrtosnorthstar.com",
+        "amarokcapital.com",
+        "amarokpartners.com",
+        "arctosanalytics.com",
+        "arctoscredit.com",
+        "arctosgp.com"
       ],
       "removed": []
     }
