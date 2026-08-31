@@ -7,16 +7,22 @@
       "url": "https://hackerone.com/zabbix"
     },
     {
-      "id": "bugcrowd:requirement-yogi",
-      "name": "Requirement Yogi (Bug bounty)",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/requirement-yogi"
+      "id": "hackerone:brave",
+      "name": "Brave Software",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/brave"
     },
     {
       "id": "intigriti:privatebankdelen",
       "name": "Delen Private Bank",
       "platform": "intigriti",
       "url": "https://www.intigriti.com/programs/delenprivatebank/privatebankdelen/detail"
+    },
+    {
+      "id": "intigriti:skodaautoprivatebugbountyprogram",
+      "name": "Skoda Auto Bug Bounty Program",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/skodaauto/skodaautoprivatebugbountyprogram/detail"
     },
     {
       "id": "intigriti:wpenginebugbounty",
@@ -33,17 +39,34 @@
   ],
   "removed": [
     {
+      "id": "bugcrowd:afterpay",
+      "name": "Afterpay Bug Bounty Program",
+      "platform": "bugcrowd"
+    },
+    {
       "id": "hackerone:stellar",
       "name": "Stellar.org",
       "platform": "hackerone"
-    },
-    {
-      "id": "intigriti:monzopublicbugbountyprogram",
-      "name": "Monzo Public Bug Bounty Program",
-      "platform": "intigriti"
     }
   ],
   "scope_changes": [
+    {
+      "id": "hackerone:nba-public",
+      "name": "NBA Public Bug Bounty",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/nba-public",
+      "added": [
+        "data-test.nba.com",
+        "dwhreports.nba.com",
+        "gldatacenter.nba.com",
+        "hoop.nba.com",
+        "nbatickets-dev.nba.com",
+        "nbatickets-qa.nba.com",
+        "nbatickets.nba.com",
+        "nbavideo.nba.com"
+      ],
+      "removed": []
+    },
     {
       "id": "hackerone:visa",
       "name": "Visa",
@@ -53,7 +76,9 @@
         "developer.plus.authorize.net",
         "sandbox.developer.plus.authorize.net"
       ],
-      "removed": []
+      "removed": [
+        "info.cybersource.com"
+      ]
     },
     {
       "id": "hackerone:okg",
@@ -79,6 +104,18 @@
         "arctosanalytics.com",
         "arctoscredit.com",
         "arctosgp.com"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:john-deere",
+      "name": "John Deere",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/john-deere",
+      "added": [
+        "cr-platform-devl.supplymgmt-compliance-risk-devl-vpn2.us.e15.c01.johndeerecloud.com",
+        "qual.r2visitorservices.deere.com",
+        "service.deere.com"
       ],
       "removed": []
     }

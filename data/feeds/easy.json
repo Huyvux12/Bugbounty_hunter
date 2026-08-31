@@ -1,26 +1,5 @@
 [
   {
-    "id": "bugcrowd:requirement-yogi",
-    "platform": "bugcrowd",
-    "handle": "requirement-yogi",
-    "name": "Requirement Yogi (Bug bounty)",
-    "url": "https://bugcrowd.com/engagements/requirement-yogi",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "9 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 9,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-08-31T12:26:19Z",
-    "added_assets": []
-  },
-  {
     "id": "intigriti:privatebankdelen",
     "platform": "intigriti",
     "handle": "privatebankdelen",
@@ -38,7 +17,7 @@
     "min_bounty": 100.0,
     "max_bounty": 15000.0,
     "currency": "EUR",
-    "first_seen": "2026-08-31T12:26:19Z",
+    "first_seen": "2026-08-31T22:17:26Z",
     "added_assets": []
   },
   {
@@ -59,7 +38,7 @@
     "min_bounty": 0.0,
     "max_bounty": 2500.0,
     "currency": "EUR",
-    "first_seen": "2026-08-31T12:26:19Z",
+    "first_seen": "2026-08-31T22:17:26Z",
     "added_assets": []
   },
   {
@@ -80,7 +59,7 @@
     "min_bounty": 100.0,
     "max_bounty": 15000.0,
     "currency": "USD",
-    "first_seen": "2026-08-31T12:26:19Z",
+    "first_seen": "2026-08-31T22:17:26Z",
     "added_assets": []
   },
   {
@@ -101,7 +80,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-08-31T12:26:19Z",
+    "first_seen": "2026-08-31T22:17:26Z",
     "added_assets": []
   },
   {
@@ -326,6 +305,37 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
+  },
+  {
+    "id": "hackerone:nba-public",
+    "platform": "hackerone",
+    "handle": "nba-public",
+    "name": "NBA Public Bug Bounty",
+    "url": "https://hackerone.com/nba-public",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "431 host/repo cụ thể",
+      "+43 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 431,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "data-test.nba.com",
+      "dwhreports.nba.com",
+      "gldatacenter.nba.com",
+      "hoop.nba.com",
+      "nbatickets-dev.nba.com",
+      "nbatickets-qa.nba.com",
+      "nbatickets.nba.com",
+      "nbavideo.nba.com"
+    ]
   },
   {
     "id": "hackerone:circle-bbp",
@@ -558,11 +568,11 @@
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "172 host/repo cụ thể",
+      "171 host/repo cụ thể",
       "+2 asset",
       "scope rộng"
     ],
-    "concrete_count": 172,
+    "concrete_count": 171,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
