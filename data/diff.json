@@ -1,34 +1,33 @@
 {
   "added": [
     {
-      "id": "hackerone:brave",
-      "name": "Brave Software",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/brave"
-    },
-    {
-      "id": "intigriti:monzopublicbugbountyprogram",
-      "name": "Monzo Public Bug Bounty Program",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/monzobank/monzopublicbugbountyprogram/detail"
+      "id": "bugcrowd:afterpay",
+      "name": "Afterpay Bug Bounty Program",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/afterpay"
     }
   ],
-  "removed": [],
+  "removed": [
+    {
+      "id": "intigriti:challenge0826",
+      "name": "Challenge 0826",
+      "platform": "intigriti"
+    },
+    {
+      "id": "intigriti:wpenginebugbounty",
+      "name": "WP Engine Bug Bounty",
+      "platform": "intigriti"
+    }
+  ],
   "scope_changes": [
     {
-      "id": "hackerone:nba-public",
-      "name": "NBA Public Bug Bounty",
+      "id": "hackerone:agoda-public",
+      "name": "Agoda Public",
       "platform": "hackerone",
-      "url": "https://hackerone.com/nba-public",
+      "url": "https://hackerone.com/agoda-public",
       "added": [
-        "data-test.nba.com",
-        "dwhreports.nba.com",
-        "gldatacenter.nba.com",
-        "hoop.nba.com",
-        "nbatickets-dev.nba.com",
-        "nbatickets-qa.nba.com",
-        "nbatickets.nba.com",
-        "nbavideo.nba.com"
+        "https://www.agoda.com/account/agodacash",
+        "https://www.agoda.com/account/cashback"
       ],
       "removed": []
     },
@@ -39,18 +38,6 @@
       "url": "https://hackerone.com/latamairlines",
       "added": [
         "artifactoryrepo1.appslatam.com"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:john-deere",
-      "name": "John Deere",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/john-deere",
-      "added": [
-        "cr-platform-devl.supplymgmt-compliance-risk-devl-vpn2.us.e15.c01.johndeerecloud.com",
-        "qual.r2visitorservices.deere.com",
-        "service.deere.com"
       ],
       "removed": []
     }
