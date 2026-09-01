@@ -1,54 +1,19 @@
 {
   "added": [
     {
-      "id": "hackerone:zabbix",
-      "name": "Zabbix",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/zabbix"
-    },
-    {
       "id": "hackerone:brave",
       "name": "Brave Software",
       "platform": "hackerone",
       "url": "https://hackerone.com/brave"
     },
     {
-      "id": "intigriti:privatebankdelen",
-      "name": "Delen Private Bank",
+      "id": "intigriti:monzopublicbugbountyprogram",
+      "name": "Monzo Public Bug Bounty Program",
       "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/delenprivatebank/privatebankdelen/detail"
-    },
-    {
-      "id": "intigriti:skodaautoprivatebugbountyprogram",
-      "name": "Skoda Auto Bug Bounty Program",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/skodaauto/skodaautoprivatebugbountyprogram/detail"
-    },
-    {
-      "id": "intigriti:wpenginebugbounty",
-      "name": "WP Engine Bug Bounty",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/wpengine/wpenginebugbounty/detail"
-    },
-    {
-      "id": "intigriti:yahoobugbounty",
-      "name": "Yahoo Bug Bounty",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/yahoo/yahoobugbounty/detail"
+      "url": "https://www.intigriti.com/programs/monzobank/monzopublicbugbountyprogram/detail"
     }
   ],
-  "removed": [
-    {
-      "id": "bugcrowd:afterpay",
-      "name": "Afterpay Bug Bounty Program",
-      "platform": "bugcrowd"
-    },
-    {
-      "id": "hackerone:stellar",
-      "name": "Stellar.org",
-      "platform": "hackerone"
-    }
-  ],
+  "removed": [],
   "scope_changes": [
     {
       "id": "hackerone:nba-public",
@@ -68,42 +33,12 @@
       "removed": []
     },
     {
-      "id": "hackerone:visa",
-      "name": "Visa",
+      "id": "hackerone:latamairlines",
+      "name": "LATAM Airlines",
       "platform": "hackerone",
-      "url": "https://hackerone.com/visa",
+      "url": "https://hackerone.com/latamairlines",
       "added": [
-        "developer.plus.authorize.net",
-        "sandbox.developer.plus.authorize.net"
-      ],
-      "removed": [
-        "info.cybersource.com"
-      ]
-    },
-    {
-      "id": "hackerone:okg",
-      "name": "OKG",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/okg",
-      "added": [
-        "https://github.com/okx/go-wallet-sdk"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:kkr_vdp",
-      "name": "KKR-VDP",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/kkr_vdp",
-      "added": [
-        "*.gafg.com",
-        "*.globalatlantic.com",
-        "acrtosnorthstar.com",
-        "amarokcapital.com",
-        "amarokpartners.com",
-        "arctosanalytics.com",
-        "arctoscredit.com",
-        "arctosgp.com"
+        "artifactoryrepo1.appslatam.com"
       ],
       "removed": []
     },
