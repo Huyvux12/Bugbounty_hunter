@@ -1,47 +1,49 @@
 [
   {
-    "id": "hackerone:agoda-public",
+    "id": "hackerone:box_private",
     "platform": "hackerone",
-    "handle": "agoda-public",
-    "name": "Agoda Public",
-    "url": "https://hackerone.com/agoda-public",
+    "handle": "box_private",
+    "name": "Box BB",
+    "url": "https://hackerone.com/box_private",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 75,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể",
-      "+2 asset"
+      "10 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 3,
+    "concrete_count": 10,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "https://www.agoda.com/account/agodacash",
-      "https://www.agoda.com/account/cashback"
+      "Box Tools"
     ]
   },
   {
-    "id": "bugcrowd:jaangainc-mbb-market",
+    "id": "bugcrowd:opensea",
     "platform": "bugcrowd",
-    "handle": "jaangainc-mbb-market",
-    "name": "Jaanga Marketplace Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
+    "handle": "opensea",
+    "name": "OpenSea Managed Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/opensea",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 75,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "7 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 4,
+    "concrete_count": 7,
     "min_bounty": null,
-    "max_bounty": 1500.0,
+    "max_bounty": 3000000.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [
+      "OpenSea Solana Marketplace Program"
+    ]
   },
   {
     "id": "intigriti:sbbglobal",
@@ -109,11 +111,11 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:acorns",
+    "id": "bugcrowd:jaangainc-mbb-market",
     "platform": "bugcrowd",
-    "handle": "acorns",
-    "name": "Acorns Grow, Inc.",
-    "url": "https://bugcrowd.com/engagements/acorns",
+    "handle": "jaangainc-mbb-market",
+    "name": "Jaanga Marketplace Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
@@ -123,7 +125,7 @@
     ],
     "concrete_count": 4,
     "min_bounty": null,
-    "max_bounty": 4000.0,
+    "max_bounty": 1500.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -169,19 +171,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:1win_com",
+    "id": "hackerone:agoda-public",
     "platform": "hackerone",
-    "handle": "1win_com",
-    "name": "1win",
-    "url": "https://hackerone.com/1win_com",
+    "handle": "agoda-public",
+    "name": "Agoda Public",
+    "url": "https://hackerone.com/agoda-public",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 5,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -189,21 +191,21 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:afterpay",
+    "id": "bugcrowd:acorns",
     "platform": "bugcrowd",
-    "handle": "afterpay",
-    "name": "Afterpay Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/afterpay",
+    "handle": "acorns",
+    "name": "Acorns Grow, Inc.",
+    "url": "https://bugcrowd.com/engagements/acorns",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 12,
+    "concrete_count": 4,
     "min_bounty": null,
-    "max_bounty": 5000.0,
+    "max_bounty": 4000.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -242,6 +244,86 @@
       "5 host/repo cụ thể"
     ],
     "concrete_count": 5,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:1win_com",
+    "platform": "hackerone",
+    "handle": "1win_com",
+    "name": "1win",
+    "url": "https://hackerone.com/1win_com",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "5 host/repo cụ thể"
+    ],
+    "concrete_count": 5,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "bugcrowd:afterpay",
+    "platform": "bugcrowd",
+    "handle": "afterpay",
+    "name": "Afterpay Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/afterpay",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "12 host/repo cụ thể"
+    ],
+    "concrete_count": 12,
+    "min_bounty": null,
+    "max_bounty": 5000.0,
+    "currency": "USD",
+    "first_seen": "2026-09-01T10:56:59Z",
+    "added_assets": []
+  },
+  {
+    "id": "intigriti:bmwgroup",
+    "platform": "intigriti",
+    "handle": "bmwgroup",
+    "name": "BMW Group",
+    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "6 host/repo cụ thể"
+    ],
+    "concrete_count": 6,
+    "min_bounty": 150.0,
+    "max_bounty": 6000.0,
+    "currency": "EUR",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "federacy:upfort",
+    "platform": "federacy",
+    "handle": "upfort",
+    "name": "Upfort",
+    "url": "https://www.federacy.com/upfort",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -289,31 +371,31 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:bmwgroup",
+    "id": "intigriti:dummy",
     "platform": "intigriti",
-    "handle": "bmwgroup",
-    "name": "BMW Group",
-    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
+    "handle": "dummy",
+    "name": "Bpost",
+    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể"
+      "12 host/repo cụ thể"
     ],
-    "concrete_count": 6,
-    "min_bounty": 150.0,
-    "max_bounty": 6000.0,
+    "concrete_count": 12,
+    "min_bounty": 0.0,
+    "max_bounty": 1500.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
   {
-    "id": "federacy:upfort",
+    "id": "federacy:delight-im",
     "platform": "federacy",
-    "handle": "upfort",
-    "name": "Upfort",
-    "url": "https://www.federacy.com/upfort",
+    "handle": "delight-im",
+    "name": "delight-im",
+    "url": "https://www.federacy.com/delight-im",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
@@ -364,86 +446,6 @@
     "concrete_count": 9,
     "min_bounty": null,
     "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "intigriti:dummy",
-    "platform": "intigriti",
-    "handle": "dummy",
-    "name": "Bpost",
-    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "12 host/repo cụ thể"
-    ],
-    "concrete_count": 12,
-    "min_bounty": 0.0,
-    "max_bounty": 1500.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "federacy:delight-im",
-    "platform": "federacy",
-    "handle": "delight-im",
-    "name": "delight-im",
-    "url": "https://www.federacy.com/delight-im",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:kong",
-    "platform": "hackerone",
-    "handle": "kong",
-    "name": "Kong",
-    "url": "https://hackerone.com/kong",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:aiven-mbb-og",
-    "platform": "bugcrowd",
-    "handle": "aiven-mbb-og",
-    "name": "Aiven Managed Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "9 host/repo cụ thể"
-    ],
-    "concrete_count": 9,
-    "min_bounty": null,
-    "max_bounty": 25000.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []

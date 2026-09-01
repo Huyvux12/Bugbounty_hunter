@@ -1,26 +1,48 @@
 [
   {
-    "id": "hackerone:agoda-public",
+    "id": "hackerone:box_private",
     "platform": "hackerone",
-    "handle": "agoda-public",
-    "name": "Agoda Public",
-    "url": "https://hackerone.com/agoda-public",
+    "handle": "box_private",
+    "name": "Box BB",
+    "url": "https://hackerone.com/box_private",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 75,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể",
-      "+2 asset"
+      "10 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 3,
+    "concrete_count": 10,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "https://www.agoda.com/account/agodacash",
-      "https://www.agoda.com/account/cashback"
+      "Box Tools"
+    ]
+  },
+  {
+    "id": "bugcrowd:opensea",
+    "platform": "bugcrowd",
+    "handle": "opensea",
+    "name": "OpenSea Managed Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/opensea",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "7 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 7,
+    "min_bounty": null,
+    "max_bounty": 3000000.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "OpenSea Solana Marketplace Program"
     ]
   },
   {
@@ -62,6 +84,26 @@
       "7 host/repo cụ thể"
     ],
     "concrete_count": 7,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:agoda-public",
+    "platform": "hackerone",
+    "handle": "agoda-public",
+    "name": "Agoda Public",
+    "url": "https://hackerone.com/agoda-public",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể"
+    ],
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -962,46 +1004,6 @@
       "13 host/repo cụ thể"
     ],
     "concrete_count": 13,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:whatnot",
-    "platform": "hackerone",
-    "handle": "whatnot",
-    "name": "Whatnot",
-    "url": "https://hackerone.com/whatnot",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:smtp2go",
-    "platform": "hackerone",
-    "handle": "smtp2go",
-    "name": "SMTP2GO BBP",
-    "url": "https://hackerone.com/smtp2go",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

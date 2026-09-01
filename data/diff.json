@@ -7,29 +7,70 @@
       "url": "https://www.intigriti.com/programs/adobe/adobepublic/detail"
     }
   ],
-  "removed": [
-    {
-      "id": "intigriti:challenge0826",
-      "name": "Challenge 0826",
-      "platform": "intigriti"
-    },
-    {
-      "id": "intigriti:wpenginebugbounty",
-      "name": "WP Engine Bug Bounty",
-      "platform": "intigriti"
-    }
-  ],
+  "removed": [],
   "scope_changes": [
     {
-      "id": "hackerone:agoda-public",
-      "name": "Agoda Public",
+      "id": "hackerone:john-deere",
+      "name": "John Deere",
       "platform": "hackerone",
-      "url": "https://hackerone.com/agoda-public",
+      "url": "https://hackerone.com/john-deere",
       "added": [
-        "https://www.agoda.com/account/agodacash",
-        "https://www.agoda.com/account/cashback"
+        "api-jdfcalculator.deere.com",
+        "jdfapi-internal.deere.com"
       ],
       "removed": []
+    },
+    {
+      "id": "hackerone:box_private",
+      "name": "Box BB",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/box_private",
+      "added": [
+        "Box Tools"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:wealthsimple",
+      "name": "Wealthsimple",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/wealthsimple",
+      "added": [
+        "com.wealthsimple.predict"
+      ],
+      "removed": []
+    },
+    {
+      "id": "bugcrowd:opensea",
+      "name": "OpenSea Managed Bug Bounty Program",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/opensea",
+      "added": [
+        "OpenSea Solana Marketplace Program"
+      ],
+      "removed": []
+    },
+    {
+      "id": "bugcrowd:t-mobile",
+      "name": "T-Mobile",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/t-mobile",
+      "added": [
+        "Cellular Network Auth Bypass via Web App/T-Life (404-200-7239)",
+        "Leaked Credentials",
+        "Self-Register Account on T-Mobile Microsoft Entra ID",
+        "Subdomain Takeover"
+      ],
+      "removed": [
+        "Assets labeled as in-scope",
+        "Cellular Network Auth Bypass via Web/Mobile App",
+        "Full Corporate Network Access or Access to Sensitive Network Segments",
+        "Self Register Account on T-Mobile Microsoft Entra ID",
+        "https://apps.apple.com/us/app/syncup-drive/id1576574297",
+        "https://apps.apple.com/us/app/syncup-kids/id1503394062",
+        "https://apps.apple.com/us/app/syncup-tracker/id1526380335",
+        "https://apps.apple.com/us/app/t-life-t-mobile-tuesdays/id1111876388"
+      ]
     },
     {
       "id": "intigriti:sbbglobal",
