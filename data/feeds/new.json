@@ -1,47 +1,25 @@
 [
   {
-    "id": "bugcrowd:afterpay",
-    "platform": "bugcrowd",
-    "handle": "afterpay",
-    "name": "Afterpay Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/afterpay",
+    "id": "intigriti:adobepublic",
+    "platform": "intigriti",
+    "handle": "adobepublic",
+    "name": "Adobe Public",
+    "url": "https://www.intigriti.com/programs/adobe/adobepublic/detail",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 30,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 12,
-    "min_bounty": null,
-    "max_bounty": 5000.0,
-    "currency": "USD",
-    "first_seen": "2026-09-01T10:56:59Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:latamairlines",
-    "platform": "hackerone",
-    "handle": "latamairlines",
-    "name": "LATAM Airlines",
-    "url": "https://hackerone.com/latamairlines",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 35,
-    "reasons": [
-      "33 host/repo cụ thể",
-      "+1 asset",
+      "26 host/repo cụ thể",
+      "program mới",
       "scope rộng"
     ],
-    "concrete_count": 33,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "artifactoryrepo1.appslatam.com"
-    ]
+    "concrete_count": 26,
+    "min_bounty": 75.0,
+    "max_bounty": 15000.0,
+    "currency": "USD",
+    "first_seen": "2026-09-01T15:56:14Z",
+    "added_assets": []
   },
   {
     "id": "hackerone:agoda-public",
@@ -65,6 +43,31 @@
     "added_assets": [
       "https://www.agoda.com/account/agodacash",
       "https://www.agoda.com/account/cashback"
+    ]
+  },
+  {
+    "id": "intigriti:sbbglobal",
+    "platform": "intigriti",
+    "handle": "sbbglobal",
+    "name": "SBB - Swiss Federal Railways",
+    "url": "https://www.intigriti.com/programs/sbb/sbbglobal/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể",
+      "+3 asset"
+    ],
+    "concrete_count": 4,
+    "min_bounty": 25.0,
+    "max_bounty": 6666.0,
+    "currency": "EUR",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "*elvetino.ch",
+      "*sbbcargo.com",
+      "*transsicura.ch"
     ]
   }
 ]

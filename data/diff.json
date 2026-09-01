@@ -1,10 +1,10 @@
 {
   "added": [
     {
-      "id": "bugcrowd:afterpay",
-      "name": "Afterpay Bug Bounty Program",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/afterpay"
+      "id": "intigriti:adobepublic",
+      "name": "Adobe Public",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/adobe/adobepublic/detail"
     }
   ],
   "removed": [
@@ -32,12 +32,14 @@
       "removed": []
     },
     {
-      "id": "hackerone:latamairlines",
-      "name": "LATAM Airlines",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/latamairlines",
+      "id": "intigriti:sbbglobal",
+      "name": "SBB - Swiss Federal Railways",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/sbb/sbbglobal/detail",
       "added": [
-        "artifactoryrepo1.appslatam.com"
+        "*elvetino.ch",
+        "*sbbcargo.com",
+        "*transsicura.ch"
       ],
       "removed": []
     }
