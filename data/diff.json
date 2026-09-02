@@ -9,23 +9,13 @@
   ],
   "scope_changes": [
     {
-      "id": "hackerone:john-deere",
-      "name": "John Deere",
+      "id": "hackerone:getyourguide_vdp",
+      "name": "GetYourGuide VDP",
       "platform": "hackerone",
-      "url": "https://hackerone.com/john-deere",
+      "url": "https://hackerone.com/getyourguide_vdp",
       "added": [
-        "api-jdfcalculator.deere.com",
-        "jdfapi-internal.deere.com"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:box_private",
-      "name": "Box BB",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/box_private",
-      "added": [
-        "Box Tools"
+        "integrator-portal-api.getyourguide.com",
+        "integrator.getyourguide.com"
       ],
       "removed": []
     },
@@ -38,48 +28,6 @@
         "app.wirespeed.co"
       ],
       "removed": []
-    },
-    {
-      "id": "hackerone:wealthsimple",
-      "name": "Wealthsimple",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/wealthsimple",
-      "added": [
-        "com.wealthsimple.predict"
-      ],
-      "removed": []
-    },
-    {
-      "id": "bugcrowd:opensea",
-      "name": "OpenSea Managed Bug Bounty Program",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/opensea",
-      "added": [
-        "OpenSea Solana Marketplace Program"
-      ],
-      "removed": []
-    },
-    {
-      "id": "bugcrowd:t-mobile",
-      "name": "T-Mobile",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/t-mobile",
-      "added": [
-        "Cellular Network Auth Bypass via Web App/T-Life (404-200-7239)",
-        "Leaked Credentials",
-        "Self-Register Account on T-Mobile Microsoft Entra ID",
-        "Subdomain Takeover"
-      ],
-      "removed": [
-        "Assets labeled as in-scope",
-        "Cellular Network Auth Bypass via Web/Mobile App",
-        "Full Corporate Network Access or Access to Sensitive Network Segments",
-        "Self Register Account on T-Mobile Microsoft Entra ID",
-        "https://apps.apple.com/us/app/syncup-drive/id1576574297",
-        "https://apps.apple.com/us/app/syncup-kids/id1503394062",
-        "https://apps.apple.com/us/app/syncup-tracker/id1526380335",
-        "https://apps.apple.com/us/app/t-life-t-mobile-tuesdays/id1111876388"
-      ]
     }
   ]
 }
