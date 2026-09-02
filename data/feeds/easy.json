@@ -46,31 +46,6 @@
     ]
   },
   {
-    "id": "intigriti:sbbglobal",
-    "platform": "intigriti",
-    "handle": "sbbglobal",
-    "name": "SBB - Swiss Federal Railways",
-    "url": "https://www.intigriti.com/programs/sbb/sbbglobal/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể",
-      "+3 asset"
-    ],
-    "concrete_count": 4,
-    "min_bounty": 25.0,
-    "max_bounty": 6666.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "*elvetino.ch",
-      "*sbbcargo.com",
-      "*transsicura.ch"
-    ]
-  },
-  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -1004,6 +979,26 @@
       "13 host/repo cụ thể"
     ],
     "concrete_count": 13,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:whatnot",
+    "platform": "hackerone",
+    "handle": "whatnot",
+    "name": "Whatnot",
+    "url": "https://hackerone.com/whatnot",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

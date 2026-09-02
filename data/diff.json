@@ -1,13 +1,12 @@
 {
-  "added": [
+  "added": [],
+  "removed": [
     {
-      "id": "intigriti:adobepublic",
-      "name": "Adobe Public",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/adobe/adobepublic/detail"
+      "id": "hackerone:vercel_sandbox",
+      "name": "Vercel Sandbox",
+      "platform": "hackerone"
     }
   ],
-  "removed": [],
   "scope_changes": [
     {
       "id": "hackerone:john-deere",
@@ -27,6 +26,16 @@
       "url": "https://hackerone.com/box_private",
       "added": [
         "Box Tools"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:coalition",
+      "name": "Coalition, Inc.",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/coalition",
+      "added": [
+        "app.wirespeed.co"
       ],
       "removed": []
     },
@@ -71,18 +80,6 @@
         "https://apps.apple.com/us/app/syncup-tracker/id1526380335",
         "https://apps.apple.com/us/app/t-life-t-mobile-tuesdays/id1111876388"
       ]
-    },
-    {
-      "id": "intigriti:sbbglobal",
-      "name": "SBB - Swiss Federal Railways",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/sbb/sbbglobal/detail",
-      "added": [
-        "*elvetino.ch",
-        "*sbbcargo.com",
-        "*transsicura.ch"
-      ],
-      "removed": []
     }
   ]
 }

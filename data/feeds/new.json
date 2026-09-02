@@ -1,27 +1,5 @@
 [
   {
-    "id": "intigriti:adobepublic",
-    "platform": "intigriti",
-    "handle": "adobepublic",
-    "name": "Adobe Public",
-    "url": "https://www.intigriti.com/programs/adobe/adobepublic/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 30,
-    "reasons": [
-      "có bounty",
-      "26 host/repo cụ thể",
-      "program mới",
-      "scope rộng"
-    ],
-    "concrete_count": 26,
-    "min_bounty": 75.0,
-    "max_bounty": 15000.0,
-    "currency": "USD",
-    "first_seen": "2026-09-01T20:24:32Z",
-    "added_assets": []
-  },
-  {
     "id": "hackerone:john-deere",
     "platform": "hackerone",
     "handle": "john-deere",
@@ -65,6 +43,28 @@
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
       "com.wealthsimple.predict"
+    ]
+  },
+  {
+    "id": "hackerone:coalition",
+    "platform": "hackerone",
+    "handle": "coalition",
+    "name": "Coalition, Inc.",
+    "url": "https://hackerone.com/coalition",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 50,
+    "reasons": [
+      "4 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "app.wirespeed.co"
     ]
   },
   {
@@ -138,31 +138,6 @@
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
       "OpenSea Solana Marketplace Program"
-    ]
-  },
-  {
-    "id": "intigriti:sbbglobal",
-    "platform": "intigriti",
-    "handle": "sbbglobal",
-    "name": "SBB - Swiss Federal Railways",
-    "url": "https://www.intigriti.com/programs/sbb/sbbglobal/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể",
-      "+3 asset"
-    ],
-    "concrete_count": 4,
-    "min_bounty": 25.0,
-    "max_bounty": 6666.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "*elvetino.ch",
-      "*sbbcargo.com",
-      "*transsicura.ch"
     ]
   }
 ]
