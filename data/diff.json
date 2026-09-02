@@ -7,33 +7,34 @@
       "url": "https://hackerone.com/semtech"
     },
     {
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
+    },
+    {
+      "id": "intigriti:website",
+      "name": "Kinepolis Group",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/kinepolis/website/detail"
+    },
+    {
       "id": "intigriti:liferaydxp",
       "name": "Liferay DXP",
       "platform": "intigriti",
       "url": "https://www.intigriti.com/programs/liferay/liferaydxp/detail"
     }
   ],
-  "removed": [
-    {
-      "id": "bugcrowd:hypixel-studios-mbb-og",
-      "name": "Hypixel Studios Managed Bug Bounty Engagement",
-      "platform": "bugcrowd"
-    },
-    {
-      "id": "intigriti:nmt",
-      "name": "Axel Springer National Media & Tech",
-      "platform": "intigriti"
-    }
-  ],
+  "removed": [],
   "scope_changes": [
     {
-      "id": "hackerone:getyourguide_vdp",
-      "name": "GetYourGuide VDP",
+      "id": "hackerone:tbs-sct",
+      "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
       "platform": "hackerone",
-      "url": "https://hackerone.com/getyourguide_vdp",
+      "url": "https://hackerone.com/tbs-sct",
       "added": [
-        "integrator-portal-api.getyourguide.com",
-        "integrator.getyourguide.com"
+        "api.forms-formulaires.alpha.canada.ca",
+        "validate-email.cdssandbox.xyz"
       ],
       "removed": []
     },
@@ -43,6 +44,7 @@
       "platform": "hackerone",
       "url": "https://hackerone.com/john-deere",
       "added": [
+        "calculadora.deere.com.br",
         "jdpo-cert.deere.com"
       ],
       "removed": []

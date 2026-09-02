@@ -17,7 +17,7 @@
     "min_bounty": 100.0,
     "max_bounty": 2000.0,
     "currency": "USD",
-    "first_seen": "2026-09-02T15:48:48Z",
+    "first_seen": "2026-09-02T20:24:34Z",
     "added_assets": []
   },
   {
@@ -38,7 +38,50 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-02T15:48:48Z",
+    "first_seen": "2026-09-02T20:24:34Z",
+    "added_assets": []
+  },
+  {
+    "id": "intigriti:website",
+    "platform": "intigriti",
+    "handle": "website",
+    "name": "Kinepolis Group",
+    "url": "https://www.intigriti.com/programs/kinepolis/website/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 70,
+    "reasons": [
+      "có bounty",
+      "37 host/repo cụ thể",
+      "program mới",
+      "scope rộng"
+    ],
+    "concrete_count": 37,
+    "min_bounty": 0.0,
+    "max_bounty": 5000.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-02T20:24:34Z",
+    "added_assets": []
+  },
+  {
+    "id": "intigriti:datacamp",
+    "platform": "intigriti",
+    "handle": "datacamp",
+    "name": "DataCamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "12 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 12,
+    "min_bounty": 25.0,
+    "max_bounty": 1500.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-02T20:24:34Z",
     "added_assets": []
   },
   {
@@ -51,40 +94,41 @@
     "status": "open",
     "easy_score": 35,
     "reasons": [
-      "1997 host/repo cụ thể",
-      "+1 asset",
+      "1998 host/repo cụ thể",
+      "+2 asset",
       "scope rộng"
     ],
-    "concrete_count": 1997,
+    "concrete_count": 1998,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
+      "calculadora.deere.com.br",
       "jdpo-cert.deere.com"
     ]
   },
   {
-    "id": "hackerone:getyourguide_vdp",
+    "id": "hackerone:tbs-sct",
     "platform": "hackerone",
-    "handle": "getyourguide_vdp",
-    "name": "GetYourGuide VDP",
-    "url": "https://hackerone.com/getyourguide_vdp",
+    "handle": "tbs-sct",
+    "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
+    "url": "https://hackerone.com/tbs-sct",
     "offers_bounty": false,
     "status": "open",
     "easy_score": 50,
     "reasons": [
-      "10 host/repo cụ thể",
+      "15 host/repo cụ thể",
       "+2 asset"
     ],
-    "concrete_count": 10,
+    "concrete_count": 15,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "integrator-portal-api.getyourguide.com",
-      "integrator.getyourguide.com"
+      "api.forms-formulaires.alpha.canada.ca",
+      "validate-email.cdssandbox.xyz"
     ]
   }
 ]

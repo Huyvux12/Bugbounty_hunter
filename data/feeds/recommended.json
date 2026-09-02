@@ -40,23 +40,24 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:algemeendagblad",
+    "id": "intigriti:datacamp",
     "platform": "intigriti",
-    "handle": "algemeendagblad",
-    "name": "Algemeen Dagblad",
-    "url": "https://www.intigriti.com/programs/dpgm/algemeendagblad/detail",
+    "handle": "datacamp",
+    "name": "DataCamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 85,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể"
+      "12 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 3,
+    "concrete_count": 12,
     "min_bounty": 25.0,
-    "max_bounty": 2200.0,
+    "max_bounty": 1500.0,
     "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-02T20:24:34Z",
     "added_assets": []
   },
   {
@@ -120,23 +121,25 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:bmwgroup",
+    "id": "intigriti:website",
     "platform": "intigriti",
-    "handle": "bmwgroup",
-    "name": "BMW Group",
-    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
+    "handle": "website",
+    "name": "Kinepolis Group",
+    "url": "https://www.intigriti.com/programs/kinepolis/website/detail",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 70,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể"
+      "37 host/repo cụ thể",
+      "program mới",
+      "scope rộng"
     ],
-    "concrete_count": 6,
-    "min_bounty": 150.0,
-    "max_bounty": 6000.0,
+    "concrete_count": 37,
+    "min_bounty": 0.0,
+    "max_bounty": 5000.0,
     "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-02T20:24:34Z",
     "added_assets": []
   },
   {
@@ -196,25 +199,25 @@
     "min_bounty": null,
     "max_bounty": 5000.0,
     "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-01T10:56:59Z",
     "added_assets": []
   },
   {
-    "id": "intigriti:dummy",
+    "id": "intigriti:algemeendagblad",
     "platform": "intigriti",
-    "handle": "dummy",
-    "name": "Bpost",
-    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
+    "handle": "algemeendagblad",
+    "name": "Algemeen Dagblad",
+    "url": "https://www.intigriti.com/programs/dpgm/algemeendagblad/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 12,
-    "min_bounty": 0.0,
-    "max_bounty": 1500.0,
+    "concrete_count": 3,
+    "min_bounty": 25.0,
+    "max_bounty": 2200.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -280,21 +283,21 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:cmcom",
+    "id": "intigriti:nmt",
     "platform": "intigriti",
-    "handle": "cmcom",
-    "name": "CM.com",
-    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
+    "handle": "nmt",
+    "name": "Axel Springer National Media & Tech",
+    "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "10 host/repo cụ thể"
+      "16 host/repo cụ thể"
     ],
-    "concrete_count": 10,
-    "min_bounty": 5.0,
-    "max_bounty": 2625.0,
+    "concrete_count": 16,
+    "min_bounty": 15.0,
+    "max_bounty": 2500.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -360,11 +363,11 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:capitalcom",
+    "id": "intigriti:bmwgroup",
     "platform": "intigriti",
-    "handle": "capitalcom",
-    "name": "Capital.com",
-    "url": "https://www.intigriti.com/programs/capitalcom/capitalcom/detail",
+    "handle": "bmwgroup",
+    "name": "BMW Group",
+    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
@@ -373,8 +376,8 @@
       "6 host/repo cụ thể"
     ],
     "concrete_count": 6,
-    "min_bounty": 0.0,
-    "max_bounty": 15000.0,
+    "min_bounty": 150.0,
+    "max_bounty": 6000.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -440,22 +443,22 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:cloudways",
+    "id": "intigriti:dummy",
     "platform": "intigriti",
-    "handle": "cloudways",
-    "name": "Cloudways by DigitalOcean",
-    "url": "https://www.intigriti.com/programs/digitalocean/cloudways/detail",
+    "handle": "dummy",
+    "name": "Bpost",
+    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể"
+      "12 host/repo cụ thể"
     ],
-    "concrete_count": 6,
-    "min_bounty": 50.0,
-    "max_bounty": 4000.0,
-    "currency": "USD",
+    "concrete_count": 12,
+    "min_bounty": 0.0,
+    "max_bounty": 1500.0,
+    "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },

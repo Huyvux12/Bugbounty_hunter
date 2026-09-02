@@ -1,5 +1,48 @@
 [
   {
+    "id": "intigriti:datacamp",
+    "platform": "intigriti",
+    "handle": "datacamp",
+    "name": "DataCamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "12 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 12,
+    "min_bounty": 25.0,
+    "max_bounty": 1500.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-02T20:24:34Z",
+    "added_assets": []
+  },
+  {
+    "id": "intigriti:website",
+    "platform": "intigriti",
+    "handle": "website",
+    "name": "Kinepolis Group",
+    "url": "https://www.intigriti.com/programs/kinepolis/website/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 70,
+    "reasons": [
+      "có bounty",
+      "37 host/repo cụ thể",
+      "program mới",
+      "scope rộng"
+    ],
+    "concrete_count": 37,
+    "min_bounty": 0.0,
+    "max_bounty": 5000.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-02T20:24:34Z",
+    "added_assets": []
+  },
+  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -953,46 +996,6 @@
       "4 host/repo cụ thể"
     ],
     "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:smtp2go",
-    "platform": "hackerone",
-    "handle": "smtp2go",
-    "name": "SMTP2GO BBP",
-    "url": "https://hackerone.com/smtp2go",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:playtika",
-    "platform": "hackerone",
-    "handle": "playtika",
-    "name": "Playtika",
-    "url": "https://hackerone.com/playtika",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể"
-    ],
-    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
