@@ -1,10 +1,28 @@
 {
-  "added": [],
+  "added": [
+    {
+      "id": "hackerone:semtech",
+      "name": "Semtech",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/semtech"
+    },
+    {
+      "id": "intigriti:liferaydxp",
+      "name": "Liferay DXP",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/liferay/liferaydxp/detail"
+    }
+  ],
   "removed": [
     {
-      "id": "hackerone:vercel_sandbox",
-      "name": "Vercel Sandbox",
-      "platform": "hackerone"
+      "id": "bugcrowd:hypixel-studios-mbb-og",
+      "name": "Hypixel Studios Managed Bug Bounty Engagement",
+      "platform": "bugcrowd"
+    },
+    {
+      "id": "intigriti:nmt",
+      "name": "Axel Springer National Media & Tech",
+      "platform": "intigriti"
     }
   ],
   "scope_changes": [
@@ -20,12 +38,12 @@
       "removed": []
     },
     {
-      "id": "hackerone:coalition",
-      "name": "Coalition, Inc.",
+      "id": "hackerone:john-deere",
+      "name": "John Deere",
       "platform": "hackerone",
-      "url": "https://hackerone.com/coalition",
+      "url": "https://hackerone.com/john-deere",
       "added": [
-        "app.wirespeed.co"
+        "jdpo-cert.deere.com"
       ],
       "removed": []
     }

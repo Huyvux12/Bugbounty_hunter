@@ -1,5 +1,70 @@
 [
   {
+    "id": "intigriti:liferaydxp",
+    "platform": "intigriti",
+    "handle": "liferaydxp",
+    "name": "Liferay DXP",
+    "url": "https://www.intigriti.com/programs/liferay/liferaydxp/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 30,
+    "reasons": [
+      "có bounty",
+      "program mới",
+      "không có web/API cụ thể"
+    ],
+    "concrete_count": 0,
+    "min_bounty": 100.0,
+    "max_bounty": 2000.0,
+    "currency": "USD",
+    "first_seen": "2026-09-02T15:48:48Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:semtech",
+    "platform": "hackerone",
+    "handle": "semtech",
+    "name": "Semtech",
+    "url": "https://hackerone.com/semtech",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 45,
+    "reasons": [
+      "27 host/repo cụ thể",
+      "program mới",
+      "scope rộng"
+    ],
+    "concrete_count": 27,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-09-02T15:48:48Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:john-deere",
+    "platform": "hackerone",
+    "handle": "john-deere",
+    "name": "John Deere",
+    "url": "https://hackerone.com/john-deere",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 35,
+    "reasons": [
+      "1997 host/repo cụ thể",
+      "+1 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 1997,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "jdpo-cert.deere.com"
+    ]
+  },
+  {
     "id": "hackerone:getyourguide_vdp",
     "platform": "hackerone",
     "handle": "getyourguide_vdp",
@@ -20,28 +85,6 @@
     "added_assets": [
       "integrator-portal-api.getyourguide.com",
       "integrator.getyourguide.com"
-    ]
-  },
-  {
-    "id": "hackerone:coalition",
-    "platform": "hackerone",
-    "handle": "coalition",
-    "name": "Coalition, Inc.",
-    "url": "https://hackerone.com/coalition",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 50,
-    "reasons": [
-      "4 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "app.wirespeed.co"
     ]
   }
 ]

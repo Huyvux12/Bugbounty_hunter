@@ -120,21 +120,21 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:nmt",
+    "id": "intigriti:bmwgroup",
     "platform": "intigriti",
-    "handle": "nmt",
-    "name": "Axel Springer National Media & Tech",
-    "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail",
+    "handle": "bmwgroup",
+    "name": "BMW Group",
+    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "16 host/repo cụ thể"
+      "6 host/repo cụ thể"
     ],
-    "concrete_count": 16,
-    "min_bounty": 15.0,
-    "max_bounty": 2500.0,
+    "concrete_count": 6,
+    "min_bounty": 150.0,
+    "max_bounty": 6000.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -196,25 +196,25 @@
     "min_bounty": null,
     "max_bounty": 5000.0,
     "currency": "USD",
-    "first_seen": "2026-09-01T10:56:59Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
   {
-    "id": "intigriti:bmwgroup",
+    "id": "intigriti:dummy",
     "platform": "intigriti",
-    "handle": "bmwgroup",
-    "name": "BMW Group",
-    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
+    "handle": "dummy",
+    "name": "Bpost",
+    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể"
+      "12 host/repo cụ thể"
     ],
-    "concrete_count": 6,
-    "min_bounty": 150.0,
-    "max_bounty": 6000.0,
+    "concrete_count": 12,
+    "min_bounty": 0.0,
+    "max_bounty": 1500.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -280,21 +280,21 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:dummy",
+    "id": "intigriti:cmcom",
     "platform": "intigriti",
-    "handle": "dummy",
-    "name": "Bpost",
-    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
+    "handle": "cmcom",
+    "name": "CM.com",
+    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể"
+      "10 host/repo cụ thể"
     ],
-    "concrete_count": 12,
-    "min_bounty": 0.0,
-    "max_bounty": 1500.0,
+    "concrete_count": 10,
+    "min_bounty": 5.0,
+    "max_bounty": 2625.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -360,21 +360,21 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:cmcom",
+    "id": "intigriti:capitalcom",
     "platform": "intigriti",
-    "handle": "cmcom",
-    "name": "CM.com",
-    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
+    "handle": "capitalcom",
+    "name": "Capital.com",
+    "url": "https://www.intigriti.com/programs/capitalcom/capitalcom/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "10 host/repo cụ thể"
+      "6 host/repo cụ thể"
     ],
-    "concrete_count": 10,
-    "min_bounty": 5.0,
-    "max_bounty": 2625.0,
+    "concrete_count": 6,
+    "min_bounty": 0.0,
+    "max_bounty": 15000.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -440,11 +440,11 @@
     "added_assets": []
   },
   {
-    "id": "intigriti:capitalcom",
+    "id": "intigriti:cloudways",
     "platform": "intigriti",
-    "handle": "capitalcom",
-    "name": "Capital.com",
-    "url": "https://www.intigriti.com/programs/capitalcom/capitalcom/detail",
+    "handle": "cloudways",
+    "name": "Cloudways by DigitalOcean",
+    "url": "https://www.intigriti.com/programs/digitalocean/cloudways/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
@@ -453,9 +453,9 @@
       "6 host/repo cụ thể"
     ],
     "concrete_count": 6,
-    "min_bounty": 0.0,
-    "max_bounty": 15000.0,
-    "currency": "EUR",
+    "min_bounty": 50.0,
+    "max_bounty": 4000.0,
+    "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
