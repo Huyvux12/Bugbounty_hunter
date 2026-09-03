@@ -1,5 +1,26 @@
 [
   {
+    "id": "intigriti:wpenginebugbounty",
+    "platform": "intigriti",
+    "handle": "wpenginebugbounty",
+    "name": "WP Engine Bug Bounty",
+    "url": "https://www.intigriti.com/programs/wpengine/wpenginebugbounty/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "9 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 9,
+    "min_bounty": 0.0,
+    "max_bounty": 2500.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-03T20:23:52Z",
+    "added_assets": []
+  },
+  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -973,26 +994,6 @@
       "3 host/repo cụ thể"
     ],
     "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:playtika",
-    "platform": "hackerone",
-    "handle": "playtika",
-    "name": "Playtika",
-    "url": "https://hackerone.com/playtika",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể"
-    ],
-    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

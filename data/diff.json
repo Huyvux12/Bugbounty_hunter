@@ -1,10 +1,10 @@
 {
   "added": [
     {
-      "id": "hackerone:phpbb",
-      "name": "phpBB",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/phpbb"
+      "id": "intigriti:wpenginebugbounty",
+      "name": "WP Engine Bug Bounty",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/wpengine/wpenginebugbounty/detail"
     }
   ],
   "removed": [
@@ -21,12 +21,49 @@
   ],
   "scope_changes": [
     {
+      "id": "hackerone:anthropic-cyber-jailbreak",
+      "name": "Anthropic Cyber Jailbreak",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/anthropic-cyber-jailbreak",
+      "added": [
+        "Fable 5.1"
+      ],
+      "removed": [
+        "Fable 5"
+      ]
+    },
+    {
+      "id": "hackerone:fifth_third_bank_vdp",
+      "name": "Fifth Third Bank VDP",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/fifth_third_bank_vdp",
+      "added": [
+        "http://fuse.bigdatahc.com",
+        "http://secure.franklin-street.com"
+      ],
+      "removed": []
+    },
+    {
       "id": "hackerone:john-deere",
       "name": "John Deere",
       "platform": "hackerone",
       "url": "https://hackerone.com/john-deere",
       "added": [
-        "jdflorestal.com"
+        "jdflorestal.com",
+        "machinefinderdevlaws.tal.deere.com",
+        "r2events.deere.com",
+        "tpc-api-gateway.deere.com",
+        "www.johndeeredealerrewards.com"
+      ],
+      "removed": []
+    },
+    {
+      "id": "bugcrowd:t-mobile",
+      "name": "T-Mobile",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/t-mobile",
+      "added": [
+        "https://account.business.t-mobile.com"
       ],
       "removed": []
     },
