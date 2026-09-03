@@ -17,49 +17,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-03T02:32:59Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:hypixel-studios-mbb-og",
-    "platform": "bugcrowd",
-    "handle": "hypixel-studios-mbb-og",
-    "name": "Hypixel Studios Managed Bug Bounty Engagement",
-    "url": "https://bugcrowd.com/engagements/hypixel-studios-mbb-og",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "9 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 9,
-    "min_bounty": null,
-    "max_bounty": 25000.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T02:32:59Z",
-    "added_assets": []
-  },
-  {
-    "id": "intigriti:nmt",
-    "platform": "intigriti",
-    "handle": "nmt",
-    "name": "Axel Springer National Media & Tech",
-    "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "16 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 16,
-    "min_bounty": 15.0,
-    "max_bounty": 2500.0,
-    "currency": "EUR",
-    "first_seen": "2026-09-03T02:32:59Z",
+    "first_seen": "2026-09-03T10:32:39Z",
     "added_assets": []
   },
   {
@@ -80,7 +38,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-03T02:32:59Z",
+    "first_seen": "2026-09-03T10:32:39Z",
     "added_assets": []
   },
   {
@@ -101,7 +59,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-03T02:32:59Z",
+    "first_seen": "2026-09-03T10:32:39Z",
     "added_assets": []
   },
   {
@@ -122,7 +80,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-03T02:32:59Z",
+    "first_seen": "2026-09-03T10:32:39Z",
     "added_assets": []
   },
   {
@@ -143,29 +101,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-03T02:32:59Z",
-    "added_assets": []
-  },
-  {
-    "id": "intigriti:website",
-    "platform": "intigriti",
-    "handle": "website",
-    "name": "Kinepolis Group",
-    "url": "https://www.intigriti.com/programs/kinepolis/website/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 70,
-    "reasons": [
-      "có bounty",
-      "37 host/repo cụ thể",
-      "program mới",
-      "scope rộng"
-    ],
-    "concrete_count": 37,
-    "min_bounty": 0.0,
-    "max_bounty": 5000.0,
-    "currency": "EUR",
-    "first_seen": "2026-09-03T02:32:59Z",
+    "first_seen": "2026-09-03T10:32:39Z",
     "added_assets": []
   },
   {
@@ -1002,6 +938,66 @@
       "9 host/repo cụ thể"
     ],
     "concrete_count": 9,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:inspectorio",
+    "platform": "hackerone",
+    "handle": "inspectorio",
+    "name": "Inspectorio",
+    "url": "https://hackerone.com/inspectorio",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "11 host/repo cụ thể"
+    ],
+    "concrete_count": 11,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:razorpay",
+    "platform": "hackerone",
+    "handle": "razorpay",
+    "name": "Razorpay",
+    "url": "https://hackerone.com/razorpay",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "6 host/repo cụ thể"
+    ],
+    "concrete_count": 6,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:zooplus",
+    "platform": "hackerone",
+    "handle": "zooplus",
+    "name": "Zooplus",
+    "url": "https://hackerone.com/zooplus",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

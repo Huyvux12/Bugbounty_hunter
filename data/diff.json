@@ -1,6 +1,12 @@
 {
   "added": [
     {
+      "id": "hackerone:phpbb",
+      "name": "phpBB",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/phpbb"
+    },
+    {
       "id": "bugcrowd:akeles",
       "name": "Akeles Marketplace Bug Bounty",
       "platform": "bugcrowd",
@@ -11,12 +17,6 @@
       "name": "APTIS",
       "platform": "bugcrowd",
       "url": "https://bugcrowd.com/engagements/epicsumup"
-    },
-    {
-      "id": "bugcrowd:hypixel-studios-mbb-og",
-      "name": "Hypixel Studios Managed Bug Bounty Engagement",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/hypixel-studios-mbb-og"
     },
     {
       "id": "bugcrowd:okapya",
@@ -35,43 +35,16 @@
       "name": "Xopero Software S.A. Marketplace Managed Bug Bounty Engagement",
       "platform": "bugcrowd",
       "url": "https://bugcrowd.com/engagements/xopero-software-marketplace"
-    },
-    {
-      "id": "intigriti:nmt",
-      "name": "Axel Springer National Media & Tech",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail"
-    },
-    {
-      "id": "intigriti:website",
-      "name": "Kinepolis Group",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/kinepolis/website/detail"
     }
   ],
-  "removed": [],
+  "removed": [
+    {
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti"
+    }
+  ],
   "scope_changes": [
-    {
-      "id": "hackerone:tbs-sct",
-      "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/tbs-sct",
-      "added": [
-        "api.forms-formulaires.alpha.canada.ca",
-        "validate-email.cdssandbox.xyz"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:john-deere",
-      "name": "John Deere",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/john-deere",
-      "added": [
-        "calculadora.deere.com.br"
-      ],
-      "removed": []
-    },
     {
       "id": "bugcrowd:blockopensource",
       "name": "Block Open Source",
