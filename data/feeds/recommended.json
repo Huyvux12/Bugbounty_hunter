@@ -20,44 +20,45 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:jaangainc-mbb-market",
+    "id": "bugcrowd:akeles",
     "platform": "bugcrowd",
-    "handle": "jaangainc-mbb-market",
-    "name": "Jaanga Marketplace Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "intigriti:datacamp",
-    "platform": "intigriti",
-    "handle": "datacamp",
-    "name": "DataCamp",
-    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "handle": "akeles",
+    "name": "Akeles Marketplace Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/akeles",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 85,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể",
+      "15 host/repo cụ thể",
       "program mới"
     ],
-    "concrete_count": 12,
-    "min_bounty": 25.0,
+    "concrete_count": 15,
+    "min_bounty": null,
     "max_bounty": 1500.0,
+    "currency": "USD",
+    "first_seen": "2026-09-03T02:32:59Z",
+    "added_assets": []
+  },
+  {
+    "id": "intigriti:nmt",
+    "platform": "intigriti",
+    "handle": "nmt",
+    "name": "Axel Springer National Media & Tech",
+    "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "16 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 16,
+    "min_bounty": 15.0,
+    "max_bounty": 2500.0,
     "currency": "EUR",
-    "first_seen": "2026-09-02T20:24:34Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": []
   },
   {
@@ -101,23 +102,24 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:acorns",
+    "id": "bugcrowd:hypixel-studios-mbb-og",
     "platform": "bugcrowd",
-    "handle": "acorns",
-    "name": "Acorns Grow, Inc.",
-    "url": "https://bugcrowd.com/engagements/acorns",
+    "handle": "hypixel-studios-mbb-og",
+    "name": "Hypixel Studios Managed Bug Bounty Engagement",
+    "url": "https://bugcrowd.com/engagements/hypixel-studios-mbb-og",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 85,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "9 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 4,
+    "concrete_count": 9,
     "min_bounty": null,
-    "max_bounty": 4000.0,
+    "max_bounty": 25000.0,
     "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": []
   },
   {
@@ -139,7 +141,7 @@
     "min_bounty": 0.0,
     "max_bounty": 5000.0,
     "currency": "EUR",
-    "first_seen": "2026-09-02T20:24:34Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": []
   },
   {
@@ -183,23 +185,24 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:afterpay",
+    "id": "bugcrowd:epicsumup",
     "platform": "bugcrowd",
-    "handle": "afterpay",
-    "name": "Afterpay Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/afterpay",
+    "handle": "epicsumup",
+    "name": "APTIS",
+    "url": "https://bugcrowd.com/engagements/epicsumup",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 80,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể"
+      "1 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 12,
+    "concrete_count": 1,
     "min_bounty": null,
-    "max_bounty": 5000.0,
+    "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-01T10:56:59Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": []
   },
   {
@@ -263,41 +266,42 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:agile-pulse",
+    "id": "bugcrowd:okapya",
     "platform": "bugcrowd",
-    "handle": "agile-pulse",
-    "name": "AgilePulse Marketplace Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/agile-pulse",
+    "handle": "okapya",
+    "name": "Okapya",
+    "url": "https://bugcrowd.com/engagements/okapya",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 80,
     "reasons": [
       "có bounty",
-      "8 host/repo cụ thể"
+      "1 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 8,
+    "concrete_count": 1,
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": []
   },
   {
-    "id": "intigriti:nmt",
+    "id": "intigriti:bmwgroup",
     "platform": "intigriti",
-    "handle": "nmt",
-    "name": "Axel Springer National Media & Tech",
-    "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail",
+    "handle": "bmwgroup",
+    "name": "BMW Group",
+    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "16 host/repo cụ thể"
+      "6 host/repo cụ thể"
     ],
-    "concrete_count": 16,
-    "min_bounty": 15.0,
-    "max_bounty": 2500.0,
+    "concrete_count": 6,
+    "min_bounty": 150.0,
+    "max_bounty": 6000.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -343,41 +347,42 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:agilislt",
+    "id": "bugcrowd:shinetech-software-market",
     "platform": "bugcrowd",
-    "handle": "agilislt",
-    "name": "Agilis LT Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/agilislt",
+    "handle": "shinetech-software-market",
+    "name": "Shinetech Software Inc Marketplace Managed Bug Bounty Engagement ",
+    "url": "https://bugcrowd.com/engagements/shinetech-software-market",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 80,
     "reasons": [
       "có bounty",
-      "9 host/repo cụ thể"
+      "2 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 9,
+    "concrete_count": 2,
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": []
   },
   {
-    "id": "intigriti:bmwgroup",
+    "id": "intigriti:dummy",
     "platform": "intigriti",
-    "handle": "bmwgroup",
-    "name": "BMW Group",
-    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
+    "handle": "dummy",
+    "name": "Bpost",
+    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể"
+      "12 host/repo cụ thể"
     ],
-    "concrete_count": 6,
-    "min_bounty": 150.0,
-    "max_bounty": 6000.0,
+    "concrete_count": 12,
+    "min_bounty": 0.0,
+    "max_bounty": 1500.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
@@ -423,41 +428,42 @@
     "added_assets": []
   },
   {
-    "id": "bugcrowd:aiven-mbb-og",
+    "id": "bugcrowd:xopero-software-marketplace",
     "platform": "bugcrowd",
-    "handle": "aiven-mbb-og",
-    "name": "Aiven Managed Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
+    "handle": "xopero-software-marketplace",
+    "name": "Xopero Software S.A. Marketplace Managed Bug Bounty Engagement",
+    "url": "https://bugcrowd.com/engagements/xopero-software-marketplace",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 80,
     "reasons": [
       "có bounty",
-      "9 host/repo cụ thể"
+      "1 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 9,
+    "concrete_count": 1,
     "min_bounty": null,
-    "max_bounty": 25000.0,
+    "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": []
   },
   {
-    "id": "intigriti:dummy",
+    "id": "intigriti:cmcom",
     "platform": "intigriti",
-    "handle": "dummy",
-    "name": "Bpost",
-    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
+    "handle": "cmcom",
+    "name": "CM.com",
+    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể"
+      "10 host/repo cụ thể"
     ],
-    "concrete_count": 12,
-    "min_bounty": 0.0,
-    "max_bounty": 1500.0,
+    "concrete_count": 10,
+    "min_bounty": 5.0,
+    "max_bounty": 2625.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []

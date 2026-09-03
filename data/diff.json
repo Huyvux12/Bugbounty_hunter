@@ -1,28 +1,52 @@
 {
   "added": [
     {
-      "id": "hackerone:semtech",
-      "name": "Semtech",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/semtech"
+      "id": "bugcrowd:akeles",
+      "name": "Akeles Marketplace Bug Bounty",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/akeles"
     },
     {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
+      "id": "bugcrowd:epicsumup",
+      "name": "APTIS",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/epicsumup"
+    },
+    {
+      "id": "bugcrowd:hypixel-studios-mbb-og",
+      "name": "Hypixel Studios Managed Bug Bounty Engagement",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/hypixel-studios-mbb-og"
+    },
+    {
+      "id": "bugcrowd:okapya",
+      "name": "Okapya",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/okapya"
+    },
+    {
+      "id": "bugcrowd:shinetech-software-market",
+      "name": "Shinetech Software Inc Marketplace Managed Bug Bounty Engagement ",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/shinetech-software-market"
+    },
+    {
+      "id": "bugcrowd:xopero-software-marketplace",
+      "name": "Xopero Software S.A. Marketplace Managed Bug Bounty Engagement",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/xopero-software-marketplace"
+    },
+    {
+      "id": "intigriti:nmt",
+      "name": "Axel Springer National Media & Tech",
       "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
+      "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail"
     },
     {
       "id": "intigriti:website",
       "name": "Kinepolis Group",
       "platform": "intigriti",
       "url": "https://www.intigriti.com/programs/kinepolis/website/detail"
-    },
-    {
-      "id": "intigriti:liferaydxp",
-      "name": "Liferay DXP",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/liferay/liferaydxp/detail"
     }
   ],
   "removed": [],
@@ -44,10 +68,33 @@
       "platform": "hackerone",
       "url": "https://hackerone.com/john-deere",
       "added": [
-        "calculadora.deere.com.br",
-        "jdpo-cert.deere.com"
+        "calculadora.deere.com.br"
       ],
       "removed": []
+    },
+    {
+      "id": "bugcrowd:blockopensource",
+      "name": "Block Open Source",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/blockopensource",
+      "added": [
+        "██████████████████████████████",
+        "███████████████████████████████",
+        "█████████████████████████████████",
+        "███████████████████████████████████",
+        "███████████████████████████████████████",
+        "███████████████████████████████████████████████",
+        "███████████████████████████████████████████████████"
+      ],
+      "removed": [
+        "https://github.com/afterpay/sdk-android",
+        "https://github.com/afterpay/sdk-ios",
+        "https://github.com/cashapp/cash-app-pay-android-sdk",
+        "https://github.com/cashapp/cash-app-pay-ios-sdk",
+        "https://github.com/cashapp/hermit",
+        "https://github.com/cashapp/misk",
+        "https://github.com/square/wire"
+      ]
     }
   ]
 }
