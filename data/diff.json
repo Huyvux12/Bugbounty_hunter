@@ -5,68 +5,42 @@
       "name": "phpBB",
       "platform": "hackerone",
       "url": "https://hackerone.com/phpbb"
-    },
-    {
-      "id": "bugcrowd:akeles",
-      "name": "Akeles Marketplace Bug Bounty",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/akeles"
-    },
-    {
-      "id": "bugcrowd:epicsumup",
-      "name": "APTIS",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/epicsumup"
-    },
-    {
-      "id": "bugcrowd:okapya",
-      "name": "Okapya",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/okapya"
-    },
-    {
-      "id": "bugcrowd:shinetech-software-market",
-      "name": "Shinetech Software Inc Marketplace Managed Bug Bounty Engagement ",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/shinetech-software-market"
-    },
-    {
-      "id": "bugcrowd:xopero-software-marketplace",
-      "name": "Xopero Software S.A. Marketplace Managed Bug Bounty Engagement",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/xopero-software-marketplace"
     }
   ],
   "removed": [
     {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
+      "id": "hackerone:frontegg",
+      "name": "Frontegg",
+      "platform": "hackerone"
+    },
+    {
+      "id": "intigriti:website",
+      "name": "Kinepolis Group",
       "platform": "intigriti"
     }
   ],
   "scope_changes": [
     {
-      "id": "bugcrowd:blockopensource",
-      "name": "Block Open Source",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/blockopensource",
+      "id": "hackerone:john-deere",
+      "name": "John Deere",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/john-deere",
       "added": [
-        "██████████████████████████████",
-        "███████████████████████████████",
-        "█████████████████████████████████",
-        "███████████████████████████████████",
-        "███████████████████████████████████████",
-        "███████████████████████████████████████████████",
-        "███████████████████████████████████████████████████"
+        "jdflorestal.com"
+      ],
+      "removed": []
+    },
+    {
+      "id": "intigriti:adobepublic",
+      "name": "Adobe Public",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/adobe/adobepublic/detail",
+      "added": [
+        "Lightroom Video & Photo Editor (IOS)"
       ],
       "removed": [
-        "https://github.com/afterpay/sdk-android",
-        "https://github.com/afterpay/sdk-ios",
-        "https://github.com/cashapp/cash-app-pay-android-sdk",
-        "https://github.com/cashapp/cash-app-pay-ios-sdk",
-        "https://github.com/cashapp/hermit",
-        "https://github.com/cashapp/misk",
-        "https://github.com/square/wire"
+        "Adobe ColdFusion without ColdFusion Administrator",
+        "https://play.google.com/store/apps/details?id=com.adobe.lrmobile&hl=en_GB"
       ]
     }
   ]

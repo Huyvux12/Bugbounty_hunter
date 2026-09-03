@@ -1,110 +1,5 @@
 [
   {
-    "id": "bugcrowd:akeles",
-    "platform": "bugcrowd",
-    "handle": "akeles",
-    "name": "Akeles Marketplace Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/akeles",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "15 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 15,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:epicsumup",
-    "platform": "bugcrowd",
-    "handle": "epicsumup",
-    "name": "APTIS",
-    "url": "https://bugcrowd.com/engagements/epicsumup",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:okapya",
-    "platform": "bugcrowd",
-    "handle": "okapya",
-    "name": "Okapya",
-    "url": "https://bugcrowd.com/engagements/okapya",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:shinetech-software-market",
-    "platform": "bugcrowd",
-    "handle": "shinetech-software-market",
-    "name": "Shinetech Software Inc Marketplace Managed Bug Bounty Engagement ",
-    "url": "https://bugcrowd.com/engagements/shinetech-software-market",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "2 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 2,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:xopero-software-marketplace",
-    "platform": "bugcrowd",
-    "handle": "xopero-software-marketplace",
-    "name": "Xopero Software S.A. Marketplace Managed Bug Bounty Engagement",
-    "url": "https://bugcrowd.com/engagements/xopero-software-marketplace",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -998,6 +893,106 @@
       "4 host/repo cụ thể"
     ],
     "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:newegg",
+    "platform": "hackerone",
+    "handle": "newegg",
+    "name": "Newegg",
+    "url": "https://hackerone.com/newegg",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:krisp",
+    "platform": "hackerone",
+    "handle": "krisp",
+    "name": "Krisp",
+    "url": "https://hackerone.com/krisp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "13 host/repo cụ thể"
+    ],
+    "concrete_count": 13,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:whatnot",
+    "platform": "hackerone",
+    "handle": "whatnot",
+    "name": "Whatnot",
+    "url": "https://hackerone.com/whatnot",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:smtp2go",
+    "platform": "hackerone",
+    "handle": "smtp2go",
+    "name": "SMTP2GO BBP",
+    "url": "https://hackerone.com/smtp2go",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": []
+  },
+  {
+    "id": "hackerone:playtika",
+    "platform": "hackerone",
+    "handle": "playtika",
+    "name": "Playtika",
+    "url": "https://hackerone.com/playtika",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "5 host/repo cụ thể"
+    ],
+    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

@@ -16,141 +16,54 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-03T10:32:39Z",
+    "first_seen": "2026-09-03T15:38:15Z",
     "added_assets": []
   },
   {
-    "id": "bugcrowd:epicsumup",
-    "platform": "bugcrowd",
-    "handle": "epicsumup",
-    "name": "APTIS",
-    "url": "https://bugcrowd.com/engagements/epicsumup",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:okapya",
-    "platform": "bugcrowd",
-    "handle": "okapya",
-    "name": "Okapya",
-    "url": "https://bugcrowd.com/engagements/okapya",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:shinetech-software-market",
-    "platform": "bugcrowd",
-    "handle": "shinetech-software-market",
-    "name": "Shinetech Software Inc Marketplace Managed Bug Bounty Engagement ",
-    "url": "https://bugcrowd.com/engagements/shinetech-software-market",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "2 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 2,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:xopero-software-marketplace",
-    "platform": "bugcrowd",
-    "handle": "xopero-software-marketplace",
-    "name": "Xopero Software S.A. Marketplace Managed Bug Bounty Engagement",
-    "url": "https://bugcrowd.com/engagements/xopero-software-marketplace",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:akeles",
-    "platform": "bugcrowd",
-    "handle": "akeles",
-    "name": "Akeles Marketplace Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/akeles",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "15 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 15,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-03T10:32:39Z",
-    "added_assets": []
-  },
-  {
-    "id": "bugcrowd:blockopensource",
-    "platform": "bugcrowd",
-    "handle": "blockopensource",
-    "name": "Block Open Source",
-    "url": "https://bugcrowd.com/engagements/blockopensource",
+    "id": "intigriti:adobepublic",
+    "platform": "intigriti",
+    "handle": "adobepublic",
+    "name": "Adobe Public",
+    "url": "https://www.intigriti.com/programs/adobe/adobepublic/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 20,
     "reasons": [
       "có bounty",
-      "+7 asset",
-      "không có web/API cụ thể"
+      "26 host/repo cụ thể",
+      "+1 asset",
+      "scope rộng"
     ],
-    "concrete_count": 0,
-    "min_bounty": null,
-    "max_bounty": 5000.0,
+    "concrete_count": 26,
+    "min_bounty": 75.0,
+    "max_bounty": 15000.0,
     "currency": "USD",
+    "first_seen": "2026-09-01T15:56:14Z",
+    "added_assets": [
+      "Lightroom Video & Photo Editor (IOS)"
+    ]
+  },
+  {
+    "id": "hackerone:john-deere",
+    "platform": "hackerone",
+    "handle": "john-deere",
+    "name": "John Deere",
+    "url": "https://hackerone.com/john-deere",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 35,
+    "reasons": [
+      "1999 host/repo cụ thể",
+      "+1 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 1999,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "██████████████████████████████",
-      "███████████████████████████████",
-      "█████████████████████████████████",
-      "███████████████████████████████████",
-      "███████████████████████████████████████",
-      "███████████████████████████████████████████████",
-      "███████████████████████████████████████████████████"
+      "jdflorestal.com"
     ]
   }
 ]
