@@ -1,48 +1,5 @@
 [
   {
-    "id": "intigriti:wpenginebugbounty",
-    "platform": "intigriti",
-    "handle": "wpenginebugbounty",
-    "name": "WP Engine Bug Bounty",
-    "url": "https://www.intigriti.com/programs/wpengine/wpenginebugbounty/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "9 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 9,
-    "min_bounty": 0.0,
-    "max_bounty": 2500.0,
-    "currency": "EUR",
-    "first_seen": "2026-09-04T02:29:22Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:anthropic-cyber-jailbreak",
-    "platform": "hackerone",
-    "handle": "anthropic-cyber-jailbreak",
-    "name": "Anthropic Cyber Jailbreak",
-    "url": "https://hackerone.com/anthropic-cyber-jailbreak",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 0,
-    "reasons": [
-      "+1 asset",
-      "không có web/API cụ thể"
-    ],
-    "concrete_count": 0,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "Fable 5.1"
-    ]
-  },
-  {
     "id": "hackerone:amazonvrp",
     "platform": "hackerone",
     "handle": "amazonvrp",
@@ -71,80 +28,6 @@
       "947984433",
       "Devices",
       "Echo Family Devices"
-    ]
-  },
-  {
-    "id": "hackerone:fifth_third_bank_vdp",
-    "platform": "hackerone",
-    "handle": "fifth_third_bank_vdp",
-    "name": "Fifth Third Bank VDP",
-    "url": "https://hackerone.com/fifth_third_bank_vdp",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 35,
-    "reasons": [
-      "71 host/repo cụ thể",
-      "+2 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 71,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "http://fuse.bigdatahc.com",
-      "http://secure.franklin-street.com"
-    ]
-  },
-  {
-    "id": "hackerone:john-deere",
-    "platform": "hackerone",
-    "handle": "john-deere",
-    "name": "John Deere",
-    "url": "https://hackerone.com/john-deere",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 35,
-    "reasons": [
-      "2003 host/repo cụ thể",
-      "+4 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 2003,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "machinefinderdevlaws.tal.deere.com",
-      "r2events.deere.com",
-      "tpc-api-gateway.deere.com",
-      "www.johndeeredealerrewards.com"
-    ]
-  },
-  {
-    "id": "bugcrowd:t-mobile",
-    "platform": "bugcrowd",
-    "handle": "t-mobile",
-    "name": "T-Mobile",
-    "url": "https://bugcrowd.com/engagements/t-mobile",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "66 host/repo cụ thể",
-      "+1 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 66,
-    "min_bounty": null,
-    "max_bounty": 133700.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "https://account.business.t-mobile.com"
     ]
   }
 ]
