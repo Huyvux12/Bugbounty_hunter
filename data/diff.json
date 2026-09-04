@@ -7,13 +7,7 @@
       "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
     }
   ],
-  "removed": [
-    {
-      "id": "hackerone:klarna",
-      "name": "Klarna",
-      "platform": "hackerone"
-    }
-  ],
+  "removed": [],
   "scope_changes": [
     {
       "id": "hackerone:john-deere",
