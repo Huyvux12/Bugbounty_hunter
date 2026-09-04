@@ -17,32 +17,8 @@
     "min_bounty": 0.0,
     "max_bounty": 2500.0,
     "currency": "EUR",
-    "first_seen": "2026-09-03T20:23:52Z",
+    "first_seen": "2026-09-04T02:29:22Z",
     "added_assets": []
-  },
-  {
-    "id": "intigriti:adobepublic",
-    "platform": "intigriti",
-    "handle": "adobepublic",
-    "name": "Adobe Public",
-    "url": "https://www.intigriti.com/programs/adobe/adobepublic/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 20,
-    "reasons": [
-      "có bounty",
-      "26 host/repo cụ thể",
-      "+1 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 26,
-    "min_bounty": 75.0,
-    "max_bounty": 15000.0,
-    "currency": "USD",
-    "first_seen": "2026-09-01T20:24:32Z",
-    "added_assets": [
-      "Lightroom Video & Photo Editor (IOS)"
-    ]
   },
   {
     "id": "hackerone:anthropic-cyber-jailbreak",
@@ -64,6 +40,37 @@
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
       "Fable 5.1"
+    ]
+  },
+  {
+    "id": "hackerone:amazonvrp",
+    "platform": "hackerone",
+    "handle": "amazonvrp",
+    "name": "Amazon Vulnerability Research Program",
+    "url": "https://hackerone.com/amazonvrp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 30,
+    "reasons": [
+      "có bounty",
+      "1 host/repo cụ thể",
+      "+21 asset",
+      "program lớn, cạnh tranh cao"
+    ],
+    "concrete_count": 1,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "1324809509",
+      "1528364633",
+      "302584613",
+      "621574163",
+      "944011620",
+      "947984433",
+      "Devices",
+      "Echo Family Devices"
     ]
   },
   {
@@ -101,7 +108,7 @@
     "easy_score": 35,
     "reasons": [
       "2003 host/repo cụ thể",
-      "+5 asset",
+      "+4 asset",
       "scope rộng"
     ],
     "concrete_count": 2003,
@@ -110,7 +117,6 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "jdflorestal.com",
       "machinefinderdevlaws.tal.deere.com",
       "r2events.deere.com",
       "tpc-api-gateway.deere.com",
