@@ -1,37 +1,28 @@
 {
-  "added": [],
-  "removed": [
+  "added": [
     {
-      "id": "hackerone:amazonvrp-devices",
-      "name": "Amazon Vulnerability Research Program - Devices",
-      "platform": "hackerone"
-    },
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
+    }
+  ],
+  "removed": [
     {
       "id": "hackerone:klarna",
       "name": "Klarna",
       "platform": "hackerone"
-    },
-    {
-      "id": "intigriti:liferaydxp",
-      "name": "Liferay DXP",
-      "platform": "intigriti"
     }
   ],
   "scope_changes": [
     {
-      "id": "hackerone:amazonvrp",
-      "name": "Amazon Vulnerability Research Program",
+      "id": "hackerone:john-deere",
+      "name": "John Deere",
       "platform": "hackerone",
-      "url": "https://hackerone.com/amazonvrp",
+      "url": "https://hackerone.com/john-deere",
       "added": [
-        "1324809509",
-        "1528364633",
-        "302584613",
-        "621574163",
-        "944011620",
-        "947984433",
-        "Devices",
-        "Echo Family Devices"
+        "asnpromcp-prod.deere.com",
+        "biomcp.ghns-web-platform-prod-standalone4.us.e00.c01.johndeerecloud.com"
       ],
       "removed": []
     }
