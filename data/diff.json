@@ -1,24 +1,11 @@
 {
-  "added": [
+  "added": [],
+  "removed": [
     {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
+      "id": "hackerone:brave",
+      "name": "Brave Software",
+      "platform": "hackerone"
     }
   ],
-  "removed": [],
-  "scope_changes": [
-    {
-      "id": "hackerone:john-deere",
-      "name": "John Deere",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/john-deere",
-      "added": [
-        "asnpromcp-prod.deere.com",
-        "biomcp.ghns-web-platform-prod-standalone4.us.e00.c01.johndeerecloud.com"
-      ],
-      "removed": []
-    }
-  ]
+  "scope_changes": []
 }
