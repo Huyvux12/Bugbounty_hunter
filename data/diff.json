@@ -1,11 +1,5 @@
 {
   "added": [],
-  "removed": [
-    {
-      "id": "hackerone:brave",
-      "name": "Brave Software",
-      "platform": "hackerone"
-    }
-  ],
+  "removed": [],
   "scope_changes": []
 }
