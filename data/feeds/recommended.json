@@ -1,23 +1,26 @@
 [
   {
-    "id": "hackerone:wolt",
+    "id": "hackerone:basecamp",
     "platform": "hackerone",
-    "handle": "wolt",
-    "name": "Wolt",
-    "url": "https://hackerone.com/wolt",
+    "handle": "basecamp",
+    "name": "Basecamp",
+    "url": "https://hackerone.com/basecamp",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 75,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể"
+      "11 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 7,
+    "concrete_count": 11,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [
+      "https://github.com/basecamp/trix"
+    ]
   },
   {
     "id": "bugcrowd:jaangainc-mbb-market",
@@ -80,19 +83,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:agoda-public",
+    "id": "hackerone:wolt",
     "platform": "hackerone",
-    "handle": "agoda-public",
-    "name": "Agoda Public",
-    "url": "https://hackerone.com/agoda-public",
+    "handle": "wolt",
+    "name": "Wolt",
+    "url": "https://hackerone.com/wolt",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể"
+      "7 host/repo cụ thể"
     ],
-    "concrete_count": 3,
+    "concrete_count": 7,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -136,7 +139,7 @@
     "min_bounty": 15.0,
     "max_bounty": 2500.0,
     "currency": "EUR",
-    "first_seen": "2026-09-03T02:32:59Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": []
   },
   {
@@ -160,19 +163,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:1win_com",
+    "id": "hackerone:agoda-public",
     "platform": "hackerone",
-    "handle": "1win_com",
-    "name": "1win",
-    "url": "https://hackerone.com/1win_com",
+    "handle": "agoda-public",
+    "name": "Agoda Public",
+    "url": "https://hackerone.com/agoda-public",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 5,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -196,7 +199,7 @@
     "min_bounty": null,
     "max_bounty": 5000.0,
     "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-01T10:56:59Z",
     "added_assets": []
   },
   {
@@ -240,19 +243,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:meesho_bbp",
+    "id": "hackerone:1win_com",
     "platform": "hackerone",
-    "handle": "meesho_bbp",
-    "name": "Meesho",
-    "url": "https://hackerone.com/meesho_bbp",
+    "handle": "1win_com",
+    "name": "1win",
+    "url": "https://hackerone.com/1win_com",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "9 host/repo cụ thể"
+      "5 host/repo cụ thể"
     ],
-    "concrete_count": 9,
+    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -320,19 +323,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:braze_inc",
+    "id": "hackerone:meesho_bbp",
     "platform": "hackerone",
-    "handle": "braze_inc",
-    "name": "Braze, Inc.",
-    "url": "https://hackerone.com/braze_inc",
+    "handle": "meesho_bbp",
+    "name": "Meesho",
+    "url": "https://hackerone.com/meesho_bbp",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể"
+      "9 host/repo cụ thể"
     ],
-    "concrete_count": 3,
+    "concrete_count": 9,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -400,19 +403,19 @@
     "added_assets": []
   },
   {
-    "id": "hackerone:kong",
+    "id": "hackerone:braze_inc",
     "platform": "hackerone",
-    "handle": "kong",
-    "name": "Kong",
-    "url": "https://hackerone.com/kong",
+    "handle": "braze_inc",
+    "name": "Braze, Inc.",
+    "url": "https://hackerone.com/braze_inc",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 4,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

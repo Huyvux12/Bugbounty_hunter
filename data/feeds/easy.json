@@ -1,5 +1,28 @@
 [
   {
+    "id": "hackerone:basecamp",
+    "platform": "hackerone",
+    "handle": "basecamp",
+    "name": "Basecamp",
+    "url": "https://hackerone.com/basecamp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "11 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 11,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://github.com/basecamp/trix"
+    ]
+  },
+  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -973,26 +996,6 @@
       "3 host/repo cụ thể"
     ],
     "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
-  },
-  {
-    "id": "hackerone:playtika",
-    "platform": "hackerone",
-    "handle": "playtika",
-    "name": "Playtika",
-    "url": "https://hackerone.com/playtika",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể"
-    ],
-    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

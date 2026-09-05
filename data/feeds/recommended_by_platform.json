@@ -1,6 +1,29 @@
 {
   "hackerone": [
     {
+      "id": "hackerone:basecamp",
+      "platform": "hackerone",
+      "handle": "basecamp",
+      "name": "Basecamp",
+      "url": "https://hackerone.com/basecamp",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 75,
+      "reasons": [
+        "có bounty",
+        "11 host/repo cụ thể",
+        "+1 asset"
+      ],
+      "concrete_count": 11,
+      "min_bounty": null,
+      "max_bounty": null,
+      "currency": null,
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [
+        "https://github.com/basecamp/trix"
+      ]
+    },
+    {
       "id": "hackerone:wolt",
       "platform": "hackerone",
       "handle": "wolt",
@@ -219,26 +242,6 @@
       "currency": null,
       "first_seen": "2026-08-24T09:20:54Z",
       "added_assets": []
-    },
-    {
-      "id": "hackerone:circle-bbp",
-      "platform": "hackerone",
-      "handle": "circle-bbp",
-      "name": "Circle BBP",
-      "url": "https://hackerone.com/circle-bbp",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "17 host/repo cụ thể"
-      ],
-      "concrete_count": 17,
-      "min_bounty": null,
-      "max_bounty": null,
-      "currency": null,
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": []
     }
   ],
   "bugcrowd": [
@@ -299,7 +302,7 @@
       "min_bounty": null,
       "max_bounty": 5000.0,
       "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
+      "first_seen": "2026-09-01T10:56:59Z",
       "added_assets": []
     },
     {
@@ -379,7 +382,7 @@
       "min_bounty": null,
       "max_bounty": 1500.0,
       "currency": "USD",
-      "first_seen": "2026-09-03T02:32:59Z",
+      "first_seen": "2026-09-03T10:32:39Z",
       "added_assets": []
     },
     {
@@ -521,7 +524,7 @@
       "min_bounty": 15.0,
       "max_bounty": 2500.0,
       "currency": "EUR",
-      "first_seen": "2026-09-03T02:32:59Z",
+      "first_seen": "2026-08-24T09:20:54Z",
       "added_assets": []
     },
     {
@@ -641,7 +644,7 @@
       "min_bounty": 25.0,
       "max_bounty": 1500.0,
       "currency": "EUR",
-      "first_seen": "2026-09-04T15:36:50Z",
+      "first_seen": "2026-09-04T20:09:45Z",
       "added_assets": []
     },
     {
@@ -701,7 +704,7 @@
       "min_bounty": 100.0,
       "max_bounty": 15000.0,
       "currency": "EUR",
-      "first_seen": "2026-08-31T12:26:19Z",
+      "first_seen": "2026-08-31T22:17:26Z",
       "added_assets": []
     },
     {
