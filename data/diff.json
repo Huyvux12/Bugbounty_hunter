@@ -2,6 +2,11 @@
   "added": [],
   "removed": [
     {
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti"
+    },
+    {
       "id": "intigriti:wpenginebugbounty",
       "name": "WP Engine Bug Bounty",
       "platform": "intigriti"
