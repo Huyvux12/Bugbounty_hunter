@@ -5,23 +5,7 @@
       "id": "intigriti:datacamp",
       "name": "DataCamp",
       "platform": "intigriti"
-    },
-    {
-      "id": "intigriti:wpenginebugbounty",
-      "name": "WP Engine Bug Bounty",
-      "platform": "intigriti"
     }
   ],
-  "scope_changes": [
-    {
-      "id": "hackerone:basecamp",
-      "name": "Basecamp",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/basecamp",
-      "added": [
-        "https://github.com/basecamp/trix"
-      ],
-      "removed": []
-    }
-  ]
+  "scope_changes": []
 }
