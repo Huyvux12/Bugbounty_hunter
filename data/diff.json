@@ -1,11 +1,5 @@
 {
   "added": [],
-  "removed": [
-    {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
-      "platform": "intigriti"
-    }
-  ],
+  "removed": [],
   "scope_changes": []
 }
