@@ -93,9 +93,15 @@ def publish_docs(docs_dir: Path, data_dir: Path, feeds: dict, generated_at: str,
                 "concrete_count": program.get("concrete_count"),
                 "min_bounty": program.get("min_bounty"),
                 "max_bounty": program.get("max_bounty"),
+                "currency": program.get("currency"),
                 "first_seen": program.get("first_seen"),
                 "in_scope": program.get("in_scope") or [],
                 "out_of_scope": program.get("out_of_scope") or [],
+                "reward_types": program.get("reward_types") or [],
+                "scope_kinds": program.get("scope_kinds") or [],
+                "summary_vi": program.get("summary_vi"),
+                "policy_url": program.get("policy_url"),
+                "contact": program.get("contact"),
             }
         )
     (data_out / "programs.min.json").write_text(

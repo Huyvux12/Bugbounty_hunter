@@ -17,20 +17,59 @@
     <button data-tab="easy">Dễ ăn</button>
     <button data-tab="new">Mới</button>
     <button data-tab="all">Tất cả</button>
+    <button data-tab="saved">Đã lưu</button>
   </nav>
   <form class="filters">
     <input id="q" type="search" placeholder="Tìm tên, handle, domain" />
   </form>
   <nav id="platforms" class="chips" aria-label="Lọc nền tảng"></nav>
+  <div class="filters extra">
+    <label>Asset
+      <select id="kind">
+        <option value="">Tất cả</option>
+        <option value="url">URL</option>
+        <option value="domain">Domain</option>
+        <option value="wildcard">Wildcard</option>
+        <option value="repo">Repo</option>
+        <option value="cidr">CIDR</option>
+        <option value="mobile">Mobile</option>
+      </select>
+    </label>
+    <label>Thưởng
+      <select id="reward">
+        <option value="">Tất cả</option>
+        <option value="cash">Tiền</option>
+        <option value="crypto">Crypto</option>
+        <option value="swag">Swag</option>
+        <option value="hall_of_fame">Hall of fame</option>
+        <option value="none">VDP / không thưởng</option>
+        <option value="unknown">Chưa rõ</option>
+      </select>
+    </label>
+    <label>Min $
+      <input id="minb" type="number" min="0" placeholder="0" />
+    </label>
+    <button id="export" type="button">Export đã lưu</button>
+    <label class="import">Import <input id="import" type="file" accept="application/json" /></label>
+  </div>
   <main id="list"></main>
   <dialog id="detail">
     <article>
       <header>
         <h2 id="d-title"></h2>
-        <button id="close" type="button">Đóng</button>
+        <div class="detail-actions">
+          <button id="save" type="button">Lưu</button>
+          <button id="close" type="button">Đóng</button>
+        </div>
       </header>
       <p id="d-meta"></p>
+      <p id="d-reward"></p>
+      <p id="d-contact"></p>
+      <p id="d-summary"></p>
       <p id="d-reasons"></p>
+      <label class="note-label">Ghi chú
+        <textarea id="d-note" rows="3" placeholder="Note riêng trên máy này"></textarea>
+      </label>
       <h3>In scope</h3>
       <ul id="d-in"></ul>
       <h3>Out of scope</h3>

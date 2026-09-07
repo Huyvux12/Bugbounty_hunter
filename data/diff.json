@@ -1,18 +1,5 @@
 {
   "added": [],
   "removed": [],
-  "scope_changes": [
-    {
-      "id": "hackerone:basecamp",
-      "name": "Basecamp",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/basecamp",
-      "added": [
-        "app.fizzy.do"
-      ],
-      "removed": [
-        "fizzy.do"
-      ]
-    }
-  ]
+  "scope_changes": []
 }

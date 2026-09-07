@@ -6,6 +6,8 @@ from urllib.parse import urlparse
 
 from feed_bot.classify import classify_kind, is_concrete
 from feed_bot.models import Asset, Program
+from feed_bot.rewards import attach_derived, infer_reward_types
+from feed_bot.sources.selfhost import _is_platform
 
 _HANDLE_RE = re.compile(r"[^a-z0-9]+")
 
@@ -231,6 +233,50 @@ def normalize_federacy(raw: dict[str, Any], source: str = "arkadiyt") -> Program
     )
 
 
+def normalize_self_host(raw: dict[str, Any], source: str = "selfhost_dump") -> Program | None:
+    url = str(raw.get("url") or raw.get("policy_url") or "").strip()
+    name = str(raw.get("name") or raw.get("program_name") or "").strip()
+    if not url or not name or _is_platform(url):
+        return None
+    host = (urlparse(url).hostname or "").removeprefix("www.")
+    handle = slug(host or name)
+    domains = raw.get("domains") or []
+    in_scope = []
+    for domain in domains:
+        text = str(domain).strip()
+        if not text:
+            continue
+        in_scope.append(_asset(text.split()[0], "WILDCARD" if "*" in text else "DOMAIN", True))
+    status = str(raw.get("status") or "open").lower()
+    if status in {"paused", "closed", "disabled"}:
+        status = "paused"
+    else:
+        status = "open"
+    min_b, _ = _money(raw.get("min_bounty") or raw.get("min_payout"))
+    max_b, _ = _money(raw.get("max_bounty") or raw.get("max_payout"))
+    rewards = infer_reward_types(raw)
+    program = Program(
+        id=f"self-host:{handle}",
+        platform="self-host",
+        handle=handle,
+        name=name,
+        url=url,
+        offers_bounty="cash" in rewards or "crypto" in rewards,
+        status=status,
+        source=str(raw.get("source_dump") or source),
+        visibility="public",
+        in_scope=in_scope,
+        min_bounty=min_b,
+        max_bounty=max_b,
+        currency=str(raw.get("currency") or "") or None,
+        reward_types=rewards,
+        summary=str(raw.get("summary") or raw.get("description") or "") or None,
+        policy_url=str(raw.get("policy_url") or url) or None,
+        contact=str(raw.get("contact") or "") or None,
+    )
+    return _finish(program)
+
+
 def normalize_hackenproof(raw: dict[str, Any], source: str = "hackenproof_mcp") -> Program | None:
     if raw.get("error"):
         return None
@@ -341,6 +387,7 @@ NORMALIZERS = {
     "yeswehack": normalize_yeswehack,
     "federacy": normalize_federacy,
     "hackenproof": normalize_hackenproof,
+    "self-host": normalize_self_host,
 }
 
 
@@ -352,5 +399,8 @@ def normalize_many(platform: str, rows: list[dict[str, Any]], source: str) -> li
             continue
         program = fn(row, source=source)
         if program and program.id:
+            if not program.reward_types:
+                program.reward_types = infer_reward_types(row, offers_bounty=program.offers_bounty)
+            attach_derived(program)
             programs.append(program)
     return programs

@@ -46,7 +46,7 @@ def send_digest(
     if by_platform:
         lines.append("")
         lines.append("⭐ Đề xuất theo nền tảng")
-        order = ("hackerone", "bugcrowd", "intigriti", "yeswehack", "federacy", "hackenproof")
+        order = ("hackerone", "bugcrowd", "intigriti", "yeswehack", "federacy", "hackenproof", "self-host")
         platforms = [p for p in order if by_platform.get(p)] + sorted(
             p for p in by_platform if p not in order and by_platform.get(p)
         )

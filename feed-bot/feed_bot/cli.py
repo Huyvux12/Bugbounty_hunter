@@ -35,6 +35,7 @@ def main(argv: list[str] | None = None) -> int:
         "count": result["count"],
         "source_status": result["source_status"],
         "telegram_sent": result["telegram_sent"],
+        "llm_used": result.get("llm_used", 0),
     }
     if result.get("telegram_error"):
         out["telegram_error"] = result["telegram_error"]

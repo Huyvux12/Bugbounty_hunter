@@ -1,28 +1,5 @@
 [
   {
-    "id": "hackerone:basecamp",
-    "platform": "hackerone",
-    "handle": "basecamp",
-    "name": "Basecamp",
-    "url": "https://hackerone.com/basecamp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "11 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 11,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "app.fizzy.do"
-    ]
-  },
-  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -40,7 +17,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:agoda-public",
@@ -60,7 +48,16 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:1win_com",
@@ -80,7 +77,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "other",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:meesho_bbp",
@@ -100,7 +108,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:braze_inc",
@@ -120,7 +138,16 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:kong",
@@ -140,7 +167,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "domain",
+      "url",
+      "wildcard"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:whoop_bug_bounty",
@@ -160,7 +199,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "domain",
+      "mobile"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:bcny",
@@ -180,7 +230,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "domain",
+      "mobile"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:neon_bbp",
@@ -200,7 +261,16 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:starbucks_japan",
@@ -220,7 +290,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:syfe_bbp",
@@ -240,7 +320,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "mobile"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:circle-bbp",
@@ -260,7 +350,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "other",
+      "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:varonis",
@@ -280,7 +381,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:unico_idtech",
@@ -300,7 +411,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:wallet_on_telegram",
@@ -320,7 +443,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:chia_network",
@@ -340,7 +473,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "mobile",
+      "repo",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:privy-bbp",
@@ -360,7 +505,20 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash",
+      "swag"
+    ],
+    "scope_kinds": [
+      "other",
+      "domain",
+      "url",
+      "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:23andme_bbp",
@@ -380,7 +538,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:temu",
@@ -400,7 +568,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:bybit_fintech",
@@ -420,7 +598,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "url",
+      "mobile"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:bykea",
@@ -440,7 +629,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "mobile",
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:anthropic",
@@ -460,7 +661,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "domain",
+      "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:toolsforhumanity",
@@ -480,7 +692,20 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "domain",
+      "mobile",
+      "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:six-group",
@@ -500,7 +725,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "cidr",
+      "url",
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:eufy_security",
@@ -520,7 +757,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "other",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:redox_bbp",
@@ -540,7 +788,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "wildcard"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:wisdomtree",
@@ -560,7 +818,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:pornbox",
@@ -580,7 +848,16 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:superbet",
@@ -600,7 +877,20 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "url",
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:vodafone_oman",
@@ -620,7 +910,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:rei_bbp",
@@ -640,7 +940,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "url",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:arkose_labs",
@@ -660,7 +971,16 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:abercrombie_fitch_bbp",
@@ -680,7 +1000,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:metamask",
@@ -700,7 +1030,20 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash",
+      "swag"
+    ],
+    "scope_kinds": [
+      "other",
+      "domain",
+      "url",
+      "mobile"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:ripio",
@@ -720,7 +1063,20 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "mobile",
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:deribit",
@@ -740,7 +1096,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "mobile",
+      "other",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:sorare",
@@ -760,7 +1128,16 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:hilton",
@@ -780,7 +1157,21 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash",
+      "swag"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "cidr",
+      "other",
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:wellsfargo-bbp",
@@ -800,7 +1191,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "domain",
+      "mobile",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:payoneer",
@@ -820,7 +1223,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "url",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:moonpay",
@@ -840,7 +1254,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "domain",
+      "mobile",
+      "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:koho",
@@ -860,7 +1286,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:inspectorio",
@@ -880,7 +1317,17 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:razorpay",
@@ -900,7 +1347,16 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:zooplus",
@@ -920,7 +1376,16 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:newegg",
@@ -940,7 +1405,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "wildcard",
+      "url",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:krisp",
@@ -960,7 +1437,19 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:whatnot",
@@ -980,7 +1469,18 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "hackerone:smtp2go",
@@ -1000,6 +1500,48 @@
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": []
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:playtika",
+    "platform": "hackerone",
+    "handle": "playtika",
+    "name": "Playtika",
+    "url": "https://hackerone.com/playtika",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "5 host/repo cụ thể"
+    ],
+    "concrete_count": 5,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "mobile",
+      "other",
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   }
 ]

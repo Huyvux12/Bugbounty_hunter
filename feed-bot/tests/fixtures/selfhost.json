@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AlwaysData",
+    "url": "https://www.alwaysdata.com/en/bug-bounty/",
+    "policy_url": "https://www.alwaysdata.com/en/bug-bounty/",
+    "offers_bounty": "yes",
+    "offers_swag": true,
+    "domains": ["alwaysdata.com"],
+    "source_dump": "diodb"
+  },
+  {
+    "name": "Skip me",
+    "url": "https://hackerone.com/airbnb",
+    "source_dump": "diodb"
+  }
+]

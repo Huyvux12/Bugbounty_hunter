@@ -53,6 +53,7 @@ PLATFORM_ORDER = (
     "yeswehack",
     "federacy",
     "hackenproof",
+    "self-host",
 )
 
 

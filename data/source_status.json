@@ -14,14 +14,14 @@
   {
     "platform": "intigriti",
     "ok": true,
-    "count": 135,
+    "count": 137,
     "via": "arkadiyt"
   },
   {
     "platform": "yeswehack",
-    "ok": false,
-    "via": "arkadiyt",
-    "error": "Invalid IPv6 URL"
+    "ok": true,
+    "count": 57,
+    "via": "arkadiyt"
   },
   {
     "platform": "federacy",
@@ -31,8 +31,14 @@
   },
   {
     "platform": "hackenproof",
-    "ok": false,
-    "via": "mcp",
-    "error": "HACKENPROOF_API_KEY missing"
+    "ok": true,
+    "count": 65,
+    "via": "mcp"
+  },
+  {
+    "platform": "self-host",
+    "ok": true,
+    "count": 500,
+    "via": "dumps"
   }
 ]

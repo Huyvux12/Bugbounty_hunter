@@ -47,3 +47,19 @@ dialog header { display: flex; justify-content: space-between; gap: 12px; align-
 ul { padding-left: 18px; }
 .kind { color: var(--warn); font-size: 0.85rem; }
 .empty { color: var(--muted); padding: 24px 0; }
+.filters.extra { align-items: center; font-size: 0.9rem; color: var(--muted); }
+.filters.extra label { display: flex; gap: 6px; align-items: center; }
+.filters.extra input[type="number"] { width: 88px; flex: none; }
+.filters.extra input[type="file"] { max-width: 140px; }
+.star { color: var(--warn); }
+.detail-actions { display: flex; gap: 8px; }
+.note-label { display: flex; flex-direction: column; gap: 6px; margin: 12px 0; color: var(--muted); }
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font: inherit;
+}

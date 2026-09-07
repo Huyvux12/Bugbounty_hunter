@@ -50,6 +50,14 @@ class Program:
     easy_score: int = 0
     reasons: list[str] = field(default_factory=list)
     added_assets: list[str] = field(default_factory=list)
+    reward_types: list[str] = field(default_factory=list)
+    scope_kinds: list[str] = field(default_factory=list)
+    summary: str | None = None
+    summary_vi: str | None = None
+    policy_url: str | None = None
+    contact: str | None = None
+    llm_status: str | None = None
+    content_hash: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
         payload = asdict(self)
@@ -78,6 +86,14 @@ class Program:
             easy_score=int(data.get("easy_score") or 0),
             reasons=list(data.get("reasons") or []),
             added_assets=list(data.get("added_assets") or []),
+            reward_types=list(data.get("reward_types") or []),
+            scope_kinds=list(data.get("scope_kinds") or []),
+            summary=data.get("summary"),
+            summary_vi=data.get("summary_vi"),
+            policy_url=data.get("policy_url"),
+            contact=data.get("contact"),
+            llm_status=data.get("llm_status"),
+            content_hash=data.get("content_hash"),
         )
 
 
@@ -107,4 +123,9 @@ def card(program: Program) -> dict[str, Any]:
         "currency": program.currency,
         "first_seen": program.first_seen,
         "added_assets": program.added_assets[:8],
+        "reward_types": program.reward_types[:6],
+        "scope_kinds": program.scope_kinds[:8],
+        "summary_vi": program.summary_vi,
+        "policy_url": program.policy_url,
+        "contact": program.contact,
     }

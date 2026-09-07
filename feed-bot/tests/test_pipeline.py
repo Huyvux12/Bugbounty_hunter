@@ -30,7 +30,9 @@ def test_pipeline_arkadiyt_and_hackenproof(tmp_path, monkeypatch):
         now=datetime(2026, 8, 24, tzinfo=timezone.utc),
         fetch_dump_fn=fetch_dump,
         fetch_hackenproof_fn=lambda: _load("hackenproof.json"),
+        fetch_selfhost_fn=lambda: [],
         send_telegram=False,
+        enrich_llm=False,
     )
     assert result["count"] >= 6
     via = {s["platform"]: s["via"] for s in result["source_status"] if s["ok"]}
@@ -54,7 +56,9 @@ def test_dump_fail_does_not_stop_other_sources(tmp_path):
         now=datetime(2026, 8, 24, tzinfo=timezone.utc),
         fetch_dump_fn=fetch_dump,
         fetch_hackenproof_fn=lambda: (_ for _ in ()).throw(SourceError("hackenproof", "HACKENPROOF_API_KEY missing")),
+        fetch_selfhost_fn=lambda: [],
         send_telegram=False,
+        enrich_llm=False,
     )
     status = {s["platform"]: s for s in result["source_status"]}
     assert status["hackerone"]["ok"] is False
@@ -78,7 +82,9 @@ def test_missing_telegram_does_not_fail(tmp_path, monkeypatch):
         now=datetime(2026, 8, 24, tzinfo=timezone.utc),
         fetch_dump_fn=fetch_dump,
         fetch_hackenproof_fn=lambda: [],
+        fetch_selfhost_fn=lambda: [],
         send_telegram=True,
+        enrich_llm=False,
     )
     assert result["telegram_sent"] is False
     assert result.get("telegram_error") is None
@@ -104,7 +110,9 @@ def test_telegram_http_error_still_saves_snapshot(tmp_path, monkeypatch):
         now=datetime(2026, 8, 24, tzinfo=timezone.utc),
         fetch_dump_fn=fetch_dump,
         fetch_hackenproof_fn=lambda: [],
+        fetch_selfhost_fn=lambda: [],
         send_telegram=True,
+        enrich_llm=False,
     )
     assert result["telegram_sent"] is False
     assert "401" in (result.get("telegram_error") or "")
