@@ -1,13 +1,34 @@
 {
   "added": [
     {
-      "id": "hackerone:weblate",
-      "name": "Weblate",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/weblate"
+      "id": "bugcrowd:simplisafe",
+      "name": "SimpliSafe Managed Bug Bounty Engagement",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/simplisafe"
+    },
+    {
+      "id": "bugcrowd:twentyminuten",
+      "name": "20 Minuten",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/twentyminuten"
     }
   ],
   "removed": [
+    {
+      "id": "bugcrowd:originenergy-og1",
+      "name": "Origin Energy",
+      "platform": "bugcrowd"
+    },
+    {
+      "id": "bugcrowd:pinterest",
+      "name": "Pinterest",
+      "platform": "bugcrowd"
+    },
+    {
+      "id": "intigriti:skodaautoprivatebugbountyprogram",
+      "name": "Skoda Auto Bug Bounty Program",
+      "platform": "intigriti"
+    },
     {
       "id": "intigriti:visma",
       "name": "Visma",

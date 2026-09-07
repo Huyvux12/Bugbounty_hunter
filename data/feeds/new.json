@@ -1,29 +1,62 @@
 [
   {
-    "id": "hackerone:weblate",
-    "platform": "hackerone",
-    "handle": "weblate",
-    "name": "Weblate",
-    "url": "https://hackerone.com/weblate",
-    "offers_bounty": false,
+    "id": "bugcrowd:simplisafe",
+    "platform": "bugcrowd",
+    "handle": "simplisafe",
+    "name": "SimpliSafe Managed Bug Bounty Engagement",
+    "url": "https://bugcrowd.com/engagements/simplisafe",
+    "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 85,
     "reasons": [
-      "6 host/repo cụ thể",
+      "có bounty",
+      "14 host/repo cụ thể",
       "program mới"
     ],
-    "concrete_count": 6,
+    "concrete_count": 14,
     "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-09-07T17:03:27Z",
+    "max_bounty": 6000.0,
+    "currency": "USD",
+    "first_seen": "2026-09-07T21:00:43Z",
     "added_assets": [],
     "reward_types": [
-      "none"
+      "cash"
     ],
     "scope_kinds": [
-      "domain",
-      "repo"
+      "url",
+      "wildcard",
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "bugcrowd:twentyminuten",
+    "platform": "bugcrowd",
+    "handle": "twentyminuten",
+    "name": "20 Minuten",
+    "url": "https://bugcrowd.com/engagements/twentyminuten",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "7 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 7,
+    "min_bounty": null,
+    "max_bounty": 5000.0,
+    "currency": "USD",
+    "first_seen": "2026-09-07T21:00:43Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
