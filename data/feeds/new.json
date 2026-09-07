@@ -16,7 +16,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T13:24:09Z",
+    "first_seen": "2026-09-07T17:03:27Z",
     "added_assets": [],
     "reward_types": [
       "none"
@@ -24,6 +24,44 @@
     "scope_kinds": [
       "domain",
       "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:mercadolibre",
+    "platform": "hackerone",
+    "handle": "mercadolibre",
+    "name": "MercadoLibre",
+    "url": "https://hackerone.com/mercadolibre",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "44 host/repo cụ thể",
+      "+3 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 44,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "*.mercadolibre.com.ve",
+      "*.tucarro.com.ve",
+      "www.ipbooster.com"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "domain",
+      "mobile"
     ],
     "summary_vi": null,
     "policy_url": null,
