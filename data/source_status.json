@@ -19,9 +19,9 @@
   },
   {
     "platform": "yeswehack",
-    "ok": true,
-    "count": 57,
-    "via": "arkadiyt"
+    "ok": false,
+    "via": "arkadiyt",
+    "error": "Invalid IPv6 URL"
   },
   {
     "platform": "federacy",
@@ -31,9 +31,9 @@
   },
   {
     "platform": "hackenproof",
-    "ok": true,
-    "count": 65,
-    "via": "mcp"
+    "ok": false,
+    "via": "mcp",
+    "error": "HACKENPROOF_API_KEY missing"
   },
   {
     "platform": "self-host",
