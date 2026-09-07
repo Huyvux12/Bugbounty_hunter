@@ -51,6 +51,7 @@ jobs:
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          LLM_RPM: ${{ secrets.LLM_RPM }}
         run: python -m feed_bot --data-dir data --docs-dir docs
 
       - name: Commit snapshot

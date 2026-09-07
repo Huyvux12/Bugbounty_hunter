@@ -1,4 +1,4 @@
-from feed_bot.llm import _apply, chat_url, content_hash, copy_cached_llm, decode_chat_response
+from feed_bot.llm import Pace, _apply, chat_url, content_hash, copy_cached_llm, decode_chat_response, rpm_from_env
 from feed_bot.models import Program
 from feed_bot.normalize import normalize_many
 from feed_bot.pipeline import run
@@ -90,6 +90,28 @@ def test_pipeline_selfhost(tmp_path):
     item = published["programs"][0]
     assert item["platform"] == "self-host"
     assert "cash" in item["reward_types"]
+
+
+def test_pace_15_rpm(monkeypatch):
+    monkeypatch.setenv("LLM_RPM", "15")
+    assert rpm_from_env() == 15
+    sleeps: list[float] = []
+    now = [0.0]
+
+    def clock() -> float:
+        return now[0]
+
+    def sleeper(delay: float) -> None:
+        sleeps.append(delay)
+        now[0] += delay
+
+    pace = Pace(15, sleeper=sleeper, clock=clock)
+    pace.wait()
+    assert sleeps == []
+    now[0] += 0.5
+    pace.wait()
+    assert len(sleeps) == 1
+    assert abs(sleeps[0] - 3.5) < 0.01
 
 
 def test_chat_url_and_sse_decode():

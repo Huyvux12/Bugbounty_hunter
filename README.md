@@ -48,6 +48,7 @@ PAGES_URL=
 LLM_BASE_URL=
 LLM_API_KEY=
 LLM_MODEL=gemini-3.5-flash-lite
+LLM_RPM=15
 ```
 
 Pages: lọc asset (url/wildcard/…) + loại thưởng; tab **Đã lưu** + note trên máy (`localStorage`, export/import JSON).

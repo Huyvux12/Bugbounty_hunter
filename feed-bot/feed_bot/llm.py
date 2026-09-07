@@ -4,7 +4,8 @@ import hashlib
 import json
 import os
 import re
-from typing import Any
+import time
+from typing import Any, Callable
 
 import httpx
 
@@ -12,8 +13,40 @@ from feed_bot.models import Program
 from feed_bot.rewards import KNOWN, attach_derived, infer_reward_types
 
 DEFAULT_MODEL = "gemini-3.5-flash-lite"
-MAX_PER_RUN = 80
+DEFAULT_RPM = 15
+MAX_PER_RUN = 60
 _FENCE = re.compile(r"^```(?:json)?\s*|\s*```$", re.I | re.M)
+
+
+class Pace:
+    """At most `rpm` HTTP calls per 60s window (including retries)."""
+
+    def __init__(
+        self,
+        rpm: float,
+        sleeper: Callable[[float], None] = time.sleep,
+        clock: Callable[[], float] = time.monotonic,
+    ):
+        self.min_interval = 60.0 / max(1.0, rpm)
+        self._sleeper = sleeper
+        self._clock = clock
+        self._next = 0.0
+
+    def wait(self) -> None:
+        now = self._clock()
+        delay = self._next - now
+        if delay > 0:
+            self._sleeper(delay)
+            now = self._clock()
+        self._next = now + self.min_interval
+
+
+def rpm_from_env() -> float:
+    raw = os.environ.get("LLM_RPM") or str(DEFAULT_RPM)
+    try:
+        return max(1.0, float(raw))
+    except ValueError:
+        return float(DEFAULT_RPM)
 
 
 def content_hash(program: Program) -> str:
@@ -54,6 +87,7 @@ def enrich_selfhost(programs: list[Program], *, limit: int = MAX_PER_RUN) -> int
         return 0
     key = os.environ.get("LLM_API_KEY") or os.environ.get("OPENAI_API_KEY") or ""
     model = os.environ.get("LLM_MODEL") or DEFAULT_MODEL
+    pace = Pace(rpm_from_env())
     pending = [
         p
         for p in programs
@@ -62,13 +96,13 @@ def enrich_selfhost(programs: list[Program], *, limit: int = MAX_PER_RUN) -> int
     used = 0
     for program in pending[:limit]:
         data = None
-        last_exc: Exception | None = None
-        for _attempt in range(3):
+        for attempt in range(2):
             try:
-                data = _complete(base, key, model, program)
+                data = _complete(base, key, model, program, pace=pace)
                 break
-            except Exception as exc:
-                last_exc = exc
+            except Exception:
+                if attempt == 0:
+                    pace.wait()
         if data is None:
             program.llm_status = "error"
             continue
@@ -121,7 +155,13 @@ def decode_chat_response(response: httpx.Response) -> dict[str, Any]:
     return response.json()
 
 
-def _complete(base: str, api_key: str, model: str, program: Program) -> dict[str, Any]:
+def _complete(
+    base: str,
+    api_key: str,
+    model: str,
+    program: Program,
+    pace: Pace | None = None,
+) -> dict[str, Any]:
     prompt = (
         "Chuẩn hóa program bug bounty/VDP. Trả JSON thuần, không markdown.\n"
         "is_program, name, summary_vi (2-4 câu tiếng Việt), reward_types "
@@ -148,8 +188,18 @@ def _complete(base: str, api_key: str, model: str, program: Program) -> dict[str
             {"role": "user", "content": prompt},
         ],
     }
+    if pace:
+        pace.wait()
     with httpx.Client(timeout=45.0, follow_redirects=True) as client:
         response = client.post(chat_url(base), headers=headers, json=body)
+        if response.status_code == 429:
+            retry_after = response.headers.get("Retry-After")
+            try:
+                extra = float(retry_after) if retry_after else 60.0 / DEFAULT_RPM
+            except ValueError:
+                extra = 60.0 / DEFAULT_RPM
+            time.sleep(max(extra, 60.0 / DEFAULT_RPM))
+            response.raise_for_status()
         response.raise_for_status()
         payload = decode_chat_response(response)
     text = _message_text(payload) if isinstance(payload, dict) else ""
