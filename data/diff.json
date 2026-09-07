@@ -1,6 +1,23 @@
 {
-  "added": [],
+  "added": [
+    {
+      "id": "hackerone:weblate",
+      "name": "Weblate",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/weblate"
+    }
+  ],
   "removed": [
+    {
+      "id": "bugcrowd:simplisafe",
+      "name": "SimpliSafe Managed Bug Bounty Engagement",
+      "platform": "bugcrowd"
+    },
+    {
+      "id": "bugcrowd:twentyminuten",
+      "name": "20 Minuten",
+      "platform": "bugcrowd"
+    },
     {
       "id": "hackenproof:1inch-smart-contract",
       "name": "1inch Smart Contract",

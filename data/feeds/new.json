@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "hackerone:weblate",
+    "platform": "hackerone",
+    "handle": "weblate",
+    "name": "Weblate",
+    "url": "https://hackerone.com/weblate",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "6 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 6,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-09-07T13:24:09Z",
+    "added_assets": [],
+    "reward_types": [
+      "none"
+    ],
+    "scope_kinds": [
+      "domain",
+      "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  }
+]
