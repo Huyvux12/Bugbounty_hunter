@@ -1,6 +1,36 @@
 {
-  "added": [],
-  "removed": [],
+  "added": [
+    {
+      "id": "hackerone:brave",
+      "name": "Brave Software",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/brave"
+    },
+    {
+      "id": "self-host:sqrx-com",
+      "name": "SquareX",
+      "platform": "self-host",
+      "url": "https://sqrx.com/bugbounty"
+    },
+    {
+      "id": "self-host:docs-arcjet-com",
+      "name": "Arcjet",
+      "platform": "self-host",
+      "url": "https://docs.arcjet.com/security"
+    }
+  ],
+  "removed": [
+    {
+      "id": "self-host:auderenow-org",
+      "name": "Audere",
+      "platform": "self-host"
+    },
+    {
+      "id": "self-host:audi-de",
+      "name": "Audi",
+      "platform": "self-host"
+    }
+  ],
   "scope_changes": [
     {
       "id": "hackerone:taxwell-vdp",
@@ -42,6 +72,16 @@
       "url": "https://hackerone.com/semtech",
       "added": [
         "Any LoRa Software product"
+      ],
+      "removed": []
+    },
+    {
+      "id": "bugcrowd:bitso-mbb-og",
+      "name": "Bitso Managed Bug Bounty Engagement",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/bitso-mbb-og",
+      "added": [
+        "https://onchain.cc/"
       ],
       "removed": []
     }

@@ -1,5 +1,35 @@
 [
   {
+    "id": "self-host:sqrx-com",
+    "platform": "self-host",
+    "handle": "sqrx-com",
+    "name": "SquareX",
+    "url": "https://sqrx.com/bugbounty",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 4,
+    "min_bounty": 100.0,
+    "max_bounty": 2000.0,
+    "currency": "USD",
+    "first_seen": "2026-09-08T20:35:21Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": "https://sqrx.com/bugbounty",
+    "contact": "mailto:security@sqrx.com"
+  },
+  {
     "id": "hackerone:moonpay",
     "platform": "hackerone",
     "handle": "moonpay",
@@ -29,6 +59,39 @@
       "domain",
       "mobile",
       "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "bugcrowd:bitso-mbb-og",
+    "platform": "bugcrowd",
+    "handle": "bitso-mbb-og",
+    "name": "Bitso Managed Bug Bounty Engagement",
+    "url": "https://bugcrowd.com/engagements/bitso-mbb-og",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": 7500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://onchain.cc/"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url",
+      "mobile"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -1480,68 +1543,6 @@
       "wildcard",
       "mobile",
       "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:smtp2go",
-    "platform": "hackerone",
-    "handle": "smtp2go",
-    "name": "SMTP2GO BBP",
-    "url": "https://hackerone.com/smtp2go",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:playtika",
-    "platform": "hackerone",
-    "handle": "playtika",
-    "name": "Playtika",
-    "url": "https://hackerone.com/playtika",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể"
-    ],
-    "concrete_count": 5,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "wildcard",
-      "mobile",
-      "other",
-      "domain",
-      "url"
     ],
     "summary_vi": null,
     "policy_url": null,

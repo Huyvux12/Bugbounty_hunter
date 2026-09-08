@@ -1,5 +1,96 @@
 [
   {
+    "id": "self-host:docs-arcjet-com",
+    "platform": "self-host",
+    "handle": "docs-arcjet-com",
+    "name": "Arcjet",
+    "url": "https://docs.arcjet.com/security",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 0,
+    "reasons": [
+      "program mới",
+      "chỉ wildcard/CIDR",
+      "chỉ mobile",
+      "không có web/API cụ thể"
+    ],
+    "concrete_count": 0,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-09-08T20:35:21Z",
+    "added_assets": [],
+    "reward_types": [
+      "unknown"
+    ],
+    "scope_kinds": [],
+    "summary_vi": null,
+    "policy_url": "https://docs.arcjet.com/security",
+    "contact": "mailto:security@arcjet.com"
+  },
+  {
+    "id": "hackerone:brave",
+    "platform": "hackerone",
+    "handle": "brave",
+    "name": "Brave Software",
+    "url": "https://hackerone.com/brave",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 50,
+    "reasons": [
+      "có bounty",
+      "program mới"
+    ],
+    "concrete_count": 0,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-09-08T20:35:21Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash",
+      "swag"
+    ],
+    "scope_kinds": [
+      "other",
+      "mobile",
+      "wildcard"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "self-host:sqrx-com",
+    "platform": "self-host",
+    "handle": "sqrx-com",
+    "name": "SquareX",
+    "url": "https://sqrx.com/bugbounty",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 4,
+    "min_bounty": 100.0,
+    "max_bounty": 2000.0,
+    "currency": "USD",
+    "first_seen": "2026-09-08T20:35:21Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": "https://sqrx.com/bugbounty",
+    "contact": "mailto:security@sqrx.com"
+  },
+  {
     "id": "hackerone:semtech",
     "platform": "hackerone",
     "handle": "semtech",
@@ -17,7 +108,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-02T20:24:34Z",
+    "first_seen": "2026-09-02T15:48:48Z",
     "added_assets": [
       "Any LoRa Software product"
     ],
@@ -134,6 +225,39 @@
       "domain",
       "mobile",
       "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "bugcrowd:bitso-mbb-og",
+    "platform": "bugcrowd",
+    "handle": "bitso-mbb-og",
+    "name": "Bitso Managed Bug Bounty Engagement",
+    "url": "https://bugcrowd.com/engagements/bitso-mbb-og",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": 7500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://onchain.cc/"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url",
+      "mobile"
     ],
     "summary_vi": null,
     "policy_url": null,
