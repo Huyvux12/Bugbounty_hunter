@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "bugcrowd:originenergy-og1",
+    "platform": "bugcrowd",
+    "handle": "originenergy-og1",
+    "name": "Origin Energy",
+    "url": "https://bugcrowd.com/engagements/originenergy-og1",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "18 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 18,
+    "min_bounty": null,
+    "max_bounty": 2500.0,
+    "currency": "USD",
+    "first_seen": "2026-09-08T07:25:27Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url",
+      "wildcard",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "bugcrowd:pinterest",
+    "platform": "bugcrowd",
+    "handle": "pinterest",
+    "name": "Pinterest",
+    "url": "https://bugcrowd.com/engagements/pinterest",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "6 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 6,
+    "min_bounty": null,
+    "max_bounty": 25000.0,
+    "currency": "USD",
+    "first_seen": "2026-09-08T07:25:27Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url",
+      "wildcard",
+      "mobile",
+      "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  }
+]
