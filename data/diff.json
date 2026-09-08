@@ -1,18 +1,49 @@
 {
-  "added": [
+  "added": [],
+  "removed": [],
+  "scope_changes": [
     {
-      "id": "bugcrowd:pinterest",
-      "name": "Pinterest",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/pinterest"
+      "id": "hackerone:taxwell-vdp",
+      "name": "Taxwell VDP",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/taxwell-vdp",
+      "added": [
+        "1040.com",
+        "securefilepro.com",
+        "taxwell.com",
+        "taxwell.org"
+      ],
+      "removed": []
     },
     {
-      "id": "bugcrowd:t-mobile",
-      "name": "T-Mobile",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/t-mobile"
+      "id": "hackerone:transunion",
+      "name": "TransUnion LLC",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/transunion",
+      "added": [
+        "administracionpreaprobadomovil.cifin.co"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:moonpay",
+      "name": "MoonPay ",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/moonpay",
+      "added": [
+        "*.swaps.xyz"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:semtech",
+      "name": "Semtech",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/semtech",
+      "added": [
+        "Any LoRa Software product"
+      ],
+      "removed": []
     }
-  ],
-  "removed": [],
-  "scope_changes": []
+  ]
 }

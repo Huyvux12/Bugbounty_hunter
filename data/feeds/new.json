@@ -1,64 +1,137 @@
 [
   {
-    "id": "bugcrowd:t-mobile",
-    "platform": "bugcrowd",
-    "handle": "t-mobile",
-    "name": "T-Mobile",
-    "url": "https://bugcrowd.com/engagements/t-mobile",
-    "offers_bounty": true,
+    "id": "hackerone:semtech",
+    "platform": "hackerone",
+    "handle": "semtech",
+    "name": "Semtech",
+    "url": "https://hackerone.com/semtech",
+    "offers_bounty": false,
     "status": "open",
-    "easy_score": 70,
+    "easy_score": 35,
     "reasons": [
-      "có bounty",
-      "66 host/repo cụ thể",
-      "program mới",
+      "27 host/repo cụ thể",
+      "+1 asset",
       "scope rộng"
     ],
-    "concrete_count": 66,
+    "concrete_count": 27,
     "min_bounty": null,
-    "max_bounty": 133700.0,
-    "currency": "USD",
-    "first_seen": "2026-09-08T10:26:22Z",
-    "added_assets": [],
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-09-02T20:24:34Z",
+    "added_assets": [
+      "Any LoRa Software product"
+    ],
     "reward_types": [
-      "cash"
+      "none"
     ],
     "scope_kinds": [
-      "other",
-      "url",
       "wildcard",
-      "mobile"
+      "other",
+      "domain",
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
     "contact": null
   },
   {
-    "id": "bugcrowd:pinterest",
-    "platform": "bugcrowd",
-    "handle": "pinterest",
-    "name": "Pinterest",
-    "url": "https://bugcrowd.com/engagements/pinterest",
+    "id": "hackerone:transunion",
+    "platform": "hackerone",
+    "handle": "transunion",
+    "name": "TransUnion LLC",
+    "url": "https://hackerone.com/transunion",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 35,
+    "reasons": [
+      "112 host/repo cụ thể",
+      "+1 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 112,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "administracionpreaprobadomovil.cifin.co"
+    ],
+    "reward_types": [
+      "none"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "cidr",
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:taxwell-vdp",
+    "platform": "hackerone",
+    "handle": "taxwell-vdp",
+    "name": "Taxwell VDP",
+    "url": "https://hackerone.com/taxwell-vdp",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 50,
+    "reasons": [
+      "4 host/repo cụ thể",
+      "+4 asset"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "1040.com",
+      "securefilepro.com",
+      "taxwell.com",
+      "taxwell.org"
+    ],
+    "reward_types": [
+      "none"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:moonpay",
+    "platform": "hackerone",
+    "handle": "moonpay",
+    "name": "MoonPay ",
+    "url": "https://hackerone.com/moonpay",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 75,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể",
-      "program mới"
+      "13 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 6,
+    "concrete_count": 13,
     "min_bounty": null,
-    "max_bounty": 25000.0,
-    "currency": "USD",
-    "first_seen": "2026-09-08T10:26:22Z",
-    "added_assets": [],
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "*.swaps.xyz"
+    ],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "url",
       "wildcard",
+      "domain",
       "mobile",
       "repo"
     ],

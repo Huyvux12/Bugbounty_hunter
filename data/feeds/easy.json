@@ -1,66 +1,34 @@
 [
   {
-    "id": "bugcrowd:pinterest",
-    "platform": "bugcrowd",
-    "handle": "pinterest",
-    "name": "Pinterest",
-    "url": "https://bugcrowd.com/engagements/pinterest",
+    "id": "hackerone:moonpay",
+    "platform": "hackerone",
+    "handle": "moonpay",
+    "name": "MoonPay ",
+    "url": "https://hackerone.com/moonpay",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 75,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể",
-      "program mới"
+      "13 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 6,
+    "concrete_count": 13,
     "min_bounty": null,
-    "max_bounty": 25000.0,
-    "currency": "USD",
-    "first_seen": "2026-09-08T10:26:22Z",
-    "added_assets": [],
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "*.swaps.xyz"
+    ],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "url",
       "wildcard",
+      "domain",
       "mobile",
       "repo"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:t-mobile",
-    "platform": "bugcrowd",
-    "handle": "t-mobile",
-    "name": "T-Mobile",
-    "url": "https://bugcrowd.com/engagements/t-mobile",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 70,
-    "reasons": [
-      "có bounty",
-      "66 host/repo cụ thể",
-      "program mới",
-      "scope rộng"
-    ],
-    "concrete_count": 66,
-    "min_bounty": null,
-    "max_bounty": 133700.0,
-    "currency": "USD",
-    "first_seen": "2026-09-08T10:26:22Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "other",
-      "url",
-      "wildcard",
-      "mobile"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -1304,38 +1272,6 @@
     "contact": null
   },
   {
-    "id": "hackerone:moonpay",
-    "platform": "hackerone",
-    "handle": "moonpay",
-    "name": "MoonPay ",
-    "url": "https://hackerone.com/moonpay",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "13 host/repo cụ thể"
-    ],
-    "concrete_count": 13,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "wildcard",
-      "domain",
-      "mobile",
-      "repo"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
     "id": "hackerone:koho",
     "platform": "hackerone",
     "handle": "koho",
@@ -1544,6 +1480,68 @@
       "wildcard",
       "mobile",
       "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:smtp2go",
+    "platform": "hackerone",
+    "handle": "smtp2go",
+    "name": "SMTP2GO BBP",
+    "url": "https://hackerone.com/smtp2go",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:playtika",
+    "platform": "hackerone",
+    "handle": "playtika",
+    "name": "Playtika",
+    "url": "https://hackerone.com/playtika",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "5 host/repo cụ thể"
+    ],
+    "concrete_count": 5,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "mobile",
+      "other",
+      "domain",
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
