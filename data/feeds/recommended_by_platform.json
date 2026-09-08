@@ -1,38 +1,6 @@
 {
   "bugcrowd": [
     {
-      "id": "bugcrowd:originenergy-og1",
-      "platform": "bugcrowd",
-      "handle": "originenergy-og1",
-      "name": "Origin Energy",
-      "url": "https://bugcrowd.com/engagements/originenergy-og1",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 85,
-      "reasons": [
-        "có bounty",
-        "18 host/repo cụ thể",
-        "program mới"
-      ],
-      "concrete_count": 18,
-      "min_bounty": null,
-      "max_bounty": 2500.0,
-      "currency": "USD",
-      "first_seen": "2026-09-08T07:25:27Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url",
-        "wildcard",
-        "domain"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
       "id": "bugcrowd:pinterest",
       "platform": "bugcrowd",
       "handle": "pinterest",
@@ -50,7 +18,7 @@
       "min_bounty": null,
       "max_bounty": 25000.0,
       "currency": "USD",
-      "first_seen": "2026-09-08T07:25:27Z",
+      "first_seen": "2026-09-08T10:26:22Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -60,6 +28,40 @@
         "wildcard",
         "mobile",
         "repo"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:t-mobile",
+      "platform": "bugcrowd",
+      "handle": "t-mobile",
+      "name": "T-Mobile",
+      "url": "https://bugcrowd.com/engagements/t-mobile",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 70,
+      "reasons": [
+        "có bounty",
+        "66 host/repo cụ thể",
+        "program mới",
+        "scope rộng"
+      ],
+      "concrete_count": 66,
+      "min_bounty": null,
+      "max_bounty": 133700.0,
+      "currency": "USD",
+      "first_seen": "2026-09-08T10:26:22Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "other",
+        "url",
+        "wildcard",
+        "mobile"
       ],
       "summary_vi": null,
       "policy_url": null,
@@ -141,7 +143,7 @@
       "min_bounty": null,
       "max_bounty": 5000.0,
       "currency": "USD",
-      "first_seen": "2026-09-01T10:56:59Z",
+      "first_seen": "2026-08-24T09:20:54Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -261,7 +263,7 @@
       "min_bounty": null,
       "max_bounty": 1500.0,
       "currency": "USD",
-      "first_seen": "2026-09-03T10:32:39Z",
+      "first_seen": "2026-09-03T02:32:59Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -779,7 +781,7 @@
       "min_bounty": 15.0,
       "max_bounty": 2500.0,
       "currency": "EUR",
-      "first_seen": "2026-08-24T09:20:54Z",
+      "first_seen": "2026-09-03T02:32:59Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -1028,7 +1030,7 @@
       "min_bounty": 100.0,
       "max_bounty": 15000.0,
       "currency": "EUR",
-      "first_seen": "2026-08-31T22:17:26Z",
+      "first_seen": "2026-08-31T12:26:19Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -1332,7 +1334,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -1362,7 +1364,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -1392,7 +1394,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -1422,7 +1424,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -1451,7 +1453,7 @@
       "min_bounty": 500.0,
       "max_bounty": 50000.0,
       "currency": "INR",
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -1481,7 +1483,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -1512,7 +1514,7 @@
       "min_bounty": 50.0,
       "max_bounty": 5000.0,
       "currency": "USD",
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -1542,7 +1544,7 @@
       "min_bounty": 5.0,
       "max_bounty": 1000.0,
       "currency": "USD",
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -1571,7 +1573,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -1600,7 +1602,7 @@
       "min_bounty": 100.0,
       "max_bounty": 1000.0,
       "currency": "USD",
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -1629,7 +1631,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -1660,7 +1662,7 @@
       "min_bounty": 100.0,
       "max_bounty": 25000.0,
       "currency": "USD",
-      "first_seen": "2026-09-07T09:51:02Z",
+      "first_seen": "2026-09-07T10:01:55Z",
       "added_assets": [],
       "reward_types": [
         "cash",

@@ -1,37 +1,5 @@
 [
   {
-    "id": "bugcrowd:originenergy-og1",
-    "platform": "bugcrowd",
-    "handle": "originenergy-og1",
-    "name": "Origin Energy",
-    "url": "https://bugcrowd.com/engagements/originenergy-og1",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "18 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 18,
-    "min_bounty": null,
-    "max_bounty": 2500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-08T07:25:27Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url",
-      "wildcard",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
     "id": "bugcrowd:pinterest",
     "platform": "bugcrowd",
     "handle": "pinterest",
@@ -49,7 +17,7 @@
     "min_bounty": null,
     "max_bounty": 25000.0,
     "currency": "USD",
-    "first_seen": "2026-09-08T07:25:27Z",
+    "first_seen": "2026-09-08T10:26:22Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -59,6 +27,40 @@
       "wildcard",
       "mobile",
       "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "bugcrowd:t-mobile",
+    "platform": "bugcrowd",
+    "handle": "t-mobile",
+    "name": "T-Mobile",
+    "url": "https://bugcrowd.com/engagements/t-mobile",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 70,
+    "reasons": [
+      "có bounty",
+      "66 host/repo cụ thể",
+      "program mới",
+      "scope rộng"
+    ],
+    "concrete_count": 66,
+    "min_bounty": null,
+    "max_bounty": 133700.0,
+    "currency": "USD",
+    "first_seen": "2026-09-08T10:26:22Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "url",
+      "wildcard",
+      "mobile"
     ],
     "summary_vi": null,
     "policy_url": null,
