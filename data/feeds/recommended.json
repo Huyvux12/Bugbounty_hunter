@@ -31,33 +31,29 @@
     "contact": null
   },
   {
-    "id": "bugcrowd:simplisafe",
+    "id": "bugcrowd:jaangainc-mbb-market",
     "platform": "bugcrowd",
-    "handle": "simplisafe",
-    "name": "SimpliSafe Managed Bug Bounty Engagement",
-    "url": "https://bugcrowd.com/engagements/simplisafe",
+    "handle": "jaangainc-mbb-market",
+    "name": "Jaanga Marketplace Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "14 host/repo cụ thể",
-      "program mới"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 14,
+    "concrete_count": 4,
     "min_bounty": null,
-    "max_bounty": 6000.0,
+    "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-07T21:00:43Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "url",
-      "wildcard",
-      "mobile",
-      "domain"
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -140,7 +136,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -183,30 +179,30 @@
     "contact": null
   },
   {
-    "id": "bugcrowd:twentyminuten",
+    "id": "bugcrowd:acorns",
     "platform": "bugcrowd",
-    "handle": "twentyminuten",
-    "name": "20 Minuten",
-    "url": "https://bugcrowd.com/engagements/twentyminuten",
+    "handle": "acorns",
+    "name": "Acorns Grow, Inc.",
+    "url": "https://bugcrowd.com/engagements/acorns",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 85,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể",
-      "program mới"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 7,
+    "concrete_count": 4,
     "min_bounty": null,
-    "max_bounty": 5000.0,
+    "max_bounty": 4000.0,
     "currency": "USD",
-    "first_seen": "2026-09-07T21:00:43Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "url"
+      "url",
+      "mobile"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -229,7 +225,7 @@
     "min_bounty": 15.0,
     "max_bounty": 2500.0,
     "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -289,7 +285,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -334,21 +330,21 @@
     "contact": null
   },
   {
-    "id": "bugcrowd:jaangainc-mbb-market",
+    "id": "bugcrowd:afterpay",
     "platform": "bugcrowd",
-    "handle": "jaangainc-mbb-market",
-    "name": "Jaanga Marketplace Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
+    "handle": "afterpay",
+    "name": "Afterpay Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/afterpay",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "12 host/repo cụ thể"
     ],
-    "concrete_count": 4,
+    "concrete_count": 12,
     "min_bounty": null,
-    "max_bounty": 1500.0,
+    "max_bounty": 5000.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
@@ -356,6 +352,7 @@
       "cash"
     ],
     "scope_kinds": [
+      "mobile",
       "url"
     ],
     "summary_vi": null,
@@ -438,7 +435,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -482,21 +479,21 @@
     "contact": null
   },
   {
-    "id": "bugcrowd:acorns",
+    "id": "bugcrowd:agile-pulse",
     "platform": "bugcrowd",
-    "handle": "acorns",
-    "name": "Acorns Grow, Inc.",
-    "url": "https://bugcrowd.com/engagements/acorns",
+    "handle": "agile-pulse",
+    "name": "AgilePulse Marketplace Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/agile-pulse",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "8 host/repo cụ thể"
     ],
-    "concrete_count": 4,
+    "concrete_count": 8,
     "min_bounty": null,
-    "max_bounty": 4000.0,
+    "max_bounty": 1500.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
@@ -504,8 +501,7 @@
       "cash"
     ],
     "scope_kinds": [
-      "url",
-      "mobile"
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -589,7 +585,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -631,30 +627,30 @@
     "contact": null
   },
   {
-    "id": "bugcrowd:afterpay",
+    "id": "bugcrowd:agilislt",
     "platform": "bugcrowd",
-    "handle": "afterpay",
-    "name": "Afterpay Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/afterpay",
+    "handle": "agilislt",
+    "name": "Agilis LT Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/agilislt",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể"
+      "9 host/repo cụ thể"
     ],
-    "concrete_count": 12,
+    "concrete_count": 9,
     "min_bounty": null,
-    "max_bounty": 5000.0,
+    "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-01T10:56:59Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "mobile",
-      "url"
+      "url",
+      "wildcard"
     ],
     "summary_vi": null,
     "policy_url": null,

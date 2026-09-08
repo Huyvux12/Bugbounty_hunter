@@ -1,52 +1,21 @@
 {
-  "added": [
-    {
-      "id": "bugcrowd:simplisafe",
-      "name": "SimpliSafe Managed Bug Bounty Engagement",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/simplisafe"
-    },
-    {
-      "id": "bugcrowd:twentyminuten",
-      "name": "20 Minuten",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/twentyminuten"
-    }
-  ],
+  "added": [],
   "removed": [
-    {
-      "id": "bugcrowd:originenergy-og1",
-      "name": "Origin Energy",
-      "platform": "bugcrowd"
-    },
     {
       "id": "bugcrowd:pinterest",
       "name": "Pinterest",
       "platform": "bugcrowd"
     },
     {
+      "id": "bugcrowd:t-mobile",
+      "name": "T-Mobile",
+      "platform": "bugcrowd"
+    },
+    {
       "id": "intigriti:skodaautoprivatebugbountyprogram",
       "name": "Skoda Auto Bug Bounty Program",
       "platform": "intigriti"
-    },
-    {
-      "id": "intigriti:visma",
-      "name": "Visma",
-      "platform": "intigriti"
     }
   ],
-  "scope_changes": [
-    {
-      "id": "hackerone:mercadolibre",
-      "name": "MercadoLibre",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/mercadolibre",
-      "added": [
-        "*.mercadolibre.com.ve",
-        "*.tucarro.com.ve",
-        "www.ipbooster.com"
-      ],
-      "removed": []
-    }
-  ]
+  "scope_changes": []
 }
