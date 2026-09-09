@@ -1,100 +1,63 @@
 [
   {
-    "id": "hackerone:scopely",
-    "platform": "hackerone",
-    "handle": "scopely",
-    "name": "Scopely",
-    "url": "https://hackerone.com/scopely",
+    "id": "self-host:idura-eu",
+    "platform": "self-host",
+    "handle": "idura-eu",
+    "name": "Idura",
+    "url": "https://idura.eu/legal/vulnerability-disclosure-policy",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 50,
+    "easy_score": 0,
     "reasons": [
       "có bounty",
-      "program mới"
+      "program mới",
+      "chỉ wildcard/CIDR",
+      "chỉ mobile"
     ],
     "concrete_count": 0,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-09T15:46:15Z",
+    "first_seen": "2026-09-09T20:17:59Z",
     "added_assets": [],
     "reward_types": [
       "cash"
     ],
-    "scope_kinds": [
-      "wildcard",
-      "other",
-      "mobile"
-    ],
+    "scope_kinds": [],
     "summary_vi": null,
-    "policy_url": null,
-    "contact": null
+    "policy_url": "https://idura.eu/legal/vulnerability-disclosure-policy",
+    "contact": "mailto:cvd@idura.eu"
   },
   {
-    "id": "hackerone:essity",
+    "id": "hackerone:john-deere",
     "platform": "hackerone",
-    "handle": "essity",
-    "name": "Essity",
-    "url": "https://hackerone.com/essity",
+    "handle": "john-deere",
+    "name": "John Deere",
+    "url": "https://hackerone.com/john-deere",
     "offers_bounty": false,
     "status": "open",
     "easy_score": 35,
     "reasons": [
-      "448 host/repo cụ thể",
-      "+2 asset",
+      "2006 host/repo cụ thể",
+      "+1 asset",
       "scope rộng"
     ],
-    "concrete_count": 448,
+    "concrete_count": 2006,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "app.essity.com",
-      "gms.app.essity.com"
+      "jdldb.deere.com"
     ],
     "reward_types": [
-      "none"
+      "swag"
     ],
     "scope_kinds": [
       "domain",
-      "url",
-      "mobile"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:abb",
-    "platform": "hackerone",
-    "handle": "abb",
-    "name": "ABB Information Systems Ltd",
-    "url": "https://hackerone.com/abb",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 35,
-    "reasons": [
-      "1019 host/repo cụ thể",
-      "+2 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 1019,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "ipec.co.uk",
-      "ipecus.com"
-    ],
-    "reward_types": [
-      "none"
-    ],
-    "scope_kinds": [
       "wildcard",
-      "domain",
       "url",
+      "mobile",
       "other"
     ],
     "summary_vi": null,
@@ -147,7 +110,7 @@
     "reasons": [
       "có bounty",
       "27 host/repo cụ thể",
-      "+6 asset",
+      "+22 asset",
       "scope rộng"
     ],
     "concrete_count": 27,
@@ -156,12 +119,14 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "*.tigets.com",
-      "com.carrentals",
-      "com.homeaway.android",
-      "www.expediacruises.com",
-      "www.expediapartnercentral.com",
-      "www.tigets.com"
+      "*.abritel.fr",
+      "*.bookabach.co.nz",
+      "*.ean.com",
+      "*.expedia-aarp.com",
+      "*.expedia.com",
+      "*.expediaagents.com",
+      "*.expediacruises.com",
+      "*.expediagroup.com"
     ],
     "reward_types": [
       "cash"
@@ -176,38 +141,31 @@
     "contact": null
   },
   {
-    "id": "hackerone:eufy_security",
-    "platform": "hackerone",
-    "handle": "eufy_security",
-    "name": "eufy Security",
-    "url": "https://hackerone.com/eufy_security",
+    "id": "bugcrowd:codeclou",
+    "platform": "bugcrowd",
+    "handle": "codeclou",
+    "name": "codeclou GmbH",
+    "url": "https://bugcrowd.com/engagements/codeclou",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 75,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể",
-      "+6 asset"
+      "6 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 4,
+    "concrete_count": 6,
     "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
+    "max_bounty": 1500.0,
+    "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "Anker soundcore Work D3200",
-      "Liberty 5 Pro Max D1204",
-      "anker-nebula/id1319092174",
-      "id=com.oceanwing.soundcore",
-      "id=com.zhixin.controller",
-      "soundcore/id1331876603"
+      "https://marketplace.atlassian.com/apps/1212096/customfield-editor-for-jira?hosting=datacenter&tab=overview"
     ],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "mobile",
-      "other",
       "url"
     ],
     "summary_vi": null,

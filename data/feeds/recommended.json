@@ -1,62 +1,57 @@
 [
   {
-    "id": "hackerone:eufy_security",
+    "id": "hackerone:wolt",
     "platform": "hackerone",
-    "handle": "eufy_security",
-    "name": "eufy Security",
-    "url": "https://hackerone.com/eufy_security",
+    "handle": "wolt",
+    "name": "Wolt",
+    "url": "https://hackerone.com/wolt",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 75,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể",
-      "+6 asset"
+      "7 host/repo cụ thể"
     ],
-    "concrete_count": 4,
+    "concrete_count": 7,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "Anker soundcore Work D3200",
-      "Liberty 5 Pro Max D1204",
-      "anker-nebula/id1319092174",
-      "id=com.oceanwing.soundcore",
-      "id=com.zhixin.controller",
-      "soundcore/id1331876603"
-    ],
+    "added_assets": [],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
+      "wildcard",
       "mobile",
-      "other",
-      "url"
+      "domain"
     ],
     "summary_vi": null,
     "policy_url": null,
     "contact": null
   },
   {
-    "id": "bugcrowd:jaangainc-mbb-market",
+    "id": "bugcrowd:codeclou",
     "platform": "bugcrowd",
-    "handle": "jaangainc-mbb-market",
-    "name": "Jaanga Marketplace Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
+    "handle": "codeclou",
+    "name": "codeclou GmbH",
+    "url": "https://bugcrowd.com/engagements/codeclou",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 75,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "6 host/repo cụ thể",
+      "+1 asset"
     ],
-    "concrete_count": 4,
+    "concrete_count": 6,
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
+    "added_assets": [
+      "https://marketplace.atlassian.com/apps/1212096/customfield-editor-for-jira?hosting=datacenter&tab=overview"
+    ],
     "reward_types": [
       "cash"
     ],
@@ -144,7 +139,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -158,19 +153,19 @@
     "contact": null
   },
   {
-    "id": "hackerone:wolt",
+    "id": "hackerone:agoda-public",
     "platform": "hackerone",
-    "handle": "wolt",
-    "name": "Wolt",
-    "url": "https://hackerone.com/wolt",
+    "handle": "agoda-public",
+    "name": "Agoda Public",
+    "url": "https://hackerone.com/agoda-public",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 7,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -180,20 +175,18 @@
       "cash"
     ],
     "scope_kinds": [
-      "wildcard",
-      "mobile",
-      "domain"
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
     "contact": null
   },
   {
-    "id": "bugcrowd:acorns",
+    "id": "bugcrowd:jaangainc-mbb-market",
     "platform": "bugcrowd",
-    "handle": "acorns",
-    "name": "Acorns Grow, Inc.",
-    "url": "https://bugcrowd.com/engagements/acorns",
+    "handle": "jaangainc-mbb-market",
+    "name": "Jaanga Marketplace Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
@@ -203,7 +196,7 @@
     ],
     "concrete_count": 4,
     "min_bounty": null,
-    "max_bounty": 4000.0,
+    "max_bounty": 1500.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
@@ -211,8 +204,7 @@
       "cash"
     ],
     "scope_kinds": [
-      "url",
-      "mobile"
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -235,7 +227,7 @@
     "min_bounty": 15.0,
     "max_bounty": 2500.0,
     "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -295,7 +287,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -309,19 +301,19 @@
     "contact": null
   },
   {
-    "id": "hackerone:agoda-public",
+    "id": "hackerone:1win_com",
     "platform": "hackerone",
-    "handle": "agoda-public",
-    "name": "Agoda Public",
-    "url": "https://hackerone.com/agoda-public",
+    "handle": "1win_com",
+    "name": "1win",
+    "url": "https://hackerone.com/1win_com",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể"
+      "5 host/repo cụ thể"
     ],
-    "concrete_count": 3,
+    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -331,6 +323,8 @@
       "cash"
     ],
     "scope_kinds": [
+      "domain",
+      "other",
       "url"
     ],
     "summary_vi": null,
@@ -338,30 +332,30 @@
     "contact": null
   },
   {
-    "id": "bugcrowd:afterpay",
+    "id": "bugcrowd:acorns",
     "platform": "bugcrowd",
-    "handle": "afterpay",
-    "name": "Afterpay Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/afterpay",
+    "handle": "acorns",
+    "name": "Acorns Grow, Inc.",
+    "url": "https://bugcrowd.com/engagements/acorns",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 12,
+    "concrete_count": 4,
     "min_bounty": null,
-    "max_bounty": 5000.0,
+    "max_bounty": 4000.0,
     "currency": "USD",
-    "first_seen": "2026-09-01T10:56:59Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "mobile",
-      "url"
+      "url",
+      "mobile"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -443,7 +437,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -457,19 +451,19 @@
     "contact": null
   },
   {
-    "id": "hackerone:1win_com",
+    "id": "hackerone:meesho_bbp",
     "platform": "hackerone",
-    "handle": "1win_com",
-    "name": "1win",
-    "url": "https://hackerone.com/1win_com",
+    "handle": "meesho_bbp",
+    "name": "Meesho",
+    "url": "https://hackerone.com/meesho_bbp",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể"
+      "9 host/repo cụ thể"
     ],
-    "concrete_count": 5,
+    "concrete_count": 9,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -479,30 +473,29 @@
       "cash"
     ],
     "scope_kinds": [
-      "domain",
-      "other",
-      "url"
+      "mobile",
+      "domain"
     ],
     "summary_vi": null,
     "policy_url": null,
     "contact": null
   },
   {
-    "id": "bugcrowd:agile-pulse",
+    "id": "bugcrowd:afterpay",
     "platform": "bugcrowd",
-    "handle": "agile-pulse",
-    "name": "AgilePulse Marketplace Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/agile-pulse",
+    "handle": "afterpay",
+    "name": "Afterpay Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/afterpay",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "8 host/repo cụ thể"
+      "12 host/repo cụ thể"
     ],
-    "concrete_count": 8,
+    "concrete_count": 12,
     "min_bounty": null,
-    "max_bounty": 1500.0,
+    "max_bounty": 5000.0,
     "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
@@ -510,6 +503,7 @@
       "cash"
     ],
     "scope_kinds": [
+      "mobile",
       "url"
     ],
     "summary_vi": null,
@@ -594,7 +588,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -607,19 +601,19 @@
     "contact": "security@84codes.com"
   },
   {
-    "id": "hackerone:meesho_bbp",
+    "id": "hackerone:braze_inc",
     "platform": "hackerone",
-    "handle": "meesho_bbp",
-    "name": "Meesho",
-    "url": "https://hackerone.com/meesho_bbp",
+    "handle": "braze_inc",
+    "name": "Braze, Inc.",
+    "url": "https://hackerone.com/braze_inc",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "9 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 9,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -629,27 +623,26 @@
       "cash"
     ],
     "scope_kinds": [
-      "mobile",
-      "domain"
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
     "contact": null
   },
   {
-    "id": "bugcrowd:agilislt",
+    "id": "bugcrowd:agile-pulse",
     "platform": "bugcrowd",
-    "handle": "agilislt",
-    "name": "Agilis LT Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/agilislt",
+    "handle": "agile-pulse",
+    "name": "AgilePulse Marketplace Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/agile-pulse",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "9 host/repo cụ thể"
+      "8 host/repo cụ thể"
     ],
-    "concrete_count": 9,
+    "concrete_count": 8,
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
@@ -659,8 +652,7 @@
       "cash"
     ],
     "scope_kinds": [
-      "url",
-      "wildcard"
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,

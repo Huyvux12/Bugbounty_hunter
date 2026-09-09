@@ -1,48 +1,37 @@
 {
   "added": [
     {
-      "id": "hackerone:scopely",
-      "name": "Scopely",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/scopely"
+      "id": "self-host:idura-eu",
+      "name": "Idura",
+      "platform": "self-host",
+      "url": "https://idura.eu/legal/vulnerability-disclosure-policy"
     }
   ],
-  "removed": [],
+  "removed": [
+    {
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti"
+    },
+    {
+      "id": "intigriti:postibugbounty",
+      "name": "Posti Bug Bounty ",
+      "platform": "intigriti"
+    },
+    {
+      "id": "self-host:expediagroup-com",
+      "name": "au.hotels.com",
+      "platform": "self-host"
+    }
+  ],
   "scope_changes": [
     {
-      "id": "hackerone:essity",
-      "name": "Essity",
+      "id": "hackerone:john-deere",
+      "name": "John Deere",
       "platform": "hackerone",
-      "url": "https://hackerone.com/essity",
+      "url": "https://hackerone.com/john-deere",
       "added": [
-        "app.essity.com",
-        "gms.app.essity.com"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:eufy_security",
-      "name": "eufy Security",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/eufy_security",
-      "added": [
-        "Anker soundcore Work D3200",
-        "Liberty 5 Pro Max D1204",
-        "anker-nebula/id1319092174",
-        "id=com.oceanwing.soundcore",
-        "id=com.zhixin.controller",
-        "soundcore/id1331876603"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:abb",
-      "name": "ABB Information Systems Ltd",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/abb",
-      "added": [
-        "ipec.co.uk",
-        "ipecus.com"
+        "jdldb.deere.com"
       ],
       "removed": []
     },
@@ -64,12 +53,24 @@
       "platform": "hackerone",
       "url": "https://hackerone.com/expediagroup_bbp",
       "added": [
-        "*.tigets.com",
-        "com.carrentals",
-        "com.homeaway.android",
-        "www.expediacruises.com",
-        "www.expediapartnercentral.com",
-        "www.tigets.com"
+        "*.abritel.fr",
+        "*.bookabach.co.nz",
+        "*.ean.com",
+        "*.expedia-aarp.com",
+        "*.expedia.com",
+        "*.expediaagents.com",
+        "*.expediacruises.com",
+        "*.expediagroup.com"
+      ],
+      "removed": []
+    },
+    {
+      "id": "bugcrowd:codeclou",
+      "name": "codeclou GmbH",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/codeclou",
+      "added": [
+        "https://marketplace.atlassian.com/apps/1212096/customfield-editor-for-jira?hosting=datacenter&tab=overview"
       ],
       "removed": []
     }
