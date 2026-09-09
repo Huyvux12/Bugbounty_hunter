@@ -33,47 +33,30 @@
   ],
   "scope_changes": [
     {
-      "id": "hackerone:taxwell-vdp",
-      "name": "Taxwell VDP",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/taxwell-vdp",
+      "id": "bugcrowd:afterpay",
+      "name": "Afterpay Bug Bounty Program",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/afterpay",
       "added": [
-        "1040.com",
-        "securefilepro.com",
-        "taxwell.com",
-        "taxwell.org"
+        "████████████",
+        "██████████████",
+        "████████████████",
+        "███████████████████",
+        "████████████████████",
+        "█████████████████████",
+        "██████████████████████",
+        "███████████████████████"
       ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:transunion",
-      "name": "TransUnion LLC",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/transunion",
-      "added": [
-        "administracionpreaprobadomovil.cifin.co"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:moonpay",
-      "name": "MoonPay ",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/moonpay",
-      "added": [
-        "*.swaps.xyz"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:semtech",
-      "name": "Semtech",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/semtech",
-      "added": [
-        "Any LoRa Software product"
-      ],
-      "removed": []
+      "removed": [
+        "https://afterpay.com",
+        "https://api.clearpay.com",
+        "https://apps.apple.com/au/app/afterpay-shop-now-pay-later/id1230286588",
+        "https://apps.apple.com/gb/app/clearpay-buy-now-pay-later/id1474022186",
+        "https://clearpay.co.uk",
+        "https://clearpay.com",
+        "https://developers.afterpay.com",
+        "https://mobileapi.afterpay.com"
+      ]
     },
     {
       "id": "bugcrowd:bitso-mbb-og",
@@ -84,6 +67,73 @@
         "https://onchain.cc/"
       ],
       "removed": []
+    },
+    {
+      "id": "bugcrowd:cashapp",
+      "name": "Cash App",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/cashapp",
+      "added": [
+        "██████████",
+        "█████████████████",
+        "███████████████████████████████████",
+        "███████████████████████████████████████"
+      ],
+      "removed": [
+        "*.cashstaging.app",
+        "https://cash.app",
+        "https://itunes.apple.com/us/app/cash-app/id711923939?mt=8",
+        "https://play.google.com/store/apps/details?id=com.squareup.cash"
+      ]
+    },
+    {
+      "id": "bugcrowd:square",
+      "name": "Square",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/square",
+      "added": [
+        "██████████",
+        "████████████",
+        "█████████████",
+        "██████████████",
+        "███████████████",
+        "███████████████████████████████████████████████",
+        "███████████████████████████████████████████████████"
+      ],
+      "removed": [
+        "Square Register",
+        "Square Terminal",
+        "https://apps.apple.com/us/app/square-point-of-sale-pos/id335393788",
+        "https://play.google.com/store/apps/details?id=com.squareup&hl=en_US&gl=US",
+        "https://square.online",
+        "https://squareup.com/",
+        "https://www.weebly.com/"
+      ]
+    },
+    {
+      "id": "bugcrowd:tidal-bugbounty",
+      "name": "TIDAL",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/tidal-bugbounty",
+      "added": [
+        "████████",
+        "███████████",
+        "█████████████",
+        "███████████████",
+        "████████████████████",
+        "████████████████████████",
+        "████████████████████████████████████████████████████████████████████████"
+      ],
+      "removed": [
+        "*.tdl.sh",
+        "*.tidalhifi.com",
+        "*.wimpmusic.com",
+        "*tidalhi.fi",
+        "Tidal Client for Android",
+        "Tidal Client for iOS",
+        "Tidal Official Clients (e.g. Sonos integration, Tesla integration, etc.)",
+        "api.tidal.com"
+      ]
     }
   ]
 }
