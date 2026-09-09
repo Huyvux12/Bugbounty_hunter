@@ -1,37 +1,57 @@
 {
   "added": [
     {
-      "id": "hackerone:brave",
-      "name": "Brave Software",
+      "id": "hackerone:scopely",
+      "name": "Scopely",
       "platform": "hackerone",
-      "url": "https://hackerone.com/brave"
+      "url": "https://hackerone.com/scopely"
     },
     {
-      "id": "self-host:sqrx-com",
-      "name": "SquareX",
-      "platform": "self-host",
-      "url": "https://sqrx.com/bugbounty"
-    },
-    {
-      "id": "self-host:docs-arcjet-com",
-      "name": "Arcjet",
-      "platform": "self-host",
-      "url": "https://docs.arcjet.com/security"
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
     }
   ],
-  "removed": [
-    {
-      "id": "self-host:auderenow-org",
-      "name": "Audere",
-      "platform": "self-host"
-    },
-    {
-      "id": "self-host:audi-de",
-      "name": "Audi",
-      "platform": "self-host"
-    }
-  ],
+  "removed": [],
   "scope_changes": [
+    {
+      "id": "hackerone:essity",
+      "name": "Essity",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/essity",
+      "added": [
+        "app.essity.com",
+        "gms.app.essity.com"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:eufy_security",
+      "name": "eufy Security",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/eufy_security",
+      "added": [
+        "Anker soundcore Work D3200",
+        "Liberty 5 Pro Max D1204",
+        "anker-nebula/id1319092174",
+        "id=com.oceanwing.soundcore",
+        "id=com.zhixin.controller",
+        "soundcore/id1331876603"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:abb",
+      "name": "ABB Information Systems Ltd",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/abb",
+      "added": [
+        "ipec.co.uk",
+        "ipecus.com"
+      ],
+      "removed": []
+    },
     {
       "id": "bugcrowd:afterpay",
       "name": "Afterpay Bug Bounty Program",
@@ -57,16 +77,6 @@
         "https://developers.afterpay.com",
         "https://mobileapi.afterpay.com"
       ]
-    },
-    {
-      "id": "bugcrowd:bitso-mbb-og",
-      "name": "Bitso Managed Bug Bounty Engagement",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/bitso-mbb-og",
-      "added": [
-        "https://onchain.cc/"
-      ],
-      "removed": []
     },
     {
       "id": "bugcrowd:cashapp",

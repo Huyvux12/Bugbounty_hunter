@@ -1,33 +1,75 @@
 [
   {
-    "id": "self-host:sqrx-com",
-    "platform": "self-host",
-    "handle": "sqrx-com",
-    "name": "SquareX",
-    "url": "https://sqrx.com/bugbounty",
+    "id": "intigriti:datacamp",
+    "platform": "intigriti",
+    "handle": "datacamp",
+    "name": "DataCamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 85,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể",
+      "12 host/repo cụ thể",
       "program mới"
     ],
-    "concrete_count": 4,
-    "min_bounty": 100.0,
-    "max_bounty": 2000.0,
-    "currency": "USD",
-    "first_seen": "2026-09-09T02:37:29Z",
+    "concrete_count": 12,
+    "min_bounty": 25.0,
+    "max_bounty": 1500.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-09T10:36:55Z",
     "added_assets": [],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "domain"
+      "domain",
+      "url",
+      "mobile",
+      "wildcard"
     ],
     "summary_vi": null,
-    "policy_url": "https://sqrx.com/bugbounty",
-    "contact": "mailto:security@sqrx.com"
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:eufy_security",
+    "platform": "hackerone",
+    "handle": "eufy_security",
+    "name": "eufy Security",
+    "url": "https://hackerone.com/eufy_security",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể",
+      "+6 asset"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "Anker soundcore Work D3200",
+      "Liberty 5 Pro Max D1204",
+      "anker-nebula/id1319092174",
+      "id=com.oceanwing.soundcore",
+      "id=com.zhixin.controller",
+      "soundcore/id1331876603"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "other",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   },
   {
     "id": "bugcrowd:afterpay",
@@ -47,7 +89,7 @@
     "min_bounty": null,
     "max_bounty": 5000.0,
     "currency": "USD",
-    "first_seen": "2026-09-01T10:56:59Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
       "████████████",
       "██████████████",
@@ -64,39 +106,6 @@
     "scope_kinds": [
       "mobile",
       "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:bitso-mbb-og",
-    "platform": "bugcrowd",
-    "handle": "bitso-mbb-og",
-    "name": "Bitso Managed Bug Bounty Engagement",
-    "url": "https://bugcrowd.com/engagements/bitso-mbb-og",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": 7500.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "https://onchain.cc/"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url",
-      "mobile"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -959,37 +968,6 @@
     "contact": null
   },
   {
-    "id": "hackerone:eufy_security",
-    "platform": "hackerone",
-    "handle": "eufy_security",
-    "name": "eufy Security",
-    "url": "https://hackerone.com/eufy_security",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "mobile",
-      "other",
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
     "id": "hackerone:redox_bbp",
     "platform": "hackerone",
     "handle": "redox_bbp",
@@ -1562,6 +1540,35 @@
       "6 host/repo cụ thể"
     ],
     "concrete_count": 6,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:zooplus",
+    "platform": "hackerone",
+    "handle": "zooplus",
+    "name": "Zooplus",
+    "url": "https://hackerone.com/zooplus",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,

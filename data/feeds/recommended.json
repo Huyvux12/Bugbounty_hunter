@@ -1,30 +1,38 @@
 [
   {
-    "id": "hackerone:wolt",
+    "id": "hackerone:eufy_security",
     "platform": "hackerone",
-    "handle": "wolt",
-    "name": "Wolt",
-    "url": "https://hackerone.com/wolt",
+    "handle": "eufy_security",
+    "name": "eufy Security",
+    "url": "https://hackerone.com/eufy_security",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 75,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể"
+      "4 host/repo cụ thể",
+      "+6 asset"
     ],
-    "concrete_count": 7,
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
+    "added_assets": [
+      "Anker soundcore Work D3200",
+      "Liberty 5 Pro Max D1204",
+      "anker-nebula/id1319092174",
+      "id=com.oceanwing.soundcore",
+      "id=com.zhixin.controller",
+      "soundcore/id1331876603"
+    ],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "wildcard",
       "mobile",
-      "domain"
+      "other",
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -48,7 +56,7 @@
     "min_bounty": null,
     "max_bounty": 5000.0,
     "currency": "USD",
-    "first_seen": "2026-09-01T10:56:59Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
       "████████████",
       "██████████████",
@@ -71,23 +79,24 @@
     "contact": null
   },
   {
-    "id": "intigriti:algemeendagblad",
+    "id": "intigriti:datacamp",
     "platform": "intigriti",
-    "handle": "algemeendagblad",
-    "name": "Algemeen Dagblad",
-    "url": "https://www.intigriti.com/programs/dpgm/algemeendagblad/detail",
+    "handle": "datacamp",
+    "name": "DataCamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 85,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể"
+      "12 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 3,
+    "concrete_count": 12,
     "min_bounty": 25.0,
-    "max_bounty": 2200.0,
+    "max_bounty": 1500.0,
     "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-09T10:36:55Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -95,6 +104,7 @@
     "scope_kinds": [
       "domain",
       "url",
+      "mobile",
       "wildcard"
     ],
     "summary_vi": null,
@@ -131,158 +141,6 @@
     "contact": null
   },
   {
-    "id": "self-host:sqrx-com",
-    "platform": "self-host",
-    "handle": "sqrx-com",
-    "name": "SquareX",
-    "url": "https://sqrx.com/bugbounty",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 4,
-    "min_bounty": 100.0,
-    "max_bounty": 2000.0,
-    "currency": "USD",
-    "first_seen": "2026-09-09T02:37:29Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": "https://sqrx.com/bugbounty",
-    "contact": "mailto:security@sqrx.com"
-  },
-  {
-    "id": "hackerone:agoda-public",
-    "platform": "hackerone",
-    "handle": "agoda-public",
-    "name": "Agoda Public",
-    "url": "https://hackerone.com/agoda-public",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:bitso-mbb-og",
-    "platform": "bugcrowd",
-    "handle": "bitso-mbb-og",
-    "name": "Bitso Managed Bug Bounty Engagement",
-    "url": "https://bugcrowd.com/engagements/bitso-mbb-og",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": 7500.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "https://onchain.cc/"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url",
-      "mobile"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "intigriti:nmt",
-    "platform": "intigriti",
-    "handle": "nmt",
-    "name": "Axel Springer National Media & Tech",
-    "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "16 host/repo cụ thể"
-    ],
-    "concrete_count": 16,
-    "min_bounty": 15.0,
-    "max_bounty": 2500.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "domain",
-      "wildcard",
-      "other"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "federacy:check",
-    "platform": "federacy",
-    "handle": "check",
-    "name": "Check",
-    "url": "https://www.federacy.com/check",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
     "id": "self-host:datto-com",
     "platform": "self-host",
     "handle": "datto-com",
@@ -299,7 +157,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -313,19 +171,19 @@
     "contact": null
   },
   {
-    "id": "hackerone:1win_com",
+    "id": "hackerone:wolt",
     "platform": "hackerone",
-    "handle": "1win_com",
-    "name": "1win",
-    "url": "https://hackerone.com/1win_com",
+    "handle": "wolt",
+    "name": "Wolt",
+    "url": "https://hackerone.com/wolt",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể"
+      "7 host/repo cụ thể"
     ],
-    "concrete_count": 5,
+    "concrete_count": 7,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -335,9 +193,9 @@
       "cash"
     ],
     "scope_kinds": [
-      "domain",
-      "other",
-      "url"
+      "wildcard",
+      "mobile",
+      "domain"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -384,21 +242,21 @@
     "contact": null
   },
   {
-    "id": "intigriti:bmwgroup",
+    "id": "intigriti:algemeendagblad",
     "platform": "intigriti",
-    "handle": "bmwgroup",
-    "name": "BMW Group",
-    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
+    "handle": "algemeendagblad",
+    "name": "Algemeen Dagblad",
+    "url": "https://www.intigriti.com/programs/dpgm/algemeendagblad/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 6,
-    "min_bounty": 150.0,
-    "max_bounty": 6000.0,
+    "concrete_count": 3,
+    "min_bounty": 25.0,
+    "max_bounty": 2200.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
@@ -407,26 +265,27 @@
     ],
     "scope_kinds": [
       "domain",
-      "other"
+      "url",
+      "wildcard"
     ],
     "summary_vi": null,
     "policy_url": null,
     "contact": null
   },
   {
-    "id": "federacy:renofi",
+    "id": "federacy:check",
     "platform": "federacy",
-    "handle": "renofi",
-    "name": "RenoFi",
-    "url": "https://www.federacy.com/renofi",
+    "handle": "check",
+    "name": "Check",
+    "url": "https://www.federacy.com/check",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 5,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -459,7 +318,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -473,19 +332,19 @@
     "contact": null
   },
   {
-    "id": "hackerone:meesho_bbp",
+    "id": "hackerone:agoda-public",
     "platform": "hackerone",
-    "handle": "meesho_bbp",
-    "name": "Meesho",
-    "url": "https://hackerone.com/meesho_bbp",
+    "handle": "agoda-public",
+    "name": "Agoda Public",
+    "url": "https://hackerone.com/agoda-public",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "9 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 9,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -495,8 +354,7 @@
       "cash"
     ],
     "scope_kinds": [
-      "mobile",
-      "domain"
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -543,23 +401,23 @@
     "contact": null
   },
   {
-    "id": "intigriti:dummy",
+    "id": "intigriti:nmt",
     "platform": "intigriti",
-    "handle": "dummy",
-    "name": "Bpost",
-    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
+    "handle": "nmt",
+    "name": "Axel Springer National Media & Tech",
+    "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "12 host/repo cụ thể"
+      "16 host/repo cụ thể"
     ],
-    "concrete_count": 12,
-    "min_bounty": 0.0,
-    "max_bounty": 1500.0,
+    "concrete_count": 16,
+    "min_bounty": 15.0,
+    "max_bounty": 2500.0,
     "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-03T02:32:59Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -567,7 +425,6 @@
     "scope_kinds": [
       "domain",
       "wildcard",
-      "mobile",
       "other"
     ],
     "summary_vi": null,
@@ -575,19 +432,19 @@
     "contact": null
   },
   {
-    "id": "federacy:upfort",
+    "id": "federacy:renofi",
     "platform": "federacy",
-    "handle": "upfort",
-    "name": "Upfort",
-    "url": "https://www.federacy.com/upfort",
+    "handle": "renofi",
+    "name": "RenoFi",
+    "url": "https://www.federacy.com/renofi",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "5 host/repo cụ thể"
     ],
-    "concrete_count": 4,
+    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -620,7 +477,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T09:51:02Z",
+    "first_seen": "2026-09-07T10:01:55Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -634,19 +491,19 @@
     "contact": null
   },
   {
-    "id": "hackerone:braze_inc",
+    "id": "hackerone:1win_com",
     "platform": "hackerone",
-    "handle": "braze_inc",
-    "name": "Braze, Inc.",
-    "url": "https://hackerone.com/braze_inc",
+    "handle": "1win_com",
+    "name": "1win",
+    "url": "https://hackerone.com/1win_com",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể"
+      "5 host/repo cụ thể"
     ],
-    "concrete_count": 3,
+    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -656,6 +513,8 @@
       "cash"
     ],
     "scope_kinds": [
+      "domain",
+      "other",
       "url"
     ],
     "summary_vi": null,
@@ -699,21 +558,168 @@
     "contact": null
   },
   {
-    "id": "intigriti:cmcom",
+    "id": "intigriti:bmwgroup",
     "platform": "intigriti",
-    "handle": "cmcom",
-    "name": "CM.com",
-    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
+    "handle": "bmwgroup",
+    "name": "BMW Group",
+    "url": "https://www.intigriti.com/programs/bmw/bmwgroup/detail",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "10 host/repo cụ thể"
+      "6 host/repo cụ thể"
     ],
-    "concrete_count": 10,
-    "min_bounty": 5.0,
-    "max_bounty": 2625.0,
+    "concrete_count": 6,
+    "min_bounty": 150.0,
+    "max_bounty": 6000.0,
+    "currency": "EUR",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "other"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "federacy:upfort",
+    "platform": "federacy",
+    "handle": "upfort",
+    "name": "Upfort",
+    "url": "https://www.federacy.com/upfort",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "self-host:84codes-com",
+    "platform": "self-host",
+    "handle": "84codes-com",
+    "name": "84codes",
+    "url": "https://www.84codes.com/security",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-09-07T10:01:55Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": "https://www.84codes.com/security",
+    "contact": "security@84codes.com"
+  },
+  {
+    "id": "hackerone:meesho_bbp",
+    "platform": "hackerone",
+    "handle": "meesho_bbp",
+    "name": "Meesho",
+    "url": "https://hackerone.com/meesho_bbp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "9 host/repo cụ thể"
+    ],
+    "concrete_count": 9,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "bugcrowd:jaangainc-mbb-market",
+    "platform": "bugcrowd",
+    "handle": "jaangainc-mbb-market",
+    "name": "Jaanga Marketplace Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": 1500.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "intigriti:dummy",
+    "platform": "intigriti",
+    "handle": "dummy",
+    "name": "Bpost",
+    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "12 host/repo cụ thể"
+    ],
+    "concrete_count": 12,
+    "min_bounty": 0.0,
+    "max_bounty": 1500.0,
     "currency": "EUR",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
@@ -723,9 +729,8 @@
     "scope_kinds": [
       "domain",
       "wildcard",
-      "url",
-      "repo",
-      "mobile"
+      "mobile",
+      "other"
     ],
     "summary_vi": null,
     "policy_url": null,
