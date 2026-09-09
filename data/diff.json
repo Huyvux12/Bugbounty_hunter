@@ -5,12 +5,6 @@
       "name": "Scopely",
       "platform": "hackerone",
       "url": "https://hackerone.com/scopely"
-    },
-    {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
     }
   ],
   "removed": [],
@@ -53,97 +47,31 @@
       "removed": []
     },
     {
-      "id": "bugcrowd:afterpay",
-      "name": "Afterpay Bug Bounty Program",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/afterpay",
+      "id": "hackerone:global-payments",
+      "name": "Global Payments",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/global-payments",
       "added": [
-        "████████████",
-        "██████████████",
-        "████████████████",
-        "███████████████████",
-        "████████████████████",
-        "█████████████████████",
-        "██████████████████████",
-        "███████████████████████"
+        "Globalpayments.com"
       ],
       "removed": [
-        "https://afterpay.com",
-        "https://api.clearpay.com",
-        "https://apps.apple.com/au/app/afterpay-shop-now-pay-later/id1230286588",
-        "https://apps.apple.com/gb/app/clearpay-buy-now-pay-later/id1474022186",
-        "https://clearpay.co.uk",
-        "https://clearpay.com",
-        "https://developers.afterpay.com",
-        "https://mobileapi.afterpay.com"
+        "Global Payments Inc"
       ]
     },
     {
-      "id": "bugcrowd:cashapp",
-      "name": "Cash App",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/cashapp",
+      "id": "hackerone:expediagroup_bbp",
+      "name": "Expedia Group Bug Bounty",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/expediagroup_bbp",
       "added": [
-        "██████████",
-        "█████████████████",
-        "███████████████████████████████████",
-        "███████████████████████████████████████"
+        "*.tigets.com",
+        "com.carrentals",
+        "com.homeaway.android",
+        "www.expediacruises.com",
+        "www.expediapartnercentral.com",
+        "www.tigets.com"
       ],
-      "removed": [
-        "*.cashstaging.app",
-        "https://cash.app",
-        "https://itunes.apple.com/us/app/cash-app/id711923939?mt=8",
-        "https://play.google.com/store/apps/details?id=com.squareup.cash"
-      ]
-    },
-    {
-      "id": "bugcrowd:square",
-      "name": "Square",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/square",
-      "added": [
-        "██████████",
-        "████████████",
-        "█████████████",
-        "██████████████",
-        "███████████████",
-        "███████████████████████████████████████████████",
-        "███████████████████████████████████████████████████"
-      ],
-      "removed": [
-        "Square Register",
-        "Square Terminal",
-        "https://apps.apple.com/us/app/square-point-of-sale-pos/id335393788",
-        "https://play.google.com/store/apps/details?id=com.squareup&hl=en_US&gl=US",
-        "https://square.online",
-        "https://squareup.com/",
-        "https://www.weebly.com/"
-      ]
-    },
-    {
-      "id": "bugcrowd:tidal-bugbounty",
-      "name": "TIDAL",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/tidal-bugbounty",
-      "added": [
-        "████████",
-        "███████████",
-        "█████████████",
-        "███████████████",
-        "████████████████████",
-        "████████████████████████",
-        "████████████████████████████████████████████████████████████████████████"
-      ],
-      "removed": [
-        "*.tdl.sh",
-        "*.tidalhifi.com",
-        "*.wimpmusic.com",
-        "*tidalhi.fi",
-        "Tidal Client for Android",
-        "Tidal Client for iOS",
-        "Tidal Official Clients (e.g. Sonos integration, Tesla integration, etc.)",
-        "api.tidal.com"
-      ]
+      "removed": []
     }
   ]
 }
