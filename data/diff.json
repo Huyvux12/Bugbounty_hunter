@@ -1,62 +1,21 @@
 {
   "added": [
     {
-      "id": "self-host:idura-eu",
-      "name": "Idura",
-      "platform": "self-host",
-      "url": "https://idura.eu/legal/vulnerability-disclosure-policy"
-    }
-  ],
-  "removed": [
-    {
       "id": "intigriti:postibugbounty",
       "name": "Posti Bug Bounty ",
-      "platform": "intigriti"
-    },
-    {
-      "id": "self-host:expediagroup-com",
-      "name": "au.hotels.com",
-      "platform": "self-host"
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/posti/postibugbounty/detail"
     }
   ],
+  "removed": [],
   "scope_changes": [
     {
-      "id": "hackerone:john-deere",
-      "name": "John Deere",
+      "id": "hackerone:gocardless_bbp",
+      "name": "GoCardless Bug Bounty Program",
       "platform": "hackerone",
-      "url": "https://hackerone.com/john-deere",
+      "url": "https://hackerone.com/gocardless_bbp",
       "added": [
-        "jdldb.deere.com"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:expediagroup_bbp",
-      "name": "Expedia Group Bug Bounty",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/expediagroup_bbp",
-      "added": [
-        "*.abritel.fr",
-        "*.bookabach.co.nz",
-        "*.ean.com",
-        "*.expedia-aarp.com",
-        "*.expedia.com",
-        "*.expediaagents.com",
-        "*.expediacruises.com",
-        "*.expediagroup.com"
-      ],
-      "removed": [
-        "*.tigets.com",
-        "www.tigets.com"
-      ]
-    },
-    {
-      "id": "bugcrowd:codeclou",
-      "name": "codeclou GmbH",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/codeclou",
-      "added": [
-        "https://marketplace.atlassian.com/apps/1212096/customfield-editor-for-jira?hosting=datacenter&tab=overview"
+        "https://github.com/gocardless"
       ],
       "removed": []
     }

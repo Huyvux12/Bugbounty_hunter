@@ -1,138 +1,67 @@
 [
   {
-    "id": "self-host:idura-eu",
-    "platform": "self-host",
-    "handle": "idura-eu",
-    "name": "Idura",
-    "url": "https://idura.eu/legal/vulnerability-disclosure-policy",
+    "id": "intigriti:postibugbounty",
+    "platform": "intigriti",
+    "handle": "postibugbounty",
+    "name": "Posti Bug Bounty ",
+    "url": "https://www.intigriti.com/programs/posti/postibugbounty/detail",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 0,
+    "easy_score": 70,
     "reasons": [
       "có bounty",
+      "41 host/repo cụ thể",
       "program mới",
-      "chỉ wildcard/CIDR",
-      "chỉ mobile"
+      "scope rộng"
     ],
-    "concrete_count": 0,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-09-10T02:39:25Z",
+    "concrete_count": 41,
+    "min_bounty": 100.0,
+    "max_bounty": 2000.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-10T10:24:46Z",
     "added_assets": [],
     "reward_types": [
       "cash"
     ],
-    "scope_kinds": [],
-    "summary_vi": null,
-    "policy_url": "https://idura.eu/legal/vulnerability-disclosure-policy",
-    "contact": "mailto:cvd@idura.eu"
-  },
-  {
-    "id": "hackerone:john-deere",
-    "platform": "hackerone",
-    "handle": "john-deere",
-    "name": "John Deere",
-    "url": "https://hackerone.com/john-deere",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 35,
-    "reasons": [
-      "2006 host/repo cụ thể",
-      "+1 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 2006,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "jdldb.deere.com"
-    ],
-    "reward_types": [
-      "swag"
-    ],
     "scope_kinds": [
       "domain",
-      "wildcard",
-      "url",
       "mobile",
-      "other"
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
     "contact": null
   },
   {
-    "id": "hackerone:expediagroup_bbp",
+    "id": "hackerone:gocardless_bbp",
     "platform": "hackerone",
-    "handle": "expediagroup_bbp",
-    "name": "Expedia Group Bug Bounty",
-    "url": "https://hackerone.com/expediagroup_bbp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "27 host/repo cụ thể",
-      "+18 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 27,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "*.abritel.fr",
-      "*.bookabach.co.nz",
-      "*.ean.com",
-      "*.expedia-aarp.com",
-      "*.expedia.com",
-      "*.expediaagents.com",
-      "*.expediacruises.com",
-      "*.expediagroup.com"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "wildcard",
-      "mobile",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:codeclou",
-    "platform": "bugcrowd",
-    "handle": "codeclou",
-    "name": "codeclou GmbH",
-    "url": "https://bugcrowd.com/engagements/codeclou",
+    "handle": "gocardless_bbp",
+    "name": "GoCardless Bug Bounty Program",
+    "url": "https://hackerone.com/gocardless_bbp",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 75,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể",
+      "14 host/repo cụ thể",
       "+1 asset"
     ],
-    "concrete_count": 6,
+    "concrete_count": 14,
     "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
+    "max_bounty": null,
+    "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "https://marketplace.atlassian.com/apps/1212096/customfield-editor-for-jira?hosting=datacenter&tab=overview"
+      "https://github.com/gocardless"
     ],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "url"
+      "wildcard",
+      "domain",
+      "url",
+      "repo"
     ],
     "summary_vi": null,
     "policy_url": null,

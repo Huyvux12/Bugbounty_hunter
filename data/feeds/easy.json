@@ -1,30 +1,66 @@
 [
   {
-    "id": "bugcrowd:codeclou",
-    "platform": "bugcrowd",
-    "handle": "codeclou",
-    "name": "codeclou GmbH",
-    "url": "https://bugcrowd.com/engagements/codeclou",
+    "id": "hackerone:gocardless_bbp",
+    "platform": "hackerone",
+    "handle": "gocardless_bbp",
+    "name": "GoCardless Bug Bounty Program",
+    "url": "https://hackerone.com/gocardless_bbp",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 75,
     "reasons": [
       "có bounty",
-      "6 host/repo cụ thể",
+      "14 host/repo cụ thể",
       "+1 asset"
     ],
-    "concrete_count": 6,
+    "concrete_count": 14,
     "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
+    "max_bounty": null,
+    "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "https://marketplace.atlassian.com/apps/1212096/customfield-editor-for-jira?hosting=datacenter&tab=overview"
+      "https://github.com/gocardless"
     ],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
+      "wildcard",
+      "domain",
+      "url",
+      "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "intigriti:postibugbounty",
+    "platform": "intigriti",
+    "handle": "postibugbounty",
+    "name": "Posti Bug Bounty ",
+    "url": "https://www.intigriti.com/programs/posti/postibugbounty/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 70,
+    "reasons": [
+      "có bounty",
+      "41 host/repo cụ thể",
+      "program mới",
+      "scope rộng"
+    ],
+    "concrete_count": 41,
+    "min_bounty": 100.0,
+    "max_bounty": 2000.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-10T10:24:46Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "mobile",
       "url"
     ],
     "summary_vi": null,
@@ -1508,35 +1544,6 @@
     "scope_kinds": [
       "wildcard",
       "mobile",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:smtp2go",
-    "platform": "hackerone",
-    "handle": "smtp2go",
-    "name": "SMTP2GO BBP",
-    "url": "https://hackerone.com/smtp2go",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
       "domain"
     ],
     "summary_vi": null,
