@@ -1,14 +1,48 @@
 {
   "added": [
     {
+      "id": "intigriti:bmc",
+      "name": "BMC",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/randstad/bmc/detail"
+    },
+    {
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
+    },
+    {
       "id": "intigriti:postibugbounty",
       "name": "Posti Bug Bounty ",
       "platform": "intigriti",
       "url": "https://www.intigriti.com/programs/posti/postibugbounty/detail"
+    },
+    {
+      "id": "intigriti:tempo-team",
+      "name": "Tempo-Team ",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/randstad/tempo-team/detail"
+    },
+    {
+      "id": "intigriti:yacht",
+      "name": "Yacht",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/randstad/yacht/detail"
     }
   ],
   "removed": [],
   "scope_changes": [
+    {
+      "id": "hackerone:neon_bbp",
+      "name": "Neon",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/neon_bbp",
+      "added": [
+        "Neon-supported extensions"
+      ],
+      "removed": []
+    },
     {
       "id": "hackerone:gocardless_bbp",
       "name": "GoCardless Bug Bounty Program",
@@ -18,6 +52,48 @@
         "https://github.com/gocardless"
       ],
       "removed": []
+    },
+    {
+      "id": "hackerone:expediagroup_bbp",
+      "name": "Expedia Group Bug Bounty",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/expediagroup_bbp",
+      "added": [
+        "506426310",
+        "642441300"
+      ],
+      "removed": [
+        "www.flights.com",
+        "www.hotwirepartnercentral.com"
+      ]
+    },
+    {
+      "id": "bugcrowd:cfr",
+      "name": "Council on Foreign Relations",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/cfr",
+      "added": [
+        "████████████████████",
+        "██████████████████████████",
+        "█████████████████████████████"
+      ],
+      "removed": [
+        "https://education.cfr.org/",
+        "https://thinkglobalhealth.org",
+        "https://www.cfr.org/"
+      ]
+    },
+    {
+      "id": "intigriti:saltovulnerabilitydisclosure",
+      "name": "Salto Vulnerability Disclosure ",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/saltosystems/saltovulnerabilitydisclosure/detail",
+      "added": [
+        "*.gantner.cloud"
+      ],
+      "removed": [
+        "*.gantnercloud.com"
+      ]
     }
   ]
 }

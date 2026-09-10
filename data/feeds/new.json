@@ -1,5 +1,94 @@
 [
   {
+    "id": "intigriti:bmc",
+    "platform": "intigriti",
+    "handle": "bmc",
+    "name": "BMC",
+    "url": "https://www.intigriti.com/programs/randstad/bmc/detail",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 0,
+    "reasons": [
+      "program mới",
+      "chỉ wildcard/CIDR"
+    ],
+    "concrete_count": 0,
+    "min_bounty": 0.0,
+    "max_bounty": 0.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-10T15:40:57Z",
+    "added_assets": [],
+    "reward_types": [
+      "none"
+    ],
+    "scope_kinds": [
+      "wildcard"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "intigriti:yacht",
+    "platform": "intigriti",
+    "handle": "yacht",
+    "name": "Yacht",
+    "url": "https://www.intigriti.com/programs/randstad/yacht/detail",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 0,
+    "reasons": [
+      "program mới",
+      "chỉ wildcard/CIDR"
+    ],
+    "concrete_count": 0,
+    "min_bounty": 0.0,
+    "max_bounty": 0.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-10T15:40:57Z",
+    "added_assets": [],
+    "reward_types": [
+      "none"
+    ],
+    "scope_kinds": [
+      "wildcard"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "intigriti:tempo-team",
+    "platform": "intigriti",
+    "handle": "tempo-team",
+    "name": "Tempo-Team ",
+    "url": "https://www.intigriti.com/programs/randstad/tempo-team/detail",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "4 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 4,
+    "min_bounty": 0.0,
+    "max_bounty": 0.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-10T15:40:57Z",
+    "added_assets": [],
+    "reward_types": [
+      "none"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "url",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
     "id": "intigriti:postibugbounty",
     "platform": "intigriti",
     "handle": "postibugbounty",
@@ -18,7 +107,7 @@
     "min_bounty": 100.0,
     "max_bounty": 2000.0,
     "currency": "EUR",
-    "first_seen": "2026-09-10T10:24:46Z",
+    "first_seen": "2026-09-10T15:40:57Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -26,6 +115,139 @@
     "scope_kinds": [
       "domain",
       "mobile",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "intigriti:datacamp",
+    "platform": "intigriti",
+    "handle": "datacamp",
+    "name": "DataCamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "12 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 12,
+    "min_bounty": 25.0,
+    "max_bounty": 1500.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-10T15:40:57Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "url",
+      "mobile",
+      "wildcard"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "intigriti:saltovulnerabilitydisclosure",
+    "platform": "intigriti",
+    "handle": "saltovulnerabilitydisclosure",
+    "name": "Salto Vulnerability Disclosure ",
+    "url": "https://www.intigriti.com/programs/saltosystems/saltovulnerabilitydisclosure/detail",
+    "offers_bounty": false,
+    "status": "open",
+    "easy_score": 0,
+    "reasons": [
+      "+1 asset",
+      "chỉ wildcard/CIDR"
+    ],
+    "concrete_count": 0,
+    "min_bounty": 0.0,
+    "max_bounty": 0.0,
+    "currency": "EUR",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "*.gantner.cloud"
+    ],
+    "reward_types": [
+      "none"
+    ],
+    "scope_kinds": [
+      "wildcard"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:expediagroup_bbp",
+    "platform": "hackerone",
+    "handle": "expediagroup_bbp",
+    "name": "Expedia Group Bug Bounty",
+    "url": "https://hackerone.com/expediagroup_bbp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "25 host/repo cụ thể",
+      "+2 asset",
+      "scope rộng"
+    ],
+    "concrete_count": 25,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "506426310",
+      "642441300"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:neon_bbp",
+    "platform": "hackerone",
+    "handle": "neon_bbp",
+    "name": "Neon",
+    "url": "https://hackerone.com/neon_bbp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "Neon-supported extensions"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
       "url"
     ],
     "summary_vi": null,
@@ -62,6 +284,40 @@
       "domain",
       "url",
       "repo"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "bugcrowd:cfr",
+    "platform": "bugcrowd",
+    "handle": "cfr",
+    "name": "Council on Foreign Relations",
+    "url": "https://bugcrowd.com/engagements/cfr",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể",
+      "+3 asset"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": 2100.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "████████████████████",
+      "██████████████████████████",
+      "█████████████████████████████"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,

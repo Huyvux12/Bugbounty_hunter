@@ -1,5 +1,164 @@
 [
   {
+    "id": "hackerone:neon_bbp",
+    "platform": "hackerone",
+    "handle": "neon_bbp",
+    "name": "Neon",
+    "url": "https://hackerone.com/neon_bbp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "Neon-supported extensions"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "bugcrowd:cfr",
+    "platform": "bugcrowd",
+    "handle": "cfr",
+    "name": "Council on Foreign Relations",
+    "url": "https://bugcrowd.com/engagements/cfr",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể",
+      "+3 asset"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": 2100.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "████████████████████",
+      "██████████████████████████",
+      "█████████████████████████████"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "intigriti:datacamp",
+    "platform": "intigriti",
+    "handle": "datacamp",
+    "name": "DataCamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "12 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 12,
+    "min_bounty": 25.0,
+    "max_bounty": 1500.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-10T15:40:57Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "url",
+      "mobile",
+      "wildcard"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "federacy:belvo-technologies-inc",
+    "platform": "federacy",
+    "handle": "belvo-technologies-inc",
+    "name": "Belvo Technologies Inc.",
+    "url": "https://www.federacy.com/belvo-technologies-inc",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "7 host/repo cụ thể"
+    ],
+    "concrete_count": 7,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "self-host:datto-com",
+    "platform": "self-host",
+    "handle": "datto-com",
+    "name": "Datto VDP",
+    "url": "https://www.datto.com/legal/vulnerability-disclosure-program",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "11 host/repo cụ thể"
+    ],
+    "concrete_count": 11,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-09-07T09:51:02Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash",
+      "swag"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": "https://www.datto.com/legal/vulnerability-disclosure-program",
+    "contact": null
+  },
+  {
     "id": "hackerone:gocardless_bbp",
     "platform": "hackerone",
     "handle": "gocardless_bbp",
@@ -82,7 +241,7 @@
     "min_bounty": 100.0,
     "max_bounty": 2000.0,
     "currency": "EUR",
-    "first_seen": "2026-09-10T10:24:46Z",
+    "first_seen": "2026-09-10T15:40:57Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -97,19 +256,19 @@
     "contact": null
   },
   {
-    "id": "federacy:belvo-technologies-inc",
+    "id": "federacy:check",
     "platform": "federacy",
-    "handle": "belvo-technologies-inc",
-    "name": "Belvo Technologies Inc.",
-    "url": "https://www.federacy.com/belvo-technologies-inc",
+    "handle": "check",
+    "name": "Check",
+    "url": "https://www.federacy.com/check",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 7,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -126,11 +285,11 @@
     "contact": null
   },
   {
-    "id": "self-host:datto-com",
+    "id": "self-host:security-tecno-com",
     "platform": "self-host",
-    "handle": "datto-com",
-    "name": "Datto VDP",
-    "url": "https://www.datto.com/legal/vulnerability-disclosure-program",
+    "handle": "security-tecno-com",
+    "name": "TECNO",
+    "url": "https://security.tecno.com/dashboard",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
@@ -142,7 +301,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T10:01:55Z",
+    "first_seen": "2026-09-07T09:51:02Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -152,7 +311,7 @@
       "domain"
     ],
     "summary_vi": null,
-    "policy_url": "https://www.datto.com/legal/vulnerability-disclosure-program",
+    "policy_url": "https://security.tecno.com/dashboard",
     "contact": null
   },
   {
@@ -248,19 +407,19 @@
     "contact": null
   },
   {
-    "id": "federacy:check",
+    "id": "federacy:renofi",
     "platform": "federacy",
-    "handle": "check",
-    "name": "Check",
-    "url": "https://www.federacy.com/check",
+    "handle": "renofi",
+    "name": "RenoFi",
+    "url": "https://www.federacy.com/renofi",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể"
+      "5 host/repo cụ thể"
     ],
-    "concrete_count": 3,
+    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -277,23 +436,23 @@
     "contact": null
   },
   {
-    "id": "self-host:security-tecno-com",
+    "id": "self-host:security-unionpay-com",
     "platform": "self-host",
-    "handle": "security-tecno-com",
-    "name": "TECNO",
-    "url": "https://security.tecno.com/dashboard",
+    "handle": "security-unionpay-com",
+    "name": "UnionPay",
+    "url": "https://security.unionpay.com/",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "11 host/repo cụ thể"
+      "7 host/repo cụ thể"
     ],
-    "concrete_count": 11,
+    "concrete_count": 7,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T10:01:55Z",
+    "first_seen": "2026-09-07T09:51:02Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -303,7 +462,7 @@
       "domain"
     ],
     "summary_vi": null,
-    "policy_url": "https://security.tecno.com/dashboard",
+    "policy_url": "https://security.unionpay.com/",
     "contact": null
   },
   {
@@ -352,7 +511,7 @@
     "min_bounty": null,
     "max_bounty": 5000.0,
     "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
+    "first_seen": "2026-09-01T10:56:59Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -382,7 +541,7 @@
     "min_bounty": 15.0,
     "max_bounty": 2500.0,
     "currency": "EUR",
-    "first_seen": "2026-09-03T02:32:59Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -397,19 +556,19 @@
     "contact": null
   },
   {
-    "id": "federacy:renofi",
+    "id": "federacy:upfort",
     "platform": "federacy",
-    "handle": "renofi",
-    "name": "RenoFi",
-    "url": "https://www.federacy.com/renofi",
+    "handle": "upfort",
+    "name": "Upfort",
+    "url": "https://www.federacy.com/upfort",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 5,
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -426,34 +585,33 @@
     "contact": null
   },
   {
-    "id": "self-host:security-unionpay-com",
+    "id": "self-host:84codes-com",
     "platform": "self-host",
-    "handle": "security-unionpay-com",
-    "name": "UnionPay",
-    "url": "https://security.unionpay.com/",
+    "handle": "84codes-com",
+    "name": "84codes",
+    "url": "https://www.84codes.com/security",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể"
+      "4 host/repo cụ thể"
     ],
-    "concrete_count": 7,
+    "concrete_count": 4,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T10:01:55Z",
+    "first_seen": "2026-09-07T09:51:02Z",
     "added_assets": [],
     "reward_types": [
-      "cash",
-      "swag"
+      "cash"
     ],
     "scope_kinds": [
       "domain"
     ],
     "summary_vi": null,
-    "policy_url": "https://security.unionpay.com/",
-    "contact": null
+    "policy_url": "https://www.84codes.com/security",
+    "contact": "security@84codes.com"
   },
   {
     "id": "hackerone:1win_com",
@@ -539,156 +697,6 @@
     ],
     "scope_kinds": [
       "domain",
-      "other"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "federacy:upfort",
-    "platform": "federacy",
-    "handle": "upfort",
-    "name": "Upfort",
-    "url": "https://www.federacy.com/upfort",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "self-host:84codes-com",
-    "platform": "self-host",
-    "handle": "84codes-com",
-    "name": "84codes",
-    "url": "https://www.84codes.com/security",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-09-07T10:01:55Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": "https://www.84codes.com/security",
-    "contact": "security@84codes.com"
-  },
-  {
-    "id": "hackerone:meesho_bbp",
-    "platform": "hackerone",
-    "handle": "meesho_bbp",
-    "name": "Meesho",
-    "url": "https://hackerone.com/meesho_bbp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "9 host/repo cụ thể"
-    ],
-    "concrete_count": 9,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "mobile",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:agilislt",
-    "platform": "bugcrowd",
-    "handle": "agilislt",
-    "name": "Agilis LT Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/agilislt",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "9 host/repo cụ thể"
-    ],
-    "concrete_count": 9,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url",
-      "wildcard"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "intigriti:dummy",
-    "platform": "intigriti",
-    "handle": "dummy",
-    "name": "Bpost",
-    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "12 host/repo cụ thể"
-    ],
-    "concrete_count": 12,
-    "min_bounty": 0.0,
-    "max_bounty": 1500.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "domain",
-      "wildcard",
-      "mobile",
       "other"
     ],
     "summary_vi": null,

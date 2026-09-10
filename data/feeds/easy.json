@@ -1,5 +1,71 @@
 [
   {
+    "id": "intigriti:datacamp",
+    "platform": "intigriti",
+    "handle": "datacamp",
+    "name": "DataCamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "12 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 12,
+    "min_bounty": 25.0,
+    "max_bounty": 1500.0,
+    "currency": "EUR",
+    "first_seen": "2026-09-10T15:40:57Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain",
+      "url",
+      "mobile",
+      "wildcard"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:neon_bbp",
+    "platform": "hackerone",
+    "handle": "neon_bbp",
+    "name": "Neon",
+    "url": "https://hackerone.com/neon_bbp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "Neon-supported extensions"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
     "id": "hackerone:gocardless_bbp",
     "platform": "hackerone",
     "handle": "gocardless_bbp",
@@ -35,6 +101,40 @@
     "contact": null
   },
   {
+    "id": "bugcrowd:cfr",
+    "platform": "bugcrowd",
+    "handle": "cfr",
+    "name": "Council on Foreign Relations",
+    "url": "https://bugcrowd.com/engagements/cfr",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể",
+      "+3 asset"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": 2100.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "████████████████████",
+      "██████████████████████████",
+      "█████████████████████████████"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
     "id": "intigriti:postibugbounty",
     "platform": "intigriti",
     "handle": "postibugbounty",
@@ -53,7 +153,7 @@
     "min_bounty": 100.0,
     "max_bounty": 2000.0,
     "currency": "EUR",
-    "first_seen": "2026-09-10T10:24:46Z",
+    "first_seen": "2026-09-10T15:40:57Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -306,35 +406,6 @@
       "other",
       "domain",
       "mobile"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:neon_bbp",
-    "platform": "hackerone",
-    "handle": "neon_bbp",
-    "name": "Neon",
-    "url": "https://hackerone.com/neon_bbp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -1481,69 +1552,6 @@
       "mobile",
       "wildcard",
       "url",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:krisp",
-    "platform": "hackerone",
-    "handle": "krisp",
-    "name": "Krisp",
-    "url": "https://hackerone.com/krisp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "13 host/repo cụ thể"
-    ],
-    "concrete_count": 13,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "wildcard",
-      "other",
-      "domain",
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:whatnot",
-    "platform": "hackerone",
-    "handle": "whatnot",
-    "name": "Whatnot",
-    "url": "https://hackerone.com/whatnot",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "wildcard",
-      "mobile",
       "domain"
     ],
     "summary_vi": null,
