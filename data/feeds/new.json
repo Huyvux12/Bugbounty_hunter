@@ -18,7 +18,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-09T20:17:59Z",
+    "first_seen": "2026-09-10T02:39:25Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -65,40 +65,6 @@
     "contact": null
   },
   {
-    "id": "hackerone:global-payments",
-    "platform": "hackerone",
-    "handle": "global-payments",
-    "name": "Global Payments",
-    "url": "https://hackerone.com/global-payments",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 50,
-    "reasons": [
-      "7 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 7,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "Globalpayments.com"
-    ],
-    "reward_types": [
-      "none"
-    ],
-    "scope_kinds": [
-      "other",
-      "repo",
-      "domain",
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
     "id": "hackerone:expediagroup_bbp",
     "platform": "hackerone",
     "handle": "expediagroup_bbp",
@@ -110,7 +76,7 @@
     "reasons": [
       "có bounty",
       "27 host/repo cụ thể",
-      "+22 asset",
+      "+18 asset",
       "scope rộng"
     ],
     "concrete_count": 27,

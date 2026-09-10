@@ -9,11 +9,6 @@
   ],
   "removed": [
     {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
-      "platform": "intigriti"
-    },
-    {
       "id": "intigriti:postibugbounty",
       "name": "Posti Bug Bounty ",
       "platform": "intigriti"
@@ -36,18 +31,6 @@
       "removed": []
     },
     {
-      "id": "hackerone:global-payments",
-      "name": "Global Payments",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/global-payments",
-      "added": [
-        "Globalpayments.com"
-      ],
-      "removed": [
-        "Global Payments Inc"
-      ]
-    },
-    {
       "id": "hackerone:expediagroup_bbp",
       "name": "Expedia Group Bug Bounty",
       "platform": "hackerone",
@@ -62,7 +45,10 @@
         "*.expediacruises.com",
         "*.expediagroup.com"
       ],
-      "removed": []
+      "removed": [
+        "*.tigets.com",
+        "www.tigets.com"
+      ]
     },
     {
       "id": "bugcrowd:codeclou",
