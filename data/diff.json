@@ -1,22 +1,58 @@
 {
   "added": [
     {
+      "id": "bugcrowd:cappsule-sarl",
+      "name": "Cappsule Sarl - Marketplace Bug Bounty Program",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/cappsule-sarl"
+    },
+    {
+      "id": "bugcrowd:catapultlabs",
+      "name": "Catapult Labs Bug Bounty",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/catapultlabs"
+    },
+    {
+      "id": "bugcrowd:codecentric",
+      "name": "codecentric AG - Marketplace Bug Bounty Program",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/codecentric"
+    },
+    {
+      "id": "bugcrowd:creativas",
+      "name": "Creativas",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/creativas"
+    },
+    {
+      "id": "bugcrowd:digitalrose",
+      "name": "Digital Rose's Marketplace Bug Bounty",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/digitalrose"
+    },
+    {
+      "id": "bugcrowd:railsware",
+      "name": "Railsware",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/railsware"
+    },
+    {
+      "id": "bugcrowd:savignano",
+      "name": "Savignano Software Solutions Marketplace Bug Bounty Program",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/savignano"
+    },
+    {
+      "id": "bugcrowd:vectors-marketplace",
+      "name": "Vectors Bug Bounty ",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/vectors-marketplace"
+    },
+    {
       "id": "intigriti:bmc",
       "name": "BMC",
       "platform": "intigriti",
       "url": "https://www.intigriti.com/programs/randstad/bmc/detail"
-    },
-    {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail"
-    },
-    {
-      "id": "intigriti:postibugbounty",
-      "name": "Posti Bug Bounty ",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/posti/postibugbounty/detail"
     },
     {
       "id": "intigriti:tempo-team",
@@ -31,8 +67,24 @@
       "url": "https://www.intigriti.com/programs/randstad/yacht/detail"
     }
   ],
-  "removed": [],
+  "removed": [
+    {
+      "id": "intigriti:arkanenetwork",
+      "name": "Venly",
+      "platform": "intigriti"
+    }
+  ],
   "scope_changes": [
+    {
+      "id": "hackerone:tbs-sct",
+      "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/tbs-sct",
+      "added": [
+        "auth.forms-formulaires.alpha.canada.ca"
+      ],
+      "removed": []
+    },
     {
       "id": "hackerone:neon_bbp",
       "name": "Neon",
@@ -40,16 +92,6 @@
       "url": "https://hackerone.com/neon_bbp",
       "added": [
         "Neon-supported extensions"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:gocardless_bbp",
-      "name": "GoCardless Bug Bounty Program",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/gocardless_bbp",
-      "added": [
-        "https://github.com/gocardless"
       ],
       "removed": []
     },
@@ -62,10 +104,17 @@
         "506426310",
         "642441300"
       ],
-      "removed": [
-        "www.flights.com",
-        "www.hotwirepartnercentral.com"
-      ]
+      "removed": []
+    },
+    {
+      "id": "hackerone:databricks",
+      "name": "Databricks",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/databricks",
+      "added": [
+        "Lakebase-Supported extensions"
+      ],
+      "removed": []
     },
     {
       "id": "bugcrowd:cfr",
