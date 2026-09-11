@@ -1,10 +1,10 @@
 [
   {
-    "id": "hackerone:neon_bbp",
+    "id": "hackerone:databricks",
     "platform": "hackerone",
-    "handle": "neon_bbp",
-    "name": "Neon",
-    "url": "https://hackerone.com/neon_bbp",
+    "handle": "databricks",
+    "name": "Databricks",
+    "url": "https://hackerone.com/databricks",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 75,
@@ -19,13 +19,14 @@
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "Neon-supported extensions"
+      "Lakebase-Supported extensions"
     ],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
       "other",
+      "domain",
       "url"
     ],
     "summary_vi": null,
@@ -50,7 +51,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -123,64 +124,62 @@
     "contact": null
   },
   {
-    "id": "self-host:datto-com",
+    "id": "self-host:fintual-com",
     "platform": "self-host",
-    "handle": "datto-com",
-    "name": "Datto VDP",
-    "url": "https://www.datto.com/legal/vulnerability-disclosure-program",
+    "handle": "fintual-com",
+    "name": "Fintual",
+    "url": "https://fintual.com/security-policy.txt",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 60,
+    "easy_score": 85,
     "reasons": [
       "có bounty",
-      "11 host/repo cụ thể"
+      "6 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 11,
-    "min_bounty": null,
+    "concrete_count": 6,
+    "min_bounty": 100.0,
     "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-09-07T10:01:55Z",
+    "currency": "USD",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash",
-      "swag"
+      "hall_of_fame"
     ],
     "scope_kinds": [
       "domain"
     ],
     "summary_vi": null,
-    "policy_url": "https://www.datto.com/legal/vulnerability-disclosure-program",
-    "contact": null
+    "policy_url": "https://fintual.com/security-policy.txt",
+    "contact": "mailto:security@fintual.com"
   },
   {
-    "id": "hackerone:databricks",
+    "id": "hackerone:wolt",
     "platform": "hackerone",
-    "handle": "databricks",
-    "name": "Databricks",
-    "url": "https://hackerone.com/databricks",
+    "handle": "wolt",
+    "name": "Wolt",
+    "url": "https://hackerone.com/wolt",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 75,
+    "easy_score": 60,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể",
-      "+1 asset"
+      "7 host/repo cụ thể"
     ],
-    "concrete_count": 3,
+    "concrete_count": 7,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
     "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "Lakebase-Supported extensions"
-    ],
+    "added_assets": [],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "other",
-      "domain",
-      "url"
+      "wildcard",
+      "mobile",
+      "domain"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -204,7 +203,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -233,7 +232,7 @@
     "min_bounty": 15.0,
     "max_bounty": 2500.0,
     "currency": "EUR",
-    "first_seen": "2026-09-03T02:32:59Z",
+    "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -277,11 +276,11 @@
     "contact": null
   },
   {
-    "id": "self-host:security-tecno-com",
+    "id": "self-host:datto-com",
     "platform": "self-host",
-    "handle": "security-tecno-com",
-    "name": "TECNO",
-    "url": "https://security.tecno.com/dashboard",
+    "handle": "datto-com",
+    "name": "Datto VDP",
+    "url": "https://www.datto.com/legal/vulnerability-disclosure-program",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
@@ -293,7 +292,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T10:01:55Z",
+    "first_seen": "2026-09-07T09:51:02Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -303,23 +302,23 @@
       "domain"
     ],
     "summary_vi": null,
-    "policy_url": "https://security.tecno.com/dashboard",
+    "policy_url": "https://www.datto.com/legal/vulnerability-disclosure-program",
     "contact": null
   },
   {
-    "id": "hackerone:wolt",
+    "id": "hackerone:agoda-public",
     "platform": "hackerone",
-    "handle": "wolt",
-    "name": "Wolt",
-    "url": "https://hackerone.com/wolt",
+    "handle": "agoda-public",
+    "name": "Agoda Public",
+    "url": "https://hackerone.com/agoda-public",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể"
+      "3 host/repo cụ thể"
     ],
-    "concrete_count": 7,
+    "concrete_count": 3,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -329,9 +328,7 @@
       "cash"
     ],
     "scope_kinds": [
-      "wildcard",
-      "mobile",
-      "domain"
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -355,7 +352,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -427,23 +424,23 @@
     "contact": null
   },
   {
-    "id": "self-host:security-unionpay-com",
+    "id": "self-host:security-tecno-com",
     "platform": "self-host",
-    "handle": "security-unionpay-com",
-    "name": "UnionPay",
-    "url": "https://security.unionpay.com/",
+    "handle": "security-tecno-com",
+    "name": "TECNO",
+    "url": "https://security.tecno.com/dashboard",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "7 host/repo cụ thể"
+      "11 host/repo cụ thể"
     ],
-    "concrete_count": 7,
+    "concrete_count": 11,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T10:01:55Z",
+    "first_seen": "2026-09-07T09:51:02Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -453,23 +450,23 @@
       "domain"
     ],
     "summary_vi": null,
-    "policy_url": "https://security.unionpay.com/",
+    "policy_url": "https://security.tecno.com/dashboard",
     "contact": null
   },
   {
-    "id": "hackerone:agoda-public",
+    "id": "hackerone:1win_com",
     "platform": "hackerone",
-    "handle": "agoda-public",
-    "name": "Agoda Public",
-    "url": "https://hackerone.com/agoda-public",
+    "handle": "1win_com",
+    "name": "1win",
+    "url": "https://hackerone.com/1win_com",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể"
+      "5 host/repo cụ thể"
     ],
-    "concrete_count": 3,
+    "concrete_count": 5,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -479,6 +476,8 @@
       "cash"
     ],
     "scope_kinds": [
+      "domain",
+      "other",
       "url"
     ],
     "summary_vi": null,
@@ -503,7 +502,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -577,48 +576,49 @@
     "contact": null
   },
   {
-    "id": "self-host:84codes-com",
+    "id": "self-host:security-unionpay-com",
     "platform": "self-host",
-    "handle": "84codes-com",
-    "name": "84codes",
-    "url": "https://www.84codes.com/security",
+    "handle": "security-unionpay-com",
+    "name": "UnionPay",
+    "url": "https://security.unionpay.com/",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "4 host/repo cụ thể"
+      "7 host/repo cụ thể"
     ],
-    "concrete_count": 4,
+    "concrete_count": 7,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-07T10:01:55Z",
+    "first_seen": "2026-09-07T09:51:02Z",
     "added_assets": [],
     "reward_types": [
-      "cash"
+      "cash",
+      "swag"
     ],
     "scope_kinds": [
       "domain"
     ],
     "summary_vi": null,
-    "policy_url": "https://www.84codes.com/security",
-    "contact": "security@84codes.com"
+    "policy_url": "https://security.unionpay.com/",
+    "contact": null
   },
   {
-    "id": "hackerone:1win_com",
+    "id": "hackerone:meesho_bbp",
     "platform": "hackerone",
-    "handle": "1win_com",
-    "name": "1win",
-    "url": "https://hackerone.com/1win_com",
+    "handle": "meesho_bbp",
+    "name": "Meesho",
+    "url": "https://hackerone.com/meesho_bbp",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "5 host/repo cụ thể"
+      "9 host/repo cụ thể"
     ],
-    "concrete_count": 5,
+    "concrete_count": 9,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -628,9 +628,8 @@
       "cash"
     ],
     "scope_kinds": [
-      "domain",
-      "other",
-      "url"
+      "mobile",
+      "domain"
     ],
     "summary_vi": null,
     "policy_url": null,
@@ -654,7 +653,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"

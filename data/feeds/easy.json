@@ -17,7 +17,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -47,7 +47,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -77,7 +77,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -107,7 +107,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -137,7 +137,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -167,7 +167,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -178,6 +178,37 @@
     "summary_vi": null,
     "policy_url": null,
     "contact": null
+  },
+  {
+    "id": "self-host:fintual-com",
+    "platform": "self-host",
+    "handle": "fintual-com",
+    "name": "Fintual",
+    "url": "https://fintual.com/security-policy.txt",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 85,
+    "reasons": [
+      "có bounty",
+      "6 host/repo cụ thể",
+      "program mới"
+    ],
+    "concrete_count": 6,
+    "min_bounty": 100.0,
+    "max_bounty": null,
+    "currency": "USD",
+    "first_seen": "2026-09-11T02:32:45Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash",
+      "hall_of_fame"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": "https://fintual.com/security-policy.txt",
+    "contact": "mailto:security@fintual.com"
   },
   {
     "id": "bugcrowd:cappsule-sarl",
@@ -197,7 +228,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -227,45 +258,12 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:neon_bbp",
-    "platform": "hackerone",
-    "handle": "neon_bbp",
-    "name": "Neon",
-    "url": "https://hackerone.com/neon_bbp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "Neon-supported extensions"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "other",
       "url"
     ],
     "summary_vi": null,
@@ -300,40 +298,6 @@
     "scope_kinds": [
       "other",
       "domain",
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:cfr",
-    "platform": "bugcrowd",
-    "handle": "cfr",
-    "name": "Council on Foreign Relations",
-    "url": "https://bugcrowd.com/engagements/cfr",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể",
-      "+3 asset"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": 2100.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "████████████████████",
-      "██████████████████████████",
-      "█████████████████████████████"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
       "url"
     ],
     "summary_vi": null,
@@ -579,6 +543,36 @@
       "other",
       "domain",
       "mobile"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:neon_bbp",
+    "platform": "hackerone",
+    "handle": "neon_bbp",
+    "name": "Neon",
+    "url": "https://hackerone.com/neon_bbp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "other",
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,

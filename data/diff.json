@@ -49,22 +49,22 @@
       "url": "https://bugcrowd.com/engagements/vectors-marketplace"
     },
     {
-      "id": "intigriti:bmc",
-      "name": "BMC",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/randstad/bmc/detail"
+      "id": "self-host:cabify-com",
+      "name": "Cabify",
+      "platform": "self-host",
+      "url": "https://cabify.com/.well-known/bounty.txt"
     },
     {
-      "id": "intigriti:tempo-team",
-      "name": "Tempo-Team ",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/randstad/tempo-team/detail"
+      "id": "self-host:fintual-com",
+      "name": "Fintual",
+      "platform": "self-host",
+      "url": "https://fintual.com/security-policy.txt"
     },
     {
-      "id": "intigriti:yacht",
-      "name": "Yacht",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/randstad/yacht/detail"
+      "id": "self-host:wallbox-com",
+      "name": "Wallbox",
+      "platform": "self-host",
+      "url": "https://wallbox.com/.well-known/security-policy.html"
     }
   ],
   "removed": [
@@ -72,6 +72,26 @@
       "id": "intigriti:arkanenetwork",
       "name": "Venly",
       "platform": "intigriti"
+    },
+    {
+      "id": "intigriti:datacamp",
+      "name": "DataCamp",
+      "platform": "intigriti"
+    },
+    {
+      "id": "self-host:asus-com",
+      "name": "ASUS",
+      "platform": "self-host"
+    },
+    {
+      "id": "self-host:athento-zendesk-com",
+      "name": "Athento",
+      "platform": "self-host"
+    },
+    {
+      "id": "self-host:atlan-com",
+      "name": "atlan.com",
+      "platform": "self-host"
     }
   ],
   "scope_changes": [
@@ -86,27 +106,6 @@
       "removed": []
     },
     {
-      "id": "hackerone:neon_bbp",
-      "name": "Neon",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/neon_bbp",
-      "added": [
-        "Neon-supported extensions"
-      ],
-      "removed": []
-    },
-    {
-      "id": "hackerone:expediagroup_bbp",
-      "name": "Expedia Group Bug Bounty",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/expediagroup_bbp",
-      "added": [
-        "506426310",
-        "642441300"
-      ],
-      "removed": []
-    },
-    {
       "id": "hackerone:databricks",
       "name": "Databricks",
       "platform": "hackerone",
@@ -115,34 +114,6 @@
         "Lakebase-Supported extensions"
       ],
       "removed": []
-    },
-    {
-      "id": "bugcrowd:cfr",
-      "name": "Council on Foreign Relations",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/cfr",
-      "added": [
-        "████████████████████",
-        "██████████████████████████",
-        "█████████████████████████████"
-      ],
-      "removed": [
-        "https://education.cfr.org/",
-        "https://thinkglobalhealth.org",
-        "https://www.cfr.org/"
-      ]
-    },
-    {
-      "id": "intigriti:saltovulnerabilitydisclosure",
-      "name": "Salto Vulnerability Disclosure ",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/saltosystems/saltovulnerabilitydisclosure/detail",
-      "added": [
-        "*.gantner.cloud"
-      ],
-      "removed": [
-        "*.gantnercloud.com"
-      ]
     }
   ]
 }

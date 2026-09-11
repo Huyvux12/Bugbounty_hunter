@@ -1,92 +1,61 @@
 [
   {
-    "id": "intigriti:bmc",
-    "platform": "intigriti",
-    "handle": "bmc",
-    "name": "BMC",
-    "url": "https://www.intigriti.com/programs/randstad/bmc/detail",
-    "offers_bounty": false,
+    "id": "self-host:cabify-com",
+    "platform": "self-host",
+    "handle": "cabify-com",
+    "name": "Cabify",
+    "url": "https://cabify.com/.well-known/bounty.txt",
+    "offers_bounty": true,
     "status": "open",
     "easy_score": 0,
     "reasons": [
+      "có bounty",
       "program mới",
-      "chỉ wildcard/CIDR"
+      "chỉ wildcard/CIDR",
+      "chỉ mobile"
     ],
     "concrete_count": 0,
-    "min_bounty": 0.0,
-    "max_bounty": 0.0,
+    "min_bounty": null,
+    "max_bounty": null,
     "currency": "EUR",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
-      "none"
+      "cash"
     ],
-    "scope_kinds": [
-      "wildcard"
-    ],
+    "scope_kinds": [],
     "summary_vi": null,
-    "policy_url": null,
-    "contact": null
+    "policy_url": "https://cabify.com/.well-known/bounty.txt",
+    "contact": "mailto:security+bugbounty@cabify.com"
   },
   {
-    "id": "intigriti:yacht",
-    "platform": "intigriti",
-    "handle": "yacht",
-    "name": "Yacht",
-    "url": "https://www.intigriti.com/programs/randstad/yacht/detail",
-    "offers_bounty": false,
+    "id": "self-host:wallbox-com",
+    "platform": "self-host",
+    "handle": "wallbox-com",
+    "name": "Wallbox",
+    "url": "https://wallbox.com/.well-known/security-policy.html",
+    "offers_bounty": true,
     "status": "open",
     "easy_score": 0,
     "reasons": [
+      "có bounty",
       "program mới",
-      "chỉ wildcard/CIDR"
+      "chỉ wildcard/CIDR",
+      "chỉ mobile"
     ],
     "concrete_count": 0,
-    "min_bounty": 0.0,
-    "max_bounty": 0.0,
-    "currency": "EUR",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "min_bounty": null,
+    "max_bounty": 500.0,
+    "currency": "USD",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
-      "none"
+      "cash"
     ],
-    "scope_kinds": [
-      "wildcard"
-    ],
+    "scope_kinds": [],
     "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "intigriti:tempo-team",
-    "platform": "intigriti",
-    "handle": "tempo-team",
-    "name": "Tempo-Team ",
-    "url": "https://www.intigriti.com/programs/randstad/tempo-team/detail",
-    "offers_bounty": false,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "4 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 4,
-    "min_bounty": 0.0,
-    "max_bounty": 0.0,
-    "currency": "EUR",
-    "first_seen": "2026-09-10T20:19:47Z",
-    "added_assets": [],
-    "reward_types": [
-      "none"
-    ],
-    "scope_kinds": [
-      "wildcard",
-      "url",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
+    "policy_url": "https://wallbox.com/.well-known/security-policy.html",
+    "contact": "mailto:security@wallbox.com"
   },
   {
     "id": "bugcrowd:cappsule-sarl",
@@ -106,7 +75,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -136,7 +105,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -166,7 +135,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -196,7 +165,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -226,7 +195,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -256,7 +225,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -286,7 +255,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -316,7 +285,7 @@
     "min_bounty": null,
     "max_bounty": 1500.0,
     "currency": "USD",
-    "first_seen": "2026-09-10T20:19:47Z",
+    "first_seen": "2026-09-11T02:32:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -329,35 +298,35 @@
     "contact": null
   },
   {
-    "id": "intigriti:saltovulnerabilitydisclosure",
-    "platform": "intigriti",
-    "handle": "saltovulnerabilitydisclosure",
-    "name": "Salto Vulnerability Disclosure ",
-    "url": "https://www.intigriti.com/programs/saltosystems/saltovulnerabilitydisclosure/detail",
-    "offers_bounty": false,
+    "id": "self-host:fintual-com",
+    "platform": "self-host",
+    "handle": "fintual-com",
+    "name": "Fintual",
+    "url": "https://fintual.com/security-policy.txt",
+    "offers_bounty": true,
     "status": "open",
-    "easy_score": 0,
+    "easy_score": 85,
     "reasons": [
-      "+1 asset",
-      "chỉ wildcard/CIDR"
+      "có bounty",
+      "6 host/repo cụ thể",
+      "program mới"
     ],
-    "concrete_count": 0,
-    "min_bounty": 0.0,
-    "max_bounty": 0.0,
-    "currency": "EUR",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "*.gantner.cloud"
-    ],
+    "concrete_count": 6,
+    "min_bounty": 100.0,
+    "max_bounty": null,
+    "currency": "USD",
+    "first_seen": "2026-09-11T02:32:45Z",
+    "added_assets": [],
     "reward_types": [
-      "none"
+      "cash",
+      "hall_of_fame"
     ],
     "scope_kinds": [
-      "wildcard"
+      "domain"
     ],
     "summary_vi": null,
-    "policy_url": null,
-    "contact": null
+    "policy_url": "https://fintual.com/security-policy.txt",
+    "contact": "mailto:security@fintual.com"
   },
   {
     "id": "hackerone:tbs-sct",
@@ -392,75 +361,6 @@
     "contact": null
   },
   {
-    "id": "hackerone:expediagroup_bbp",
-    "platform": "hackerone",
-    "handle": "expediagroup_bbp",
-    "name": "Expedia Group Bug Bounty",
-    "url": "https://hackerone.com/expediagroup_bbp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "25 host/repo cụ thể",
-      "+2 asset",
-      "scope rộng"
-    ],
-    "concrete_count": 25,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "506426310",
-      "642441300"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "wildcard",
-      "mobile",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:neon_bbp",
-    "platform": "hackerone",
-    "handle": "neon_bbp",
-    "name": "Neon",
-    "url": "https://hackerone.com/neon_bbp",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "Neon-supported extensions"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "other",
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
     "id": "hackerone:databricks",
     "platform": "hackerone",
     "handle": "databricks",
@@ -488,40 +388,6 @@
     "scope_kinds": [
       "other",
       "domain",
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:cfr",
-    "platform": "bugcrowd",
-    "handle": "cfr",
-    "name": "Council on Foreign Relations",
-    "url": "https://bugcrowd.com/engagements/cfr",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể",
-      "+3 asset"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": 2100.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "████████████████████",
-      "██████████████████████████",
-      "█████████████████████████████"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
       "url"
     ],
     "summary_vi": null,
