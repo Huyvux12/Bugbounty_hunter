@@ -18,7 +18,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": "EUR",
-    "first_seen": "2026-09-11T02:32:45Z",
+    "first_seen": "2026-09-11T10:26:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -47,7 +47,7 @@
     "min_bounty": null,
     "max_bounty": 500.0,
     "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
+    "first_seen": "2026-09-11T10:26:45Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -58,244 +58,36 @@
     "contact": "mailto:security@wallbox.com"
   },
   {
-    "id": "bugcrowd:cappsule-sarl",
-    "platform": "bugcrowd",
-    "handle": "cappsule-sarl",
-    "name": "Cappsule Sarl - Marketplace Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/cappsule-sarl",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "2 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 2,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:codecentric",
-    "platform": "bugcrowd",
-    "handle": "codecentric",
-    "name": "codecentric AG - Marketplace Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/codecentric",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 80,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:catapultlabs",
-    "platform": "bugcrowd",
-    "handle": "catapultlabs",
-    "name": "Catapult Labs Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/catapultlabs",
+    "id": "self-host:cleanshot-com",
+    "platform": "self-host",
+    "handle": "cleanshot-com",
+    "name": "cleanshot.com",
+    "url": "https://cleanshot.com/disclosure",
     "offers_bounty": true,
     "status": "open",
     "easy_score": 85,
     "reasons": [
       "có bounty",
-      "8 host/repo cụ thể",
+      "6 host/repo cụ thể",
       "program mới"
     ],
-    "concrete_count": 8,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
+    "concrete_count": 6,
+    "min_bounty": 50.0,
+    "max_bounty": 4000.0,
     "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
+    "first_seen": "2026-09-11T10:26:45Z",
     "added_assets": [],
     "reward_types": [
-      "cash"
+      "cash",
+      "hall_of_fame"
     ],
     "scope_kinds": [
-      "url"
+      "domain",
+      "wildcard"
     ],
     "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:creativas",
-    "platform": "bugcrowd",
-    "handle": "creativas",
-    "name": "Creativas",
-    "url": "https://bugcrowd.com/engagements/creativas",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 5,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:digitalrose",
-    "platform": "bugcrowd",
-    "handle": "digitalrose",
-    "name": "Digital Rose's Marketplace Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/digitalrose",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:railsware",
-    "platform": "bugcrowd",
-    "handle": "railsware",
-    "name": "Railsware",
-    "url": "https://bugcrowd.com/engagements/railsware",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:savignano",
-    "platform": "bugcrowd",
-    "handle": "savignano",
-    "name": "Savignano Software Solutions Marketplace Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/savignano",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:vectors-marketplace",
-    "platform": "bugcrowd",
-    "handle": "vectors-marketplace",
-    "name": "Vectors Bug Bounty ",
-    "url": "https://bugcrowd.com/engagements/vectors-marketplace",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "8 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 8,
-    "min_bounty": null,
-    "max_bounty": 1500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
+    "policy_url": "https://cleanshot.com/disclosure",
+    "contact": "mailto:security@cleanshot.com"
   },
   {
     "id": "self-host:fintual-com",
@@ -315,7 +107,7 @@
     "min_bounty": 100.0,
     "max_bounty": null,
     "currency": "USD",
-    "first_seen": "2026-09-11T02:32:45Z",
+    "first_seen": "2026-09-11T10:26:45Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -329,65 +121,66 @@
     "contact": "mailto:security@fintual.com"
   },
   {
-    "id": "hackerone:tbs-sct",
-    "platform": "hackerone",
-    "handle": "tbs-sct",
-    "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
-    "url": "https://hackerone.com/tbs-sct",
-    "offers_bounty": false,
+    "id": "intigriti:watsons",
+    "platform": "intigriti",
+    "handle": "watsons",
+    "name": "Watsons",
+    "url": "https://www.intigriti.com/programs/aswatson/watsons/detail",
+    "offers_bounty": true,
     "status": "open",
-    "easy_score": 50,
+    "easy_score": 60,
     "reasons": [
-      "16 host/repo cụ thể",
-      "+1 asset"
+      "có bounty",
+      "77 host/repo cụ thể",
+      "+1 asset",
+      "scope rộng"
     ],
-    "concrete_count": 16,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
+    "concrete_count": 77,
+    "min_bounty": 10.0,
+    "max_bounty": 8500.0,
+    "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "auth.forms-formulaires.alpha.canada.ca"
+      "id-watsonsbesti.com"
     ],
     "reward_types": [
-      "none"
+      "cash"
     ],
     "scope_kinds": [
-      "wildcard",
-      "domain"
+      "domain",
+      "mobile",
+      "wildcard"
     ],
     "summary_vi": null,
     "policy_url": null,
     "contact": null
   },
   {
-    "id": "hackerone:databricks",
-    "platform": "hackerone",
-    "handle": "databricks",
-    "name": "Databricks",
-    "url": "https://hackerone.com/databricks",
+    "id": "bugcrowd:kiteworks-public",
+    "platform": "bugcrowd",
+    "handle": "kiteworks-public",
+    "name": "Kiteworks",
+    "url": "https://bugcrowd.com/engagements/kiteworks-public",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 75,
+    "easy_score": 70,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể",
+      "1 host/repo cụ thể",
       "+1 asset"
     ],
-    "concrete_count": 3,
+    "concrete_count": 1,
     "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
+    "max_bounty": 25000.0,
+    "currency": "USD",
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
-      "Lakebase-Supported extensions"
+      "█████████████████████████████████████████████"
     ],
     "reward_types": [
       "cash"
     ],
     "scope_kinds": [
-      "other",
-      "domain",
       "url"
     ],
     "summary_vi": null,

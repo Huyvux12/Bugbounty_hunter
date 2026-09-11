@@ -1,58 +1,16 @@
 {
   "added": [
     {
-      "id": "bugcrowd:cappsule-sarl",
-      "name": "Cappsule Sarl - Marketplace Bug Bounty Program",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/cappsule-sarl"
-    },
-    {
-      "id": "bugcrowd:catapultlabs",
-      "name": "Catapult Labs Bug Bounty",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/catapultlabs"
-    },
-    {
-      "id": "bugcrowd:codecentric",
-      "name": "codecentric AG - Marketplace Bug Bounty Program",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/codecentric"
-    },
-    {
-      "id": "bugcrowd:creativas",
-      "name": "Creativas",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/creativas"
-    },
-    {
-      "id": "bugcrowd:digitalrose",
-      "name": "Digital Rose's Marketplace Bug Bounty",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/digitalrose"
-    },
-    {
-      "id": "bugcrowd:railsware",
-      "name": "Railsware",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/railsware"
-    },
-    {
-      "id": "bugcrowd:savignano",
-      "name": "Savignano Software Solutions Marketplace Bug Bounty Program",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/savignano"
-    },
-    {
-      "id": "bugcrowd:vectors-marketplace",
-      "name": "Vectors Bug Bounty ",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/vectors-marketplace"
-    },
-    {
       "id": "self-host:cabify-com",
       "name": "Cabify",
       "platform": "self-host",
       "url": "https://cabify.com/.well-known/bounty.txt"
+    },
+    {
+      "id": "self-host:cleanshot-com",
+      "name": "cleanshot.com",
+      "platform": "self-host",
+      "url": "https://cleanshot.com/disclosure"
     },
     {
       "id": "self-host:fintual-com",
@@ -69,16 +27,6 @@
   ],
   "removed": [
     {
-      "id": "intigriti:arkanenetwork",
-      "name": "Venly",
-      "platform": "intigriti"
-    },
-    {
-      "id": "intigriti:datacamp",
-      "name": "DataCamp",
-      "platform": "intigriti"
-    },
-    {
       "id": "self-host:asus-com",
       "name": "ASUS",
       "platform": "self-host"
@@ -92,26 +40,33 @@
       "id": "self-host:atlan-com",
       "name": "atlan.com",
       "platform": "self-host"
+    },
+    {
+      "id": "self-host:devolksbank-nl",
+      "name": "ASN Bank",
+      "platform": "self-host"
     }
   ],
   "scope_changes": [
     {
-      "id": "hackerone:tbs-sct",
-      "name": "Treasury Board of Canada Secretariat/Secrétariat du Conseil du Trésor du Canada",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/tbs-sct",
+      "id": "bugcrowd:kiteworks-public",
+      "name": "Kiteworks",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/kiteworks-public",
       "added": [
-        "auth.forms-formulaires.alpha.canada.ca"
+        "█████████████████████████████████████████████"
       ],
-      "removed": []
+      "removed": [
+        "https://kw-bugcrowd-pub.bounty.kiteworks.dev/"
+      ]
     },
     {
-      "id": "hackerone:databricks",
-      "name": "Databricks",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/databricks",
+      "id": "intigriti:watsons",
+      "name": "Watsons",
+      "platform": "intigriti",
+      "url": "https://www.intigriti.com/programs/aswatson/watsons/detail",
       "added": [
-        "Lakebase-Supported extensions"
+        "id-watsonsbesti.com"
       ],
       "removed": []
     }
