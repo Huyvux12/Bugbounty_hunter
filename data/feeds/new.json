@@ -1,63 +1,5 @@
 [
   {
-    "id": "self-host:cabify-com",
-    "platform": "self-host",
-    "handle": "cabify-com",
-    "name": "Cabify",
-    "url": "https://cabify.com/.well-known/bounty.txt",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 0,
-    "reasons": [
-      "có bounty",
-      "program mới",
-      "chỉ wildcard/CIDR",
-      "chỉ mobile"
-    ],
-    "concrete_count": 0,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": "EUR",
-    "first_seen": "2026-09-11T10:26:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [],
-    "summary_vi": null,
-    "policy_url": "https://cabify.com/.well-known/bounty.txt",
-    "contact": "mailto:security+bugbounty@cabify.com"
-  },
-  {
-    "id": "self-host:wallbox-com",
-    "platform": "self-host",
-    "handle": "wallbox-com",
-    "name": "Wallbox",
-    "url": "https://wallbox.com/.well-known/security-policy.html",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 0,
-    "reasons": [
-      "có bounty",
-      "program mới",
-      "chỉ wildcard/CIDR",
-      "chỉ mobile"
-    ],
-    "concrete_count": 0,
-    "min_bounty": null,
-    "max_bounty": 500.0,
-    "currency": "USD",
-    "first_seen": "2026-09-11T10:26:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [],
-    "summary_vi": null,
-    "policy_url": "https://wallbox.com/.well-known/security-policy.html",
-    "contact": "mailto:security@wallbox.com"
-  },
-  {
     "id": "self-host:cleanshot-com",
     "platform": "self-host",
     "handle": "cleanshot-com",
@@ -75,7 +17,7 @@
     "min_bounty": 50.0,
     "max_bounty": 4000.0,
     "currency": "USD",
-    "first_seen": "2026-09-11T10:26:45Z",
+    "first_seen": "2026-09-11T15:42:54Z",
     "added_assets": [],
     "reward_types": [
       "cash",
@@ -88,37 +30,6 @@
     "summary_vi": null,
     "policy_url": "https://cleanshot.com/disclosure",
     "contact": "mailto:security@cleanshot.com"
-  },
-  {
-    "id": "self-host:fintual-com",
-    "platform": "self-host",
-    "handle": "fintual-com",
-    "name": "Fintual",
-    "url": "https://fintual.com/security-policy.txt",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "6 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 6,
-    "min_bounty": 100.0,
-    "max_bounty": null,
-    "currency": "USD",
-    "first_seen": "2026-09-11T10:26:45Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash",
-      "hall_of_fame"
-    ],
-    "scope_kinds": [
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": "https://fintual.com/security-policy.txt",
-    "contact": "mailto:security@fintual.com"
   },
   {
     "id": "intigriti:watsons",
@@ -176,6 +87,108 @@
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
       "█████████████████████████████████████████████"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:superbet",
+    "platform": "hackerone",
+    "handle": "superbet",
+    "name": "Superbet",
+    "url": "https://hackerone.com/superbet",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "10 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 10,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "*.super.xyz"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "url",
+      "mobile",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:files",
+    "platform": "hackerone",
+    "handle": "files",
+    "name": "Files.com",
+    "url": "https://hackerone.com/files",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "Files.com SDKs and MCP"
+    ],
+    "reward_types": [
+      "cash",
+      "swag"
+    ],
+    "scope_kinds": [
+      "other",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "bugcrowd:webdotcom",
+    "platform": "bugcrowd",
+    "handle": "webdotcom",
+    "name": "Web.com Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/webdotcom",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 75,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": 3000.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://app.web.com"
     ],
     "reward_types": [
       "cash"

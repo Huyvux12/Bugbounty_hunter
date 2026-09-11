@@ -1,45 +1,17 @@
 {
   "added": [
     {
-      "id": "self-host:cabify-com",
-      "name": "Cabify",
-      "platform": "self-host",
-      "url": "https://cabify.com/.well-known/bounty.txt"
-    },
-    {
       "id": "self-host:cleanshot-com",
       "name": "cleanshot.com",
       "platform": "self-host",
       "url": "https://cleanshot.com/disclosure"
-    },
-    {
-      "id": "self-host:fintual-com",
-      "name": "Fintual",
-      "platform": "self-host",
-      "url": "https://fintual.com/security-policy.txt"
-    },
-    {
-      "id": "self-host:wallbox-com",
-      "name": "Wallbox",
-      "platform": "self-host",
-      "url": "https://wallbox.com/.well-known/security-policy.html"
     }
   ],
   "removed": [
     {
-      "id": "self-host:asus-com",
-      "name": "ASUS",
-      "platform": "self-host"
-    },
-    {
-      "id": "self-host:athento-zendesk-com",
-      "name": "Athento",
-      "platform": "self-host"
-    },
-    {
-      "id": "self-host:atlan-com",
-      "name": "atlan.com",
-      "platform": "self-host"
+      "id": "hackerone:mozilla",
+      "name": "Mozilla",
+      "platform": "hackerone"
     },
     {
       "id": "self-host:devolksbank-nl",
@@ -48,6 +20,29 @@
     }
   ],
   "scope_changes": [
+    {
+      "id": "hackerone:superbet",
+      "name": "Superbet",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/superbet",
+      "added": [
+        "*.super.xyz"
+      ],
+      "removed": []
+    },
+    {
+      "id": "hackerone:files",
+      "name": "Files.com",
+      "platform": "hackerone",
+      "url": "https://hackerone.com/files",
+      "added": [
+        "Files.com SDKs and MCP"
+      ],
+      "removed": [
+        "Files.com Desktop v4 App (previously known as Desktop App)",
+        "Files.com SDK's"
+      ]
+    },
     {
       "id": "bugcrowd:kiteworks-public",
       "name": "Kiteworks",
@@ -59,6 +54,16 @@
       "removed": [
         "https://kw-bugcrowd-pub.bounty.kiteworks.dev/"
       ]
+    },
+    {
+      "id": "bugcrowd:webdotcom",
+      "name": "Web.com Bug Bounty",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/webdotcom",
+      "added": [
+        "https://app.web.com"
+      ],
+      "removed": []
     },
     {
       "id": "intigriti:watsons",

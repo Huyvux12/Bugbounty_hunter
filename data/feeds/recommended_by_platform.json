@@ -18,7 +18,7 @@
       "min_bounty": 50.0,
       "max_bounty": 4000.0,
       "currency": "USD",
-      "first_seen": "2026-09-11T10:26:45Z",
+      "first_seen": "2026-09-11T15:42:54Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -31,37 +31,6 @@
       "summary_vi": null,
       "policy_url": "https://cleanshot.com/disclosure",
       "contact": "mailto:security@cleanshot.com"
-    },
-    {
-      "id": "self-host:fintual-com",
-      "platform": "self-host",
-      "handle": "fintual-com",
-      "name": "Fintual",
-      "url": "https://fintual.com/security-policy.txt",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 85,
-      "reasons": [
-        "có bounty",
-        "6 host/repo cụ thể",
-        "program mới"
-      ],
-      "concrete_count": 6,
-      "min_bounty": 100.0,
-      "max_bounty": null,
-      "currency": "USD",
-      "first_seen": "2026-09-11T10:26:45Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash",
-        "hall_of_fame"
-      ],
-      "scope_kinds": [
-        "domain"
-      ],
-      "summary_vi": null,
-      "policy_url": "https://fintual.com/security-policy.txt",
-      "contact": "mailto:security@fintual.com"
     },
     {
       "id": "self-host:datto-com",
@@ -80,7 +49,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -110,7 +79,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -140,7 +109,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -170,7 +139,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -199,7 +168,7 @@
       "min_bounty": 500.0,
       "max_bounty": 50000.0,
       "currency": "INR",
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -229,7 +198,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash",
@@ -260,7 +229,7 @@
       "min_bounty": 50.0,
       "max_bounty": 5000.0,
       "currency": "USD",
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -290,7 +259,7 @@
       "min_bounty": 5.0,
       "max_bounty": 1000.0,
       "currency": "USD",
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -319,7 +288,7 @@
       "min_bounty": null,
       "max_bounty": null,
       "currency": null,
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -348,7 +317,7 @@
       "min_bounty": 100.0,
       "max_bounty": 1000.0,
       "currency": "USD",
-      "first_seen": "2026-09-07T10:01:55Z",
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -359,372 +328,110 @@
       "summary_vi": null,
       "policy_url": "https://www.bentley.com/legal/bug-bounty-report/",
       "contact": "security@bentley.com"
-    }
-  ],
-  "bugcrowd": [
-    {
-      "id": "bugcrowd:kiteworks-public",
-      "platform": "bugcrowd",
-      "handle": "kiteworks-public",
-      "name": "Kiteworks",
-      "url": "https://bugcrowd.com/engagements/kiteworks-public",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 70,
-      "reasons": [
-        "có bounty",
-        "1 host/repo cụ thể",
-        "+1 asset"
-      ],
-      "concrete_count": 1,
-      "min_bounty": null,
-      "max_bounty": 25000.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [
-        "█████████████████████████████████████████████"
-      ],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
     },
     {
-      "id": "bugcrowd:jaangainc-mbb-market",
-      "platform": "bugcrowd",
-      "handle": "jaangainc-mbb-market",
-      "name": "Jaanga Marketplace Bug Bounty",
-      "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
+      "id": "self-host:billie-io",
+      "platform": "self-host",
+      "handle": "billie-io",
+      "name": "Billie",
+      "url": "https://billie.io/coordinated-vulnerability-disclosure-policy",
       "offers_bounty": true,
       "status": "open",
       "easy_score": 60,
       "reasons": [
         "có bounty",
-        "4 host/repo cụ thể"
+        "16 host/repo cụ thể"
       ],
-      "concrete_count": 4,
+      "concrete_count": 16,
       "min_bounty": null,
-      "max_bounty": 1500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
+      "max_bounty": null,
+      "currency": null,
+      "first_seen": "2026-09-07T09:51:02Z",
       "added_assets": [],
       "reward_types": [
-        "cash"
+        "cash",
+        "hall_of_fame"
       ],
       "scope_kinds": [
-        "url"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:acorns",
-      "platform": "bugcrowd",
-      "handle": "acorns",
-      "name": "Acorns Grow, Inc.",
-      "url": "https://bugcrowd.com/engagements/acorns",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "4 host/repo cụ thể"
-      ],
-      "concrete_count": 4,
-      "min_bounty": null,
-      "max_bounty": 4000.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url",
-        "mobile"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:afterpay",
-      "platform": "bugcrowd",
-      "handle": "afterpay",
-      "name": "Afterpay Bug Bounty Program",
-      "url": "https://bugcrowd.com/engagements/afterpay",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "12 host/repo cụ thể"
-      ],
-      "concrete_count": 12,
-      "min_bounty": null,
-      "max_bounty": 5000.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "mobile",
-        "url"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:agile-pulse",
-      "platform": "bugcrowd",
-      "handle": "agile-pulse",
-      "name": "AgilePulse Marketplace Bug Bounty Program",
-      "url": "https://bugcrowd.com/engagements/agile-pulse",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "8 host/repo cụ thể"
-      ],
-      "concrete_count": 8,
-      "min_bounty": null,
-      "max_bounty": 1500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:agilislt",
-      "platform": "bugcrowd",
-      "handle": "agilislt",
-      "name": "Agilis LT Bug Bounty",
-      "url": "https://bugcrowd.com/engagements/agilislt",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "9 host/repo cụ thể"
-      ],
-      "concrete_count": 9,
-      "min_bounty": null,
-      "max_bounty": 1500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url",
+        "domain",
         "wildcard"
       ],
       "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:aiven-mbb-og",
-      "platform": "bugcrowd",
-      "handle": "aiven-mbb-og",
-      "name": "Aiven Managed Bug Bounty",
-      "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "9 host/repo cụ thể"
-      ],
-      "concrete_count": 9,
-      "min_bounty": null,
-      "max_bounty": 25000.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url",
-        "other",
-        "repo"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:akeles",
-      "platform": "bugcrowd",
-      "handle": "akeles",
-      "name": "Akeles Marketplace Bug Bounty",
-      "url": "https://bugcrowd.com/engagements/akeles",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "15 host/repo cụ thể"
-      ],
-      "concrete_count": 15,
-      "min_bounty": null,
-      "max_bounty": 1500.0,
-      "currency": "USD",
-      "first_seen": "2026-09-03T02:32:59Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:appliger",
-      "platform": "bugcrowd",
-      "handle": "appliger",
-      "name": "AppLiger",
-      "url": "https://bugcrowd.com/engagements/appliger",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "4 host/repo cụ thể"
-      ],
-      "concrete_count": 4,
-      "min_bounty": null,
-      "max_bounty": 1500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:appsvio",
-      "platform": "bugcrowd",
-      "handle": "appsvio",
-      "name": "Appsvio Marketplace Bug Bounty",
-      "url": "https://bugcrowd.com/engagements/appsvio",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "4 host/repo cụ thể"
-      ],
-      "concrete_count": 4,
-      "min_bounty": null,
-      "max_bounty": 1500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:arlo",
-      "platform": "bugcrowd",
-      "handle": "arlo",
-      "name": "Arlo Cash Rewards",
-      "url": "https://bugcrowd.com/engagements/arlo",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "7 host/repo cụ thể"
-      ],
-      "concrete_count": 7,
-      "min_bounty": null,
-      "max_bounty": 4500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "mobile",
-        "other",
-        "wildcard",
-        "url"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "bugcrowd:asana",
-      "platform": "bugcrowd",
-      "handle": "asana",
-      "name": "Asana",
-      "url": "https://bugcrowd.com/engagements/asana",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "5 host/repo cụ thể"
-      ],
-      "concrete_count": 5,
-      "min_bounty": null,
-      "max_bounty": 6500.0,
-      "currency": "USD",
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "url",
-        "mobile",
-        "wildcard"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
+      "policy_url": "https://billie.io/coordinated-vulnerability-disclosure-policy",
+      "contact": "mailto:disclosure@billie.io"
     }
   ],
   "hackerone": [
+    {
+      "id": "hackerone:superbet",
+      "platform": "hackerone",
+      "handle": "superbet",
+      "name": "Superbet",
+      "url": "https://hackerone.com/superbet",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 75,
+      "reasons": [
+        "có bounty",
+        "10 host/repo cụ thể",
+        "+1 asset"
+      ],
+      "concrete_count": 10,
+      "min_bounty": null,
+      "max_bounty": null,
+      "currency": null,
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [
+        "*.super.xyz"
+      ],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "wildcard",
+        "other",
+        "url",
+        "mobile",
+        "domain"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "hackerone:files",
+      "platform": "hackerone",
+      "handle": "files",
+      "name": "Files.com",
+      "url": "https://hackerone.com/files",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 75,
+      "reasons": [
+        "có bounty",
+        "3 host/repo cụ thể",
+        "+1 asset"
+      ],
+      "concrete_count": 3,
+      "min_bounty": null,
+      "max_bounty": null,
+      "currency": null,
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [
+        "Files.com SDKs and MCP"
+      ],
+      "reward_types": [
+        "cash",
+        "swag"
+      ],
+      "scope_kinds": [
+        "other",
+        "domain"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
     {
       "id": "hackerone:wolt",
       "platform": "hackerone",
@@ -1028,13 +735,345 @@
       "summary_vi": null,
       "policy_url": null,
       "contact": null
+    }
+  ],
+  "bugcrowd": [
+    {
+      "id": "bugcrowd:webdotcom",
+      "platform": "bugcrowd",
+      "handle": "webdotcom",
+      "name": "Web.com Bug Bounty",
+      "url": "https://bugcrowd.com/engagements/webdotcom",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 75,
+      "reasons": [
+        "có bounty",
+        "4 host/repo cụ thể",
+        "+1 asset"
+      ],
+      "concrete_count": 4,
+      "min_bounty": null,
+      "max_bounty": 3000.0,
+      "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [
+        "https://app.web.com"
+      ],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
     },
     {
-      "id": "hackerone:syfe_bbp",
-      "platform": "hackerone",
-      "handle": "syfe_bbp",
-      "name": "Syfe",
-      "url": "https://hackerone.com/syfe_bbp",
+      "id": "bugcrowd:kiteworks-public",
+      "platform": "bugcrowd",
+      "handle": "kiteworks-public",
+      "name": "Kiteworks",
+      "url": "https://bugcrowd.com/engagements/kiteworks-public",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 70,
+      "reasons": [
+        "có bounty",
+        "1 host/repo cụ thể",
+        "+1 asset"
+      ],
+      "concrete_count": 1,
+      "min_bounty": null,
+      "max_bounty": 25000.0,
+      "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [
+        "█████████████████████████████████████████████"
+      ],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:jaangainc-mbb-market",
+      "platform": "bugcrowd",
+      "handle": "jaangainc-mbb-market",
+      "name": "Jaanga Marketplace Bug Bounty",
+      "url": "https://bugcrowd.com/engagements/JaangaInc-mbb-market",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "4 host/repo cụ thể"
+      ],
+      "concrete_count": 4,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:acorns",
+      "platform": "bugcrowd",
+      "handle": "acorns",
+      "name": "Acorns Grow, Inc.",
+      "url": "https://bugcrowd.com/engagements/acorns",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "4 host/repo cụ thể"
+      ],
+      "concrete_count": 4,
+      "min_bounty": null,
+      "max_bounty": 4000.0,
+      "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url",
+        "mobile"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:afterpay",
+      "platform": "bugcrowd",
+      "handle": "afterpay",
+      "name": "Afterpay Bug Bounty Program",
+      "url": "https://bugcrowd.com/engagements/afterpay",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "12 host/repo cụ thể"
+      ],
+      "concrete_count": 12,
+      "min_bounty": null,
+      "max_bounty": 5000.0,
+      "currency": "USD",
+      "first_seen": "2026-09-01T10:56:59Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "mobile",
+        "url"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:agile-pulse",
+      "platform": "bugcrowd",
+      "handle": "agile-pulse",
+      "name": "AgilePulse Marketplace Bug Bounty Program",
+      "url": "https://bugcrowd.com/engagements/agile-pulse",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "8 host/repo cụ thể"
+      ],
+      "concrete_count": 8,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:agilislt",
+      "platform": "bugcrowd",
+      "handle": "agilislt",
+      "name": "Agilis LT Bug Bounty",
+      "url": "https://bugcrowd.com/engagements/agilislt",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "9 host/repo cụ thể"
+      ],
+      "concrete_count": 9,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url",
+        "wildcard"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:aiven-mbb-og",
+      "platform": "bugcrowd",
+      "handle": "aiven-mbb-og",
+      "name": "Aiven Managed Bug Bounty",
+      "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "9 host/repo cụ thể"
+      ],
+      "concrete_count": 9,
+      "min_bounty": null,
+      "max_bounty": 25000.0,
+      "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url",
+        "other",
+        "repo"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:akeles",
+      "platform": "bugcrowd",
+      "handle": "akeles",
+      "name": "Akeles Marketplace Bug Bounty",
+      "url": "https://bugcrowd.com/engagements/akeles",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "15 host/repo cụ thể"
+      ],
+      "concrete_count": 15,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-09-03T10:32:39Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:appliger",
+      "platform": "bugcrowd",
+      "handle": "appliger",
+      "name": "AppLiger",
+      "url": "https://bugcrowd.com/engagements/appliger",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "4 host/repo cụ thể"
+      ],
+      "concrete_count": 4,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:appsvio",
+      "platform": "bugcrowd",
+      "handle": "appsvio",
+      "name": "Appsvio Marketplace Bug Bounty",
+      "url": "https://bugcrowd.com/engagements/appsvio",
+      "offers_bounty": true,
+      "status": "open",
+      "easy_score": 60,
+      "reasons": [
+        "có bounty",
+        "4 host/repo cụ thể"
+      ],
+      "concrete_count": 4,
+      "min_bounty": null,
+      "max_bounty": 1500.0,
+      "currency": "USD",
+      "first_seen": "2026-08-24T09:20:54Z",
+      "added_assets": [],
+      "reward_types": [
+        "cash"
+      ],
+      "scope_kinds": [
+        "url"
+      ],
+      "summary_vi": null,
+      "policy_url": null,
+      "contact": null
+    },
+    {
+      "id": "bugcrowd:arlo",
+      "platform": "bugcrowd",
+      "handle": "arlo",
+      "name": "Arlo Cash Rewards",
+      "url": "https://bugcrowd.com/engagements/arlo",
       "offers_bounty": true,
       "status": "open",
       "easy_score": 60,
@@ -1044,47 +1083,18 @@
       ],
       "concrete_count": 7,
       "min_bounty": null,
-      "max_bounty": null,
-      "currency": null,
+      "max_bounty": 4500.0,
+      "currency": "USD",
       "first_seen": "2026-08-24T09:20:54Z",
       "added_assets": [],
       "reward_types": [
         "cash"
       ],
       "scope_kinds": [
-        "domain",
-        "mobile"
-      ],
-      "summary_vi": null,
-      "policy_url": null,
-      "contact": null
-    },
-    {
-      "id": "hackerone:circle-bbp",
-      "platform": "hackerone",
-      "handle": "circle-bbp",
-      "name": "Circle BBP",
-      "url": "https://hackerone.com/circle-bbp",
-      "offers_bounty": true,
-      "status": "open",
-      "easy_score": 60,
-      "reasons": [
-        "có bounty",
-        "17 host/repo cụ thể"
-      ],
-      "concrete_count": 17,
-      "min_bounty": null,
-      "max_bounty": null,
-      "currency": null,
-      "first_seen": "2026-08-24T09:20:54Z",
-      "added_assets": [],
-      "reward_types": [
-        "cash"
-      ],
-      "scope_kinds": [
-        "domain",
+        "mobile",
         "other",
-        "repo"
+        "wildcard",
+        "url"
       ],
       "summary_vi": null,
       "policy_url": null,
@@ -1140,7 +1150,7 @@
       "min_bounty": 15.0,
       "max_bounty": 2500.0,
       "currency": "EUR",
-      "first_seen": "2026-09-03T02:32:59Z",
+      "first_seen": "2026-08-24T09:20:54Z",
       "added_assets": [],
       "reward_types": [
         "cash"
@@ -1389,7 +1399,7 @@
       "min_bounty": 100.0,
       "max_bounty": 15000.0,
       "currency": "EUR",
-      "first_seen": "2026-08-31T12:26:19Z",
+      "first_seen": "2026-08-31T22:17:26Z",
       "added_assets": [],
       "reward_types": [
         "cash"
