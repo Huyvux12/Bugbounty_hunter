@@ -1,22 +1,10 @@
 {
-  "added": [
-    {
-      "id": "self-host:cleanshot-com",
-      "name": "cleanshot.com",
-      "platform": "self-host",
-      "url": "https://cleanshot.com/disclosure"
-    }
-  ],
+  "added": [],
   "removed": [
     {
       "id": "hackerone:mozilla",
       "name": "Mozilla",
       "platform": "hackerone"
-    },
-    {
-      "id": "self-host:devolksbank-nl",
-      "name": "ASN Bank",
-      "platform": "self-host"
     }
   ],
   "scope_changes": [
@@ -44,34 +32,12 @@
       ]
     },
     {
-      "id": "bugcrowd:kiteworks-public",
-      "name": "Kiteworks",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/kiteworks-public",
-      "added": [
-        "█████████████████████████████████████████████"
-      ],
-      "removed": [
-        "https://kw-bugcrowd-pub.bounty.kiteworks.dev/"
-      ]
-    },
-    {
       "id": "bugcrowd:webdotcom",
       "name": "Web.com Bug Bounty",
       "platform": "bugcrowd",
       "url": "https://bugcrowd.com/engagements/webdotcom",
       "added": [
         "https://app.web.com"
-      ],
-      "removed": []
-    },
-    {
-      "id": "intigriti:watsons",
-      "name": "Watsons",
-      "platform": "intigriti",
-      "url": "https://www.intigriti.com/programs/aswatson/watsons/detail",
-      "added": [
-        "id-watsonsbesti.com"
       ],
       "removed": []
     }

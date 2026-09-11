@@ -1,37 +1,5 @@
 [
   {
-    "id": "self-host:cleanshot-com",
-    "platform": "self-host",
-    "handle": "cleanshot-com",
-    "name": "cleanshot.com",
-    "url": "https://cleanshot.com/disclosure",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 85,
-    "reasons": [
-      "có bounty",
-      "6 host/repo cụ thể",
-      "program mới"
-    ],
-    "concrete_count": 6,
-    "min_bounty": 50.0,
-    "max_bounty": 4000.0,
-    "currency": "USD",
-    "first_seen": "2026-09-11T15:42:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash",
-      "hall_of_fame"
-    ],
-    "scope_kinds": [
-      "domain",
-      "wildcard"
-    ],
-    "summary_vi": null,
-    "policy_url": "https://cleanshot.com/disclosure",
-    "contact": "mailto:security@cleanshot.com"
-  },
-  {
     "id": "hackerone:superbet",
     "platform": "hackerone",
     "handle": "superbet",
@@ -122,38 +90,6 @@
     "first_seen": "2026-08-24T09:20:54Z",
     "added_assets": [
       "https://app.web.com"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:kiteworks-public",
-    "platform": "bugcrowd",
-    "handle": "kiteworks-public",
-    "name": "Kiteworks",
-    "url": "https://bugcrowd.com/engagements/kiteworks-public",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 70,
-    "reasons": [
-      "có bounty",
-      "1 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 1,
-    "min_bounty": null,
-    "max_bounty": 25000.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "█████████████████████████████████████████████"
     ],
     "reward_types": [
       "cash"
@@ -1547,6 +1483,69 @@
       "mobile",
       "wildcard",
       "url",
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:krisp",
+    "platform": "hackerone",
+    "handle": "krisp",
+    "name": "Krisp",
+    "url": "https://hackerone.com/krisp",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "13 host/repo cụ thể"
+    ],
+    "concrete_count": 13,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "domain",
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:whatnot",
+    "platform": "hackerone",
+    "handle": "whatnot",
+    "name": "Whatnot",
+    "url": "https://hackerone.com/whatnot",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "4 host/repo cụ thể"
+    ],
+    "concrete_count": 4,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "mobile",
       "domain"
     ],
     "summary_vi": null,
