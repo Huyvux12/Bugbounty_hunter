@@ -1,107 +1,5 @@
 [
   {
-    "id": "hackerone:superbet",
-    "platform": "hackerone",
-    "handle": "superbet",
-    "name": "Superbet",
-    "url": "https://hackerone.com/superbet",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "10 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 10,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "*.super.xyz"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "wildcard",
-      "other",
-      "url",
-      "mobile",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:files",
-    "platform": "hackerone",
-    "handle": "files",
-    "name": "Files.com",
-    "url": "https://hackerone.com/files",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "3 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 3,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "Files.com SDKs and MCP"
-    ],
-    "reward_types": [
-      "cash",
-      "swag"
-    ],
-    "scope_kinds": [
-      "other",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:webdotcom",
-    "platform": "bugcrowd",
-    "handle": "webdotcom",
-    "name": "Web.com Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/webdotcom",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": 3000.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "https://app.web.com"
-    ],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "url"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -446,9 +344,9 @@
     "easy_score": 60,
     "reasons": [
       "có bounty",
-      "17 host/repo cụ thể"
+      "15 host/repo cụ thể"
     ],
-    "concrete_count": 17,
+    "concrete_count": 15,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
@@ -956,6 +854,39 @@
       "cash"
     ],
     "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:superbet",
+    "platform": "hackerone",
+    "handle": "superbet",
+    "name": "Superbet",
+    "url": "https://hackerone.com/superbet",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "10 host/repo cụ thể"
+    ],
+    "concrete_count": 10,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "other",
+      "url",
+      "mobile",
       "domain"
     ],
     "summary_vi": null,
@@ -1547,6 +1478,68 @@
       "wildcard",
       "mobile",
       "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:smtp2go",
+    "platform": "hackerone",
+    "handle": "smtp2go",
+    "name": "SMTP2GO BBP",
+    "url": "https://hackerone.com/smtp2go",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "3 host/repo cụ thể"
+    ],
+    "concrete_count": 3,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "domain"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
+    "id": "hackerone:playtika",
+    "platform": "hackerone",
+    "handle": "playtika",
+    "name": "Playtika",
+    "url": "https://hackerone.com/playtika",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 60,
+    "reasons": [
+      "có bounty",
+      "5 host/repo cụ thể"
+    ],
+    "concrete_count": 5,
+    "min_bounty": null,
+    "max_bounty": null,
+    "currency": null,
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "wildcard",
+      "mobile",
+      "other",
+      "domain",
+      "url"
     ],
     "summary_vi": null,
     "policy_url": null,

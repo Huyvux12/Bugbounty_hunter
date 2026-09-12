@@ -1,45 +1,34 @@
 {
-  "added": [],
-  "removed": [
+  "added": [
     {
-      "id": "hackerone:mozilla",
-      "name": "Mozilla",
-      "platform": "hackerone"
+      "id": "self-host:ilionx-com",
+      "name": "ilionx",
+      "platform": "self-host",
+      "url": "https://www.ilionx.com/en/contact/report-vulnerability-cvd/"
+    },
+    {
+      "id": "self-host:zenya-software-com",
+      "name": "Zenya",
+      "platform": "self-host",
+      "url": "https://zenya-software.com/coordinated-vulnerability-disclosure/"
     }
   ],
-  "scope_changes": [
+  "removed": [
     {
-      "id": "hackerone:superbet",
-      "name": "Superbet",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/superbet",
-      "added": [
-        "*.super.xyz"
-      ],
-      "removed": []
+      "id": "hackerone:brave",
+      "name": "Brave Software",
+      "platform": "hackerone"
     },
     {
-      "id": "hackerone:files",
-      "name": "Files.com",
-      "platform": "hackerone",
-      "url": "https://hackerone.com/files",
-      "added": [
-        "Files.com SDKs and MCP"
-      ],
-      "removed": [
-        "Files.com Desktop v4 App (previously known as Desktop App)",
-        "Files.com SDK's"
-      ]
+      "id": "self-host:ashbyhq-com",
+      "name": "Ashby",
+      "platform": "self-host"
     },
     {
-      "id": "bugcrowd:webdotcom",
-      "name": "Web.com Bug Bounty",
-      "platform": "bugcrowd",
-      "url": "https://bugcrowd.com/engagements/webdotcom",
-      "added": [
-        "https://app.web.com"
-      ],
-      "removed": []
+      "id": "self-host:developer-arm-com",
+      "name": "Arm",
+      "platform": "self-host"
     }
-  ]
+  ],
+  "scope_changes": []
 }

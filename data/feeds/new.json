@@ -1,104 +1,60 @@
 [
   {
-    "id": "hackerone:superbet",
-    "platform": "hackerone",
-    "handle": "superbet",
-    "name": "Superbet",
-    "url": "https://hackerone.com/superbet",
+    "id": "self-host:ilionx-com",
+    "platform": "self-host",
+    "handle": "ilionx-com",
+    "name": "ilionx",
+    "url": "https://www.ilionx.com/en/contact/report-vulnerability-cvd/",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 75,
+    "easy_score": 0,
     "reasons": [
       "có bounty",
-      "10 host/repo cụ thể",
-      "+1 asset"
+      "program mới",
+      "chỉ wildcard/CIDR",
+      "chỉ mobile"
     ],
-    "concrete_count": 10,
+    "concrete_count": 0,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "*.super.xyz"
-    ],
+    "first_seen": "2026-09-12T02:41:46Z",
+    "added_assets": [],
     "reward_types": [
       "cash"
     ],
-    "scope_kinds": [
-      "wildcard",
-      "other",
-      "url",
-      "mobile",
-      "domain"
-    ],
+    "scope_kinds": [],
     "summary_vi": null,
-    "policy_url": null,
-    "contact": null
+    "policy_url": "https://www.ilionx.com/en/contact/report-vulnerability-cvd/",
+    "contact": "mailto:cert@ilionx.com"
   },
   {
-    "id": "hackerone:files",
-    "platform": "hackerone",
-    "handle": "files",
-    "name": "Files.com",
-    "url": "https://hackerone.com/files",
+    "id": "self-host:zenya-software-com",
+    "platform": "self-host",
+    "handle": "zenya-software-com",
+    "name": "Zenya",
+    "url": "https://zenya-software.com/coordinated-vulnerability-disclosure/",
     "offers_bounty": true,
     "status": "open",
-    "easy_score": 75,
+    "easy_score": 0,
     "reasons": [
       "có bounty",
-      "3 host/repo cụ thể",
-      "+1 asset"
+      "program mới",
+      "chỉ wildcard/CIDR",
+      "chỉ mobile"
     ],
-    "concrete_count": 3,
+    "concrete_count": 0,
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "Files.com SDKs and MCP"
-    ],
-    "reward_types": [
-      "cash",
-      "swag"
-    ],
-    "scope_kinds": [
-      "other",
-      "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "bugcrowd:webdotcom",
-    "platform": "bugcrowd",
-    "handle": "webdotcom",
-    "name": "Web.com Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/webdotcom",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 75,
-    "reasons": [
-      "có bounty",
-      "4 host/repo cụ thể",
-      "+1 asset"
-    ],
-    "concrete_count": 4,
-    "min_bounty": null,
-    "max_bounty": 3000.0,
-    "currency": "USD",
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [
-      "https://app.web.com"
-    ],
+    "first_seen": "2026-09-12T02:41:46Z",
+    "added_assets": [],
     "reward_types": [
       "cash"
     ],
-    "scope_kinds": [
-      "url"
-    ],
+    "scope_kinds": [],
     "summary_vi": null,
-    "policy_url": null,
-    "contact": null
+    "policy_url": "https://zenya-software.com/coordinated-vulnerability-disclosure/",
+    "contact": "https://forms.zenya.work/psbr6j9omo/1325"
   }
 ]
