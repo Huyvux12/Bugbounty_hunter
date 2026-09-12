@@ -1,35 +1,6 @@
 {
-  "added": [
-    {
-      "id": "self-host:ilionx-com",
-      "name": "ilionx",
-      "platform": "self-host",
-      "url": "https://www.ilionx.com/en/contact/report-vulnerability-cvd/"
-    },
-    {
-      "id": "self-host:zenya-software-com",
-      "name": "Zenya",
-      "platform": "self-host",
-      "url": "https://zenya-software.com/coordinated-vulnerability-disclosure/"
-    }
-  ],
-  "removed": [
-    {
-      "id": "hackerone:brave",
-      "name": "Brave Software",
-      "platform": "hackerone"
-    },
-    {
-      "id": "self-host:ashbyhq-com",
-      "name": "Ashby",
-      "platform": "self-host"
-    },
-    {
-      "id": "self-host:developer-arm-com",
-      "name": "Arm",
-      "platform": "self-host"
-    }
-  ],
+  "added": [],
+  "removed": [],
   "scope_changes": [
     {
       "id": "bugcrowd:fis",
