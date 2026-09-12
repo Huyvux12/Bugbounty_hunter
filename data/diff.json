@@ -30,5 +30,16 @@
       "platform": "self-host"
     }
   ],
-  "scope_changes": []
+  "scope_changes": [
+    {
+      "id": "bugcrowd:fis",
+      "name": "FIS",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/fis",
+      "added": [
+        "https://www.tdfitloan.com/#!/"
+      ],
+      "removed": []
+    }
+  ]
 }

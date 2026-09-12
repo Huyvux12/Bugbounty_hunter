@@ -18,7 +18,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-12T02:41:46Z",
+    "first_seen": "2026-09-12T09:55:59Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -47,7 +47,7 @@
     "min_bounty": null,
     "max_bounty": null,
     "currency": null,
-    "first_seen": "2026-09-12T02:41:46Z",
+    "first_seen": "2026-09-12T09:55:59Z",
     "added_assets": [],
     "reward_types": [
       "cash"
@@ -56,5 +56,37 @@
     "summary_vi": null,
     "policy_url": "https://zenya-software.com/coordinated-vulnerability-disclosure/",
     "contact": "https://forms.zenya.work/psbr6j9omo/1325"
+  },
+  {
+    "id": "bugcrowd:fis",
+    "platform": "bugcrowd",
+    "handle": "fis",
+    "name": "FIS",
+    "url": "https://bugcrowd.com/engagements/fis",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 70,
+    "reasons": [
+      "có bounty",
+      "2 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 2,
+    "min_bounty": null,
+    "max_bounty": 20000.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://www.tdfitloan.com/#!/"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
   }
 ]

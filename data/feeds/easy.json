@@ -1,5 +1,37 @@
 [
   {
+    "id": "bugcrowd:fis",
+    "platform": "bugcrowd",
+    "handle": "fis",
+    "name": "FIS",
+    "url": "https://bugcrowd.com/engagements/fis",
+    "offers_bounty": true,
+    "status": "open",
+    "easy_score": 70,
+    "reasons": [
+      "có bounty",
+      "2 host/repo cụ thể",
+      "+1 asset"
+    ],
+    "concrete_count": 2,
+    "min_bounty": null,
+    "max_bounty": 20000.0,
+    "currency": "USD",
+    "first_seen": "2026-08-24T09:20:54Z",
+    "added_assets": [
+      "https://www.tdfitloan.com/#!/"
+    ],
+    "reward_types": [
+      "cash"
+    ],
+    "scope_kinds": [
+      "url"
+    ],
+    "summary_vi": null,
+    "policy_url": null,
+    "contact": null
+  },
+  {
     "id": "hackerone:wolt",
     "platform": "hackerone",
     "handle": "wolt",
@@ -1507,39 +1539,6 @@
     ],
     "scope_kinds": [
       "domain"
-    ],
-    "summary_vi": null,
-    "policy_url": null,
-    "contact": null
-  },
-  {
-    "id": "hackerone:playtika",
-    "platform": "hackerone",
-    "handle": "playtika",
-    "name": "Playtika",
-    "url": "https://hackerone.com/playtika",
-    "offers_bounty": true,
-    "status": "open",
-    "easy_score": 60,
-    "reasons": [
-      "có bounty",
-      "5 host/repo cụ thể"
-    ],
-    "concrete_count": 5,
-    "min_bounty": null,
-    "max_bounty": null,
-    "currency": null,
-    "first_seen": "2026-08-24T09:20:54Z",
-    "added_assets": [],
-    "reward_types": [
-      "cash"
-    ],
-    "scope_kinds": [
-      "wildcard",
-      "mobile",
-      "other",
-      "domain",
-      "url"
     ],
     "summary_vi": null,
     "policy_url": null,
