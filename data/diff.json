@@ -1,5 +1,18 @@
 {
-  "added": [],
+  "added": [
+    {
+      "id": "bugcrowd:seek",
+      "name": "SEEK ",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/seek"
+    },
+    {
+      "id": "bugcrowd:upwork",
+      "name": "Upwork",
+      "platform": "bugcrowd",
+      "url": "https://bugcrowd.com/engagements/upwork"
+    }
+  ],
   "removed": [],
   "scope_changes": []
 }
