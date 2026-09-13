@@ -4,6 +4,7 @@ import re
 from typing import Any
 from urllib.parse import urlparse
 
+from feed_bot.validation import money, string_list
 from feed_bot.classify import classify_kind, is_concrete
 from feed_bot.models import Asset, Program
 from feed_bot.rewards import attach_derived, infer_reward_types
@@ -23,10 +24,7 @@ def _money(value: Any) -> tuple[float | None, str | None]:
     if isinstance(value, dict):
         amount, _nested_currency = _money(value.get("value"))
         return amount, value.get("currency") or _nested_currency
-    try:
-        return float(value), None
-    except (TypeError, ValueError):
-        return None, None
+    return money(value), None
 
 
 def _asset(
@@ -49,6 +47,8 @@ def _asset(
 
 
 def _finish(program: Program) -> Program:
+    if program.min_bounty is not None and program.max_bounty is not None and program.min_bounty > program.max_bounty:
+        program.min_bounty = program.max_bounty = None
     program.concrete_count = sum(1 for a in program.in_scope if is_concrete(a.kind))
     return program
 
@@ -240,18 +240,20 @@ def normalize_self_host(raw: dict[str, Any], source: str = "selfhost_dump") -> P
         return None
     host = (urlparse(url).hostname or "").removeprefix("www.")
     handle = slug(host or name)
-    domains = raw.get("domains") or []
+    domains = string_list(raw.get("domains"), "domains")
     in_scope = []
     for domain in domains:
         text = str(domain).strip()
         if not text:
             continue
-        in_scope.append(_asset(text.split()[0], "WILDCARD" if "*" in text else "DOMAIN", True))
+        in_scope.append(_asset(text, "WILDCARD" if "*" in text else "DOMAIN", True))
     status = str(raw.get("status") or "open").lower()
     if status in {"paused", "closed", "disabled"}:
         status = "paused"
-    else:
+    elif status in {"open", "active", "live", "published"}:
         status = "open"
+    else:
+        status = "unknown" if not status else status
     min_b, _ = _money(raw.get("min_bounty") or raw.get("min_payout"))
     max_b, _ = _money(raw.get("max_bounty") or raw.get("max_payout"))
     rewards = infer_reward_types(raw)
@@ -266,6 +268,10 @@ def normalize_self_host(raw: dict[str, Any], source: str = "selfhost_dump") -> P
         source=str(raw.get("source_dump") or source),
         visibility="public",
         in_scope=in_scope,
+        out_of_scope=[
+            _asset(str(value).strip(), "other", False)
+            for value in string_list(raw.get("out_of_scope"), "out_of_scope")
+        ],
         min_bounty=min_b,
         max_bounty=max_b,
         currency=str(raw.get("currency") or "") or None,

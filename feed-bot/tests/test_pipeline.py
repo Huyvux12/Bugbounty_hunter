@@ -115,5 +115,6 @@ def test_telegram_http_error_still_saves_snapshot(tmp_path, monkeypatch):
         enrich_llm=False,
     )
     assert result["telegram_sent"] is False
-    assert "401" in (result.get("telegram_error") or "")
+    assert result["telegram_error"] == "RuntimeError"
+    assert result["quality"]["pending_notifications"] == 1
     assert (tmp_path / "data" / "programs.min.json").exists()

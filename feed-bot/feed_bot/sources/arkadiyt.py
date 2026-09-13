@@ -4,6 +4,8 @@ from typing import Any
 
 import httpx
 
+from feed_bot.sources.result import FetchBatch
+
 ARKADIYT_BASE = "https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/master/data"
 DUMP_FILES = {
     "hackerone": "hackerone_data.json",
@@ -37,4 +39,6 @@ def fetch_dump(platform: str, timeout: float = 120.0, client: httpx.Client | Non
             http.close()
     if not isinstance(payload, list):
         raise SourceError(platform, f"arkadiyt {filename} is not a list")
-    return [row for row in payload if isinstance(row, dict)]
+    rows = [row for row in payload if isinstance(row, dict)]
+    rejected = len(payload) - len(rows)
+    return FetchBatch(rows, complete=not rejected, rejected_count=rejected)

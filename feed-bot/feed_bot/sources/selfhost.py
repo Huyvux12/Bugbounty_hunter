@@ -4,6 +4,10 @@ from typing import Any
 from urllib.parse import urlparse
 
 import httpx
+import yaml
+
+from feed_bot.validation import string_list
+from feed_bot.sources.result import FetchBatch
 
 from feed_bot.sources.arkadiyt import SourceError
 
@@ -31,24 +35,25 @@ def fetch_selfhost(client: httpx.Client | None = None) -> list[dict[str, Any]]:
     http = client or httpx.Client(timeout=90.0, follow_redirects=True)
     try:
         rows: list[dict[str, Any]] = []
-        errors: list[str] = []
-        try:
-            rows.extend(_from_lissy(_get(http, LISSY_URL).text))
-        except Exception as exc:
-            errors.append(f"lissy93: {exc}")
-        try:
-            payload = _get(http, PD_URL).json()
-            rows.extend(_from_pd(payload))
-        except Exception as exc:
-            errors.append(f"projectdiscovery: {exc}")
-        try:
-            payload = _get(http, DIODB_URL).json()
-            rows.extend(_from_diodb(payload))
-        except Exception as exc:
-            errors.append(f"diodb: {exc}")
-        if not rows:
-            raise SourceError("self-host", "; ".join(errors) or "no self-host dumps")
-        return _merge(rows)[:MAX_PROGRAMS]
+        statuses = []
+        loaders = (
+            ("lissy93", LISSY_URL, lambda r: _from_lissy(r.text)),
+            ("projectdiscovery", PD_URL, lambda r: _from_pd(r.json())),
+            ("diodb", DIODB_URL, lambda r: _from_diodb(r.json())),
+        )
+        for name, url, parse in loaders:
+            try:
+                batch = parse(_get(http, url))
+                rows.extend(batch)
+                statuses.append({"source": name, "ok": True, "count": len(batch)})
+            except Exception as exc:
+                statuses.append({"source": name, "ok": False, "error": str(exc)})
+        merged = _merge(rows)
+        extra = max(0, len(merged) - MAX_PROGRAMS)
+        if extra:
+            # Cap is a ranked trim, not a fetch failure: overflow drops instead of going stale.
+            statuses.append({"source": "limit", "ok": True, "count": MAX_PROGRAMS, "truncated": extra})
+        return FetchBatch(merged[:MAX_PROGRAMS], complete=all(s["ok"] for s in statuses), sources=statuses)
     finally:
         if own:
             http.close()
@@ -61,7 +66,9 @@ def _get(http: httpx.Client, url: str) -> httpx.Response:
 
 
 def _from_diodb(payload: Any) -> list[dict[str, Any]]:
-    rows = payload if isinstance(payload, list) else []
+    if not isinstance(payload, list):
+        raise ValueError("diodb response must be a list")
+    rows = payload
     out = []
     for item in rows:
         if not isinstance(item, dict):
@@ -92,8 +99,10 @@ def _from_diodb(payload: Any) -> list[dict[str, Any]]:
 
 def _from_pd(payload: Any) -> list[dict[str, Any]]:
     programs = payload.get("programs") if isinstance(payload, dict) else payload
+    if not isinstance(programs, list):
+        raise ValueError("ProjectDiscovery programs must be a list")
     out = []
-    for item in programs or []:
+    for item in programs:
         if not isinstance(item, dict):
             continue
         url = str(item.get("url") or "").strip()
@@ -102,7 +111,7 @@ def _from_pd(payload: Any) -> list[dict[str, Any]]:
         name = str(item.get("name") or "").strip()
         if not name:
             continue
-        domains = [str(d) for d in (item.get("domains") or []) if d]
+        domains = string_list(item.get("domains"), "domains")
         out.append(
             {
                 "name": name,
@@ -118,58 +127,23 @@ def _from_pd(payload: Any) -> list[dict[str, Any]]:
 
 
 def _from_lissy(text: str) -> list[dict[str, Any]]:
-    out: list[dict[str, Any]] = []
-    current: dict[str, Any] | None = None
-    list_key: str | None = None
-    for raw in text.splitlines():
-        line = raw.rstrip()
-        if line.startswith("- company:"):
-            if current and current.get("url"):
-                out.append(current)
-            current = {
-                "name": line.split(":", 1)[1].strip().strip("'\""),
-                "source_dump": "lissy93",
-            }
-            list_key = None
-            continue
-        if current is None or not line.startswith("  "):
-            continue
-        stripped = line.strip()
-        if stripped.startswith("- ") and list_key:
-            current.setdefault(list_key, []).append(stripped[2:].strip().strip("'\""))
-            continue
-        if ":" not in stripped or stripped.startswith("- "):
-            continue
-        key, value = stripped.split(":", 1)
-        value = value.strip().strip("'\"")
-        if value == "" or value == "|-" or value == "|":
-            list_key = key
-            if key in {"rewards", "domains", "out_of_scope"}:
-                current[key] = []
-            continue
-        list_key = None
-        if key == "url":
-            current["url"] = value
-            current["policy_url"] = value
-        elif key == "contact":
-            current["contact"] = value
-        elif key == "description":
-            current["summary"] = value
-        elif key == "min_payout":
-            current["min_bounty"] = value
-        elif key == "max_payout":
-            current["max_bounty"] = value
-        elif key == "currency":
-            current["currency"] = value
-        elif key == "status":
-            current["status"] = value
-        elif key == "program_type":
-            current["program_type"] = value
-        else:
-            current[key] = value
-    if current and current.get("url"):
-        out.append(current)
-    return [row for row in out if not _is_platform(str(row.get("url") or ""))]
+    payload = yaml.safe_load(text)
+    companies = payload.get("companies") if isinstance(payload, dict) else None
+    if not isinstance(companies, list):
+        raise ValueError("lissy93 companies must be a list")
+    rows = []
+    aliases = {"company": "name", "description": "summary", "min_payout": "min_bounty", "max_payout": "max_bounty"}
+    for item in companies:
+        if not isinstance(item, dict):
+            raise ValueError("lissy93 company must be an object")
+        row = {aliases.get(key, key): value for key, value in item.items()}
+        for field in ("domains", "out_of_scope"):
+            row[field] = string_list(row.get(field), field)
+        row["source_dump"] = "lissy93"
+        row["policy_url"] = row.get("url")
+        if row.get("url") and row.get("name") and not _is_platform(str(row["url"])):
+            rows.append(row)
+    return rows
 
 
 def _merge(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:

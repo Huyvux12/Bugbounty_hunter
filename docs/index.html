@@ -11,6 +11,13 @@
     <h1>Bug bounty feed</h1>
     <p class="banner">Snapshot công khai. Không thay policy live. Không phải giấy phép scan.</p>
     <p id="meta" class="meta"></p>
+    <p id="quality" class="meta" aria-live="polite"></p>
+    <details class="health"><summary>Trạng thái nguồn dữ liệu</summary><ul id="source-status"></ul></details>
+    <details class="history-panel"><summary>Lịch sử thay đổi</summary>
+      <button id="load-history" type="button">Xem thay đổi gần đây</button>
+      <a href="data/history.json" download>Tải toàn bộ lịch sử JSON</a>
+      <p id="history-status" role="status"></p><ol id="recent-history"></ol>
+    </details>
   </header>
   <nav class="tabs" role="tablist">
     <button data-tab="recommended" class="active">Đề xuất</button>
@@ -46,9 +53,13 @@
         <option value="unknown">Chưa rõ</option>
       </select>
     </label>
-    <label>Min $
-      <input id="minb" type="number" min="0" placeholder="0" />
+    <label>Đơn vị thưởng
+      <select id="currency"><option value="">Tất cả</option><option value="USD">USD</option></select>
     </label>
+    <label>Thưởng tối đa từ
+      <input id="minb" type="number" min="0" step="any" placeholder="Chọn đơn vị trước" disabled />
+    </label>
+    <span class="meta">So sánh theo đơn vị đã chọn, không quy đổi.</span>
     <button id="export" type="button">Export đã lưu</button>
     <label class="import">Import <input id="import" type="file" accept="application/json" /></label>
   </div>
@@ -74,6 +85,8 @@
       <ul id="d-in"></ul>
       <h3>Out of scope</h3>
       <ul id="d-out"></ul>
+      <h3>Lịch sử program</h3>
+      <p id="d-history-status" role="status"></p><ol id="d-history"></ol>
     </article>
   </dialog>
   <script src="app.js"></script>

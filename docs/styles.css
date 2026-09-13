@@ -63,3 +63,12 @@ textarea {
   padding: 8px 12px;
   font: inherit;
 }
+
+
+.health, .history-panel { margin: 12px 0; padding: 12px; border: 1px solid #ccc; border-radius: 8px; }
+summary { cursor: pointer; font-weight: 600; }
+#recent-history li, #d-history li { white-space: pre-wrap; overflow-wrap: anywhere; margin: 12px 0; }
+#recent-history, #d-history { max-height: 420px; overflow: auto; }
+#source-status { overflow-wrap: anywhere; }
+.stale { color: #9c4b00; font-weight: 600; }
+input:disabled { opacity: .55; }

@@ -33,6 +33,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     out = {
         "count": result["count"],
+        "quality": result["quality"],
         "source_status": result["source_status"],
         "telegram_sent": result["telegram_sent"],
         "llm_used": result.get("llm_used", 0),

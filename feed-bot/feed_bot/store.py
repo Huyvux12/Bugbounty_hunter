@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-import shutil
+from feed_bot.storage import atomic_json, load_state, read_snapshot
 from pathlib import Path
 
 from feed_bot.models import Program
@@ -18,18 +18,8 @@ def default_docs_dir() -> Path:
 
 
 def load_previous(data_dir: Path) -> dict[str, Program]:
-    path = data_dir / "previous" / "programs.min.json"
-    if not path.exists():
-        path = data_dir / "programs.min.json"
-    if not path.exists():
-        return {}
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    rows = payload.get("programs", payload) if isinstance(payload, dict) else payload
-    programs = {}
-    for row in rows:
-        program = Program.from_dict(row)
-        programs[program.id] = program
-    return programs
+    rows = load_state(data_dir)["programs"]
+    return {row["id"]: Program.from_dict(row) for row in rows}
 
 
 def save_snapshot(
@@ -39,6 +29,9 @@ def save_snapshot(
     diff: dict,
     source_status: list[dict],
     generated_at: str,
+    history: list | None = None,
+    outbox: list | None = None,
+    quality: dict | None = None,
 ) -> None:
     data_dir.mkdir(parents=True, exist_ok=True)
     previous_dir = data_dir / "previous"
@@ -47,27 +40,31 @@ def save_snapshot(
     feeds_dir.mkdir(parents=True, exist_ok=True)
 
     current = data_dir / "programs.min.json"
-    if current.exists():
-        shutil.copyfile(current, previous_dir / "programs.min.json")
-
+    old = load_state(data_dir)
     payload = {
         "generated_at": generated_at,
         "count": len(programs),
         "source_status": source_status,
         "programs": [p.to_dict() for p in programs],
+        "history": history if history is not None else old.get("history", []),
+        "outbox": outbox if outbox is not None else old.get("outbox", []),
+        "quality": quality or {},
     }
-    current.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
-    (feeds_dir / "recommended.json").write_text(_dump(feeds["recommended"]), encoding="utf-8")
-    (feeds_dir / "recommended_by_platform.json").write_text(
-        json.dumps(feeds.get("recommended_by_platform") or {}, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    (feeds_dir / "easy.json").write_text(_dump(feeds["easy"]), encoding="utf-8")
-    (feeds_dir / "new.json").write_text(_dump(feeds["new"]), encoding="utf-8")
-    (data_dir / "diff.json").write_text(json.dumps(diff, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (data_dir / "source_status.json").write_text(
-        json.dumps(source_status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    # Check serialization before rotating the last known good backup.
+    json.dumps(payload, allow_nan=False)
+    if current.exists():
+        try:
+            valid = read_snapshot(current)
+        except (ValueError, TypeError, KeyError, OSError):
+            pass  # Never overwrite a good backup with a corrupt current file.
+        else:
+            atomic_json(previous_dir / "programs.min.json", valid)
+    atomic_json(current, payload)
+    for name in ("recommended", "recommended_by_platform", "easy", "new"):
+        atomic_json(feeds_dir / f"{name}.json", feeds.get(name, {} if name.endswith("platform") else []))
+    atomic_json(data_dir / "diff.json", diff)
+    atomic_json(data_dir / "source_status.json", source_status)
+    atomic_json(data_dir / "quality.json", quality or {})
 
 
 def publish_docs(docs_dir: Path, data_dir: Path, feeds: dict, generated_at: str, pages_base: str | None) -> None:
@@ -88,6 +85,8 @@ def publish_docs(docs_dir: Path, data_dir: Path, feeds: dict, generated_at: str,
                 "url": program["url"],
                 "offers_bounty": program.get("offers_bounty"),
                 "status": program.get("status"),
+                "stale": program.get("stale", False),
+                "last_seen": program.get("last_seen"),
                 "easy_score": program.get("easy_score"),
                 "reasons": program.get("reasons"),
                 "concrete_count": program.get("concrete_count"),
@@ -104,14 +103,20 @@ def publish_docs(docs_dir: Path, data_dir: Path, feeds: dict, generated_at: str,
                 "contact": program.get("contact"),
             }
         )
-    (data_out / "programs.min.json").write_text(
-        json.dumps({"generated_at": generated_at, "count": len(slim), "programs": slim}, ensure_ascii=False),
-        encoding="utf-8",
-    )
+    atomic_json(data_out / "programs.min.json", {"generated_at": generated_at, "count": len(slim), "programs": slim})
     feeds_out = dict(feeds)
     feeds_out["pages_base"] = pages_base
-    (data_out / "feeds.json").write_text(json.dumps(feeds_out, ensure_ascii=False), encoding="utf-8")
-
-
-def _dump(rows: list) -> str:
-    return json.dumps(rows, ensure_ascii=False, indent=2) + "\n"
+    feeds_out["quality"] = payload.get("quality", {})
+    feeds_out["source_status"] = payload.get("source_status", [])
+    public_ids = {p["id"] for p in public_programs}
+    for key in ("recommended", "easy", "new"):
+        feeds_out[key] = [p for p in feeds_out.get(key, []) if p["id"] in public_ids]
+    feeds_out["recommended_by_platform"] = {
+        key: [p for p in rows if p["id"] in public_ids]
+        for key, rows in feeds_out.get("recommended_by_platform", {}).items()
+    }
+    atomic_json(data_out / "feeds.json", feeds_out)
+    atomic_json(data_out / "history.json", {
+        "generated_at": generated_at,
+        "events": [e for e in payload.get("history", []) if e.get("visibility", "public") == "public"],
+    })

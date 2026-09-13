@@ -9,6 +9,7 @@ from typing import Any, Callable
 
 import httpx
 
+from feed_bot.validation import money
 from feed_bot.models import Program
 from feed_bot.rewards import KNOWN, attach_derived, infer_reward_types
 
@@ -58,6 +59,10 @@ def content_hash(program: Program) -> str:
             program.summary or "",
             program.policy_url or "",
             str(program.offers_bounty),
+            json.dumps(program.reward_types, ensure_ascii=False),
+            str(program.min_bounty),
+            str(program.max_bounty),
+            program.currency or "",
         ]
     )
     return hashlib.sha256(blob.encode("utf-8")).hexdigest()[:16]
@@ -65,6 +70,8 @@ def content_hash(program: Program) -> str:
 
 def copy_cached_llm(programs: list[Program], previous: dict[str, Program]) -> None:
     for program in programs:
+        if program.stale:
+            continue
         program.content_hash = content_hash(program)
         old = previous.get(program.id)
         if not old:
@@ -73,6 +80,10 @@ def copy_cached_llm(programs: list[Program], previous: dict[str, Program]) -> No
             program.summary_vi = old.summary_vi or program.summary_vi
             if old.reward_types:
                 program.reward_types = list(old.reward_types)
+            program.name = old.name
+            program.min_bounty = old.min_bounty
+            program.max_bounty = old.max_bounty
+            program.currency = old.currency
             program.llm_status = "ok"
             if old.contact and not program.contact:
                 program.contact = old.contact
@@ -91,7 +102,7 @@ def enrich_selfhost(programs: list[Program], *, limit: int = MAX_PER_RUN) -> int
     pending = [
         p
         for p in programs
-        if p.platform == "self-host" and p.llm_status != "ok"
+        if p.platform == "self-host" and not p.stale and p.llm_status != "ok"
     ]
     used = 0
     for program in pending[:limit]:
@@ -220,16 +231,13 @@ def _apply(program: Program, data: dict[str, Any]) -> None:
     types = infer_reward_types({"reward_types": data.get("reward_types") or data.get("rewards")})
     if types and types != ["unknown"]:
         program.reward_types = [t for t in types if t in KNOWN] or program.reward_types
-    if data.get("min_bounty") not in (None, ""):
-        try:
-            program.min_bounty = float(data["min_bounty"])
-        except (TypeError, ValueError):
-            pass
-    if data.get("max_bounty") not in (None, ""):
-        try:
-            program.max_bounty = float(data["max_bounty"])
-        except (TypeError, ValueError):
-            pass
+    for field in ("min_bounty", "max_bounty"):
+        if data.get(field) not in (None, ""):
+            value = money(data[field])
+            if value is not None:
+                setattr(program, field, value)
+    if program.min_bounty is not None and program.max_bounty is not None and program.min_bounty > program.max_bounty:
+        program.min_bounty = program.max_bounty = None
     if data.get("currency"):
         program.currency = str(data["currency"]).strip()[:8]
     attach_derived(program)

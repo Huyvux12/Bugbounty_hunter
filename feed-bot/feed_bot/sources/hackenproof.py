@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import os
+import re
 from pathlib import Path
 from typing import Any, Callable
 from urllib.parse import urlparse
 
 import httpx
 
+from feed_bot.sources.result import FetchBatch
 from feed_bot.mcp_client import McpHttpClient, as_rows
 from feed_bot.sources.arkadiyt import SourceError
 
@@ -16,6 +18,7 @@ PD_PROGRAMS_URL = (
     "https://raw.githubusercontent.com/projectdiscovery/public-bugbounty-programs/main/dist/data.json"
 )
 WATCHLIST = Path(__file__).resolve().parents[2] / "watchlists" / "hackenproof_slugs.txt"
+_GONE = re.compile(r"\b404\b|not found", re.I)
 
 
 def fetch_hackenproof(
@@ -50,7 +53,8 @@ def fetch_hackenproof(
                 if slug:
                     found[slug] = {"slug": slug, "company": company_slug}
 
-        wanted = list(dict.fromkeys(slugs if slugs is not None else _discover_slugs(discover)))
+        discovery = slugs if slugs is not None else _discover_slugs(discover)
+        wanted = list(dict.fromkeys(discovery))
         for slug in wanted:
             found.setdefault(slug, {"slug": slug})
 
@@ -61,19 +65,43 @@ def fetch_hackenproof(
             )
 
         hydrated: list[dict[str, Any]] = []
+        statuses = list(getattr(discovery, "sources", []))
+        extra = max(0, len(found) - MAX_PROGRAMS)
+        if extra:
+            statuses.append({"source": "limit", "ok": True, "count": MAX_PROGRAMS, "truncated": extra})
         for slug, meta in list(found.items())[:MAX_PROGRAMS]:
-            info = _call(mcp, "get_program_info", {"program": slug})
-            if not isinstance(info, dict) or info.get("error"):
+            try:
+                info = _call(mcp, "get_program_info", {"program": slug})
+                if not isinstance(info, dict) or info.get("error") or info.get("isError"):
+                    raise ValueError(str(info.get("error") if isinstance(info, dict) else "invalid program response"))
+                if not any(info.get(k) for k in ("title", "name", "state", "status", "scopes", "targets")):
+                    raise ValueError("empty program response")
+                statuses.append({"source": slug, "ok": True, "count": 1})
+            except Exception as exc:
+                gone = _is_gone(exc)
+                statuses.append(
+                    {
+                        "source": slug,
+                        "ok": gone,
+                        "count": 0,
+                        "error": None if gone else str(exc),
+                        **({"gone": True} if gone else {}),
+                    }
+                )
                 continue
             merged = dict(meta)
             merged.update(info)
             merged["slug"] = str(info.get("program") or slug)
             hydrated.append(merged)
-        return hydrated
+        return FetchBatch(hydrated, complete=all(s["ok"] for s in statuses), sources=statuses)
     except SourceError:
         raise
     except Exception as exc:
         raise SourceError("hackenproof", f"MCP: {exc}") from exc
+
+
+def _is_gone(exc: BaseException) -> bool:
+    return bool(_GONE.search(str(exc)))
 
 
 def _call(mcp: Any, name: str, arguments: dict[str, Any]) -> Any:
@@ -85,11 +113,16 @@ def _slug_of(program: dict[str, Any]) -> str:
 
 
 def _discover_slugs(enabled: bool) -> list[str]:
-    slugs: list[str] = []
-    slugs.extend(_read_watchlist())
+    slugs = _read_watchlist()
+    statuses = []
     if enabled:
-        slugs.extend(_slugs_from_projectdiscovery())
-    return list(dict.fromkeys(s for s in slugs if s))
+        try:
+            discovered = _slugs_from_projectdiscovery()
+            slugs.extend(discovered)
+            statuses.append({"source": "projectdiscovery", "ok": True, "count": len(discovered)})
+        except Exception as exc:
+            statuses.append({"source": "projectdiscovery", "ok": False, "error": str(exc)})
+    return FetchBatch(dict.fromkeys(s for s in slugs if s), complete=all(s["ok"] for s in statuses), sources=statuses)
 
 
 def _read_watchlist(path: Path = WATCHLIST) -> list[str]:
@@ -105,12 +138,13 @@ def _read_watchlist(path: Path = WATCHLIST) -> list[str]:
 
 
 def _slugs_from_projectdiscovery() -> list[str]:
-    try:
-        with httpx.Client(timeout=60.0, follow_redirects=True) as client:
-            payload = client.get(PD_PROGRAMS_URL).json()
-    except Exception:
-        return []
+    with httpx.Client(timeout=60.0, follow_redirects=True) as client:
+        response = client.get(PD_PROGRAMS_URL)
+        response.raise_for_status()
+        payload = response.json()
     programs = payload.get("programs") if isinstance(payload, dict) else payload
+    if not isinstance(programs, list):
+        raise ValueError("ProjectDiscovery programs must be a list")
     slugs = []
     for row in programs or []:
         if not isinstance(row, dict):

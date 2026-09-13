@@ -1,0 +1,27 @@
+name: feed regression tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install
+        run: python -m pip install -e 'feed-bot[dev]'
+      - name: Python regressions
+        run: python -m pytest feed-bot/tests -q
+      - name: Feed ordering regressions
+        run: node --test docs/tests/app.test.cjs

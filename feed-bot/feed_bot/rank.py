@@ -105,7 +105,7 @@ def score_program(program: Program, now: datetime, has_history: bool = False) ->
 
 
 def is_new(program: Program, now: datetime, has_history: bool) -> bool:
-    if not has_history:
+    if program.stale or not has_history:
         return False
     if program.added_assets:
         return True
@@ -113,7 +113,7 @@ def is_new(program: Program, now: datetime, has_history: bool) -> bool:
 
 
 def is_easy(program: Program) -> bool:
-    if program.status not in LIVE:
+    if program.stale or program.status not in LIVE:
         return False
     if program.concrete_count < 1:
         return False
@@ -126,7 +126,7 @@ def build_feeds(programs: list[Program], now: datetime, has_history: bool = Fals
 
     new_items = [p for p in programs if is_new(p, now, has_history) and p.status in LIVE]
     easy_items = [p for p in programs if is_easy(p)]
-    new_items.sort(key=lambda p: (p.first_seen or "", -p.easy_score), reverse=True)
+    new_items.sort(key=lambda p: (p.first_seen or "", p.easy_score), reverse=True)
     easy_items.sort(key=lambda p: p.easy_score, reverse=True)
     recommended, recommended_by_platform = pick_recommended(easy_items)
     counts = {}

@@ -7,7 +7,7 @@ name = "feed-bot"
 version = "0.1.0"
 description = "Public bug bounty feed for GitHub Actions, Telegram, and Pages"
 requires-python = ">=3.10"
-dependencies = ["httpx>=0.27"]
+dependencies = ["httpx>=0.27", "PyYAML>=6.0,<7"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]

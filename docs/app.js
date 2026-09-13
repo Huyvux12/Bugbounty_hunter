@@ -25,6 +25,8 @@ const state = {
   kind: "",
   reward: "",
   minb: "",
+  currency: "",
+  history: null,
   feeds: null,
   programs: [],
   saved: loadSaved(),
@@ -44,10 +46,12 @@ function persistSaved() {
 }
 
 async function load() {
-  const [feeds, programs] = await Promise.all([
-    fetch("data/feeds.json").then((r) => r.json()),
-    fetch("data/programs.min.json").then((r) => r.json()),
-  ]);
+  let feeds, programs;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    [feeds, programs] = await Promise.all([readJson("data/feeds.json"), readJson("data/programs.min.json")]);
+    if (feeds.generated_at === programs.generated_at) break;
+    if (attempt === 1) throw new Error("Dữ liệu đang cập nhật, vui lòng tải lại trang.");
+  }
   state.feeds = feeds;
   state.programs = programs.programs || [];
   const counts = feeds.counts || countBy(state.programs);
@@ -57,6 +61,8 @@ async function load() {
   document.getElementById("meta").textContent =
     `Cập nhật ${feeds.generated_at || programs.generated_at || ""} · ${state.programs.length} program` +
     (parts.length ? ` · ${parts.join(" · ")}` : "");
+  renderHealth();
+  populateCurrencies();
   renderChips();
   render();
 }
@@ -113,16 +119,19 @@ function renderChips() {
   }
 }
 
+function programsInFeedOrder(cards) {
+  const byId = new Map(state.programs.map((p) => [p.id, p]));
+  return (cards || []).map((card) => byId.get(card.id)).filter(Boolean);
+}
+
 function tabRows() {
   if (state.tab === "saved") return state.programs.filter((p) => state.saved[p.id]);
   if (state.tab === "all") return state.programs;
   if (state.tab === "recommended" && state.platform) {
     const grouped = (state.feeds && state.feeds.recommended_by_platform) || {};
-    const ids = new Set((grouped[state.platform] || []).map((c) => c.id));
-    if (ids.size) return state.programs.filter((p) => ids.has(p.id));
+    if (grouped[state.platform]) return programsInFeedOrder(grouped[state.platform]);
   }
-  const ids = new Set(((state.feeds && state.feeds[state.tab]) || []).map((c) => c.id));
-  return state.programs.filter((p) => ids.has(p.id));
+  return programsInFeedOrder(state.feeds && state.feeds[state.tab]);
 }
 
 function kindsOf(p) {
@@ -140,9 +149,9 @@ function currentRows() {
     if (state.platform && p.platform !== state.platform) return false;
     if (state.kind && !kindsOf(p).includes(state.kind)) return false;
     if (state.reward && !rewardsOf(p).includes(state.reward)) return false;
+    if (state.currency && (p.currency || "").toUpperCase() !== state.currency) return false;
     if (state.minb !== "" && Number(state.minb) > 0) {
-      const max = p.max_bounty == null ? p.min_bounty : p.max_bounty;
-      if (max == null || Number(max) < Number(state.minb)) return false;
+      if (!state.currency || !Number.isFinite(p.max_bounty) || p.max_bounty < Number(state.minb)) return false;
     }
     return true;
   });
@@ -168,6 +177,12 @@ function render() {
     const reward = rewardsOf(p).map((r) => REWARD_LABELS[r] || r).join(", ");
     el.innerHTML = `<h2>${escapeHtml(p.name)} <span class="score">${escapeHtml(p.easy_score ?? "")}</span> <span class="star">${star}</span></h2>
       <p>${escapeHtml(LABELS[p.platform] || p.platform)} · ${escapeHtml(reward)} · ${p.concrete_count || 0} host/repo · ${escapeHtml((p.reasons || []).slice(0, 3).join(", "))}</p>`;
+    if (p.stale) {
+      const badge = document.createElement("p");
+      badge.className = "stale";
+      badge.textContent = "Dữ liệu cũ · " + (p.last_seen || "chưa rõ thời điểm xác nhận");
+      el.appendChild(badge);
+    }
     el.addEventListener("click", () => show(p));
     root.appendChild(el);
   }
@@ -184,6 +199,7 @@ function show(p) {
       ? `${p.min_bounty ?? "?"}–${p.max_bounty ?? "?"} ${p.currency || ""}`.trim()
       : "",
     kindsOf(p).join(", "),
+    p.stale ? `Dữ liệu cũ · xác nhận lần cuối: ${p.last_seen || "chưa rõ"}` : "",
   ].filter(Boolean);
   document.getElementById("d-reward").textContent = bits.join(" · ");
   const contact = p.contact ? `Liên hệ: ${p.contact}` : "";
@@ -196,6 +212,8 @@ function show(p) {
   fillAssets("d-in", p.in_scope || []);
   fillAssets("d-out", p.out_of_scope || []);
   document.getElementById("detail").showModal();
+  showHistory(p.id);
+
 }
 
 function fillAssets(id, assets) {
@@ -213,7 +231,7 @@ function fillAssets(id, assets) {
 }
 
 function escapeHtml(value) {
-  return String(value || "").replace(/[&<>"']/g, (ch) => ({
+  return String(value ?? "").replace(/[&<>"']/g, (ch) => ({
     "&": "&amp;",
     "<": "&lt;",
     ">": "&gt;",
@@ -231,6 +249,7 @@ document.querySelectorAll(".tabs button").forEach((btn) => {
     document.querySelectorAll(".tabs button").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     state.tab = btn.dataset.tab;
+    state.platform = "";
     renderChips();
     render();
   });
@@ -295,6 +314,115 @@ document.getElementById("import").addEventListener("change", async (e) => {
   e.target.value = "";
 });
 
-load().catch(() => {
-  document.getElementById("meta").textContent = "Chưa có data/feeds.json — chạy feed-bot trước.";
+load().catch((error) => {
+  document.getElementById("meta").textContent = "Không tải được dữ liệu. " + error.message;
+});
+
+
+async function readJson(url) {
+  const response = await fetch(url, { cache: "no-cache" });
+  if (!response.ok) throw new Error("Không đọc được " + url);
+  return response.json();
+}
+
+function populateCurrencies() {
+  const root = document.getElementById("currency");
+  root.innerHTML = '<option value="">Tất cả</option>';
+  const currencies = new Set(["USD", ...state.programs.map(p => (p.currency || "").toUpperCase()).filter(Boolean)]);
+  for (const currency of [...currencies].sort()) {
+    const option = document.createElement("option");
+    option.value = currency;
+    option.textContent = currency;
+    root.appendChild(option);
+  }
+  root.value = state.currency;
+}
+
+document.getElementById("currency").addEventListener("change", (event) => {
+  state.currency = event.target.value;
+  const input = document.getElementById("minb");
+  input.disabled = !state.currency;
+  if (!state.currency) { state.minb = ""; input.value = ""; }
+  render();
+});
+document.querySelector("form.filters").addEventListener("submit", event => event.preventDefault());
+
+function renderHealth() {
+  const q = state.feeds.quality || {};
+  document.getElementById("quality").textContent =
+    `Dữ liệu cũ: ${q.stale_count || 0} · Bản ghi lỗi: ${q.rejected_count || 0} · Bỏ qua: ${q.skipped_count || 0} · Nguồn chưa đầy đủ: ${q.incomplete_sources || 0} · Thông báo chờ: ${q.pending_notifications || 0}`;
+  const root = document.getElementById("source-status");
+  root.innerHTML = "";
+  for (const source of state.feeds.source_status || []) {
+    const li = document.createElement("li");
+    const status = source.ok ? "Đầy đủ" : source.state === "partial" ? "Tải thiếu" : "Lỗi";
+    li.textContent = `${LABELS[source.platform] || source.platform}: ${status} · ${source.count || 0} program · giữ dữ liệu cũ: ${source.retained_count || 0}` +
+      (source.last_success_at ? ` · thành công gần nhất: ${source.last_success_at}` : "");
+    const failures = (source.sources || []).filter(s => !s.ok).map(s => s.source);
+    if (failures.length) li.textContent += " · nguồn con/slug lỗi: " + failures.join(", ");
+    root.appendChild(li);
+  }
+}
+
+let historyRequest = null;
+async function loadHistory() {
+  if (state.history) return state.history;
+  if (!historyRequest) {
+    historyRequest = readJson("data/history.json").then(data => {
+      state.history = data.events || [];
+      return state.history;
+    }).finally(() => { historyRequest = null; });
+  }
+  return historyRequest;
+}
+
+const FIELD_LABELS = {status:"Trạng thái", offers_bounty:"Có thưởng", min_bounty:"Thưởng thấp nhất", max_bounty:"Thưởng cao nhất", currency:"Đơn vị", reward_types:"Loại thưởng", policy_url:"Policy", contact:"Liên hệ"};
+function historyText(event) {
+  const kinds = {added:"Program mới", removed:"Ngừng xuất hiện", scope_changes:"Scope đổi", program_changes:"Thông tin đổi"};
+  const lines = [`${event.at} · ${event.name} · ${kinds[event.kind] || event.kind}`];
+  const value = v => v === null || v === undefined ? "chưa rõ" : Array.isArray(v) ? v.join(", ") : String(v);
+  for (const [key, change] of Object.entries(event.fields || {})) {
+    lines.push(`${FIELD_LABELS[key] || key}: ${value(change.before)} → ${value(change.after)}`);
+  }
+  for (const [scope, change] of Object.entries(event.scopes || {})) {
+    const label = scope === "in_scope" ? "Trong scope" : "Ngoài scope";
+    if (change.added.length) lines.push(`${label} thêm: ${change.added.join(", ")}`);
+    if (change.removed.length) lines.push(`${label} bỏ: ${change.removed.join(", ")}`);
+    for (const item of change.updated) {
+      const edits = Object.keys(item.after).filter(k => item.before[k] !== item.after[k]);
+      const labels = {eligible_for_submission:"Nhận báo cáo", eligible_for_bounty:"Nhận thưởng", kind:"Loại asset", asset_type:"Loại nguồn"};
+      lines.push(`${item.identifier}: ` + edits.map(k => `${labels[k] || k} ${value(item.before[k])} → ${value(item.after[k])}`).join("; "));
+    }
+  }
+  return lines.join("\n");
+}
+function renderHistory(rootId, events) {
+  const root = document.getElementById(rootId);
+  root.innerHTML = "";
+  for (const event of events.slice(-100).reverse()) {
+    const li = document.createElement("li");
+    li.textContent = historyText(event);
+    root.appendChild(li);
+  }
+}
+async function showHistory(id) {
+  document.getElementById("d-history").innerHTML = "";
+  document.getElementById("d-history-status").textContent = "Đang tải lịch sử…";
+  try {
+    const events = (await loadHistory()).filter(e => e.id === id);
+    if (state.openId !== id) return;
+    document.getElementById("d-history-status").textContent = events.length ? `${events.length} thay đổi · hiển thị tối đa 100 mục gần nhất.` : "Chưa có thay đổi được ghi nhận.";
+    renderHistory("d-history", events);
+  } catch {
+    if (state.openId === id) document.getElementById("d-history-status").textContent = "Chưa tải được lịch sử. Đóng và mở lại để thử lại.";
+  }
+}
+document.getElementById("load-history").addEventListener("click", async () => {
+  const status = document.getElementById("history-status");
+  status.textContent = "Đang tải lịch sử…";
+  try {
+    const events = await loadHistory();
+    renderHistory("recent-history", events);
+    status.textContent = `${events.length} thay đổi · hiển thị tối đa 100 mục gần nhất.`;
+  } catch { status.textContent = "Không tải được lịch sử. Bấm để thử lại."; }
 });

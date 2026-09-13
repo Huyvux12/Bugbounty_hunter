@@ -36,33 +36,44 @@ def _norm_type(asset_type: str | None) -> str:
 def classify_kind(identifier: str | None, asset_type: str | None = None) -> str:
     raw = (identifier or "").strip()
     t = _norm_type(asset_type)
-    lowered = raw.lower()
-
-    if not raw and not t:
+    if not raw:
         return "other"
     if t in CONTRACT_TYPES or "smart_contract" in t:
         return "other"
-    if t in MOBILE_TYPES or any(h in lowered for h in MOBILE_HINTS):
+    if t in MOBILE_TYPES:
         return "mobile"
     if t in CIDR_TYPES or _is_cidr(raw):
         return "cidr"
-    if "*" in raw or t in WILDCARD_TYPES:
+    try:
+        parsed = urlparse(raw if "://" in raw else "//" + raw)
+        host = (parsed.hostname or "").lower().rstrip(".")
+        parsed.port  # Reject malformed ports as well as malformed hosts.
+    except ValueError:
+        return "other"
+    if "*" in host or "*" in parsed.path or t in WILDCARD_TYPES:
         return "wildcard"
-    if t in REPO_TYPES or any(h in lowered for h in REPO_HOSTS):
+    if any(ch.isspace() for ch in raw):
+        return "other"
+    valid_host = bool(_DOMAIN_RE.fullmatch(host))
+    try:
+        ipaddress.ip_address(host)
+        valid_host = True
+    except ValueError:
+        pass
+    if not valid_host:
+        return "other"
+    if parsed.scheme and parsed.scheme not in {"http", "https"}:
+        return "other"
+    if any(host == h or host.endswith("." + h) for h in MOBILE_HINTS):
+        return "mobile"
+    if any(host == h or host.endswith("." + h) for h in REPO_HOSTS):
         return "repo"
-    if lowered.startswith("http://") or lowered.startswith("https://"):
-        host = urlparse(raw).hostname or ""
-        if "*" in host:
-            return "wildcard"
-        if any(h in host for h in REPO_HOSTS):
-            return "repo"
-        return "url"
-    if t in URL_TYPES:
-        if _DOMAIN_RE.match(raw.rstrip("/")):
-            return "domain"
-        return "url"
-    if t in DOMAIN_TYPES or _DOMAIN_RE.match(raw.rstrip("/")):
+    if parsed.scheme in {"http", "https"}:
+        return "repo" if t in REPO_TYPES else "url"
+    if _DOMAIN_RE.fullmatch(raw.rstrip("/")):
         return "domain"
+    if t in URL_TYPES and parsed.path:
+        return "url"
     return "other"
 
 

@@ -3,6 +3,8 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any
 
+from feed_bot.validation import money
+
 
 @dataclass
 class Asset:
@@ -58,6 +60,7 @@ class Program:
     contact: str | None = None
     llm_status: str | None = None
     content_hash: str | None = None
+    stale: bool = False
 
     def to_dict(self) -> dict[str, Any]:
         payload = asdict(self)
@@ -94,16 +97,12 @@ class Program:
             contact=data.get("contact"),
             llm_status=data.get("llm_status"),
             content_hash=data.get("content_hash"),
+            stale=bool(data.get("stale", False)),
         )
 
 
 def _maybe_float(value: Any) -> float | None:
-    if value is None or value == "":
-        return None
-    try:
-        return float(value)
-    except (TypeError, ValueError):
-        return None
+    return money(value)
 
 
 def card(program: Program) -> dict[str, Any]:
