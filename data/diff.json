@@ -1,16 +1,5 @@
 {
   "added": [],
-  "removed": [
-    {
-      "id": "bugcrowd:seek",
-      "name": "SEEK ",
-      "platform": "bugcrowd"
-    },
-    {
-      "id": "bugcrowd:upwork",
-      "name": "Upwork",
-      "platform": "bugcrowd"
-    }
-  ],
+  "removed": [],
   "scope_changes": []
 }
