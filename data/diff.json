@@ -1,1 +1,1 @@
-{"added":[],"removed":[],"scope_changes":[],"program_changes":[]}
+{"added":[{"id":"self-host:developer-arm-com","name":"Arm","platform":"self-host","url":"https://developer.arm.com/support/arm-security-updates/report-security-vulnerabilities"}],"removed":[{"id":"self-host:docs-google-com","name":"HackerRank","platform":"self-host"}],"scope_changes":[],"program_changes":[]}
