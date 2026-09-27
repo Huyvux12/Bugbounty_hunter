@@ -1,1 +1,1 @@
-{"added":[],"removed":[],"scope_changes":[],"program_changes":[{"id":"self-host:github-com","name":"Grafana Labs","platform":"self-host","url":"https://github.com/grafana/bugbounty","fields":{"contact":{"before":"security@bitcoincore.org","after":"https://github.com/grafana/bugbounty/security/advisories"}}}]}
+{"added":[],"removed":[],"scope_changes":[],"program_changes":[]}
