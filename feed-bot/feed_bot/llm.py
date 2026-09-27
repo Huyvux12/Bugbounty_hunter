@@ -15,7 +15,7 @@ from feed_bot.rewards import KNOWN, attach_derived, infer_reward_types
 
 DEFAULT_MODEL = "gemini-3.5-flash-lite"
 DEFAULT_RPM = 15
-MAX_PER_RUN = 60
+DEFAULT_MAX_PER_RUN = 180
 _FENCE = re.compile(r"^```(?:json)?\s*|\s*```$", re.I | re.M)
 
 
@@ -48,6 +48,13 @@ def rpm_from_env() -> float:
         return max(1.0, float(raw))
     except ValueError:
         return float(DEFAULT_RPM)
+
+
+def max_per_run_from_env() -> int:
+    try:
+        return min(300, max(1, int(os.environ.get("LLM_MAX_PER_RUN") or DEFAULT_MAX_PER_RUN)))
+    except ValueError:
+        return DEFAULT_MAX_PER_RUN
 
 
 def content_hash(program: Program) -> str:
@@ -89,7 +96,8 @@ def copy_cached_llm(programs: list[Program], previous: dict[str, Program]) -> No
                 program.contact = old.contact
 
 
-def enrich_selfhost(programs: list[Program], *, limit: int = MAX_PER_RUN) -> int:
+def enrich_selfhost(programs: list[Program], *, limit: int | None = None) -> int:
+    limit = max_per_run_from_env() if limit is None else max(0, limit)
     base = (os.environ.get("LLM_BASE_URL") or "").rstrip("/")
     if not base:
         for program in programs:
@@ -111,9 +119,15 @@ def enrich_selfhost(programs: list[Program], *, limit: int = MAX_PER_RUN) -> int
             try:
                 data = _complete(base, key, model, program, pace=pace)
                 break
+            except httpx.HTTPStatusError as exc:
+                if attempt == 0 and exc.response.status_code == 429:
+                    try:
+                        delay = float(exc.response.headers.get("Retry-After", ""))
+                    except ValueError:
+                        delay = 60.0 / rpm_from_env()
+                    time.sleep(min(60.0, max(0.0, delay)))
             except Exception:
-                if attempt == 0:
-                    pace.wait()
+                pass
         if data is None:
             program.llm_status = "error"
             continue
@@ -203,14 +217,6 @@ def _complete(
         pace.wait()
     with httpx.Client(timeout=45.0, follow_redirects=True) as client:
         response = client.post(chat_url(base), headers=headers, json=body)
-        if response.status_code == 429:
-            retry_after = response.headers.get("Retry-After")
-            try:
-                extra = float(retry_after) if retry_after else 60.0 / DEFAULT_RPM
-            except ValueError:
-                extra = 60.0 / DEFAULT_RPM
-            time.sleep(max(extra, 60.0 / DEFAULT_RPM))
-            response.raise_for_status()
         response.raise_for_status()
         payload = decode_chat_response(response)
     text = _message_text(payload) if isinstance(payload, dict) else ""

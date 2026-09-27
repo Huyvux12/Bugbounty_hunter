@@ -8,7 +8,7 @@ from feed_bot.validation import money, string_list
 from feed_bot.classify import classify_kind, is_concrete
 from feed_bot.models import Asset, Program
 from feed_bot.rewards import attach_derived, infer_reward_types
-from feed_bot.sources.selfhost import _is_platform
+from feed_bot.sources.selfhost import _dedupe_key, _is_http_url, _is_platform, SHARED_POLICY_HOSTS
 
 _HANDLE_RE = re.compile(r"[^a-z0-9]+")
 
@@ -236,10 +236,10 @@ def normalize_federacy(raw: dict[str, Any], source: str = "arkadiyt") -> Program
 def normalize_self_host(raw: dict[str, Any], source: str = "selfhost_dump") -> Program | None:
     url = str(raw.get("url") or raw.get("policy_url") or "").strip()
     name = str(raw.get("name") or raw.get("program_name") or "").strip()
-    if not url or not name or _is_platform(url):
+    if not _is_http_url(url) or not name or _is_platform(url):
         return None
-    host = (urlparse(url).hostname or "").removeprefix("www.")
-    handle = slug(host or name)
+    host = (urlparse(url).hostname or "").lower().removeprefix("www.")
+    handle = slug(_dedupe_key(raw) if host in SHARED_POLICY_HOSTS else host or name)
     domains = string_list(raw.get("domains"), "domains")
     in_scope = []
     for domain in domains:

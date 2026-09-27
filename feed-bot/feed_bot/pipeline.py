@@ -95,7 +95,26 @@ def run(
         programs.extend(batch)
         source_status.append(status)
 
+    # Preserve the IDs of already published shared-host entries so browser
+    # bookmarks and saved notes continue to point to the same policy URL.
+    legacy_by_url = {p.url: p.id for p in previous.values()
+                     if p.platform == "self-host" and p.id in {
+                         "self-host:github-com", "self-host:gitlab-com", "self-host:bugbase-in"}}
+    for program in programs:
+        if program.platform == "self-host" and program.url in legacy_by_url:
+            program.id = legacy_by_url[program.url]
     programs = _dedupe(programs)
+    for status in source_status:
+        status["normalized_count"] = status["count"]
+        status["count"] = sum(p.platform == status["platform"] for p in programs)
+    # The first uncapped run discovers entries that were previously hidden by the
+    # 500-item limit. They are a backfill, not newly launched programs.
+    old_selfhost = next((s for s in state.get("source_status", []) if s.get("platform") == "self-host"), {})
+    previously_capped = any(s.get("truncated", 0) for s in old_selfhost.get("sources", []))
+    if previously_capped:
+        for program in programs:
+            if program.platform == "self-host" and program.id not in previous:
+                program.backfilled = True
     programs = stamp(programs, previous, now)
     copy_cached_llm(programs, previous)
     llm_used = 0
@@ -104,6 +123,11 @@ def run(
             llm_used = enrich_selfhost(programs)
         except Exception as exc:
             source_status.append({"platform": "llm", "ok": False, "via": "openai-compat", "error": str(exc)})
+    llm_rows = [p for p in programs if p.platform == "self-host"]
+    llm_quality = {status: sum(p.llm_status == status for p in llm_rows)
+                   for status in ("ok", "skipped", "error")}
+    llm_quality["used_this_run"] = llm_used
+    llm_quality["configured"] = bool(os.environ.get("LLM_BASE_URL")) if enrich_llm else False
     for program in programs:
         attach_derived(program)
     feeds = build_feeds(programs, now, has_history=bool(previous))
@@ -123,6 +147,7 @@ def run(
         "incomplete_sources": sum(not s["ok"] for s in source_status),
         "pending_notifications": len(pending),
         "history_events": len(history),
+        "llm": llm_quality,
     }
     save_snapshot(data_dir, programs, feeds, diff, source_status, generated_at, history=history, outbox=pending, quality=quality)
     snapshot = load_state(data_dir)

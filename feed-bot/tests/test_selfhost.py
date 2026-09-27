@@ -1,9 +1,10 @@
-from feed_bot.llm import Pace, _apply, chat_url, content_hash, copy_cached_llm, decode_chat_response, rpm_from_env
+from feed_bot.llm import Pace, _apply, chat_url, content_hash, copy_cached_llm, decode_chat_response, max_per_run_from_env, rpm_from_env
 from feed_bot.models import Program
 from feed_bot.normalize import normalize_many
 from feed_bot.pipeline import run
 from feed_bot.rewards import infer_reward_types
-from feed_bot.sources.selfhost import _from_diodb, _from_lissy, _from_pd, _is_platform, _merge
+from feed_bot.sources.selfhost import _from_diodb, _from_lissy, _from_pd, _is_platform, _merge, fetch_selfhost
+from feed_bot.sources.result import FetchBatch
 from datetime import datetime, timezone
 from pathlib import Path
 import json
@@ -15,6 +16,10 @@ def test_platform_urls_filtered():
     assert _is_platform("https://hackerone.com/airbnb")
     assert _is_platform("https://bugcrowd.com/acorns")
     assert not _is_platform("https://www.alwaysdata.com/en/bug-bounty/")
+
+
+def test_untrusted_policy_url_is_rejected():
+    assert normalize_many("self-host", [{"name": "Bad", "url": "javascript:alert(1)"}], "selfhost_dump") == []
 
 
 def test_diodb_skips_platform_and_dead():
@@ -71,6 +76,55 @@ def test_merge_prefers_lissy():
     assert merged[0]["domains"] == ["ably.com"]
 
 
+def test_shared_host_policies_remain_distinct():
+    rows = _merge([
+        {"name": "One", "url": "https://github.com/one/app/security/policy", "source_dump": "diodb"},
+        {"name": "Two", "url": "https://github.com/two/app/security/policy", "source_dump": "diodb"},
+    ])
+    programs = normalize_many("self-host", rows, "selfhost_dump")
+    assert len({p.id for p in programs}) == 2
+
+
+def test_selfhost_does_not_drop_programs_after_500():
+    class Response:
+        def __init__(self, payload, text="companies: []"):
+            self.payload = payload
+            self.text = text
+        def raise_for_status(self): pass
+        def json(self): return self.payload
+    class Client:
+        def get(self, url):
+            if "Lissy93" in url:
+                return Response([], "companies: [{company: Lissy, url: 'https://lissy.test/security'}]")
+            if "projectdiscovery" in url:
+                return Response({"programs": [{"name": "PD", "url": "https://pd.test/security"}]})
+            if "disclose" in url:
+                return Response([{"program_name": f"Company {i}",
+                                  "policy_url": f"https://company{i}.test/security"}
+                                 for i in range(501)])
+            return Response([])
+    batch = fetch_selfhost(Client())
+    assert len(batch) == 503
+    assert batch.complete
+    assert next(s for s in batch.sources if s["source"] == "merge")["count"] == 503
+
+
+def test_empty_subsource_marks_batch_incomplete():
+    class Client:
+        def get(self, url):
+            import httpx
+            if "Lissy93" in url:
+                return httpx.Response(200, text="companies: []")
+            if "projectdiscovery" in url:
+                return httpx.Response(200, json={"programs": [
+                    {"name": "PD", "url": "https://pd.test/security"}]})
+            return httpx.Response(200, json=[
+                {"program_name": "DIODB", "policy_url": "https://diodb.test/security"}])
+    batch = fetch_selfhost(Client())
+    assert not batch.complete
+    assert any(s["source"] == "lissy93" and not s["ok"] for s in batch.sources)
+
+
 def test_pipeline_selfhost(tmp_path):
     rows = json.loads((FIXTURES / "selfhost.json").read_text(encoding="utf-8"))
     result = run(
@@ -112,6 +166,13 @@ def test_pace_15_rpm(monkeypatch):
     pace.wait()
     assert len(sleeps) == 1
     assert abs(sleeps[0] - 3.5) < 0.01
+
+
+def test_llm_run_limit_is_configurable(monkeypatch):
+    monkeypatch.setenv("LLM_MAX_PER_RUN", "240")
+    assert max_per_run_from_env() == 240
+    monkeypatch.setenv("LLM_MAX_PER_RUN", "9999")
+    assert max_per_run_from_env() == 300
 
 
 def test_chat_url_and_sse_decode():

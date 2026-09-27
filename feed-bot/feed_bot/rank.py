@@ -105,7 +105,7 @@ def score_program(program: Program, now: datetime, has_history: bool = False) ->
 
 
 def is_new(program: Program, now: datetime, has_history: bool) -> bool:
-    if program.stale or not has_history:
+    if program.stale or program.backfilled or not has_history:
         return False
     if program.added_assets:
         return True

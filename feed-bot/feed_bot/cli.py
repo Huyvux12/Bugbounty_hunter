@@ -41,8 +41,10 @@ def main(argv: list[str] | None = None) -> int:
     if result.get("telegram_error"):
         out["telegram_error"] = result["telegram_error"]
     print(json.dumps(out, indent=2))
-    failures = [s for s in result["source_status"] if not s.get("ok")]
-    return 0 if len(failures) < len(result["source_status"]) else 1
+    # HackenProof is optional; a failed public dump must still fail the job.
+    failures = [s for s in result["source_status"]
+                if s.get("platform") not in {"hackenproof", "llm"} and not s.get("ok")]
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":

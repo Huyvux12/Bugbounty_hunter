@@ -30,7 +30,7 @@ def stamp(programs: list[Program], previous: dict[str, Program], now: datetime) 
 def diff_snapshot(programs: list[Program], previous: dict[str, Program]) -> dict:
     current_ids = {p.id for p in programs}
     prev_ids = set(previous)
-    added = [p for p in programs if p.id not in prev_ids]
+    added = [p for p in programs if p.id not in prev_ids and not p.backfilled]
     removed = [previous[i] for i in sorted(prev_ids - current_ids)]
     scope_changes = []
     program_changes = []

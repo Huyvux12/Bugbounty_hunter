@@ -12,6 +12,7 @@
     <p class="banner">Snapshot công khai. Không thay policy live. Không phải giấy phép scan.</p>
     <p id="meta" class="meta"></p>
     <p id="quality" class="meta" aria-live="polite"></p>
+    <p id="ai-status" class="meta" aria-live="polite"></p>
     <details class="health"><summary>Trạng thái nguồn dữ liệu</summary><ul id="source-status"></ul></details>
     <details class="history-panel"><summary>Lịch sử thay đổi</summary>
       <button id="load-history" type="button">Xem thay đổi gần đây</button>
@@ -19,7 +20,7 @@
       <p id="history-status" role="status"></p><ol id="recent-history"></ol>
     </details>
   </header>
-  <nav class="tabs" role="tablist">
+  <nav class="tabs" aria-label="Danh sách chương trình">
     <button data-tab="recommended" class="active">Đề xuất</button>
     <button data-tab="easy">Dễ ăn</button>
     <button data-tab="new">Mới</button>
@@ -27,7 +28,7 @@
     <button data-tab="saved">Đã lưu</button>
   </nav>
   <form class="filters">
-    <input id="q" type="search" placeholder="Tìm tên, handle, domain" />
+    <input id="q" type="search" aria-label="Tìm chương trình" placeholder="Tìm tên, handle, domain" />
   </form>
   <nav id="platforms" class="chips" aria-label="Lọc nền tảng"></nav>
   <div class="filters extra">
@@ -63,6 +64,7 @@
     <button id="export" type="button">Export đã lưu</button>
     <label class="import">Import <input id="import" type="file" accept="application/json" /></label>
   </div>
+  <p id="list-status" class="meta" role="status" tabindex="-1"></p>
   <main id="list"></main>
   <dialog id="detail">
     <article>

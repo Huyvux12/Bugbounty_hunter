@@ -61,6 +61,7 @@ class Program:
     llm_status: str | None = None
     content_hash: str | None = None
     stale: bool = False
+    backfilled: bool = False
 
     def to_dict(self) -> dict[str, Any]:
         payload = asdict(self)
@@ -98,6 +99,7 @@ class Program:
             llm_status=data.get("llm_status"),
             content_hash=data.get("content_hash"),
             stale=bool(data.get("stale", False)),
+            backfilled=bool(data.get("backfilled", False)),
         )
 
 

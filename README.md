@@ -14,7 +14,7 @@ Không chạy Strix. Không crawl Cloudflare. Không dùng MCP local.
 | HackenProof | MCP hosted `get_program_info` (researcher key không list directory). Slug: `feed-bot/watchlists/hackenproof_slugs.txt` + [public-bugbounty-programs](https://github.com/projectdiscovery/public-bugbounty-programs) |
 | Self-host | dump disclose.io + ProjectDiscovery + lissy93/bug-bounties (lọc URL nền tảng). LLM (tùy chọn) dịch/nhãn thưởng |
 
-Ingest gần nhất: ~1000 program (H1 448, Bugcrowd 260, Intigriti 136, YWH 63, Federacy 35, HackenProof 65).
+Số program thay đổi theo nguồn ở mỗi lần ingest; trạng thái và số lượng thực tế hiển thị trên Pages.
 
 ## Pipeline
 
@@ -49,9 +49,12 @@ LLM_BASE_URL=
 LLM_API_KEY=
 LLM_MODEL=gemini-3.5-flash-lite
 LLM_RPM=15
+LLM_MAX_PER_RUN=180
 ```
 
 Pages: lọc asset (url/wildcard/…) + loại thưởng; tab **Đã lưu** + note trên máy (`localStorage`, export/import JSON).
+
+Self-host giữ toàn bộ program sau khi gộp trùng; Pages hiển thị mỗi lần 50 mục. Lần đầu bỏ giới hạn 500, các program được bổ sung được đánh dấu backfill để không tạo thông báo "program mới" giả. AI là bước tùy chọn trên GitHub Actions, chỉ bổ sung self-host dựa trên metadata từ các nguồn tổng hợp (không đọc policy live); `LLM_BASE_URL` cần là URL gốc tương thích OpenAI, có hoặc không có hậu tố `/v1`. Số mục đã xử lý, chờ và lỗi hiển thị trên Pages. `LLM_MAX_PER_RUN` đặt qua GitHub Actions variable, mặc định 180, tối đa 300. Không đưa khóa API vào repo; đặt `LLM_API_KEY` trong Actions Secrets.
 
 Telegram: `@BotFather` → token; mở bot `/start` rồi `getUpdates` lấy `chat.id`. Bot chỉ nhắn khi có diff.
 

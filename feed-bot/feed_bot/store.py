@@ -99,6 +99,7 @@ def publish_docs(docs_dir: Path, data_dir: Path, feeds: dict, generated_at: str,
                 "reward_types": program.get("reward_types") or [],
                 "scope_kinds": program.get("scope_kinds") or [],
                 "summary_vi": program.get("summary_vi"),
+                "summary": program.get("summary"),
                 "policy_url": program.get("policy_url"),
                 "contact": program.get("contact"),
             }

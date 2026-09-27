@@ -14,7 +14,8 @@ from feed_bot.sources.arkadiyt import SourceError
 DIODB_URL = "https://raw.githubusercontent.com/disclose/diodb/master/program-list.json"
 PD_URL = "https://raw.githubusercontent.com/projectdiscovery/public-bugbounty-programs/main/dist/data.json"
 LISSY_URL = "https://raw.githubusercontent.com/Lissy93/bug-bounties/main/independent-programs.yml"
-MAX_PROGRAMS = 500
+# Hosted directories can contain independent programs under the same hostname.
+SHARED_POLICY_HOSTS = {"github.com", "gitlab.com", "bugbase.in"}
 PLATFORM_HOSTS = (
     "hackerone.com",
     "bugcrowd.com",
@@ -44,16 +45,16 @@ def fetch_selfhost(client: httpx.Client | None = None) -> list[dict[str, Any]]:
         for name, url, parse in loaders:
             try:
                 batch = parse(_get(http, url))
+                if not batch:
+                    raise ValueError("empty source response")
                 rows.extend(batch)
                 statuses.append({"source": name, "ok": True, "count": len(batch)})
             except Exception as exc:
                 statuses.append({"source": name, "ok": False, "error": str(exc)})
         merged = _merge(rows)
-        extra = max(0, len(merged) - MAX_PROGRAMS)
-        if extra:
-            # Cap is a ranked trim, not a fetch failure: overflow drops instead of going stale.
-            statuses.append({"source": "limit", "ok": True, "count": MAX_PROGRAMS, "truncated": extra})
-        return FetchBatch(merged[:MAX_PROGRAMS], complete=all(s["ok"] for s in statuses), sources=statuses)
+        statuses.append({"source": "merge", "ok": True, "count": len(merged),
+                         "deduplicated": len(rows) - len(merged)})
+        return FetchBatch(merged, complete=all(s["ok"] for s in statuses), sources=statuses)
     finally:
         if own:
             http.close()
@@ -76,7 +77,7 @@ def _from_diodb(payload: Any) -> list[dict[str, Any]]:
         if str(item.get("policy_url_status") or "").lower() == "dead":
             continue
         url = str(item.get("policy_url") or item.get("contact_url") or "").strip()
-        if not url or _is_platform(url) or _is_platform(str(item.get("contact_url") or "")):
+        if not _is_http_url(url) or _is_platform(url) or _is_platform(str(item.get("contact_url") or "")):
             continue
         name = str(item.get("program_name") or "").strip()
         if not name:
@@ -106,7 +107,7 @@ def _from_pd(payload: Any) -> list[dict[str, Any]]:
         if not isinstance(item, dict):
             continue
         url = str(item.get("url") or "").strip()
-        if not url or _is_platform(url):
+        if not _is_http_url(url) or _is_platform(url):
             continue
         name = str(item.get("name") or "").strip()
         if not name:
@@ -141,7 +142,7 @@ def _from_lissy(text: str) -> list[dict[str, Any]]:
             row[field] = string_list(row.get(field), field)
         row["source_dump"] = "lissy93"
         row["policy_url"] = row.get("url")
-        if row.get("url") and row.get("name") and not _is_platform(str(row["url"])):
+        if row.get("url") and row.get("name") and _is_http_url(str(row["url"])) and not _is_platform(str(row["url"])):
             rows.append(row)
     return rows
 
@@ -172,9 +173,13 @@ def _merge(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def _dedupe_key(row: dict[str, Any]) -> str:
-    host = urlparse(str(row.get("url") or "")).hostname or ""
+    parsed = urlparse(str(row.get("url") or ""))
+    host = parsed.hostname or ""
     host = host.lower().removeprefix("www.")
     if host:
+        if host in SHARED_POLICY_HOSTS:
+            path = [part.lower() for part in parsed.path.split("/") if part]
+            return host + "/" + "/".join(path[:2] if host in {"github.com", "gitlab.com"} else path)
         return host
     return str(row.get("name") or "").strip().lower()
 
@@ -182,3 +187,8 @@ def _dedupe_key(row: dict[str, Any]) -> str:
 def _is_platform(url: str) -> bool:
     host = (urlparse(url).hostname or "").lower()
     return any(host == p or host.endswith("." + p) for p in PLATFORM_HOSTS)
+
+
+def _is_http_url(url: str) -> bool:
+    parsed = urlparse(url)
+    return parsed.scheme.lower() in {"http", "https"} and bool(parsed.hostname)

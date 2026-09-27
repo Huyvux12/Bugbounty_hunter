@@ -45,7 +45,7 @@ def test_partial_dump_retains_missing_and_authoritative_records(tmp_path):
             return httpx.Response(200, text='companies:\n- company: Official A\n  url: https://a.test/security\n  domains: [app.a.test]\n')
         if str(request.url) == PD_URL:
             return httpx.Response(200, json={'programs': [{'name': 'Fallback A', 'url': 'https://a.test/security', 'domains': ['other.a.test']}, {'name': 'B', 'url': 'https://b.test/security'}]})
-        return httpx.Response(200, json=[])
+        return httpx.Response(200, json=[{'program_name': 'C', 'policy_url': 'https://c.test/security'}])
     with httpx.Client(transport=httpx.MockTransport(respond)) as client:
         runner(tmp_path, sh=lambda: fetch_selfhost(client), now=NOW)
         partial[0] = True
@@ -84,7 +84,7 @@ def test_hackenproof_not_found_slug_keeps_batch_complete():
     assert gone['ok'] is True and gone.get('gone') is True
 
 
-def test_selfhost_cap_is_complete_and_drops_overflow(tmp_path, monkeypatch):
+def test_selfhost_keeps_all_merged_programs(tmp_path):
     yaml_text = (
         'companies:\n'
         '- company: Cash Co\n'
@@ -98,21 +98,19 @@ def test_selfhost_cap_is_complete_and_drops_overflow(tmp_path, monkeypatch):
         if url == LISSY_URL:
             return httpx.Response(200, text=yaml_text)
         if url == PD_URL:
-            return httpx.Response(200, json={'programs': []})
-        return httpx.Response(200, json=[])
+            return httpx.Response(200, json={'programs': [{'name': 'PD', 'url': 'https://pd.test/security'}]})
+        return httpx.Response(200, json=[{'program_name': 'DIODB', 'policy_url': 'https://diodb.test/security'}])
     with httpx.Client(transport=httpx.MockTransport(respond)) as client:
-        monkeypatch.setattr('feed_bot.sources.selfhost.MAX_PROGRAMS', 10)
         runner(tmp_path, sh=lambda: fetch_selfhost(client), now=NOW)
-        monkeypatch.setattr('feed_bot.sources.selfhost.MAX_PROGRAMS', 1)
         result = runner(tmp_path, sh=lambda: fetch_selfhost(client), now=NOW + timedelta(hours=6))
     saved = load_previous(tmp_path / 'data')
     status = next(s for s in result['source_status'] if s['platform'] == 'self-host')
     assert status['ok'] is True and status['state'] == 'complete'
     assert 'self-host:cash-test' in saved
-    assert 'self-host:other-test' not in saved
+    assert 'self-host:other-test' in saved
     assert not saved['self-host:cash-test'].stale
-    limit = next(s for s in status.get('sources', []) if s.get('source') == 'limit')
-    assert limit['ok'] is True and limit['truncated'] == 1
+    merge = next(s for s in status.get('sources', []) if s.get('source') == 'merge')
+    assert merge['count'] == 4 and merge['deduplicated'] == 0
 
 
 def test_empty_and_malformed_dump_does_not_remove_last_good(tmp_path):

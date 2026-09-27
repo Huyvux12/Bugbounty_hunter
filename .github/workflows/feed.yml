@@ -54,6 +54,7 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
           LLM_RPM: ${{ secrets.LLM_RPM }}
+          LLM_MAX_PER_RUN: ${{ vars.LLM_MAX_PER_RUN || '180' }}
         run: python -m feed_bot --data-dir data --docs-dir docs
 
       - name: Commit snapshot
