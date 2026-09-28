@@ -1,1 +1,1 @@
-{"added":[],"removed":[],"scope_changes":[],"program_changes":[]}
+{"added":[{"id":"self-host:flocksafety-com","name":"Flock Safety","platform":"self-host","url":"https://www.flocksafety.com/legal/vulnerability-disclosure-policy"}],"removed":[],"scope_changes":[{"id":"bugcrowd:city-of-vienna-mbb-og","name":"City of Vienna Managed Bug Bounty","platform":"bugcrowd","url":"https://bugcrowd.com/engagements/city-of-vienna-mbb-og","added":[],"removed":[],"scopes":{"out_of_scope":{"added":["https://www.wien.gv.at/umfrage/*"],"removed":[],"updated":[]}}}],"program_changes":[]}
