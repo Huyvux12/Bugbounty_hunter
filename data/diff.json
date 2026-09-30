@@ -1,1 +1,1 @@
-{"added":[],"removed":[],"scope_changes":[{"id":"hackerone:cloudflare","name":"Cloudflare Public Bug Bounty","platform":"hackerone","url":"https://hackerone.com/cloudflare","added":[],"removed":[],"scopes":{"out_of_scope":{"added":["https://github.com/cloudflare/cf"],"removed":[],"updated":[]}}}],"program_changes":[]}
+{"added":[],"removed":[{"id":"intigriti:uzleuven","name":"UZ Leuven","platform":"intigriti"}],"scope_changes":[],"program_changes":[]}
