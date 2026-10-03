@@ -1,1 +1,1 @@
-[]
+[{"id":"self-host:trueproxies-com","platform":"self-host","handle":"trueproxies-com","name":"TrueProxies","url":"https://trueproxies.com/security/","offers_bounty":false,"status":"open","easy_score":55,"reasons":["1 host/repo cụ thể","program mới"],"concrete_count":1,"min_bounty":null,"max_bounty":null,"currency":null,"first_seen":"2026-10-03T10:57:39Z","added_assets":[],"reward_types":["unknown"],"scope_kinds":["domain"],"summary_vi":null,"policy_url":"https://trueproxies.com/security/","contact":"mailto:hello@trueproxies.com"}]
