@@ -1,1 +1,1 @@
-[]
+[{"id":"self-host:qnap-com","platform":"self-host","handle":"qnap-com","name":"QNAP","url":"https://www.qnap.com/en/security-bounty-program","offers_bounty":true,"status":"open","easy_score":85,"reasons":["có bounty","6 host/repo cụ thể","program mới"],"concrete_count":6,"min_bounty":null,"max_bounty":20000.0,"currency":"USD","first_seen":"2026-10-07T22:32:20Z","added_assets":[],"reward_types":["cash","hall_of_fame"],"scope_kinds":["domain"],"summary_vi":null,"policy_url":"https://www.qnap.com/en/security-bounty-program","contact":"mailto:security@qnap.com"}]
