@@ -1,1 +1,1 @@
-[]
+[{"id":"self-host:strato-de","platform":"self-host","handle":"strato-de","name":"STRATO","url":"https://www.strato.de/sicherheit/#content-area-5","offers_bounty":false,"status":"open","easy_score":0,"reasons":["program mới","chỉ wildcard/CIDR","chỉ mobile","không có web/API cụ thể"],"concrete_count":0,"min_bounty":null,"max_bounty":null,"currency":null,"first_seen":"2026-10-08T22:44:59Z","added_assets":[],"reward_types":["unknown"],"scope_kinds":[],"summary_vi":null,"policy_url":"https://www.strato.de/sicherheit/#content-area-5","contact":"mailto:security@strato.de"}]
