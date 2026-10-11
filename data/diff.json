@@ -1,1 +1,1 @@
-{"added":[],"removed":[],"scope_changes":[],"program_changes":[]}
+{"added":[],"removed":[{"id":"intigriti:nvidiapublicbugbounty","name":"NVIDIA Public Bug Bounty","platform":"intigriti"}],"scope_changes":[],"program_changes":[{"id":"bugcrowd:vinted-uab-mbb","name":"Vinted Bug Bounty","platform":"bugcrowd","url":"https://bugcrowd.com/engagements/vinted-uab-mbb","fields":{"max_bounty":{"before":4000.0,"after":8000.0}}}]}
