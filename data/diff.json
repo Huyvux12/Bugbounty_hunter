@@ -1,1 +1,1 @@
-{"added":[],"removed":[],"scope_changes":[],"program_changes":[]}
+{"added":[],"removed":[{"id":"intigriti:wpenginebugbounty","name":"WP Engine Bug Bounty","platform":"intigriti"}],"scope_changes":[{"id":"hackerone:paypal","name":"PayPal","platform":"hackerone","url":"https://hackerone.com/paypal","added":["Account restrictions and control bypasses - campaign"],"removed":[],"scopes":{"in_scope":{"added":["Account restrictions and control bypasses - campaign"],"removed":[],"updated":[]}}}],"program_changes":[]}
