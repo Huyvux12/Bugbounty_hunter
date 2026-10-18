@@ -176,10 +176,33 @@ test("keyboard navigation, mobile drawer and accessibility", async ({
   await card.focus();
   await page.keyboard.press("Enter");
   await expect(page.locator("#detail")).toBeVisible();
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    await Promise.all(
+      document
+        .getAnimations()
+        .filter(
+          (animation) =>
+            animation.effect.getComputedTiming().iterations !== Infinity,
+        )
+        .map((animation) => animation.finished.catch(() => {})),
+    );
+  });
   const detailAudit = await new AxeBuilder({ page }).analyze();
   expect(detailAudit.violations).toEqual([]);
   await page.keyboard.press("Escape");
   await expect(card.locator(".open-program")).toBeFocused();
+  await page.evaluate(async () => {
+    await Promise.all(
+      document
+        .getAnimations()
+        .filter(
+          (animation) =>
+            animation.effect.getComputedTiming().iterations !== Infinity,
+        )
+        .map((animation) => animation.finished.catch(() => {})),
+    );
+  });
   const audit = await new AxeBuilder({ page }).analyze();
   expect(audit.violations).toEqual([]);
 });
