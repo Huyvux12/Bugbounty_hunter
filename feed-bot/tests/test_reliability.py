@@ -13,7 +13,6 @@ from feed_bot.models import Program
 from feed_bot.normalize import normalize_self_host
 from feed_bot.pipeline import run
 from feed_bot.rank import build_feeds
-from feed_bot.sources.hackenproof import fetch_hackenproof
 from feed_bot.sources.selfhost import fetch_selfhost, _from_lissy, LISSY_URL, PD_URL
 from feed_bot.storage import atomic_json, load_state
 from feed_bot.store import load_previous, save_snapshot
@@ -31,7 +30,6 @@ def program(**changes):
 
 def runner(tmp_path, fetch=lambda _: [], **kwargs):
     return run(data_dir=tmp_path/'data', docs_dir=tmp_path/'docs', fetch_dump_fn=fetch,
-               fetch_hackenproof_fn=kwargs.pop('hp', lambda: []),
                fetch_selfhost_fn=kwargs.pop('sh', lambda: []), enrich_llm=False,
                send_telegram=kwargs.pop('send', False), **kwargs)
 
@@ -58,30 +56,6 @@ def test_partial_dump_retains_missing_and_authoritative_records(tmp_path):
     assert status['state'] == 'partial' and status['retained_count'] == 1
     assert status['last_success_at'] == '2026-09-12T00:00:00Z'
     assert not result['diff']['removed']
-
-
-def test_hackenproof_all_error_responses_are_incomplete():
-    class MCP:
-        def call_tool(self, name, args):
-            return {'companies': []} if name == 'list_companies' else {'error': 'upstream unavailable'}
-    batch = fetch_hackenproof(api_key='fake', client_factory=MCP, slugs=['a', 'b'], discover=False)
-    assert batch == [] and not batch.complete
-    assert len(batch.sources) == 2 and all(not s['ok'] for s in batch.sources)
-
-
-def test_hackenproof_not_found_slug_keeps_batch_complete():
-    class MCP:
-        def call_tool(self, name, args):
-            if name == 'list_companies':
-                return {'companies': []}
-            if args.get('program') == 'gone':
-                return {'error': '404'}
-            return {'title': 'Live', 'state': 'open', 'program': args.get('program')}
-    batch = fetch_hackenproof(api_key='fake', client_factory=MCP, slugs=['live', 'gone'], discover=False)
-    assert [row['slug'] for row in batch] == ['live']
-    assert batch.complete
-    gone = next(s for s in batch.sources if s['source'] == 'gone')
-    assert gone['ok'] is True and gone.get('gone') is True
 
 
 def test_selfhost_keeps_all_merged_programs(tmp_path):

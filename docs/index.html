@@ -1,96 +1,336 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bug bounty feed</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <h1>Bug bounty feed</h1>
-    <p class="banner">Snapshot công khai. Không thay policy live. Không phải giấy phép scan.</p>
-    <p id="meta" class="meta"></p>
-    <p id="quality" class="meta" aria-live="polite"></p>
-    <p id="ai-status" class="meta" aria-live="polite"></p>
-    <details class="health"><summary>Trạng thái nguồn dữ liệu</summary><ul id="source-status"></ul></details>
-    <details class="history-panel"><summary>Lịch sử thay đổi</summary>
-      <button id="load-history" type="button">Xem thay đổi gần đây</button>
-      <a href="data/history.json" download>Tải toàn bộ lịch sử JSON</a>
-      <p id="history-status" role="status"></p><ol id="recent-history"></ol>
-    </details>
-  </header>
-  <nav class="tabs" aria-label="Danh sách chương trình">
-    <button data-tab="recommended" class="active">Đề xuất</button>
-    <button data-tab="easy">Dễ ăn</button>
-    <button data-tab="new">Mới</button>
-    <button data-tab="all">Tất cả</button>
-    <button data-tab="saved">Đã lưu</button>
-  </nav>
-  <form class="filters">
-    <input id="q" type="search" aria-label="Tìm chương trình" placeholder="Tìm tên, handle, domain" />
-  </form>
-  <nav id="platforms" class="chips" aria-label="Lọc nền tảng"></nav>
-  <div class="filters extra">
-    <label>Asset
-      <select id="kind">
-        <option value="">Tất cả</option>
-        <option value="url">URL</option>
-        <option value="domain">Domain</option>
-        <option value="wildcard">Wildcard</option>
-        <option value="repo">Repo</option>
-        <option value="cidr">CIDR</option>
-        <option value="mobile">Mobile</option>
-      </select>
-    </label>
-    <label>Thưởng
-      <select id="reward">
-        <option value="">Tất cả</option>
-        <option value="cash">Tiền</option>
-        <option value="crypto">Crypto</option>
-        <option value="swag">Swag</option>
-        <option value="hall_of_fame">Hall of fame</option>
-        <option value="none">VDP / không thưởng</option>
-        <option value="unknown">Chưa rõ</option>
-      </select>
-    </label>
-    <label>Đơn vị thưởng
-      <select id="currency"><option value="">Tất cả</option><option value="USD">USD</option></select>
-    </label>
-    <label>Thưởng tối đa từ
-      <input id="minb" type="number" min="0" step="any" placeholder="Chọn đơn vị trước" disabled />
-    </label>
-    <span class="meta">So sánh theo đơn vị đã chọn, không quy đổi.</span>
-    <button id="export" type="button">Export đã lưu</button>
-    <label class="import">Import <input id="import" type="file" accept="application/json" /></label>
-  </div>
-  <p id="list-status" class="meta" role="status" tabindex="-1"></p>
-  <main id="list"></main>
-  <dialog id="detail">
-    <article>
-      <header>
-        <h2 id="d-title"></h2>
-        <div class="detail-actions">
-          <button id="save" type="button">Lưu</button>
-          <button id="close" type="button">Đóng</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Khám phá program bug bounty công khai. Tìm scope phù hợp, theo dõi thay đổi và lưu ghi chú riêng."
+    />
+    <meta name="theme-color" content="#101116" />
+    <title>Scopeboard · Bug bounty feed</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#results">Đến danh sách chương trình</a>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Điều hướng chính">
+        <a class="brand" href="./"
+          ><span class="brand-mark" aria-hidden="true">⌘</span
+          ><span>scopeboard<span class="brand-dot">.</span></span></a
+        >
+        <div class="workspace-label">KHÔNG GIAN NGHIÊN CỨU</div>
+        <nav class="tabs" aria-label="Danh sách chương trình">
+          <button data-tab="recommended" class="active" aria-pressed="true">
+            <span aria-hidden="true">✧</span> Đề xuất
+            <span class="nav-tag">CHO BẠN</span>
+          </button>
+          <button data-tab="easy" aria-pressed="false">
+            <span aria-hidden="true">◎</span> Dễ tiếp cận
+          </button>
+          <button data-tab="new" aria-pressed="false">
+            <span aria-hidden="true">↗</span> Mới cập nhật
+          </button>
+          <button data-tab="all" aria-pressed="false">
+            <span aria-hidden="true">▦</span> Tất cả chương trình
+          </button>
+          <button data-tab="saved" aria-pressed="false">
+            <span aria-hidden="true">☆</span> Đã lưu
+            <span id="saved-count" class="count">0</span>
+          </button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="local-indicator">
+            <span aria-hidden="true"></span> Ghi chú riêng trên thiết bị
+          </div>
+          <p>Xuất bản sao để giữ lại những gì quan trọng.</p>
+          <button id="export" class="subtle" type="button">
+            ↓ Xuất mục đã lưu</button
+          ><label class="import-button" for="import">↑ Nhập bản sao lưu</label
+          ><input
+            class="sr-only"
+            id="import"
+            type="file"
+            accept="application/json"
+          />
+          <p id="storage-status" role="status"></p>
         </div>
-      </header>
-      <p id="d-meta"></p>
-      <p id="d-reward"></p>
-      <p id="d-contact"></p>
-      <p id="d-summary"></p>
-      <p id="d-reasons"></p>
-      <label class="note-label">Ghi chú
-        <textarea id="d-note" rows="3" placeholder="Note riêng trên máy này"></textarea>
-      </label>
-      <h3>In scope</h3>
-      <ul id="d-in"></ul>
-      <h3>Out of scope</h3>
-      <ul id="d-out"></ul>
-      <h3>Lịch sử program</h3>
-      <p id="d-history-status" role="status"></p><ol id="d-history"></ol>
-    </article>
-  </dialog>
-  <script src="app.js"></script>
-</body>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <div class="breadcrumb">
+            Workspace <span>/</span> <strong>Khám phá</strong>
+          </div>
+          <a
+            class="source-link"
+            href="https://github.com/Huyvux12/Bugbounty_hunter"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Mã nguồn
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M7 7h10v10" /></svg
+          ></a>
+        </header>
+        <main id="results" tabindex="-1">
+          <section class="hero" aria-labelledby="page-title">
+            <div>
+              <p class="eyebrow">ÍT NHIỄU HƠN. ĐÚNG SCOPE HƠN.</p>
+              <h1 id="page-title">Tìm mục tiêu tiếp theo<span>.</span></h1>
+              <p class="intro">
+                Chương trình phù hợp, scope rõ ràng.<br class="mobile-break" />
+                Tập trung vào điều bạn làm tốt nhất.
+              </p>
+            </div>
+            <div class="hero-symbol" aria-hidden="true">
+              <span>⌖</span><i></i><i></i>
+            </div>
+          </section>
+          <section class="stats" aria-label="Tổng quan dữ liệu">
+            <div>
+              <span class="stat-label">CHƯƠNG TRÌNH</span
+              ><strong id="stat-total">—</strong
+              ><span class="stat-foot">Từ các nguồn công khai</span>
+            </div>
+            <div>
+              <span class="stat-label">DỄ TIẾP CẬN</span
+              ><strong id="stat-easy">—</strong
+              ><span class="stat-foot">Có asset cụ thể để tìm hiểu</span>
+            </div>
+            <div>
+              <span class="stat-label">NGUỒN DỮ LIỆU</span
+              ><strong id="stat-sources">—</strong
+              ><span id="stat-health" class="stat-foot">Đang kiểm tra</span>
+            </div>
+            <div>
+              <span class="stat-label">BỘ SƯU TẬP</span
+              ><strong id="stat-saved">0</strong
+              ><span class="stat-foot">Program bạn đã lưu</span>
+            </div>
+          </section>
+          <section class="explorer" aria-labelledby="section-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">KHÁM PHÁ</p>
+                <h2 id="section-title">Đề xuất cho bạn</h2>
+              </div>
+              <p id="meta" class="meta" role="status">Đang tải snapshot…</p>
+            </div>
+            <form class="filters searchbar" role="search">
+              <label class="search-field"
+                ><span aria-hidden="true">⌕</span
+                ><input
+                  id="q"
+                  type="search"
+                  placeholder="Tìm tên, domain, scope…"
+                  aria-label="Tìm chương trình"
+                  autocomplete="off" /></label
+              ><button
+                id="filter-toggle"
+                type="button"
+                aria-controls="filter-panel"
+                aria-expanded="false"
+              >
+                ☷ Bộ lọc</button
+              ><label class="sort-label"
+                ><span class="sr-only">Sắp xếp</span
+                ><select id="sort">
+                  <option value="rank">Theo đề xuất</option>
+                  <option value="score">Điểm tiếp cận cao</option>
+                  <option value="name">Tên A–Z</option>
+                  <option value="updated">Xác nhận gần nhất</option>
+                  <option value="bounty">Thưởng cao nhất · chọn đơn vị</option>
+                </select></label
+              >
+            </form>
+            <div id="filter-panel" class="filter-panel">
+              <div class="filter-head">
+                <h3>Bộ lọc chương trình</h3>
+                <button id="filter-close" type="button">Đóng</button>
+              </div>
+              <nav id="platforms" class="chips" aria-label="Lọc nền tảng"></nav>
+              <div class="filter-grid">
+                <label
+                  >Loại asset<select id="kind">
+                    <option value="">Tất cả asset</option>
+                    <option value="url">URL</option>
+                    <option value="domain">Domain</option>
+                    <option value="wildcard">Wildcard</option>
+                    <option value="repo">Repository</option>
+                    <option value="cidr">CIDR</option>
+                    <option value="mobile">Mobile</option>
+                  </select></label
+                >
+                <label
+                  >Loại thưởng<select id="reward">
+                    <option value="">Tất cả loại thưởng</option>
+                    <option value="cash">Tiền thưởng</option>
+                    <option value="crypto">Crypto</option>
+                    <option value="swag">Swag</option>
+                    <option value="hall_of_fame">Hall of fame</option>
+                    <option value="none">VDP / không thưởng</option>
+                    <option value="unknown">Chưa rõ</option>
+                  </select></label
+                >
+                <label
+                  >Đơn vị thưởng<select id="currency">
+                    <option value="">Tất cả đơn vị</option>
+                  </select></label
+                >
+                <label
+                  >Thưởng tối đa từ<input
+                    id="minb"
+                    type="number"
+                    min="0"
+                    step="any"
+                    placeholder="Chọn đơn vị trước"
+                    disabled
+                /></label>
+              </div>
+              <div class="filter-footer">
+                <span>So sánh trong cùng đơn vị, không quy đổi tỷ giá.</span
+                ><button id="reset" class="text-button" type="button">
+                  Xóa bộ lọc
+                </button>
+              </div>
+            </div>
+            <div class="result-toolbar">
+              <p id="list-status" role="status" tabindex="-1">
+                Đang chuẩn bị danh sách…
+              </p>
+              <span id="active-filters"></span>
+            </div>
+            <div id="load-error" class="message error" hidden>
+              <p id="error-text"></p>
+              <button id="retry" type="button">Thử tải lại</button>
+            </div>
+            <div id="list" aria-busy="true">
+              <div class="skeleton"></div>
+              <div class="skeleton"></div>
+              <div class="skeleton"></div>
+            </div>
+          </section>
+          <details class="health">
+            <summary>
+              <span class="health-dot" aria-hidden="true"></span> Chất lượng
+              &amp; trạng thái nguồn
+              <span class="summary-hint">Chi tiết vận hành</span>
+            </summary>
+            <p id="quality"></p>
+            <p id="ai-status"></p>
+            <ul id="source-status"></ul>
+          </details>
+          <details class="history-panel">
+            <summary>
+              Lịch sử thay đổi
+              <span class="summary-hint">Theo dõi biến động program</span>
+            </summary>
+            <div class="history-actions">
+              <button id="load-history" type="button">
+                Xem thay đổi gần đây</button
+              ><a id="history-download" href="data/history.json" download
+                >Tải lịch sử JSON ↓</a
+              >
+            </div>
+            <p id="history-status" role="status"></p>
+            <ol
+              id="recent-history"
+              tabindex="0"
+              aria-label="Các thay đổi gần đây"
+            ></ol>
+          </details>
+          <footer>
+            <span class="footer-brand">scopeboard.</span>
+            <p>
+              Dữ liệu từ snapshot công khai. Luôn đọc policy gốc và xác nhận
+              quyền kiểm thử.
+            </p>
+            <span>Public programs · Open source</span>
+          </footer>
+        </main>
+      </div>
+    </div>
+    <dialog id="detail" aria-labelledby="d-title">
+      <article>
+        <header class="detail-header">
+          <div>
+            <p class="eyebrow" id="d-platform">CHƯƠNG TRÌNH</p>
+            <h2 id="d-title"></h2>
+          </div>
+          <button id="close" type="button" aria-label="Đóng chi tiết">✕</button>
+        </header>
+        <div class="detail-body">
+          <p id="d-meta"></p>
+          <div class="detail-actions">
+            <button id="save" type="button">Lưu chương trình</button
+            ><button id="share" type="button">Sao chép liên kết</button>
+          </div>
+          <p id="d-reward" class="reward-detail"></p>
+          <p id="d-contact"></p>
+          <p id="d-summary"></p>
+          <p id="d-reasons" class="reason-detail"></p>
+          <div class="note-box">
+            <label for="d-note"
+              >Ghi chú riêng <span>Tự lưu trên thiết bị này</span></label
+            ><textarea
+              id="d-note"
+              rows="3"
+              maxlength="20000"
+              placeholder="Ý tưởng, điểm cần kiểm tra, hướng nghiên cứu…"
+            ></textarea>
+            <p id="note-status" role="status"></p>
+          </div>
+          <div class="scope-heading">
+            <h3>Trong scope</h3>
+            <button id="copy-assets" type="button">Sao chép asset</button>
+          </div>
+          <ul
+            id="d-in"
+            class="asset-list"
+            tabindex="0"
+            aria-label="Asset trong scope"
+          ></ul>
+          <h3>Ngoài scope</h3>
+          <ul
+            id="d-out"
+            class="asset-list"
+            tabindex="0"
+            aria-label="Asset ngoài scope"
+          ></ul>
+          <h3>Lịch sử chương trình</h3>
+          <p id="d-history-status" role="status"></p>
+          <button id="retry-detail" type="button" hidden>
+            Thử tải chi tiết lại
+          </button>
+          <ol
+            id="d-history"
+            tabindex="0"
+            aria-label="Các thay đổi của program"
+          ></ol>
+        </div>
+      </article>
+    </dialog>
+    <dialog id="import-dialog" aria-labelledby="import-title">
+      <div class="import-preview">
+        <h2 id="import-title">Nhập bản sao lưu</h2>
+        <p id="import-summary"></p>
+        <p>
+          Mục trùng sẽ được cập nhật bằng ghi chú từ file. Các mục khác được giữ
+          nguyên.
+        </p>
+        <div class="detail-actions">
+          <button id="confirm-import" type="button">Gộp bản sao lưu</button
+          ><button id="cancel-import" type="button">Hủy</button>
+        </div>
+      </div>
+    </dialog>
+    <div id="toast" role="status" class="toast" hidden></div>
+    <noscript
+      ><p class="message">
+        Hãy bật JavaScript để tìm/lọc program. Bạn vẫn có thể
+        <a href="data/programs.min.json">tải snapshot JSON</a>.
+      </p></noscript
+    >
+  </body>
 </html>

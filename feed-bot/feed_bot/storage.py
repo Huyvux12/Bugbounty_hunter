@@ -2,6 +2,11 @@
 import json
 import os
 import tempfile
+if os.name == "nt":
+    import msvcrt
+else:
+    import fcntl
+from contextlib import contextmanager
 from pathlib import Path
 
 
@@ -52,3 +57,29 @@ def load_state(data_dir: Path) -> dict:
     if failures:
         raise ValueError("No valid snapshot or backup: " + "; ".join(failures))
     return {"programs": [], "history": [], "outbox": []}
+
+
+@contextmanager
+def writer_lock(data_dir: Path):
+    """A crashed process releases flock automatically; never delete the inode."""
+    data_dir.mkdir(parents=True, exist_ok=True)
+    with (data_dir / ".ingest.lock").open("a+b") as lock:
+        try:
+            if os.name == "nt":
+                if lock.seek(0, os.SEEK_END) == 0:
+                    lock.write(b"0")
+                    lock.flush()
+                lock.seek(0)
+                msvcrt.locking(lock.fileno(), msvcrt.LK_NBLCK, 1)
+            else:
+                fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError as exc:
+            raise RuntimeError("Another ingest is writing this data directory") from exc
+        try:
+            yield
+        finally:
+            if os.name == "nt":
+                lock.seek(0)
+                msvcrt.locking(lock.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                fcntl.flock(lock, fcntl.LOCK_UN)

@@ -204,35 +204,6 @@ def normalize_yeswehack(raw: dict[str, Any], source: str = "arkadiyt") -> Progra
     )
 
 
-def normalize_federacy(raw: dict[str, Any], source: str = "arkadiyt") -> Program | None:
-    url = str(raw.get("url") or "")
-    handle = _handle_from_url(url) or slug(str(raw.get("name") or "federacy"))
-    targets = raw.get("targets") or {}
-    in_scope = [
-        _asset(str(i.get("target") or ""), str(i.get("type") or "website"), True)
-        for i in targets.get("in_scope") or []
-    ]
-    out_scope = [
-        _asset(str(i.get("target") or ""), str(i.get("type") or "website"), False)
-        for i in targets.get("out_of_scope") or []
-    ]
-    return _finish(
-        Program(
-            id=f"federacy:{handle}",
-            platform="federacy",
-            handle=handle,
-            name=str(raw.get("name") or handle),
-            url=url or f"https://www.federacy.com/{handle}",
-            offers_bounty=bool(raw.get("offers_awards") or raw.get("offers_bounty")),
-            status="open",
-            source=source,
-            visibility="public",
-            in_scope=in_scope,
-            out_of_scope=out_scope,
-        )
-    )
-
-
 def normalize_self_host(raw: dict[str, Any], source: str = "selfhost_dump") -> Program | None:
     url = str(raw.get("url") or raw.get("policy_url") or "").strip()
     name = str(raw.get("name") or raw.get("program_name") or "").strip()
@@ -283,101 +254,6 @@ def normalize_self_host(raw: dict[str, Any], source: str = "selfhost_dump") -> P
     return _finish(program)
 
 
-def normalize_hackenproof(raw: dict[str, Any], source: str = "hackenproof_mcp") -> Program | None:
-    if raw.get("error"):
-        return None
-    status_obj = raw.get("status")
-    status_name = ""
-    if isinstance(status_obj, dict):
-        status_name = str(status_obj.get("name") or "").lower()
-    elif status_obj:
-        status_name = str(status_obj).lower()
-    state = str(raw.get("state") or status_name or "published").lower()
-    if state in {"archived", "disabled", "draft"} or status_name in {"archived", "disabled"}:
-        return None
-    handle = str(
-        raw.get("program") or raw.get("slug") or raw.get("handle") or slug(str(raw.get("name") or raw.get("title") or ""))
-    )
-    name = str(raw.get("title") or raw.get("name") or handle)
-    url = str(raw.get("url") or f"https://hackenproof.com/programs/{handle}")
-    in_scope, out_scope = _hackenproof_scopes(raw)
-    rewards = raw.get("rewards") if isinstance(raw.get("rewards"), dict) else {}
-    max_b, currency = _money(raw.get("max_bounty") or raw.get("max_reward"))
-    min_b, currency2 = _money(raw.get("min_bounty") or raw.get("min_reward"))
-    if max_b is None:
-        max_b, _ = _money(
-            rewards.get("critical_max") or rewards.get("high_max") or rewards.get("medium_max") or rewards.get("low_max")
-        )
-    if min_b is None:
-        min_b, _ = _money(
-            rewards.get("low_min") or rewards.get("medium_min") or rewards.get("high_min") or rewards.get("critical_min")
-        )
-    offers = bool((max_b or 0) > 0 or (min_b or 0) > 0 or raw.get("offers_bounty"))
-    live = state in {"live", "open", "active", "published", ""} or status_name == "active"
-    return _finish(
-        Program(
-            id=f"hackenproof:{handle}",
-            platform="hackenproof",
-            handle=handle,
-            name=name,
-            url=url,
-            offers_bounty=offers,
-            status="open" if live else state,
-            source=source,
-            visibility="public",
-            in_scope=in_scope,
-            out_of_scope=out_scope,
-            min_bounty=min_b,
-            max_bounty=max_b,
-            currency=currency or currency2 or "USD",
-        )
-    )
-
-
-def _hackenproof_scopes(raw: dict[str, Any]) -> tuple[list[Asset], list[Asset]]:
-    in_scope: list[Asset] = []
-    out_scope: list[Asset] = []
-    info = raw.get("program") if isinstance(raw.get("program"), dict) else raw
-    scopes = info.get("scopes") if isinstance(info, dict) else None
-    if scopes is None:
-        targets = info.get("targets") if isinstance(info, dict) else None
-        if isinstance(targets, dict):
-            for item in targets.get("in_scope") or []:
-                in_scope.append(_hp_asset(item, True))
-            for item in targets.get("out_of_scope") or []:
-                out_scope.append(_hp_asset(item, False))
-            return in_scope, out_scope
-        scopes = []
-    if isinstance(scopes, dict):
-        for item in scopes.get("in_scope") or scopes.get("inScope") or []:
-            in_scope.append(_hp_asset(item, True))
-        for item in scopes.get("out_of_scope") or scopes.get("outOfScope") or []:
-            out_scope.append(_hp_asset(item, False))
-        return in_scope, out_scope
-    for item in scopes or []:
-        if not isinstance(item, dict):
-            continue
-        out = bool(item.get("out_of_scope") or item.get("outOfScope"))
-        asset = _hp_asset(item, not out)
-        (out_scope if out else in_scope).append(asset)
-    return in_scope, out_scope
-
-
-def _hp_asset(item: dict[str, Any], in_scope: bool) -> Asset:
-    description = str(item.get("target_description") or "").strip()
-    target = str(item.get("target") or item.get("endpoint") or item.get("identifier") or item.get("asset") or "").strip()
-    identifier = description if _looks_like_host(description) else target or description
-    asset_type = str(item.get("type") or item.get("title") or item.get("asset_type") or "Web")
-    return _asset(identifier, asset_type, in_scope)
-
-
-def _looks_like_host(value: str) -> bool:
-    text = value.lower().strip()
-    if not text:
-        return False
-    return text.startswith("http://") or text.startswith("https://") or "." in text.split()[0]
-
-
 def _handle_from_url(url: str) -> str:
     path = urlparse(url).path.strip("/")
     if not path:
@@ -391,8 +267,6 @@ NORMALIZERS = {
     "bugcrowd": normalize_bugcrowd,
     "intigriti": normalize_intigriti,
     "yeswehack": normalize_yeswehack,
-    "federacy": normalize_federacy,
-    "hackenproof": normalize_hackenproof,
     "self-host": normalize_self_host,
 }
 

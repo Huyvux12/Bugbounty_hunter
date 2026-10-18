@@ -14,7 +14,7 @@ def test_first_uncapped_run_does_not_announce_old_programs(tmp_path):
 
     def execute(rows, when, capped=False):
         return run(data_dir=data, docs_dir=docs, now=when,
-                   fetch_dump_fn=lambda platform: [], fetch_hackenproof_fn=lambda: [],
+                   fetch_dump_fn=lambda platform: [],
                    fetch_selfhost_fn=lambda: FetchBatch(rows, sources=[
                        {"source": "limit", "ok": True, "truncated": 1}] if capped else []),
                    send_telegram=False, enrich_llm=False)

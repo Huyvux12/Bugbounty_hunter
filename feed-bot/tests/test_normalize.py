@@ -29,18 +29,3 @@ def test_other_platforms():
     assert ig.in_scope[0].kind == "domain"
     ywh = normalize_many("yeswehack", load("yeswehack.json"), "arkadiyt")[0]
     assert ywh.in_scope[0].kind == "url"
-    fed = normalize_many("federacy", load("federacy.json"), "arkadiyt")[0]
-    assert fed.concrete_count == 0
-    assert fed.in_scope[0].kind == "wildcard"
-
-
-def test_hackenproof_skips_archived():
-    programs = normalize_many("hackenproof", load("hackenproof.json"), "hackenproof_mcp")
-    assert [p.handle for p in programs] == ["hackenproof"]
-    hp = programs[0]
-    assert hp.status == "open"
-    assert hp.offers_bounty is True
-    assert hp.max_bounty == 1500
-    assert hp.in_scope[0].identifier == "https://hackenproof.com"
-    assert hp.in_scope[0].kind == "url"
-    assert hp.out_of_scope[0].identifier == "blog.hackenproof.com"

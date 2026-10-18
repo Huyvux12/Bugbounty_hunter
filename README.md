@@ -1,6 +1,6 @@
 # Bug bounty feed bot
 
-Feed program bug bounty **public**: HackerOne, Bugcrowd, Intigriti, YesWeHack, Federacy, HackenProof.
+Feed program bug bounty **public**: HackerOne, Bugcrowd, Intigriti, YesWeHack và các program self-host.
 
 GitHub Actions (cron 6h) ingest scope/rules → snapshot trên repo → 3 khay **Đề xuất / Dễ ăn / Mới** trên GitHub Pages và Telegram khi có program mới hoặc scope đổi.
 
@@ -10,9 +10,10 @@ Không chạy Strix. Không crawl Cloudflare. Không dùng MCP local.
 
 | Nền tảng | Cách |
 |---|---|
-| HackerOne, Bugcrowd, Intigriti, YesWeHack, Federacy | dump [arkadiyt/bounty-targets-data](https://github.com/arkadiyt/bounty-targets-data) |
-| HackenProof | MCP hosted `get_program_info` (researcher key không list directory). Slug: `feed-bot/watchlists/hackenproof_slugs.txt` + [public-bugbounty-programs](https://github.com/projectdiscovery/public-bugbounty-programs) |
+| HackerOne, Bugcrowd, Intigriti, YesWeHack | dump [arkadiyt/bounty-targets-data](https://github.com/arkadiyt/bounty-targets-data) |
 | Self-host | dump disclose.io + ProjectDiscovery + lissy93/bug-bounties (lọc URL nền tảng). LLM (tùy chọn) dịch/nhãn thưởng |
+
+Federacy và HackenProof đã được loại khỏi pipeline; không cần API key HackenProof. Snapshot mới bỏ các program của hai nguồn này, giữ lịch sử cũ và không tạo sự kiện program đóng do việc loại nguồn.
 
 Số program thay đổi theo nguồn ở mỗi lần ingest; trạng thái và số lượng thực tế hiển thị trên Pages.
 
@@ -20,7 +21,7 @@ Số program thay đổi theo nguồn ở mỗi lần ingest; trạng thái và 
 
 ```text
 cron 6h
-  → arkadiyt JSON + HackenProof MCP + dump self-host
+  → arkadiyt JSON + dump self-host
   → schema chung, loại wildcard/CIDR/mobile khỏi “quét được”
   → điểm dễ ăn, 3 khay, diff snapshot
   → commit data/ + docs/
@@ -35,13 +36,11 @@ cron 6h
 python -m pip install -e feed-bot[dev]
 python -m pytest feed-bot/tests -q
 python -m feed_bot --no-telegram
-python -m feed_bot --probe-hackenproof
 ```
 
 `.env` (gitignore):
 
 ```env
-HACKENPROOF_API_KEY=
 TELEGRAM_BOT_TOKEN=
 TELEGRAM_CHAT_ID=
 PAGES_URL=
@@ -70,7 +69,6 @@ data/         snapshot programs + feeds + diff
 docs/         GitHub Pages
 ```
 
-Thêm program HackenProof: một slug/dòng trong `feed-bot/watchlists/hackenproof_slugs.txt`.
 
 
 
@@ -87,3 +85,27 @@ Thêm program HackenProof: một slug/dòng trong `feed-bot/watchlists/hackenpro
 Nguồn tự trả dữ liệu thiếu nhưng vẫn báo thành công và không có dấu hiệu lỗi không thể luôn được nhận biết; cần theo dõi thống kê và policy gốc. Khi một nguồn không đầy đủ, việc xác nhận program biến mất được hoãn đến khi có dữ liệu đầy đủ. Không chạy đồng thời nhiều tiến trình ghi cùng thư mục data; workflow GitHub đã có concurrency group.
 
 Workflow `test.yml` chạy test cho pull request và main. Workflow ingest vẫn commit checkpoint khi lần ingest trả lỗi, sau đó đánh dấu job thất bại để vừa giữ hàng đợi/dữ liệu vừa báo lỗi vận hành.
+
+## Scopeboard — phát triển giao diện
+
+Giao diện dashboard hỗ trợ mobile, tìm kiếm domain/scope, sắp xếp, bộ lọc theo đơn vị thưởng, liên kết chia sẻ đến program và khôi phục trạng thái qua Back/Forward. “Dễ tiếp cận” là điểm heuristic từ metadata, không phải xác suất tìm được lỗi.
+
+```sh
+npm ci
+npm test
+npx playwright install --with-deps chromium
+npm run test:e2e
+python -m http.server 4173 --directory docs
+```
+
+Trình duyệt test gồm desktop 1280 px, tablet 768 px, mobile 390 px và 360 px; kiểm tra cả accessibility, retry, deep link, import/export và lỗi storage. Nếu môi trường đã có Chromium, đặt `PLAYWRIGHT_CHROMIUM_EXECUTABLE` tới executable thay vì cài browser khác. Bộ kiểm thử dùng snapshot trong checkout, không gửi Telegram và không gọi nguồn ingest live.
+
+Ghi chú và bookmark lưu trên thiết bị, không đồng bộ qua tài khoản. Export dùng schema `version: 1`; import tương thích bản cũ, xem số mục trùng trước khi gộp, tối đa 2 MB / 5.000 mục / 20.000 ký tự mỗi note. Khi storage bị đầy/chặn, giao diện giữ thay đổi trong phiên và yêu cầu xuất bản sao; không thông báo lưu thành công giả. Program rời feed vẫn còn trong bộ sưu tập nếu đã lưu.
+
+## Snapshot và vận hành
+
+`publish_docs` tiếp tục xuất JSON cũ để tương thích, đồng thời tạo `docs/data/manifest.json` trỏ tới một snapshot bất biến trong `docs/data/snapshots/`. Index nhẹ dùng cho danh sách và tìm kiếm; scope được tải theo bucket khi mở chi tiết, lịch sử chỉ tải khi cần. Manifest được ghi cuối, frontend kiểm tra `schema_version` và `snapshot_id` để tránh trộn dữ liệu giữa các lần publish. Giữ snapshot hiện tại và hai phiên bản trước; tab mở lâu hơn cần tải lại nếu chi tiết cũ không còn. Không chỉnh tay các artifact được sinh tự động.
+
+Ingest khóa thư mục data để tránh hai writer, dùng lại HTTP connection và retry tối đa ba lần cho timeout/408/429/5xx có thể phục hồi. Không retry 404/401. `Retry-After` quá 10 giây được hoãn đến lần ingest sau thay vì gọi lại sớm. Bản ghi lỗi trong dump self-host được đếm và giữ lại các bản tốt; nguồn chưa đầy đủ vẫn giữ dữ liệu tốt gần nhất và làm CLI báo lỗi. Trạng thái có thời lượng xử lý từng nguồn.
+
+Outbox vẫn giữ checkpoint từng phần, backoff sau lỗi gửi và gộp cảnh báo nguồn giống nhau đang chờ khi không có thay đổi program. Không tự xóa backlog cũ; `--no-telegram` không gửi hoặc thêm thông báo và vẫn giữ hàng đợi.

@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import json
+import hashlib
+import shutil
+import re
 from feed_bot.storage import atomic_json, load_state, read_snapshot
 from pathlib import Path
 
@@ -121,3 +124,37 @@ def publish_docs(docs_dir: Path, data_dir: Path, feeds: dict, generated_at: str,
         "generated_at": generated_at,
         "events": [e for e in payload.get("history", []) if e.get("visibility", "public") == "public"],
     })
+
+    # Immutable artifacts are complete before the manifest is replaced. Readers
+    # pin a generation, including details/history opened after a new deployment.
+    generation = hashlib.sha256(json.dumps([slim, feeds_out, payload.get("history", [])],
+        ensure_ascii=False, sort_keys=True, allow_nan=False).encode()).hexdigest()[:24]
+    base = data_out / "snapshots" / generation
+    buckets = {}
+    index = []
+    for program in slim:
+        bucket = hashlib.sha256(program["id"].encode()).hexdigest()[:2]
+        buckets.setdefault(bucket, {})[program["id"]] = program
+        row = {k: v for k, v in program.items()
+               if k not in {"in_scope", "out_of_scope", "summary", "summary_vi", "contact", "policy_url"}}
+        row["summary_excerpt"] = (program.get("summary_vi") or program.get("summary") or "")[:180]
+        row["search_text"] = " ".join(a["identifier"] for a in program.get("in_scope", []))
+        row["detail_bucket"] = bucket
+        index.append(row)
+    for bucket, programs in buckets.items():
+        atomic_json(base / "details" / f"{bucket}.json", {"schema_version": 1, "snapshot_id": generation, "programs": programs})
+    shared = {"schema_version": 1, "snapshot_id": generation, "generated_at": generated_at}
+    atomic_json(base / "index.json", {**shared, "count": len(index), "programs": index})
+    atomic_json(base / "feeds.json", {**feeds_out, **shared})
+    atomic_json(base / "history.json", {**shared, "events": [e for e in payload.get("history", [])
+                                                       if e.get("visibility", "public") == "public"]})
+    atomic_json(data_out / "manifest.json", {**shared, "base": f"data/snapshots/{generation}/"})
+
+    # Keep the active and two previous generations for tabs opened before deploy.
+    # Cleanup happens only after publication and never touches legacy exports.
+    generations = sorted((p for p in (data_out / "snapshots").iterdir()
+                          if p.is_dir() and not p.is_symlink() and re.fullmatch(r"[a-f0-9]{24}", p.name)),
+                         key=lambda p: p.stat().st_mtime, reverse=True)
+    others = [p for p in generations if p.name != generation]
+    for obsolete in others[2:]:
+        shutil.rmtree(obsolete)

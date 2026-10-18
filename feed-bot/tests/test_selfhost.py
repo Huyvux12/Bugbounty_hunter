@@ -132,7 +132,6 @@ def test_pipeline_selfhost(tmp_path):
         docs_dir=tmp_path / "docs",
         now=datetime(2026, 8, 24, tzinfo=timezone.utc),
         fetch_dump_fn=lambda platform: [],
-        fetch_hackenproof_fn=lambda: [],
         fetch_selfhost_fn=lambda: rows,
         send_telegram=False,
         enrich_llm=False,

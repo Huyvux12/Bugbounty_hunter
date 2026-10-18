@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 import os
+import time
+import httpx
 from datetime import datetime, timezone
 from pathlib import Path
+from functools import wraps
 from typing import Any, Callable
 
 from feed_bot.diff import diff_snapshot, stamp, append_history
@@ -12,24 +15,35 @@ from feed_bot.rank import build_feeds
 from feed_bot.llm import copy_cached_llm, enrich_selfhost
 from feed_bot.rewards import attach_derived
 from feed_bot.sources.arkadiyt import DUMP_FILES, fetch_dump
-from feed_bot.sources.hackenproof import fetch_hackenproof
 from feed_bot.sources.selfhost import fetch_selfhost
 from feed_bot.store import default_data_dir, default_docs_dir, publish_docs, save_snapshot
 from feed_bot.telegram import send_digest
-from feed_bot.storage import load_state, atomic_json
+from feed_bot.storage import load_state, atomic_json, writer_lock
 from feed_bot.outbox import enqueue, flush
 
 DumpFetcher = Callable[[str], list[dict[str, Any]]]
-HpFetcher = Callable[[], list[dict[str, Any]]]
 SelfhostFetcher = Callable[[], list[dict[str, Any]]]
 
 
+def single_writer(function):
+    @wraps(function)
+    def wrapped(*args, **kwargs):
+        directory = kwargs.get("data_dir") or (args[0] if args else None) or default_data_dir()
+        with writer_lock(directory), httpx.Client(timeout=120.0, follow_redirects=True) as client:
+            if len(args) <= 3 and "fetch_dump_fn" not in kwargs:
+                kwargs["fetch_dump_fn"] = lambda platform: fetch_dump(platform, client=client)
+            if len(args) <= 4 and "fetch_selfhost_fn" not in kwargs:
+                kwargs["fetch_selfhost_fn"] = lambda: fetch_selfhost(client=client)
+            return function(*args, **kwargs)
+    return wrapped
+
+
+@single_writer
 def run(
     data_dir: Path | None = None,
     docs_dir: Path | None = None,
     now: datetime | None = None,
     fetch_dump_fn: DumpFetcher = fetch_dump,
-    fetch_hackenproof_fn: HpFetcher = fetch_hackenproof,
     fetch_selfhost_fn: SelfhostFetcher = fetch_selfhost,
     send_telegram: bool = True,
     enrich_llm: bool = True,
@@ -38,13 +52,16 @@ def run(
     data_dir = data_dir or default_data_dir()
     docs_dir = docs_dir or default_docs_dir()
     state = load_state(data_dir)
-    previous = {row["id"]: Program.from_dict(row) for row in state["programs"]}
+    # Retiring a source is a configuration change, not evidence its programs closed.
+    previous = {row["id"]: Program.from_dict(row) for row in state["programs"]
+                if row.get("platform") not in {"federacy", "hackenproof"}}
     programs: list[Program] = []
     source_status: list[dict[str, Any]] = []
     fetchers = [(platform, "arkadiyt", lambda p=platform: fetch_dump_fn(p)) for platform in DUMP_FILES]
-    fetchers += [("hackenproof", "hackenproof_mcp", fetch_hackenproof_fn), ("self-host", "selfhost_dump", fetch_selfhost_fn)]
+    fetchers += [("self-host", "selfhost_dump", fetch_selfhost_fn)]
     for platform, source, fetch in fetchers:
-        status = {"platform": platform, "via": {"hackenproof_mcp": "mcp", "selfhost_dump": "dumps"}.get(source, source),
+        started = time.monotonic()
+        status = {"platform": platform, "via": {"selfhost_dump": "dumps"}.get(source, source),
                   "ok": True, "state": "complete", "count": 0, "rejected_count": 0, "skipped_count": 0, "retained_count": 0}
         batch = []
         try:
@@ -92,6 +109,7 @@ def run(
             batch = list(by_id.values())
         old_status = next((s for s in state.get("source_status", []) if s["platform"] == platform), {})
         status["last_success_at"] = now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") if status["ok"] else old_status.get("last_success_at")
+        status["duration_ms"] = round((time.monotonic() - started) * 1000)
         programs.extend(batch)
         source_status.append(status)
 
@@ -181,7 +199,6 @@ def _dedupe(programs: list[Program]) -> list[Program]:
 def _source_rank(program: Program) -> int:
     order = {
         "arkadiyt": 0,
-        "hackenproof_mcp": 1,
         "lissy93": 2,
         "projectdiscovery": 3,
         "diodb": 4,

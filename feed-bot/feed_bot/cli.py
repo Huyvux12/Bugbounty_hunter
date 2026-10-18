@@ -16,16 +16,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--data-dir", type=Path, default=None)
     parser.add_argument("--docs-dir", type=Path, default=None)
     parser.add_argument("--no-telegram", action="store_true")
-    parser.add_argument(
-        "--probe-hackenproof",
-        action="store_true",
-        help="Call HackenProof MCP read tools and print the raw shape",
-    )
     args = parser.parse_args(argv)
-    if args.probe_hackenproof:
-        from feed_bot.probe_hackenproof import main as probe_main
-
-        return probe_main()
     result = run(
         data_dir=args.data_dir or (REPO_ROOT / "data"),
         docs_dir=args.docs_dir or (REPO_ROOT / "docs"),
@@ -41,9 +32,9 @@ def main(argv: list[str] | None = None) -> int:
     if result.get("telegram_error"):
         out["telegram_error"] = result["telegram_error"]
     print(json.dumps(out, indent=2))
-    # HackenProof is optional; a failed public dump must still fail the job.
+    # Optional LLM enrichment does not fail the public feed job.
     failures = [s for s in result["source_status"]
-                if s.get("platform") not in {"hackenproof", "llm"} and not s.get("ok")]
+                if s.get("platform") != "llm" and not s.get("ok")]
     return 1 if failures else 0
 
 

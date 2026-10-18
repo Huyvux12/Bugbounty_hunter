@@ -1,9 +1,9 @@
 from feed_bot import cli
 
 
-def test_public_source_failure_returns_nonzero_but_hackenproof_is_optional(monkeypatch, tmp_path, capsys):
+def test_public_source_failure_returns_nonzero_but_llm_is_optional(monkeypatch, tmp_path, capsys):
     status = [
-        {"platform": "hackenproof", "ok": False},
+        {"platform": "llm", "ok": False},
         {"platform": "hackerone", "ok": True},
     ]
     monkeypatch.setattr(cli, "run", lambda **kwargs: {

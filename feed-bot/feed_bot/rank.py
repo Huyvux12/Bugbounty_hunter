@@ -51,8 +51,6 @@ PLATFORM_ORDER = (
     "bugcrowd",
     "intigriti",
     "yeswehack",
-    "federacy",
-    "hackenproof",
     "self-host",
 )
 
@@ -86,13 +84,15 @@ def score_program(program: Program, now: datetime, has_history: bool = False) ->
     if any(name in blob.split() or name == program.handle.lower() for name in MEGA):
         score -= 40
         reasons.append("program lớn, cạnh tranh cao")
-    if concrete == 0 and kinds <= {"wildcard", "cidr"}:
+    if concrete == 0 and kinds and kinds <= {"wildcard", "cidr"}:
         score -= 30
         reasons.append("chỉ wildcard/CIDR")
-    if concrete == 0 and kinds <= {"mobile"}:
+    if concrete == 0 and kinds and kinds <= {"mobile"}:
         score -= 25
         reasons.append("chỉ mobile")
-    if kinds <= {"other"} and concrete == 0:
+    if concrete == 0 and not kinds:
+        reasons.append("chưa có dữ liệu scope")
+    elif kinds <= {"other"} and concrete == 0:
         score -= 20
         reasons.append("không có web/API cụ thể")
     if not live:

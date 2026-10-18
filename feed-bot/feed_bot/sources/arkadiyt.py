@@ -5,6 +5,7 @@ from typing import Any
 import httpx
 
 from feed_bot.sources.result import FetchBatch
+from feed_bot.sources.http import get
 
 ARKADIYT_BASE = "https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/master/data"
 DUMP_FILES = {
@@ -12,7 +13,6 @@ DUMP_FILES = {
     "bugcrowd": "bugcrowd_data.json",
     "intigriti": "intigriti_data.json",
     "yeswehack": "yeswehack_data.json",
-    "federacy": "federacy_data.json",
 }
 
 
@@ -29,8 +29,7 @@ def fetch_dump(platform: str, timeout: float = 120.0, client: httpx.Client | Non
     own = client is None
     http = client or httpx.Client(timeout=timeout, follow_redirects=True)
     try:
-        response = http.get(url)
-        response.raise_for_status()
+        response = get(http, url)
         payload = response.json()
     except Exception as exc:
         raise SourceError(platform, f"arkadiyt {filename}: {exc}") from exc

@@ -47,7 +47,7 @@ def format_digest(feeds: dict, diff: dict, source_status: list[dict], pages_url:
     if by_platform:
         lines.append("")
         lines.append("⭐ Đề xuất theo nền tảng")
-        order = ("hackerone", "bugcrowd", "intigriti", "yeswehack", "federacy", "hackenproof", "self-host")
+        order = ("hackerone", "bugcrowd", "intigriti", "yeswehack", "self-host")
         platforms = [p for p in order if by_platform.get(p)] + sorted(
             p for p in by_platform if p not in order and by_platform.get(p)
         )

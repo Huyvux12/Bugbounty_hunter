@@ -26,7 +26,7 @@ def test_snapshot_sequence_and_source_recovery(tmp_path):
     def cycle(i):
         return run(data_dir=tmp_path/'data', docs_dir=tmp_path/'docs',
                    now=start+timedelta(hours=i), fetch_dump_fn=fetch,
-                   fetch_hackenproof_fn=lambda: [], fetch_selfhost_fn=lambda: [],
+                   fetch_selfhost_fn=lambda: [],
                    send_telegram=False, enrich_llm=False)
     cycle(0)
     rows.append({**rows[0], 'name': 'B', 'handle': 'b'})

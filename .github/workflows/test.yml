@@ -25,3 +25,16 @@ jobs:
         run: python -m pytest feed-bot/tests -q
       - name: Feed ordering regressions
         run: node --test docs/tests/app.test.cjs
+      - name: Install UI test dependencies
+        run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser regressions and accessibility
+        run: npm run test:e2e
+      - name: Save browser diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-test-results
+          path: test-results/
+          retention-days: 7

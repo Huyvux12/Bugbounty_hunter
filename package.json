@@ -1,0 +1,13 @@
+{
+  "name": "scopeboard-ui",
+  "private": true,
+  "scripts": {
+    "test": "node --test docs/tests/app.test.cjs",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.56.1",
+    "prettier": "3.6.2"
+  }
+}

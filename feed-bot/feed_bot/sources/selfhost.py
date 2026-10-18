@@ -8,6 +8,7 @@ import yaml
 
 from feed_bot.validation import string_list
 from feed_bot.sources.result import FetchBatch
+from feed_bot.sources.http import get
 
 from feed_bot.sources.arkadiyt import SourceError
 
@@ -48,22 +49,22 @@ def fetch_selfhost(client: httpx.Client | None = None) -> list[dict[str, Any]]:
                 if not batch:
                     raise ValueError("empty source response")
                 rows.extend(batch)
-                statuses.append({"source": name, "ok": True, "count": len(batch)})
+                statuses.append({"source": name, "ok": getattr(batch, "complete", True), "count": len(batch),
+                                 "rejected_count": getattr(batch, "rejected_count", 0)})
             except Exception as exc:
                 statuses.append({"source": name, "ok": False, "error": str(exc)})
         merged = _merge(rows)
         statuses.append({"source": "merge", "ok": True, "count": len(merged),
                          "deduplicated": len(rows) - len(merged)})
-        return FetchBatch(merged, complete=all(s["ok"] for s in statuses), sources=statuses)
+        return FetchBatch(merged, complete=all(s["ok"] for s in statuses), sources=statuses,
+                          rejected_count=sum(s.get("rejected_count", 0) for s in statuses))
     finally:
         if own:
             http.close()
 
 
 def _get(http: httpx.Client, url: str) -> httpx.Response:
-    response = http.get(url)
-    response.raise_for_status()
-    return response
+    return get(http, url)
 
 
 def _from_diodb(payload: Any) -> list[dict[str, Any]]:
@@ -71,8 +72,10 @@ def _from_diodb(payload: Any) -> list[dict[str, Any]]:
         raise ValueError("diodb response must be a list")
     rows = payload
     out = []
+    rejected = 0
     for item in rows:
         if not isinstance(item, dict):
+            rejected += 1
             continue
         if str(item.get("policy_url_status") or "").lower() == "dead":
             continue
@@ -95,7 +98,7 @@ def _from_diodb(payload: Any) -> list[dict[str, Any]]:
                 "source_dump": "diodb",
             }
         )
-    return out
+    return FetchBatch(out, complete=not rejected, rejected_count=rejected)
 
 
 def _from_pd(payload: Any) -> list[dict[str, Any]]:
@@ -103,8 +106,10 @@ def _from_pd(payload: Any) -> list[dict[str, Any]]:
     if not isinstance(programs, list):
         raise ValueError("ProjectDiscovery programs must be a list")
     out = []
+    rejected = 0
     for item in programs:
         if not isinstance(item, dict):
+            rejected += 1
             continue
         url = str(item.get("url") or "").strip()
         if not _is_http_url(url) or _is_platform(url):
@@ -112,7 +117,11 @@ def _from_pd(payload: Any) -> list[dict[str, Any]]:
         name = str(item.get("name") or "").strip()
         if not name:
             continue
-        domains = string_list(item.get("domains"), "domains")
+        try:
+            domains = string_list(item.get("domains"), "domains")
+        except ValueError:
+            rejected += 1
+            continue
         out.append(
             {
                 "name": name,
@@ -124,7 +133,7 @@ def _from_pd(payload: Any) -> list[dict[str, Any]]:
                 "source_dump": "projectdiscovery",
             }
         )
-    return out
+    return FetchBatch(out, complete=not rejected, rejected_count=rejected)
 
 
 def _from_lissy(text: str) -> list[dict[str, Any]]:
@@ -133,24 +142,31 @@ def _from_lissy(text: str) -> list[dict[str, Any]]:
     if not isinstance(companies, list):
         raise ValueError("lissy93 companies must be a list")
     rows = []
+    rejected = 0
     aliases = {"company": "name", "description": "summary", "min_payout": "min_bounty", "max_payout": "max_bounty"}
     for item in companies:
         if not isinstance(item, dict):
-            raise ValueError("lissy93 company must be an object")
+            rejected += 1
+            continue
         row = {aliases.get(key, key): value for key, value in item.items()}
-        for field in ("domains", "out_of_scope"):
-            row[field] = string_list(row.get(field), field)
+        try:
+            for field in ("domains", "out_of_scope"):
+                row[field] = string_list(row.get(field), field)
+        except ValueError:
+            rejected += 1
+            continue
         row["source_dump"] = "lissy93"
         row["policy_url"] = row.get("url")
         if row.get("url") and row.get("name") and _is_http_url(str(row["url"])) and not _is_platform(str(row["url"])):
             rows.append(row)
-    return rows
+    return FetchBatch(rows, complete=not rejected, rejected_count=rejected)
 
 
 def _merge(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rank = {"lissy93": 0, "projectdiscovery": 1, "diodb": 2}
     by_key: dict[str, dict[str, Any]] = {}
-    for row in rows:
+    for original in sorted(rows, key=lambda row: rank.get(row.get("source_dump"), 9)):
+        row = dict(original)
         key = _dedupe_key(row)
         existing = by_key.get(key)
         if existing is None or rank.get(row.get("source_dump"), 9) < rank.get(existing.get("source_dump"), 9):
