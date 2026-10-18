@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Be Vietnam Pro";
-  src: url("fonts/BeVietnamPro-Regular.ttf") format("truetype");
+  src: url("fonts/BeVietnamPro-Regular.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Be Vietnam Pro";
-  src: url("fonts/BeVietnamPro-SemiBold.ttf") format("truetype");
+  src: url("fonts/BeVietnamPro-SemiBold.woff2") format("woff2");
   font-style: normal;
   font-weight: 500 800;
   font-display: swap;
@@ -27,6 +27,14 @@
   --danger: #ffb1b1;
   --radius: 18px;
   --ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+  --motion-fast: 140ms;
+  --motion-enter: 240ms;
+  --motion-exit: 160ms;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --surface-hover: #2b3041;
+  --border-active: #8e7ab9;
 }
 * {
   box-sizing: border-box;
@@ -81,11 +89,11 @@ a,
 .import-button {
   touch-action: manipulation;
   transition:
-    color 0.18s var(--ease),
-    background-color 0.18s var(--ease),
-    border-color 0.18s var(--ease),
-    box-shadow 0.18s var(--ease),
-    transform 0.18s var(--ease);
+    color var(--motion-fast) var(--ease),
+    background-color var(--motion-fast) var(--ease),
+    border-color var(--motion-fast) var(--ease),
+    box-shadow var(--motion-fast) var(--ease),
+    transform var(--motion-fast) var(--ease);
 }
 button {
   cursor: pointer;
@@ -220,7 +228,7 @@ button.active {
   border-radius: 3px;
   background: var(--accent);
   transform: scaleY(0);
-  transition: transform 0.22s var(--ease);
+  transition: transform var(--motion-enter) var(--ease);
 }
 .tabs button.active {
   color: #d1c3ff;
@@ -632,9 +640,9 @@ textarea::placeholder {
     inset 0 1px #ffffff06,
     0 4px 14px #00000014;
   transition:
-    border-color 0.22s var(--ease),
-    box-shadow 0.22s var(--ease),
-    transform 0.22s var(--ease);
+    border-color var(--motion-enter) var(--ease),
+    box-shadow var(--motion-enter) var(--ease),
+    transform var(--motion-enter) var(--ease);
   cursor: pointer;
 }
 .card:focus-within {
@@ -921,10 +929,10 @@ dialog {
   opacity: 0;
   transform: translateY(18px) scale(0.985);
   transition:
-    opacity 0.22s var(--ease),
-    transform 0.3s var(--ease),
-    display 0.3s allow-discrete,
-    overlay 0.3s allow-discrete;
+    opacity var(--motion-enter) var(--ease),
+    transform var(--motion-enter) var(--ease),
+    display var(--motion-enter) allow-discrete,
+    overlay var(--motion-enter) allow-discrete;
   scrollbar-width: thin;
   scrollbar-color: #6f638a #202330;
 }
@@ -938,8 +946,8 @@ dialog::backdrop {
   opacity: 0;
   transition:
     opacity 0.22s,
-    display 0.3s allow-discrete,
-    overlay 0.3s allow-discrete;
+    display var(--motion-enter) allow-discrete,
+    overlay var(--motion-enter) allow-discrete;
 }
 dialog[open]::backdrop {
   opacity: 1;
@@ -1118,7 +1126,7 @@ textarea {
   box-shadow: 0 12px 45px #0006;
   font-size: 15px;
   line-height: 1.7;
-  animation: toast-in 0.22s var(--ease);
+  animation: toast-in var(--motion-enter) var(--ease);
 }
 .skeleton {
   height: 205px;
@@ -1515,9 +1523,9 @@ textarea {
     opacity: 0;
     transform: translateY(18px);
     transition:
-      opacity 0.22s var(--ease),
-      transform 0.28s var(--ease),
-      display 0.28s allow-discrete;
+      opacity var(--motion-enter) var(--ease),
+      transform var(--motion-enter) var(--ease),
+      display var(--motion-enter) allow-discrete;
   }
   .filter-panel.open {
     display: block;

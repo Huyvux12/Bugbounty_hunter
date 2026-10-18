@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "test": "node --test docs/tests/app.test.cjs",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "build": "python3 scripts/version_assets.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.10.2",

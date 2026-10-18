@@ -23,6 +23,7 @@ const TITLES = {
 };
 const STORE_KEY = "bbh-saved-v1";
 const MAX_IMPORT_BYTES = 2 * 1024 * 1024;
+const PAGE_SIZE = 50;
 let recoveryRaw = null,
   storageWarning = "",
   toastTimer,
@@ -43,7 +44,8 @@ const state = {
   programs: [],
   saved: loadSaved(),
   openId: "",
-  visible: 50,
+  page: 1,
+  view: "cards",
   searchIndex: new Map(),
   base: "",
   snapshotId: "",
@@ -290,6 +292,8 @@ async function load() {
           p.easy_score >= 50,
       )
       .length.toLocaleString("vi-VN");
+    $("easy-caption").textContent =
+      `Đủ tiêu chí · top ${state.feeds.easy?.length || 0} chọn lọc`;
     renderHealth();
     populateCurrencies();
     readUrl();
@@ -370,23 +374,107 @@ function chipCount(platform) {
 }
 function renderChips() {
   const root = $("platforms");
-  root.innerHTML = "";
-  for (const platform of ["", ...platformIds()]) {
-    const n = platform ? chipCount(platform) : null;
-    if (platform && !n && state.tab !== "all") continue;
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.textContent = platform
-      ? `${LABELS[platform] || platform} (${n})`
+  const existing = new Map(
+    [...root.querySelectorAll("button[data-platform]")].map((button) => [
+      button.dataset.platform,
+      button,
+    ]),
+  );
+  const platforms = ["", ...platformIds()];
+  if (state.platform && !platforms.includes(state.platform))
+    platforms.push(state.platform);
+  for (const platform of platforms) {
+    const count = platform ? chipCount(platform) : null;
+    let button = existing.get(platform);
+    if (!button) {
+      button = document.createElement("button");
+      button.type = "button";
+      button.dataset.platform = platform;
+      button.addEventListener("click", () => {
+        state.platform = platform;
+        changed();
+      });
+      root.appendChild(button);
+    }
+    button.textContent = platform
+      ? `${LABELS[platform] || platform} (${count})`
       : "Tất cả nền tảng";
-    btn.className = state.platform === platform ? "active" : "";
-    btn.setAttribute("aria-pressed", String(state.platform === platform));
-    btn.addEventListener("click", () => {
-      state.platform = platform;
-      changed();
-    });
-    root.appendChild(btn);
+    button.classList.toggle("active", state.platform === platform);
+    button.setAttribute("aria-pressed", String(state.platform === platform));
+    button.hidden =
+      !!platform &&
+      !count &&
+      state.tab !== "all" &&
+      state.platform !== platform;
   }
+  for (const [platform, button] of existing) {
+    if (!platforms.includes(platform)) button.hidden = true;
+    if (button.hidden && document.activeElement === button)
+      root.querySelector('[data-platform=""]').focus();
+  }
+}
+function renderActiveFilters() {
+  const root = $("active-filters");
+  const labels = {
+    q: (value) => `Tìm: ${value}`,
+    platform: (value) => LABELS[value] || value,
+    kind: (value) => `Asset: ${value}`,
+    reward: (value) => REWARD_LABELS[value] || value,
+    currency: (value) => `Đơn vị: ${value}`,
+    minb: (value) =>
+      `Thưởng tối đa ≥ ${new Intl.NumberFormat("vi-VN").format(Number(value))} ${state.currency}`,
+  };
+  const buttons = new Map(
+    [...root.querySelectorAll("button[data-filter-key]")].map((button) => [
+      button.dataset.filterKey,
+      button,
+    ]),
+  );
+  let count = 0;
+  for (const [key, label] of Object.entries(labels)) {
+    let button = buttons.get(key);
+    const active = state[key] !== "" && state[key] !== undefined;
+    if (!active) {
+      if (button) button.hidden = true;
+      continue;
+    }
+    count++;
+    if (!button) {
+      button = document.createElement("button");
+      button.type = "button";
+      button.className = "filter-pill";
+      button.dataset.filterKey = key;
+      button.addEventListener("click", () => {
+        state[key] = "";
+        if (key === "currency") {
+          state.minb = "";
+          if (state.sort === "bounty") state.sort = "rank";
+        }
+        changed();
+        (root.querySelector("button:not([hidden])") || $("q")).focus({
+          preventScroll: true,
+        });
+      });
+      root.appendChild(button);
+    }
+    button.hidden = false;
+    const text = label(state[key]);
+    button.textContent = text + " ×";
+    button.setAttribute("aria-label", `Xóa bộ lọc ${text}`);
+  }
+  root.hidden = !count;
+}
+function effectiveView() {
+  return state.view === "table" &&
+    (typeof window === "undefined" || window.innerWidth > 760)
+    ? "table"
+    : "cards";
+}
+function pageWindow(rows) {
+  const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+  state.page = Math.min(pages, Math.max(1, state.page));
+  const start = (state.page - 1) * PAGE_SIZE;
+  return { rows: rows.slice(start, start + PAGE_SIZE), start, pages };
 }
 function currentRows() {
   return tabRows().filter((p) => {
@@ -407,7 +495,7 @@ function currentRows() {
   });
 }
 function resetList() {
-  state.visible = 50;
+  state.page = 1;
   render();
 }
 function render() {
@@ -435,20 +523,24 @@ function render() {
     rows.sort((a, b) => (b.max_bounty ?? -1) - (a.max_bounty ?? -1));
   const root = $("list");
   root.innerHTML = "";
+  const page = pageWindow(rows);
+  root.dataset.view = effectiveView();
   $("list-status").textContent =
-    `Hiển thị ${Math.min(rows.length, state.visible)}/${rows.length} program khớp bộ lọc.`;
+    `Hiển thị ${rows.length ? page.start + 1 : 0}–${page.start + page.rows.length}/${rows.length} program khớp bộ lọc.`;
   $("section-title").textContent = TITLES[state.tab];
-  const filters = [
-    state.q,
-    state.platform,
-    state.kind,
-    state.reward,
-    state.currency,
-    state.minb,
-  ].filter(Boolean).length;
-  $("active-filters").textContent = filters
-    ? `${filters} bộ lọc đang áp dụng`
-    : "";
+  renderActiveFilters();
+  $("pagination").hidden = page.pages <= 1;
+  $("page-prev").disabled = state.page <= 1;
+  $("page-next").disabled = state.page >= page.pages;
+  $("page-summary").textContent = `Trang ${state.page}/${page.pages}`;
+  const explanation =
+    state.tab === "easy"
+      ? `Top ${state.feeds?.easy?.length || 0} được chọn lọc; số tổng quan là toàn bộ program đủ tiêu chí.`
+      : "";
+  $("list-scope").textContent = explanation;
+  $("list-scope").hidden = !explanation;
+  $("view-cards").setAttribute("aria-pressed", String(state.view === "cards"));
+  $("view-table").setAttribute("aria-pressed", String(state.view === "table"));
   updateSavedCount();
   if (!rows.length) {
     const box = document.createElement("div");
@@ -465,70 +557,102 @@ function render() {
     root.appendChild(box);
     return;
   }
-  for (const p of rows.slice(0, state.visible)) {
-    const el = document.createElement("article");
-    el.className = "card";
-    el.dataset.programId = p.id;
-    el.tabIndex = -1;
-    el.setAttribute("aria-label", `Xem ${p.name}`);
-    const icon = (LABELS[p.platform] || p.platform || "?")
-      .slice(0, 2)
-      .toUpperCase();
-    const tags = [
-      ...kindsOf(p)
-        .slice(0, 3)
-        .map((k) => `<span class="tag">${escapeHtml(k)}</span>`),
-      `<span class="tag">${p.concrete_count || 0} asset cụ thể</span>`,
-    ];
-    const summary = p.unavailable
-      ? "Không còn trong feed hiện tại. Ghi chú của bạn vẫn được giữ lại."
-      : p.summary_excerpt ||
-        p.summary_vi ||
-        p.summary ||
-        (p.reasons || []).slice(0, 2).join(" · ") ||
-        "Đọc policy gốc để tìm hiểu chương trình.";
-    el.innerHTML = `<div class="platform-icon" data-platform="${escapeHtml(p.platform)}" aria-hidden="true">${escapeHtml(icon)}</div><div class="card-main"><h2><button class="open-program" type="button" aria-label="Xem ${escapeHtml(p.name)}">${escapeHtml(p.name)}</button></h2><span class="card-platform">${escapeHtml(LABELS[p.platform] || p.platform)}</span><p class="card-summary">${escapeHtml(summary)}</p><div class="card-tags">${tags.join("")}</div>${p.stale ? `<p class="stale">${p.unavailable ? "Đã rời feed" : "Dữ liệu cũ · " + escapeHtml(formatDate(p.last_seen))}</p>` : ""}</div><div class="card-right"><div class="card-reward">${escapeHtml(rewardText(p))}<small>${p.currency ? "Theo đơn vị nguồn công bố" : "Chi tiết trong policy gốc"}</small></div><div class="card-bottom"><span class="score" title="Điểm heuristic dựa trên metadata, không phải xác suất tìm lỗi">Tiếp cận ${p.easy_score ?? "—"}/100</span></div></div>`;
-    const star = document.createElement("button");
-    star.className = "bookmark";
-    star.type = "button";
-    star.textContent = state.saved[p.id] ? "★" : "☆";
-    star.setAttribute(
-      "aria-label",
-      `${state.saved[p.id] ? "Bỏ lưu" : "Lưu"} ${p.name}`,
-    );
-    star.setAttribute("aria-pressed", String(!!state.saved[p.id]));
-    star.addEventListener("click", (event) => {
-      event.stopPropagation();
-      toggleSaved(p);
-      [...root.querySelectorAll(".bookmark")]
-        .find((b) => b.closest(".card")?.dataset.programId === p.id)
-        ?.focus();
-    });
-    // Separate button semantics from the article: keyboard activation on a child
-    // must not also activate the detail panel.
-    el.querySelector?.(".card-bottom")?.appendChild(star);
-    el.addEventListener("click", () => show(p));
-    el.addEventListener("keydown", (e) => {
-      if (e.target !== el) return;
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        show(p);
-      }
-    });
-    root.appendChild(el);
+  if (effectiveView() === "table") root.appendChild(createTable(page.rows));
+  else for (const program of page.rows) root.appendChild(createCard(program));
+}
+function bookmarkButton(p) {
+  const button = document.createElement("button");
+  button.className = "bookmark";
+  button.type = "button";
+  updateBookmark(button, p);
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    toggleSaved(p);
+    if (button.isConnected) button.focus({ preventScroll: true });
+    else $("list-status").focus();
+  });
+  return button;
+}
+function updateBookmark(button, program) {
+  button.textContent = state.saved[program.id] ? "★" : "☆";
+  button.setAttribute(
+    "aria-label",
+    `${state.saved[program.id] ? "Bỏ lưu" : "Lưu"} ${program.name}`,
+  );
+  button.setAttribute("aria-pressed", String(!!state.saved[program.id]));
+}
+function createCard(p) {
+  const el = document.createElement("article");
+  el.className = "card";
+  el.dataset.programId = p.id;
+  el.tabIndex = -1;
+  el.setAttribute("aria-label", `Xem ${p.name}`);
+  const icon = (LABELS[p.platform] || p.platform || "?")
+    .slice(0, 2)
+    .toUpperCase();
+  const tags = [
+    ...kindsOf(p)
+      .slice(0, 3)
+      .map((k) => `<span class="tag">${escapeHtml(k)}</span>`),
+    `<span class="tag">${p.concrete_count || 0} asset cụ thể</span>`,
+  ];
+  const summary = p.unavailable
+    ? "Không còn trong feed hiện tại. Ghi chú của bạn vẫn được giữ lại."
+    : p.summary_excerpt ||
+      p.summary_vi ||
+      p.summary ||
+      (p.reasons || []).slice(0, 2).join(" · ") ||
+      "Đọc policy gốc để tìm hiểu chương trình.";
+  el.innerHTML = `<div class="platform-icon" data-platform="${escapeHtml(p.platform)}" aria-hidden="true">${escapeHtml(icon)}</div><div class="card-main"><h2><button class="open-program" type="button" aria-label="Xem ${escapeHtml(p.name)}">${escapeHtml(p.name)}</button></h2><span class="card-platform">${escapeHtml(LABELS[p.platform] || p.platform)}</span><p class="card-summary">${escapeHtml(summary)}</p><div class="card-tags">${tags.join("")}</div>${p.stale ? `<p class="stale">${p.unavailable ? "Đã rời feed" : "Dữ liệu cũ · " + escapeHtml(formatDate(p.last_seen))}</p>` : ""}</div><div class="card-right"><div class="card-reward">${escapeHtml(rewardText(p))}<small>${p.currency ? "Theo đơn vị nguồn công bố" : "Chi tiết trong policy gốc"}</small></div><div class="card-bottom"><span class="score" title="Điểm heuristic dựa trên metadata, không phải xác suất tìm lỗi">Tiếp cận ${p.easy_score ?? "—"}/100</span></div></div>`;
+  el.querySelector(".card-bottom").appendChild(bookmarkButton(p));
+  el.addEventListener("click", () => show(p));
+  el.addEventListener("keydown", (event) => {
+    if (event.target === el && ["Enter", " "].includes(event.key)) {
+      event.preventDefault();
+      show(p);
+    }
+  });
+  return el;
+}
+function createTable(programs) {
+  const region = document.createElement("div");
+  region.className = "table-wrap";
+  region.tabIndex = 0;
+  region.setAttribute("role", "region");
+  region.setAttribute(
+    "aria-label",
+    "Bảng chương trình, cuộn ngang để xem các cột",
+  );
+  const table = document.createElement("table");
+  table.className = "program-table";
+  table.innerHTML =
+    '<caption class="sr-only">Chương trình theo thứ tự sắp xếp đang chọn; mức thưởng giữ nguyên đơn vị nguồn công bố.</caption><thead><tr><th scope="col">Chương trình</th><th scope="col">Nền tảng</th><th scope="col">Thưởng</th><th scope="col">Asset</th><th scope="col">Xác nhận gần nhất</th><th scope="col">Lưu</th></tr></thead>';
+  const body = document.createElement("tbody");
+  for (const p of programs) {
+    const row = document.createElement("tr");
+    row.dataset.programId = p.id;
+    row.tabIndex = -1;
+    row.innerHTML = `<th scope="row"><button class="open-program" type="button" aria-label="Xem ${escapeHtml(p.name)}">${escapeHtml(p.name)}</button><span class="table-score">Tiếp cận ${escapeHtml(p.easy_score ?? "—")}/100</span></th><td>${escapeHtml(LABELS[p.platform] || p.platform)}</td><td>${escapeHtml(rewardText(p))}</td><td>${escapeHtml(p.concrete_count ?? "—")}</td><td>${escapeHtml(formatDate(p.last_seen))}${p.stale ? '<span class="stale">Dữ liệu cũ</span>' : ""}</td><td></td>`;
+    row.lastElementChild.appendChild(bookmarkButton(p));
+    row.addEventListener("click", () => show(p));
+    body.appendChild(row);
   }
-  if (state.visible < rows.length) {
-    const more = document.createElement("button");
-    more.type = "button";
-    more.className = "more";
-    more.textContent = `Xem thêm ${Math.min(50, rows.length - state.visible)} mục`;
-    more.addEventListener("click", () => {
-      const first = state.visible;
-      state.visible += 50;
-      render();
-      $("list").querySelectorAll?.(".card")[first]?.focus();
-    });
-    root.appendChild(more);
+  table.appendChild(body);
+  region.appendChild(table);
+  return region;
+}
+function syncSavedUi(id) {
+  updateSavedCount();
+  renderChips();
+  if (state.tab === "saved" && !state.saved[id]) {
+    render();
+    return;
+  }
+  for (const row of document.querySelectorAll("#list [data-program-id]")) {
+    if (row.dataset.programId !== id) continue;
+    const button = row.querySelector(".bookmark");
+    const p = allSavedRows().find((program) => program.id === id);
+    if (button && p) updateBookmark(button, p);
   }
 }
 function savedEntry(p, note = "") {
@@ -541,6 +665,15 @@ function updateSavedCount() {
   const count = Object.keys(state.saved).length;
   $("saved-count").textContent = count;
   $("stat-saved").textContent = count;
+  for (const badge of document.querySelectorAll("[data-saved-count]")) {
+    badge.textContent = count;
+    badge.hidden = !count;
+  }
+  const mobileSaved = document.querySelector(
+    '.mobile-nav [data-route="saved"]',
+  );
+  if (mobileSaved)
+    mobileSaved.setAttribute("aria-label", `Đã lưu, ${count} chương trình`);
 }
 function syncSaveButton() {
   $("save").textContent = state.saved[state.openId]
@@ -564,8 +697,7 @@ function toggleSaved(p) {
     );
   const ok = persistSaved();
   syncSaveButton();
-  renderChips();
-  render();
+  syncSavedUi(p.id);
   notify(ok ? "Đã cập nhật bộ sưu tập." : storageWarning);
 }
 function openProgram() {
@@ -696,10 +828,13 @@ function syncControls() {
   for (const key of ["q", "kind", "reward", "currency", "minb", "sort"])
     $(key).value = state[key];
   $("minb").disabled = !state.currency;
-  document.querySelectorAll(".tabs button").forEach((btn) => {
-    btn.classList.toggle("active", state.tab === btn.dataset.tab);
-    btn.setAttribute("aria-pressed", String(state.tab === btn.dataset.tab));
-  });
+  document
+    .querySelectorAll(".tabs button, .mobile-nav button")
+    .forEach((btn) => {
+      const selected = state.tab === (btn.dataset.tab || btn.dataset.route);
+      btn.classList.toggle("active", selected);
+      btn.setAttribute("aria-pressed", String(selected));
+    });
 }
 function writeUrl(replace = false) {
   if (typeof window === "undefined") return;
@@ -713,8 +848,14 @@ function writeUrl(replace = false) {
     "currency",
     "minb",
     "sort",
+    "view",
+    "page",
   ]) {
-    if (state[k] && state[k] !== { tab: "recommended", sort: "rank" }[k])
+    if (
+      state[k] &&
+      state[k] !==
+        { tab: "recommended", sort: "rank", view: "cards", page: 1 }[k]
+    )
       url.searchParams.set(k, state[k]);
     else url.searchParams.delete(k);
   }
@@ -748,8 +889,13 @@ function readUrl() {
     ? p.get("sort")
     : "rank";
   state.openId = (p.get("program") || "").slice(0, 300);
+  state.view = p.get("view") === "table" ? "table" : "cards";
+  state.page = /^\d+$/.test(p.get("page") || "")
+    ? Math.min(10000, Math.max(1, Number(p.get("page"))))
+    : 1;
 }
 function changed() {
+  state.page = 1;
   syncControls();
   writeUrl();
   renderChips();
@@ -768,19 +914,20 @@ function resetFilters() {
   changed();
 }
 function filterDrawer(open) {
-  $("filter-panel").classList.toggle("open", open);
-  document.body.classList.toggle("filters-open", open);
+  const panel = $("filter-panel");
+  const mobile = window.innerWidth <= 760;
+  panel.classList.toggle("open", open);
+  document.body.classList.toggle("filters-open", open && mobile);
   $("filter-toggle").setAttribute("aria-expanded", String(open));
-  if (open) {
-    $("filter-panel").setAttribute("role", "dialog");
-    $("filter-panel").setAttribute("aria-modal", "true");
-    $("filter-panel").setAttribute("aria-label", "Bộ lọc chương trình");
-    $("filter-close").focus();
-  } else {
-    for (const a of ["role", "aria-modal", "aria-label"])
-      $("filter-panel").removeAttribute(a);
-    $("filter-toggle").focus();
-  }
+  if (open && mobile) {
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-modal", "true");
+    panel.setAttribute("aria-label", "Bộ lọc chương trình");
+  } else
+    for (const attribute of ["role", "aria-modal", "aria-label"])
+      panel.removeAttribute(attribute);
+  if (open) $("filter-close").focus();
+  else $("filter-toggle").focus();
 }
 function renderHealth() {
   const q = state.feeds.quality || {},
@@ -921,9 +1068,9 @@ async function copyText(text) {
 }
 
 // Bind once; rendering never replaces the note field or import controls.
-document.querySelectorAll(".tabs button").forEach((btn) =>
+document.querySelectorAll(".tabs button, .mobile-nav button").forEach((btn) =>
   btn.addEventListener("click", () => {
-    state.tab = btn.dataset.tab;
+    state.tab = btn.dataset.tab || btn.dataset.route;
     state.platform = "";
     changed();
   }),
@@ -950,6 +1097,29 @@ $("minb").addEventListener("input", (e) => {
   state.minb = e.target.value;
   changed();
 });
+for (const [id, delta] of [
+  ["page-prev", -1],
+  ["page-next", 1],
+])
+  $(id).addEventListener("click", () => {
+    state.page += delta;
+    render();
+    writeUrl();
+    $("list-status").scrollIntoView({
+      block: "start",
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+    });
+    if ($(id).disabled)
+      $(delta > 0 ? "page-prev" : "page-next").focus({ preventScroll: true });
+  });
+for (const view of ["cards", "table"])
+  $("view-" + view).addEventListener("click", () => {
+    state.view = view;
+    writeUrl();
+    render();
+  });
 $("reset").addEventListener("click", resetFilters);
 $("retry").addEventListener("click", load);
 $("filter-toggle").addEventListener("click", () =>
@@ -962,10 +1132,10 @@ $("filter-panel").addEventListener("keydown", (e) => {
     filterDrawer(false);
     return;
   }
-  if (e.key === "Tab") {
+  if (e.key === "Tab" && window.innerWidth <= 760) {
     const controls = [
       ...$("filter-panel").querySelectorAll("button,select,input"),
-    ].filter((c) => !c.disabled);
+    ].filter((c) => !c.disabled && !c.hidden);
     const first = controls[0],
       last = controls.at(-1);
     if (e.shiftKey && document.activeElement === first) {
@@ -982,10 +1152,12 @@ $("detail").addEventListener("close", () => {
   const id = state.openId || $("detail").dataset.programId;
   state.openId = "";
   writeUrl();
-  [...document.querySelectorAll("#list article")]
+  if (state.q || state.tab === "saved") render();
+  [...document.querySelectorAll("#list [data-program-id]")]
     .find((el) => el.dataset.programId === id)
     ?.querySelector(".open-program")
     ?.focus();
+  if (document.activeElement === document.body) $("list-status").focus();
 });
 $("save").addEventListener("click", () => {
   const p = openProgram();
@@ -1001,8 +1173,7 @@ $("d-note").addEventListener("input", (e) => {
   const ok = persistSaved();
   $("note-status").textContent = ok ? "Đã lưu trên thiết bị." : storageWarning;
   syncSaveButton();
-  renderChips();
-  render();
+  syncSavedUi(p.id);
 });
 $("share").addEventListener("click", () => copyText(window.location.href));
 $("copy-assets").addEventListener("click", () =>
@@ -1093,7 +1264,7 @@ if (typeof window !== "undefined") {
     readUrl();
     syncControls();
     renderChips();
-    resetList();
+    render();
     if (state.openId) {
       const p = allSavedRows().find((p) => p.id === state.openId);
       if (p) show(p, false);
@@ -1110,9 +1281,14 @@ if (typeof window !== "undefined") {
       syncSaveButton();
     }
   });
+  let wasMobile = window.innerWidth <= 760;
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 760 && $("filter-panel").classList.contains("open"))
-      filterDrawer(false);
+    const mobile = window.innerWidth <= 760;
+    if (mobile !== wasMobile) {
+      if ($("filter-panel").classList.contains("open")) filterDrawer(false);
+      wasMobile = mobile;
+      if (state.feeds) render();
+    }
   });
 }
 $("storage-status").textContent = storageWarning;

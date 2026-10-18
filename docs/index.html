@@ -12,13 +12,14 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link
       rel="preload"
-      href="fonts/BeVietnamPro-Regular.ttf"
+      href="fonts/BeVietnamPro-Regular.woff2"
       as="font"
-      type="font/ttf"
+      type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=cca12d2f6483" />
+    <link rel="stylesheet" href="explorer.css?v=c641ad1964ed" />
+    <script src="app.js?v=0da8c7c9fd34" defer></script>
   </head>
   <body>
     <a class="skip" href="#results">Đến danh sách chương trình</a>
@@ -129,7 +130,9 @@
             <div>
               <span class="stat-label">DỄ TIẾP CẬN</span
               ><strong id="stat-easy">—</strong
-              ><span class="stat-foot">Có asset cụ thể để tìm hiểu</span>
+              ><span id="easy-caption" class="stat-foot"
+                >Đủ tiêu chí · danh sách chọn lọc</span
+              >
             </div>
             <div>
               <span class="stat-label">NGUỒN DỮ LIỆU</span
@@ -234,12 +237,26 @@
                 </button>
               </div>
             </div>
+            <div
+              id="active-filters"
+              class="active-filters"
+              aria-label="Bộ lọc đang áp dụng"
+              hidden
+            ></div>
             <div class="result-toolbar">
               <p id="list-status" role="status" tabindex="-1">
                 Đang chuẩn bị danh sách…
               </p>
-              <span id="active-filters"></span>
+              <div class="view-switch" role="group" aria-label="Kiểu hiển thị">
+                <button id="view-cards" type="button" aria-pressed="true">
+                  Card
+                </button>
+                <button id="view-table" type="button" aria-pressed="false">
+                  Bảng
+                </button>
+              </div>
             </div>
+            <p id="list-scope" class="list-scope" hidden></p>
             <div id="load-error" class="message error" hidden>
               <p id="error-text"></p>
               <button id="retry" type="button">Thử tải lại</button>
@@ -249,6 +266,16 @@
               <div class="skeleton"></div>
               <div class="skeleton"></div>
             </div>
+            <nav
+              id="pagination"
+              class="pagination"
+              aria-label="Phân trang chương trình"
+              hidden
+            >
+              <button id="page-prev" type="button">Trang trước</button>
+              <span id="page-summary"></span>
+              <button id="page-next" type="button">Trang sau</button>
+            </nav>
           </section>
           <details class="health">
             <summary>
@@ -290,6 +317,43 @@
         </main>
       </div>
     </div>
+    <nav class="mobile-nav" aria-label="Điều hướng mobile">
+      <button type="button" data-route="recommended" aria-pressed="true">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3 9 9l-6 3 6 3 3 6 3-6 6-3-6-3-3-6Z" /></svg
+        ><span>Đề xuất</span>
+      </button>
+      <button type="button" data-route="easy" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+          /></svg
+        ><span>Dễ tiếp cận</span>
+      </button>
+      <button type="button" data-route="new" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 19 19 5M5 5h14v14" /></svg
+        ><span>Mới</span>
+      </button>
+      <button type="button" data-route="all" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z" /></svg
+        ><span>Tất cả</span>
+      </button>
+      <button type="button" data-route="saved" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="m12 3 2.8 5.7 6.3.9-4.5 4.4 1.1 6.2L12 17.3l-5.7 3 1.1-6.3L3 9.6l6.2-.9L12 3Z"
+          /></svg
+        ><span>Đã lưu</span
+        ><span
+          class="mobile-saved-count"
+          data-saved-count
+          hidden
+          aria-hidden="true"
+        ></span>
+      </button>
+    </nav>
     <dialog id="detail" aria-labelledby="d-title">
       <article>
         <header class="detail-header">

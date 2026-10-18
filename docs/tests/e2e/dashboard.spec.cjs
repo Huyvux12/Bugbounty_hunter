@@ -3,10 +3,20 @@ const AxeBuilder = require("@axe-core/playwright").default;
 async function ready(page, path = "/") {
   await page.goto(path);
   await expect(page.locator("#list")).toHaveAttribute("aria-busy", "false");
-  await expect(page.locator(".card").first()).toBeVisible();
+  await expect(
+    page.locator(".card, .program-table tbody tr").first(),
+  ).toBeVisible();
+}
+async function tab(page, name) {
+  const mobile = page.locator(`.mobile-nav [data-route="${name}"]`);
+  if (await mobile.isVisible()) await mobile.click();
+  else await page.locator(`.tabs [data-tab="${name}"]`).click();
 }
 async function filters(page) {
-  if (await page.locator("#filter-toggle").isVisible())
+  if (
+    (await page.locator("#filter-toggle").getAttribute("aria-expanded")) !==
+    "true"
+  )
     await page.locator("#filter-toggle").click();
 }
 async function closeFilters(page) {
@@ -69,7 +79,7 @@ test("bookmark, note, reload and versioned export preserve user work", async ({
     "Research note <script>not executable</script>",
   );
   await page.keyboard.press("Escape");
-  await page.locator('[data-tab="saved"]').click();
+  await tab(page, "saved");
   await expect(page.locator(".card")).toHaveCount(1);
   const downloadPromise = page.waitForEvent("download");
   await page.locator("#export").click();
@@ -107,7 +117,7 @@ test("imports preview before merge and retain orphaned saved program", async ({
   await expect(page.locator("#import-dialog")).toBeVisible();
   await expect(page.locator("#saved-count")).toHaveText("0");
   await page.locator("#confirm-import").click();
-  await page.locator('[data-tab="saved"]').click();
+  await tab(page, "saved");
   await expect(page.locator(".card")).toContainText("Archived research");
   await expect(page.locator(".card")).toContainText("Đã rời feed");
   await page.locator(".card").click();
@@ -167,8 +177,10 @@ test("keyboard navigation, mobile drawer and accessibility", async ({
   if (await page.locator("#filter-toggle").isVisible()) {
     await page.locator("#filter-toggle").click();
     await expect(page.locator("#filter-close")).toBeFocused();
-    await page.keyboard.press("Shift+Tab");
-    await expect(page.locator("#reset")).toBeFocused();
+    if (page.viewportSize().width <= 760) {
+      await page.keyboard.press("Shift+Tab");
+      await expect(page.locator("#reset")).toBeFocused();
+    }
     await page.keyboard.press("Escape");
     await expect(page.locator("#filter-toggle")).toBeFocused();
   }
@@ -244,4 +256,136 @@ test("rejects mixed snapshot versions and retries successfully", async ({
   await page.unroute("**/snapshots/*/index.json");
   await page.locator("#retry").click();
   await expect(page.locator(".card").first()).toBeVisible();
+});
+
+test("platform selection preserves focus and note editing preserves card nodes", async ({
+  page,
+}) => {
+  await ready(page, "/?tab=all");
+  await filters(page);
+  const chip = page.locator('#platforms [data-platform="hackerone"]');
+  await chip.focus();
+  await page.keyboard.press("Enter");
+  await expect(chip).toBeFocused();
+  await expect(chip).toHaveAttribute("aria-pressed", "true");
+  await page.evaluate(() => {
+    window.originalChip = document.querySelector(
+      '#platforms [data-platform="hackerone"]',
+    );
+  });
+  await page.keyboard.press("Space");
+  await expect(chip).toBeFocused();
+  expect(
+    await page.evaluate(
+      () =>
+        window.originalChip ===
+        document.querySelector('#platforms [data-platform="hackerone"]'),
+    ),
+  ).toBe(true);
+  await closeFilters(page);
+  await page
+    .getByRole("button", { name: "Xóa bộ lọc HackerOne", exact: true })
+    .click();
+  await expect(page.locator("#q")).toBeFocused();
+  await page.evaluate(() => {
+    window.originalCard = document.querySelector(".card");
+  });
+  await page.locator(".card").first().click();
+  await page.locator("#d-note").fill("Stable DOM while taking notes");
+  expect(
+    await page.evaluate(
+      () => window.originalCard === document.querySelector(".card"),
+    ),
+  ).toBe(true);
+  await expect(page.locator(".card .bookmark").first()).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+});
+
+test("result is above fold, typography stays readable and saved navigation is reachable", async ({
+  page,
+}) => {
+  await ready(page);
+  await page.evaluate(() => document.fonts.ready);
+  const geometry = await page.locator(".card").first().boundingBox();
+  expect(geometry.y + 50).toBeLessThan(page.viewportSize().height);
+  expect(
+    await page
+      .locator(".card-summary")
+      .first()
+      .evaluate((el) => parseFloat(getComputedStyle(el).fontSize)),
+  ).toBeGreaterThanOrEqual(16);
+  await tab(page, "easy");
+  await expect(page.locator("#list-scope")).toContainText("Top 50");
+  await expect(page.locator("#easy-caption")).toContainText("top 50");
+  await tab(page, "saved");
+  await expect(page.locator("#section-title")).toHaveText("Bộ sưu tập của bạn");
+  if (page.viewportSize().width <= 760) {
+    const nav = page.locator('.mobile-nav [data-route="saved"]');
+    await expect(nav).toBeInViewport();
+    await expect(nav).toHaveAttribute("aria-pressed", "true");
+  }
+});
+
+test("pagination keeps at most fifty cards and filter changes reset the URL page", async ({
+  page,
+}) => {
+  await ready(page, "/?tab=all");
+  await expect(page.locator(".card")).toHaveCount(50);
+  const first = await page
+    .locator(".card")
+    .first()
+    .getAttribute("data-program-id");
+  await page.locator("#page-next").click();
+  await expect(page).toHaveURL(/page=2/);
+  await expect(page.locator(".card")).toHaveCount(50);
+  expect(
+    await page.locator(".card").first().getAttribute("data-program-id"),
+  ).not.toBe(first);
+  await page.reload();
+  await expect(page.locator("#page-summary")).toHaveText(/Trang 2\//);
+  await page.locator("#q").fill("starbucks");
+  await expect(page).not.toHaveURL(/page=/);
+  await expect(page.locator("#page-summary")).toHaveText(/Trang 1\//);
+});
+
+test("table view preserves interactions and URL; phones keep cards", async ({
+  page,
+}) => {
+  await ready(page, "/?tab=all&view=table");
+  if (page.viewportSize().width <= 760) {
+    await expect(page.locator(".card")).toHaveCount(50);
+    await expect(page.locator(".program-table")).toHaveCount(0);
+    return;
+  }
+  await expect(page.locator(".program-table tbody tr")).toHaveCount(50);
+  await expect(page.locator("#view-table")).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  const row = page.locator(".program-table tbody tr").first();
+  await row.locator(".bookmark").click();
+  await expect(row.locator(".bookmark")).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  await expect(page.locator("#detail")).not.toBeVisible();
+  await row.locator(".open-program").click();
+  await expect(page.locator("#detail")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(row.locator(".open-program")).toBeFocused();
+  await page.evaluate(async () => {
+    await Promise.all(
+      document
+        .getAnimations()
+        .filter((a) => a.effect.getComputedTiming().iterations !== Infinity)
+        .map((a) => a.finished.catch(() => {})),
+    );
+  });
+  const audit = await new AxeBuilder({ page }).analyze();
+  expect(audit.violations).toEqual([]);
+  await page.locator("#view-cards").click();
+  await expect(page.locator(".card")).toHaveCount(50);
+  await expect(page).not.toHaveURL(/view=table/);
 });

@@ -108,44 +108,27 @@ test("history describes zero, false and exclusion changes", () => {
   assert.match(text, /Ngoài scope thêm: admin.demo.test/);
 });
 
-test("large lists page by 50 and cards open with keyboard", () => {
+test("pagination bounds rows and clamps the page after filtering", () => {
   const context = app();
   vm.runInContext(
-    `
-    const list = {children:[], set innerHTML(value){if(value==='')this.children=[]},
-      appendChild(el){this.children.push(el)}};
-    const status = {textContent:'',focus(){}};
-    document.getElementById = id => id === 'list' ? list : id === 'list-status' ? status : {textContent:''};
-    document.createElement = tag => ({tag, dataset:{}, listeners:{},
-      setAttribute(){}, addEventListener(name, fn){this.listeners[name]=fn}});
-    state.tab='all'; state.programs = Array.from({length: 120}, (_, i) =>
-      ({id:'id'+i,name:'Program '+i,platform:'self-host',in_scope:[],reward_types:['unknown']}));
-    show = p => { state.openId = p.id; };
-    render();
-  `,
+    `const rows = Array.from({length:120},(_,i)=>({id:'id'+i}));`,
     context,
   );
+  assert.equal(vm.runInContext("pageWindow(rows).rows.length", context), 50);
   assert.equal(
-    vm.runInContext(
-      'list.children.filter(x=>x.tag==="article").length',
-      context,
-    ),
-    50,
+    vm.runInContext("state.page=2; pageWindow(rows).rows[0].id", context),
+    "id50",
   );
-  assert.match(vm.runInContext("status.textContent", context), /50\/120/);
-  vm.runInContext(
-    `list.children[0].listeners.keydown({key:'Enter',target:list.children[0],preventDefault(){}});`,
-    context,
-  );
-  assert.equal(vm.runInContext("state.openId", context), "id0");
-  vm.runInContext(`list.children.at(-1).listeners.click();`, context);
   assert.equal(
-    vm.runInContext(
-      'list.children.filter(x=>x.tag==="article").length',
-      context,
-    ),
-    100,
+    vm.runInContext("state.page=99; pageWindow(rows).rows.length", context),
+    20,
   );
+  assert.equal(vm.runInContext("state.page", context), 3);
+  assert.equal(
+    vm.runInContext("pageWindow(rows.slice(0,2)).rows.length", context),
+    2,
+  );
+  assert.equal(vm.runInContext("state.page", context), 1);
 });
 
 test("policy links reject non-http schemes", () => {

@@ -109,3 +109,11 @@ Ghi chú và bookmark lưu trên thiết bị, không đồng bộ qua tài kho�
 Ingest khóa thư mục data để tránh hai writer, dùng lại HTTP connection và retry tối đa ba lần cho timeout/408/429/5xx có thể phục hồi. Không retry 404/401. `Retry-After` quá 10 giây được hoãn đến lần ingest sau thay vì gọi lại sớm. Bản ghi lỗi trong dump self-host được đếm và giữ lại các bản tốt; nguồn chưa đầy đủ vẫn giữ dữ liệu tốt gần nhất và làm CLI báo lỗi. Trạng thái có thời lượng xử lý từng nguồn.
 
 Outbox vẫn giữ checkpoint từng phần, backoff sau lỗi gửi và gộp cảnh báo nguồn giống nhau đang chờ khi không có thay đổi program. Không tự xóa backlog cũ; `--no-telegram` không gửi hoặc thêm thông báo và vẫn giữ hàng đợi.
+
+### Khám phá và so sánh program
+
+Dashboard đưa kết quả lên sớm hơn, giữ nội dung 16px và tên program 19–21px. Bộ lọc nâng cao mở bằng nút Bộ lọc; các pill bên ngoài cho phép xóa riêng từng điều kiện. Chọn nền tảng giữ nguyên focus bàn phím, nhập note/cập nhật bookmark giữ node danh sách ổn định. Mobile có thanh điều hướng dưới với khoảng đệm safe-area; mục Đã lưu luôn có thể truy cập.
+
+Desktop có chế độ Card/Bảng. Các trang chỉ giữ tối đa 50 program trong DOM; kiểu hiển thị và số trang được lưu trong URL, hỗ trợ reload và Back/Forward. Mobile dùng card kể cả khi mở link có `view=table`. Số “Dễ tiếp cận” ở tổng quan tính tất cả program đủ tiêu chí; danh sách Dễ tiếp cận là top 50 đã chọn lọc và được ghi rõ trên giao diện.
+
+Font Be Vietnam Pro dùng WOFF2 tự host, giữ license OFL, glyph và metrics từ bản TTF gốc. Sau khi sửa JS/CSS, chạy `npm run build` để cập nhật phiên bản asset trong HTML rồi commit cùng thay đổi; CI kiểm tra hash này để tránh HTML mới tải nhầm JS/CSS cũ từ cache. Không cần build lại khi chỉ cập nhật snapshot.
