@@ -1,1 +1,1 @@
-{"added":[],"removed":[],"scope_changes":[],"program_changes":[]}
+{"added":[{"id":"intigriti:truelayer","name":"TrueLayer","platform":"intigriti","url":"https://www.intigriti.com/programs/truelayer/truelayer/detail"}],"removed":[{"id":"intigriti:upholdcom","name":"Uphold","platform":"intigriti"}],"scope_changes":[{"id":"hackerone:exodus","name":"Exodus","platform":"hackerone","url":"https://hackerone.com/exodus","added":["agents.exodus.com"],"removed":[],"scopes":{"in_scope":{"added":["agents.exodus.com"],"removed":[],"updated":[]}}}],"program_changes":[]}
