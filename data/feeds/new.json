@@ -1,1 +1,1 @@
-[{"id":"hackerone:vercel","platform":"hackerone","handle":"vercel","name":"Vercel","url":"https://hackerone.com/vercel","offers_bounty":true,"status":"open","easy_score":20,"reasons":["có bounty","23 host/repo cụ thể","+1 asset","scope rộng"],"concrete_count":23,"min_bounty":null,"max_bounty":null,"currency":null,"first_seen":"2026-09-21T17:40:40Z","added_assets":["https://github.com/better-auth/better-auth"],"reward_types":["cash"],"scope_kinds":["wildcard","other","repo","domain"],"summary_vi":null,"policy_url":null,"contact":null}]
+[]
