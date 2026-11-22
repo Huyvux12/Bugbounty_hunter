@@ -1,1 +1,1 @@
-[]
+[{"id":"bugcrowd:tesla","platform":"bugcrowd","handle":"tesla","name":"Tesla","url":"https://bugcrowd.com/engagements/tesla","offers_bounty":true,"status":"open","easy_score":10,"reasons":["có bounty","program mới","program lớn, cạnh tranh cao"],"concrete_count":0,"min_bounty":null,"max_bounty":100000.0,"currency":"USD","first_seen":"2026-11-22T13:54:56Z","added_assets":[],"reward_types":["cash"],"scope_kinds":["wildcard","mobile","other"],"summary_vi":null,"policy_url":null,"contact":null}]
